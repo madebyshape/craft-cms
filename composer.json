@@ -20,7 +20,17 @@
   },
   "require": {
     "craftcms/cms": "^3.0.0",
-    "vlucas/phpdotenv": "^2.4.0"
+    "vlucas/phpdotenv": "^2.4.0",
+    "aelvan/imager": "v2.0.1.1",
+    "verbb/super-table": "2.0.7",
+    "nystudio107/craft-seomatic": "3.0.20",
+    "solspace/craft3-freeform": "v2.0.4",
+    "clubstudioltd/craft-asset-rev": "v6.0.0",
+    "nystudio107/craft-minify": "1.2.8",
+    "verbb/cp-nav": "2.0.7",
+    "topshelfcraft/wordsmith": "3.0.2",
+    "verbb/default-dashboard": "1.0.1",
+    "ether/simplemap": "v3.3.3"
   },
   "autoload": {
     "psr-4": {
