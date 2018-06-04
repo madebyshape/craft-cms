@@ -1,5 +1,5 @@
 {
-  "name": "craftcms/craft",
+  "name": "madebyshape/craft-3",
   "description": "Craft CMS",
   "keywords": [
     "craft",
@@ -30,7 +30,8 @@
     "verbb/cp-nav": "2.0.7",
     "topshelfcraft/wordsmith": "3.0.2",
     "verbb/default-dashboard": "1.0.1",
-    "ether/simplemap": "v3.3.3"
+    "ether/simplemap": "v3.3.3",
+    "craftcms/mailgun": "1.2.0"
   },
   "autoload": {
     "psr-4": {
