@@ -1,0 +1,29 @@
+{% extends "_layout/global" %}
+
+{# ------- Variables ------- #}
+
+{% set template = {
+   section: 'page',
+   folder: '_page'
+} %}
+
+{# ------- Template ------- #}
+
+{% block content %}
+
+   {% cache %}
+      {% for block in entry.matrix %}
+         {% include '_blocks/' ~ block.type %}
+      {% endfor %}
+   {% cache %}
+
+{% endblock %}
+
+{# ------- Inline ------- #}
+
+{% block inlineCss %}
+   {{ source (entry.slug ~ '.css', ignore_missing = true) }}
+{% endblock %}
+
+{% block inlineJs %}
+{% endblock %}

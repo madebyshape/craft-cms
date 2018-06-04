@@ -1,0 +1,24 @@
+{% extends "_layout/global" %}
+
+{# ------- Variables ------- #}
+
+{% set template = {
+   section: '',
+   folder: ''
+} %}
+
+{# ------- Template ------- #}
+
+{% block content %}
+   {% cache %}
+   {% endcache %}
+{% endblock %}
+
+{# ------- Inline ------- #}
+
+{% block inlineCss %}
+   {{ source('index.css', ignore_missing = true) }}
+{% endblock %}
+
+{% block inlineJs %}
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "_layout/global" %}
+
+{# -------------------------- #}
+{# --- Variables --- #}
+{# -------------------------- #}
+
+	{# -- Message - Variables -- #}
+	
+	{% set message = {
+		handle: 'message404'
+	} %}
+
+	{# -- Meta Data - Variables -- #}	
+
+	{% do craft.sproutSeo.meta({ 
+	    section: 'sproutseo_section:' ~ message.handle
+	}) %}
+
+{# ------------------------- #}
+{# -------- Template ------- #}
+{# ------------------------- #}
+
+{% block content %}
+	{% cache globally using key craft.request.path ~ '-404' for 1 day  %}
+		{% minify %}
+		
+			{% include '_snippets/message' with {
+				handle: message.handle
+			} %}
+			
+		{% endminify %}
+	{% endcache %}
+{% endblock %}

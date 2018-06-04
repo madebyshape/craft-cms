@@ -1,0 +1,27 @@
+{% extends "_layout/global" %}
+
+{# ------- Variables ------- #}
+
+{% set template = {
+   defaultSection: '',
+   folder: ''
+} %}
+
+{# ------- Template ------- #}
+
+{% block content %}
+
+	{% include '_snippets/message' with {
+		handle: message.handle,
+		time: true
+	} %}
+
+{% endblock %}
+
+{# ------- Extras ------- #}
+
+{% block inlineCss %}
+{% endblock %}
+
+{% block inlineJs %}
+{% endblock %}
