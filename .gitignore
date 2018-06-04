@@ -32,3 +32,4 @@ vendor
 storage/*
 web/uploads
 web/uploads/*
+config/license.key
