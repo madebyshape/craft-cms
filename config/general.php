@@ -9,42 +9,44 @@
  */
 
 return [
-    // Global settings
     '*' => [
-        // Default Week Start Day (0 = Sunday, 1 = Monday...)
-        'defaultWeekStartDay' => 0,
+      // Site / Environment
+      'isSystemOn' => true,
+      'securityKey' => getenv('SECURITY_KEY'),
+      // Cache
+      'enableTemplateCaching' => true,
+      'cacheMethod' => 'file',
+      'cacheDuration' => 86400, // 24 Hours
+      // Images / Files
+      'defaultImageQuality' => '100',
+      'extraAllowedFileExtensions' => 'ico,xml,json',
+      // Account
+      'useEmailAsUsername' => true,
+      'testToEmailAddress' => 'development@madebyshape.co.uk',
+      'autoLoginAfterAccountActivation' => true,
+      // URL
+      'omitScriptNameInUrls' => true,
+      'cpTrigger' => 'admin',
+      // Misc
+      'timezone' => 'Europe/London',
+      'defaultWeekStartDay' => 1,
+      'enableCsrfProtection' => true,
+      'allowUpdates' => false,
+      'backupOnUpdate' => true
 
-        // Enable CSRF Protection (recommended)
-        'enableCsrfProtection' => true,
-
-        // Whether generated URLs should omit "index.php"
-        'omitScriptNameInUrls' => true,
-
-        // Control Panel trigger word
-        'cpTrigger' => 'admin',
-
-        // The secure key Craft will use for hashing and encrypting data
-        'securityKey' => getenv('SECURITY_KEY'),
     ],
-
-    // Dev environment settings
     'dev' => [
-        // Base site URL
         'siteUrl' => null,
-
-        // Dev Mode (see https://craftcms.com/support/dev-mode)
         'devMode' => true,
+        'allowUpdates' => true,
+        'enableTemplateCaching' => false
     ],
-
-    // Staging environment settings
     'staging' => [
-        // Base site URL
         'siteUrl' => null,
+        'isSystemOn' => false
     ],
-
-    // Production environment settings
     'production' => [
-        // Base site URL
-        'siteUrl' => null,
-    ],
+        'siteUrl' => null
+
+    ]
 ];
