@@ -1,0 +1,39 @@
+{
+  "name": "craftcms/oauth2-craftid",
+  "description": "Craft OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pixel & Tonic",
+      "homepage": "https://pixelandtonic.com/"
+    }
+  ],
+  "keywords": [
+    "oauth",
+    "oauth2",
+    "client",
+    "authorization",
+    "authentication",
+    "cms",
+    "craftcms",
+    "craftid"
+  ],
+  "require": {
+    "league/oauth2-client": "^2.2.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.0",
+    "satooshi/php-coveralls": "^1.0",
+    "squizlabs/php_codesniffer": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "craftcms\\oauth2\\client\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "craftcms\\oauth2\\client\\test\\": "tests/src/"
+    }
+  }
+}

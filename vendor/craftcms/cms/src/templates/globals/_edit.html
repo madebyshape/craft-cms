@@ -1,0 +1,47 @@
+{% extends "_layouts/cp" %}
+{% set title = globalSet.name|t('site') %}
+{% set fullPageForm = true %}
+
+
+{% block contextMenu %}
+    {% if craft.app.getIsMultiSite() %}
+        {% include "_elements/sitemenu" with {
+            selectedSiteId: globalSet.siteId,
+            urlFormat: "globals/{handle}/#{globalSet.handle}"
+        } %}
+    {% endif %}
+{% endblock %}
+
+
+{% block sidebar %}
+    <nav>
+        <ul>
+            {% for theGlobalSet in editableGlobalSets %}
+                <li><a{% if theGlobalSet.handle == globalSet.handle %} class="sel"{% endif %} href="{{ theGlobalSet.getCpEditUrl() }}">{{ theGlobalSet.name|t('site') }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+{% endblock %}
+
+
+{% block content %}
+    <input type="hidden" name="action" value="globals/save-content">
+    <input type="hidden" name="setId" value="{{ globalSet.id }}">
+    <input type="hidden" name="siteId" value="{{ globalSet.siteId }}">
+    {{ csrfInput() }}
+
+    {% if globalSet.getFieldLayout().getFields() | length %}
+        <div>
+            {% for tab in globalSet.getFieldLayout().getTabs() %}
+                <div id="{{ tab.getHtmlId() }}"{% if not loop.first %} class="hidden"{% endif %}>
+                    {% include "_includes/fields" with {
+                        fields:  tab.getFields(),
+                        element: globalSet
+                    } only %}
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        {{ "This global set doesn’t have any fields assigned to it in its field layout."|t('app') }}
+    {% endif %}
+{% endblock %}

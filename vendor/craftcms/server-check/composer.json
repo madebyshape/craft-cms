@@ -1,0 +1,25 @@
+{
+  "name": "craftcms/server-check",
+  "description": "Craft CMS Server Check",
+  "keywords": [
+    "cms",
+    "craftcms",
+    "requirements",
+    "yii2"
+  ],
+  "homepage": "https://craftcms.com/",
+  "support": {
+    "email": "support@craftcms.com",
+    "issues": "https://github.com/craftcms/server-check/issues?state=open",
+    "forum": "https://craftcms.stackexchange.com/",
+    "source": "https://github.com/craftcms/server-check",
+    "docs": "https://github.com/craftcms/docs",
+    "rss": "https://github.com/craftcms/server-check/releases.atom"
+  },
+  "license": "MIT",
+  "autoload": {
+    "classmap": [
+      "server/requirements"
+    ]
+  }
+}

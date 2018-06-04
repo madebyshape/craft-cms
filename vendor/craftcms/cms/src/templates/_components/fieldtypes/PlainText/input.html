@@ -1,0 +1,23 @@
+{% import "_includes/forms" as forms %}
+
+{%- set class = [
+    'nicetext',
+    (field.code ? 'code' : null)
+]|filter|join(' ') %}
+
+{% set config = {
+    id: name,
+    name: name,
+    value: value,
+    class: class,
+    maxlength: field.charLimit,
+    showCharsLeft: true,
+    placeholder: field.placeholder|t('site'),
+    rows: field.initialRows
+} %}
+
+{% if field.multiline %}
+    {{ forms.textarea(config) }}
+{% else %}
+    {{ forms.text(config) }}
+{% endif %}

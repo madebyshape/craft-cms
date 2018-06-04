@@ -1,0 +1,52 @@
+{% extends "_layouts/cp" %}
+{% set fullPageForm = true %}
+
+{% import "_includes/forms" as forms %}
+
+
+{% block content %}
+    <input type="hidden" name="action" value="globals/save-set">
+    {{ redirectInput('settings/globals') }}
+
+    {% if globalSet.id %}<input type="hidden" name="setId" value="{{ globalSet.id }}">{% endif %}
+
+    <div id="set-settings">
+        {{ forms.textField({
+            first: true,
+            label: "Name"|t('app'),
+            instructions: "What this global set will be called in the CP."|t('app'),
+            id: 'name',
+            name: 'name',
+            value: globalSet.name,
+            errors: globalSet.getErrors('name'),
+            autofocus: true,
+            required: true,
+        }) }}
+
+        {{ forms.textField({
+            label: "Handle"|t('app'),
+            instructions: "How you’ll refer to this global set in the templates."|t('app'),
+            id: 'handle',
+            class: 'code',
+            name: 'handle',
+            value: globalSet.handle,
+            errors: globalSet.getErrors('handle'),
+            required: true
+        }) }}
+
+    </div>
+
+    <div id="set-fieldlayout" class="hidden">
+        {% include "_includes/fieldlayoutdesigner" with {
+            fieldLayout: globalSet.getFieldLayout(),
+            tab: 'fieldlayout'
+        } only %}
+    </div>
+{% endblock %}
+
+
+{% if not globalSet.handle %}
+    {% js %}
+        new Craft.HandleGenerator('#name', '#handle');
+    {% endjs %}
+{% endif %}

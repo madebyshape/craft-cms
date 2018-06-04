@@ -1,0 +1,24 @@
+{% requireAdmin %}
+
+{% set crumbs = [
+    { label: "Settings"|t('app'), url: url('settings') },
+    { label: "Plugins"|t('app'), url: url('settings/plugins') }
+] %}
+
+{% set fullPageForm = true %}
+
+
+{% extends "_layouts/cp" %}
+{% set title = plugin.name %}
+{% set docTitle = title ~ ' - ' ~ "Plugins"|t('app') %}
+
+
+{% block content %}
+    <input type="hidden" name="action" value="plugins/save-plugin-settings">
+    <input type="hidden" name="pluginHandle" value="{{ plugin.handle }}">
+    {{ redirectInput('settings/plugins') }}
+
+    {% namespace 'settings' %}
+        {{ settingsHtml|raw }}
+    {% endnamespace %}
+{% endblock %}

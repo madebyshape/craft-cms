@@ -1,0 +1,49 @@
+{% extends "_layouts/cp" %}
+{% set title = "Form Tests" %}
+{% import "_includes/forms" as forms %}
+
+{% block content %}
+    {{ forms.checkboxSelectField({
+        label: "Checkbox select with “All” option",
+        options: [
+            { value: 'one', label: 'One' },
+            { value: 'two', label: 'Two' },
+            { value: 'three', label: 'Three' },
+        ],
+        showAllOption: true,
+    }) }}
+
+    {{ forms.checkboxSelectField({
+        label: "Checkbox select without “All” option",
+        options: [
+            { value: 'one', label: 'One' },
+            { value: 'two', label: 'Two' },
+            { value: 'three', label: 'Three' },
+        ],
+        showAllOption: false,
+    }) }}
+{% endblock %}
+
+{% js %}
+var $body = $('#content .body');
+
+$body.append(Craft.ui.createCheckboxSelectField({
+    label: 'Checkbox select with “All” option (JS)',
+    options: [
+        { value: 'one', label: 'One' },
+        { value: 'two', label: 'Two' },
+        { value: 'three', label: 'Three' },
+    ],
+    showAllOption: true,
+}));
+
+$body.append(Craft.ui.createCheckboxSelectField({
+    label: 'Checkbox select without “All” option (JS)',
+    options: [
+        { value: 'one', label: 'One' },
+        { value: 'two', label: 'Two' },
+        { value: 'three', label: 'Three' },
+    ],
+    showAllOption: false,
+}));
+{% endjs %}

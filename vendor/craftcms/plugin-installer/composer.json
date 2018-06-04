@@ -1,0 +1,35 @@
+{
+  "name": "craftcms/plugin-installer",
+  "description": "Craft CMS Plugin Installer",
+  "version": "1.5.2",
+  "keywords": [
+    "cms",
+    "composer",
+    "craftcms",
+    "installer",
+    "plugin"
+  ],
+  "homepage": "https://craftcms.com/",
+  "type": "composer-plugin",
+  "support": {
+    "email": "support@craftcms.com",
+    "issues": "https://github.com/craftcms/cms/issues?state=open",
+    "forum": "https://craftcms.stackexchange.com/",
+    "source": "https://github.com/craftcms/cms",
+    "docs": "https://craftcms.com/docs",
+    "rss": "https://craftcms.com/changelog.rss"
+  },
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "require": {
+    "composer-plugin-api": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "craft\\composer\\": "src/"
+    }
+  },
+  "extra": {
+    "class": "craft\\composer\\Plugin"
+  }
+}

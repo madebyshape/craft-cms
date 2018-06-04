@@ -1,0 +1,43 @@
+<?php
+/**
+ * @link https://craftcms.com/
+ * @copyright Copyright (c) Pixel & Tonic, Inc.
+ * @license https://craftcms.github.io/license/
+ */
+
+namespace craft\validators;
+
+use Craft;
+use yii\validators\Validator;
+
+/**
+ * Will validate that the given attribute is a valid URI.
+ *
+ * @author Pixel & Tonic, Inc. <support@pixelandtonic.com>
+ * @since 3.0
+ */
+class UriValidator extends Validator
+{
+    // Properties
+    // =========================================================================
+
+    /**
+     * @var string
+     */
+    public $pattern = '/^\S+$/u';
+
+    // Protected Methods
+    // =========================================================================
+
+    /**
+     * @inheritdoc
+     */
+    protected function validateValue($value)
+    {
+        if (!preg_match($this->pattern, $value)) {
+            return [Craft::t('app', '{attribute} is not a valid URI'), []];
+        }
+
+        return null;
+    }
+}

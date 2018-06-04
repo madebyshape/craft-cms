@@ -1,0 +1,54 @@
+<div class="tabs">
+    <ul>
+        <li data-view="rotate"><i></i>{{ 'Rotate'|t('app') }}</li>
+        <li data-view="crop"><i></i>{{ 'Crop'|t('app') }}</li>
+    </ul>
+</div>
+<div class="views">
+    <div class="rotate hidden" data-view="rotate" data-rotate="true">
+        <div class="rotate-buttons buttons">
+            <div class="rotate-left btn icon leftalign">{{ 'Rotate Left'|t('app') }}</div>
+            <div class="rotate-right btn icon leftalign">{{ 'Rotate Right'|t('app') }}</div>
+        </div>
+        <div class="flip-buttons buttons">
+            <div class="flip-vertical btn icon leftalign">{{ 'Flip Vertical'|t('app') }}</div>
+            <div class="flip-horizontal btn icon leftalign">{{ 'Flip Horizontal'|t('app') }}</div>
+        </div>
+        <div class="buttons">
+            <div class="focal-point btn icon leftalign">{{ 'Focal Point'|t('app') }}</div>
+        </div>
+    </div>
+    <div class="crop hidden" data-view="crop" data-crop="true">
+        <div class="buttons">
+            <div class="focal-point btn icon leftalign">{{ 'Focal Point'|t('app') }}</div>
+            <div class="constraint btn icon menubtn no-outline">{{ 'Unconstrained'|t('app') }}</div>
+            <div class="menu dark">
+                <ul>
+                    <li><a class="" data-constraint="none">{{ 'Unconstrained'|t('app') }}</a></li>
+                    <li><a class="" data-constraint="original">{{ 'Original'|t('app') }}</a></li>
+                    <li><a class="" data-constraint="1">{{ 'Square'|t('app') }}</a></li>
+                    <li><a class="" data-constraint="1.78">16:9</a></li>
+                    <li><a class="" data-constraint="0.8">8:10</a></li>
+                    <li><a class="" data-constraint="0.71">5:7</a></li>
+                    <li><a class="" data-constraint="1.3">4:3</a></li>
+                    <li><a class="" data-constraint="0.6">3:5</a></li>
+                    <li><a class="" data-constraint="1.5">3:2</a></li>
+                </ul>
+           </div>
+        </div>
+
+    </div>
+</div>
+<div class="image-container">
+    <div class="image">
+        <canvas id="image-canvas">
+        </canvas>
+        <canvas id="cropping-canvas">
+        </canvas>
+    </div>
+    <div class="image-tools hidden">
+        <div data-view="transform" class="straightening">
+            <div id="slide-rule" class="slide-rule"></div>
+        </div>
+    </div>
+</div>

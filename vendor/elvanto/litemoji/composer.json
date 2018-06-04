@@ -1,0 +1,36 @@
+{
+    "name": "elvanto/litemoji",
+    "description": "A PHP library simplifying the conversion of unicode, HTML and shortcode emoji.",
+    "type": "library",
+    "keywords": ["php-emoji", "emoji"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.0",
+        "milesj/emojibase": "*"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "milesj/emojibase",
+                "version": "3.0.0",
+                "source": {
+                    "url": "https://github.com/milesj/emojibase",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
+    "autoload": {
+        "psr-4": {"LitEmoji\\":"src/"}
+    },
+    "scripts": {
+        "update-resources": [
+            "@php bin/generate-shortcodes-array.php"
+        ]
+    }
+}

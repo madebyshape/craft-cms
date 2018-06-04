@@ -1,0 +1,22 @@
+{% requireAdmin %}
+
+{% extends "_layouts/cp" %}
+{% set title = "User Settings"|t('app') %}
+
+{% set crumbs = [
+    { label: "Settings"|t('app'), url: url('settings') }
+] %}
+
+{% set navItems = {
+    groups: CraftEdition == CraftPro ? { label: "User Groups"|t('app'), url: url('settings/users') },
+    fields: { label: "Fields"|t('app'), url: url('settings/users/fields') },
+    settings: { label: "Settings"|t('app'), url: url('settings/users/settings') }
+}|filter %}
+
+{% set docTitle = navItems[selectedNavItem].label~' - '~title %}
+
+{% block sidebar %}
+    <nav>
+        {% include "_includes/nav" with { items: navItems, selectedItem: selectedNavItem } only %}
+    </nav>
+{% endblock %}
