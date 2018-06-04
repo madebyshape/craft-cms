@@ -1,6 +1,7 @@
 # Gulp / Packages
 
 node_modules
+composer.lock
 
 # Sass
 
