@@ -4,4 +4,4 @@ This is a boilerplate MadeByShape use for starting Craft CMS projects.
 
 ## install
 
-`composer require madebyshape/craft-3`
+`composer create-project madebyshape/craft-3`
