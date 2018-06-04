@@ -26,3 +26,10 @@ This is a boilerplate MadeByShape use for starting Craft CMS projects.
    - Default Dashboard
    - Simplemap
    - Mailgun
+
+## Developers
+
+MadeByShape
+http://madebyshape.co.uk
+
+Jason Mayo (ByMayo)
