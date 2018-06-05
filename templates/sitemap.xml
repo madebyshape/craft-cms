@@ -1,3 +1,0 @@
-{% cache for 6 hours %}
-	{{ craft.sproutSeo.sitemap() }}
-{% endcache %}
