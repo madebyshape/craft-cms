@@ -3,22 +3,25 @@
 {# ------- Variables ------- #}
 
 {% set template = {
-   defaultSection: '',
+   section: '',
    folder: ''
 } %}
 
 {# ------- Template ------- #}
 
 {% block content %}
+   {% cache %}
 
-	{% include '_snippets/message' with {
-		handle: message.handle,
-		time: true
-	} %}
+      <h1>Page Not Found</h1>
 
+      <p>The page or file you requested is no longer available.</p>
+
+      <em>Error: 410 - Page Not Found</em>
+
+   {% endcache %}
 {% endblock %}
 
-{# ------- Extras ------- #}
+{# ------- Inline ------- #}
 
 {% block inlineCss %}
 {% endblock %}

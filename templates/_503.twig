@@ -1,0 +1,32 @@
+{% extends "_layout/global" %}
+
+{# ------- Variables ------- #}
+
+{% set template = {
+   section: '',
+   folder: ''
+} %}
+
+{# ------- Template ------- #}
+
+{% block content %}
+   {% cache %}
+
+      <h1>Maintenance</h1>
+
+      <p>Sorry, but we are temporarily unavailable whilst we perform scheduled maintenance.</p>
+      <p>We don't expect this to last long so please try again shortly.</p>
+      <p>We're sorry for any inconvenience. </p>
+
+      <em>Error: 503 Service Unavailable</em>
+
+   {% endcache %}
+{% endblock %}
+
+{# ------- Inline ------- #}
+
+{% block inlineCss %}
+{% endblock %}
+
+{% block inlineJs %}
+{% endblock %}

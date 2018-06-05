@@ -1,0 +1,30 @@
+{% extends "_layout/global" %}
+
+{# ------- Variables ------- #}
+
+{% set template = {
+   section: '',
+   folder: ''
+} %}
+
+{# ------- Template ------- #}
+
+{% block content %}
+   {% cache %}
+
+      <h1>Page Not Found</h1>
+
+      <p>The page or file you requested can't be found.</p>
+
+      <em>Error: 404 - Page Not Found</em>
+
+   {% endcache %}
+{% endblock %}
+
+{# ------- Inline ------- #}
+
+{% block inlineCss %}
+{% endblock %}
+
+{% block inlineJs %}
+{% endblock %}

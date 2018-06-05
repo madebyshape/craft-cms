@@ -32,12 +32,13 @@ return [
       'defaultWeekStartDay' => 1,
       'enableCsrfProtection' => true,
       'allowUpdates' => false,
-      'backupOnUpdate' => true
+      'backupOnUpdate' => true,
+      'errorTemplatePrefix' => '_'
 
     ],
     'dev' => [
         'siteUrl' => null,
-        'devMode' => true,
+        'devMode' => false,
         'allowUpdates' => true,
         'enableTemplateCaching' => false
     ],
@@ -47,6 +48,5 @@ return [
     ],
     'production' => [
         'siteUrl' => null
-
     ]
 ];
