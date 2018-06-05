@@ -1,6 +1,8 @@
 # Craft CMS 3.x
 
-This is a boilerplate MadeByShape use for starting Craft CMS projects.
+This is a boilerplate we use internally for Craft CMS projects. It's built with the intention of a custom gulp script as well as using Foundation CSS framework.
+
+Feel free to use.
 
 ## Install
 
@@ -8,28 +10,19 @@ This is a boilerplate MadeByShape use for starting Craft CMS projects.
 
 ## Whats included
 
-- Craft CMS
-- Foundation templates
-- .gitignore to ignore specific project files
+- Craft CMS 3.x
+- Templates
+   - Foundation base
+   - Error / Exception
 - Config
    - Custom general config settings
-   - Plugin settings
-- Plugins
-   - Imager
-   - Super Table
-   - SEOMatic (£)
-   - Freeform Lite (£)
-   - Asset Rev
-   - Minify
-   - CP Nav
-   - Wordsmith
-   - Default Dashboard
-   - Simplemap
-   - Mailgun
+   - Plugin settings (Asset Rev, Imager, Minify etc)
+- Useful Plugins
+- .gitignore to ignore specific project files
 
 ## Developers
 
-MadeByShape
+**MadeByShape**
 http://madebyshape.co.uk
 
-Jason Mayo (ByMayo)
+**Jason Mayo** (ByMayo)
