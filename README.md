@@ -23,4 +23,4 @@ Feel free to use.
 ## Developers
 
 **MadeByShape** - https://madebyshape.co.uk
-**Jason Mayo** - https://github.com/bymayo/
+**Jason Mayo** - https://github.com/bymayo
