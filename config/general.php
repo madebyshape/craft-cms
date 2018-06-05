@@ -38,7 +38,7 @@ return [
     ],
     'dev' => [
         'siteUrl' => null,
-        'devMode' => false,
+        'devMode' => true,
         'allowUpdates' => true,
         'enableTemplateCaching' => false
     ],
