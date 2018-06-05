@@ -9,41 +9,22 @@
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      {#
-      {%- include "_snippets/favicons" -%} #}
 
-      {# CSS #}
+      {# Favicons #}
+      {{ source('_partials/favicons', ignore_missing = true) }}
+
+      {# Inline / Critical CSS #}
       {% if block('inlineCss') is defined %}
          <style>
             {% block inlineCss %}{% endblock %}
          </style>
       {% endif %}
 
+      {# CSS #}
       <link rel="preload" href="{{ rev('/dist/app.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-      <noscript><link rel="stylesheet" href="{{ rev('/dist/app.css') }}"></noscript>
-
-      {# Include load.js #}
-
-      {# Google Analytics #}
-      {# {% if craft.config.env == 'production' and general.globalGoogleAnalytics | length and not craft.request.isLivePreview %}
-         <script>
-            (function(i, s, o, g, r, a, m) {
-               i['GoogleAnalyticsObject'] = r;
-               i[r] = i[r] || function() {
-                  (i[r].q = i[r].q || []).push(arguments)
-               },
-               i[r].l = 1 * new Date();
-               a = s.createElement(o),
-               m = s.getElementsByTagName(o)[0];
-               a.async = 1;
-               a.src = g;
-               m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-            ga('create', '{{ general.globalGoogleAnalytics }}', 'auto');
-            ga('send', 'pageview');
-         </script>
-      {% endif %} #}
+      <noscript>
+         <link rel="stylesheet" href="{{ rev('/dist/app.css') }}">
+      </noscript>
 
    </head>
 
@@ -52,7 +33,9 @@
       {% block body %}{% endblock %}
 
       {# Javascript #}
-      {# <script src="{{ craft.cacheBuster.bust('/dist/app.js') }}"></script> #}
+      <script src="{{ rev('/dist/app.js') }}"></script>
+
+      {# Inline Javascript#}
       {% block inlineJs %}{% endblock %}
 
    </body>
