@@ -15,7 +15,7 @@
       {% for block in entry.matrix %}
          {% include '_blocks/' ~ block.type %}
       {% endfor %}
-   {% cache %}
+   {% endcache %}
 
 {% endblock %}
 
