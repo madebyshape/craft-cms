@@ -34,7 +34,7 @@
       {% if asset.extension == 'svg' %}
          {{ svg(asset) }}
       {% else %}
-         <img src="{{ asset.url }}" alt="{{ icon.title }}">
+         <img src="{{ asset.url }}" alt="{{ asset.title }}">
       {% endif %}
    {% endif %}
 
