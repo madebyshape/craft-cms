@@ -1,3 +1,17 @@
+{# ------- Example - Macro Attributes  ------- #}
+
+{% macro exampleMacroAttributes(attributes) %}
+
+   {% set defaults = {
+      list: null
+   } %}
+
+   {% set attributes = defaults|merge(attributes) %}
+
+   {{ attributes.list }}
+
+{% endmacro %}
+
 {# ------- Date ------- #}
 
 {% macro date(date, relative) %}
@@ -9,5 +23,19 @@
   {% else %}
     {{ date|date(dateFormat) }}
   {% endif %}
+
+{% endmacro %}
+
+{# ------- SVG ------- #}
+
+{% macro svg(asset) %}
+
+   {% if asset|length %}
+      {% if asset.extension == 'svg' %}
+         {{ svg(asset) }}
+      {% else %}
+         <img src="{{ asset.url }}" alt="{{ icon.title }}">
+      {% endif %}
+   {% endif %}
 
 {% endmacro %}
