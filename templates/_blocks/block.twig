@@ -1,7 +1,4 @@
-{%- cache -%}
-   {%- minify -%}
-      {% if entry is defined and entry.matrix.block is defined %}
-        {# Block #}
-      {% endif %}
-   {%- endminify -%}
-{%- endcache -%}
+{% cache %}
+   {% minify %}
+   {% endminify %}
+{% endcache %}

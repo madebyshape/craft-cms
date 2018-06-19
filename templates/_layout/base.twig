@@ -1,45 +1,49 @@
-{%- minify -%}
+{% minify %}
 
-{% import '_partials/macros' as macro %}
+   {% import '_partials/macros' as macro %}
 
-<!doctype html>
-<html class="no-js" lang="{{ craft.app.language|slice(0,2) }}">
-   <head>
+   <!doctype html>
+   <html class="no-js" lang="{{ craft.app.language|slice(0,2) }}">
+      <head>
 
-      <meta charset="utf-8">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         <meta charset="utf-8">
+         <meta http-equiv="x-ua-compatible" content="ie=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-      {# Favicons #}
-      {{ source('_partials/favicons', ignore_missing = true) }}
+         {# Favicons #}
+         {{ source('_partials/favicons', ignore_missing = true) }}
 
-      {# Inline / Critical CSS #}
-      {% if block('inlineCss') is defined %}
-         <style>
-            {% block inlineCss %}{% endblock %}
-         </style>
-      {% endif %}
+         {# Inline / Critical CSS #}
+         {% if
+            block('inlineCss')|length or
+            block('criticalCss')|length
+         %}
+            <style>
+               {% block criticalCss %}{% endblock %}
+               {% block inlineCss %}{% endblock %}
+            </style>
+         {% endif %}
 
-      {# CSS #}
-      <link rel="preload" href="{{ rev('/dist/app.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-      <noscript>
-         <link rel="stylesheet" href="{{ rev('/dist/app.css') }}">
-      </noscript>
+         {# CSS #}
+         <link rel="{{ block('criticalCss')|length ? 'preload' : 'stylesheet' }}" href="{{ rev('/dist/app.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+         <noscript>
+            <link rel="stylesheet" href="{{ rev('/dist/app.css') }}">
+         </noscript>
 
-   </head>
+      </head>
 
-   <body>
+      <body>
 
-      {% block body %}{% endblock %}
+         {% block body %}{% endblock %}
 
-      {# Javascript #}
-      <script src="{{ rev('/dist/app.js') }}"></script>
+         {# Javascript #}
+         <script src="{{ rev('/dist/app.js') }}"></script>
 
-      {# Inline Javascript#}
-      {% block inlineJs %}{% endblock %}
+         {# Inline Javascript#}
+         {% block inlineJs %}{% endblock %}
 
-   </body>
+      </body>
 
-</html>
+   </html>
 
-{%- endminify -%}
+{% endminify %}

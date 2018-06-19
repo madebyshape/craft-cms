@@ -12,17 +12,26 @@
 {% block content %}
 
    {% cache %}
-      {% for block in entry.matrix %}
-         {% include '_blocks/' ~ block.type %}
-      {% endfor %}
+      {#
+         {% for block in entry.matrix %}
+            {% include '_blocks/' ~ block.type %}
+         {% endfor %}
+      #}
    {% endcache %}
 
+{% endblock %}
+
+{# ------- Critical ------- #}
+
+{% block criticalCss %}
+   {%- spaceless -%}
+      {{ source (entry.slug ~ '.css', ignore_missing = true) }}
+   {%- endspaceless -%}
 {% endblock %}
 
 {# ------- Inline ------- #}
 
 {% block inlineCss %}
-   {{ source (entry.slug ~ '.css', ignore_missing = true) }}
 {% endblock %}
 
 {% block inlineJs %}
