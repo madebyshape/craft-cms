@@ -8,6 +8,12 @@ Feel free to use.
 
 `composer create-project madebyshape/craft-3`
 
+## Pulling from repo
+
+`./craft setup`
+
+If using MAMP, ensure the server name is `127.0.0.1` and `Allow network access to MySQL` is enabled in MAMP - https://craftcms.stackexchange.com/questions/23056/craft-cli-rc1-connectivity-issues-with-mamp-pro/23058
+
 ## Whats included
 
 - Craft CMS 3.x
