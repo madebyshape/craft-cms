@@ -8,7 +8,7 @@ Feel free to use.
 
 `composer create-project madebyshape/craft-3`
 
-## Pulling from repo
+## Generate .env (If project exists)
 
 `./craft setup`
 
