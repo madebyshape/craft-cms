@@ -44,9 +44,9 @@
 
 {% endmacro %}
 
-{# ------- Lazy Image ------- #}
+{# ------- Lazy Load ------- #}
 
-{% macro lazyImage(asset, transforms) %}
+{% macro lazyLoad(asset, transforms) %}
 
    {% if asset|length %}
       {% set assetTransform = craft.imager.transformImage(
