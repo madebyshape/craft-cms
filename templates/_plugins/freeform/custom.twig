@@ -1,0 +1,66 @@
+{% if form.submittedSuccessfully %}
+    <div class="form-notification">
+      Thank you for submitting your details, we will be in touch shortly.
+   </div>
+{% endif %}
+
+{{ form.renderTag }}
+
+   {% if form.pages|length > 1 %}
+      <nav class="form-pages">
+         <ul>
+            {% for page in form.pages %}
+               <li>
+                  {% if form.currentPage.index == page.index %}
+                     <a href="javascript:;">{{ page.label }}</a>
+                  {% else %}
+                     {{ page.label }}
+                  {% endif %}
+               </li>
+            {% endfor %}
+         </ul>
+      </nav>
+   {% endif %}
+
+   {% for row in form %}
+       <div class="row field-container-row {{ form.customAttributes.rowClass }}">
+           {% for field in row %}
+               <div class="column medium-{{ 12 / row|length }} field-container field-{{ field.type }}{{ field.type == 'submit' ? " align-" ~ field.position }}">
+                  {% if field.type != "submit" %}
+                     {{ field.renderLabel(
+                        {
+                           labelClass: field.required ? "is-required",
+                        }
+                     ) }}
+                  {% endif %}
+                  {% if field.type == "submit" %}
+                     <button class="button">
+                        <span>{{ field.label }}</span>
+                     </button>
+                  {% elseif field.type == "select" %}
+                     <div class="field-select">
+                        {{ field.renderInput({
+                            labelClass: field.required ? "-required",
+                            errorClass: "field-errors",
+                            instructionsClass: "field-instructions",
+                        }) }}
+                     </div>
+                  {% else %}
+                      {{ field.renderInput() }}
+                   {% endif %}
+                   {{ field.renderInstructions(
+                      {
+                         instructionsClass: "field-instructions"
+                      }
+                   ) }}
+                   {{ field.renderErrors(
+                      {
+                         errorClass: "field-errors"
+                      }
+                   ) }}
+               </div>
+           {% endfor %}
+       </div>
+   {% endfor %}
+
+{{ form.renderClosingTag }}
