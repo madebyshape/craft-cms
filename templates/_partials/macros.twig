@@ -28,14 +28,39 @@
 
 {# ------- SVG ------- #}
 
-{% macro svg(asset) %}
+{% macro svg(asset, transforms) %}
 
    {% if asset|length %}
       {% if asset.extension == 'svg' %}
          {{ svg(asset) }}
       {% else %}
-         <img src="{{ asset.url }}" alt="{{ asset.title }}">
+         {% set assetTransform = craft.imager.transformImage(
+            asset,
+            transformParams
+         ) %}
+         <img src="{{ assetTransform.url }}" alt="{{ asset.title }}">
       {% endif %}
+   {% endif %}
+
+{% endmacro %}
+
+{# ------- Lazy Image ------- #}
+
+{% macro lazyImage(asset, transforms) %}
+
+   {% if asset|length %}
+      {% set assetTransform = craft.imager.transformImage(
+         asset,
+         transforms
+      ) %}
+      <div class="lazy-load-container" style="background-color: {{ craft.imager.getDominantColor(assetTransform.url) }}">
+         <img
+            src="{{ craft.imager.placeholder({ width: transforms.width, height: transforms.height }) }}"
+            data-src="{{ assetTransform.url }}"
+            alt="{{ asset.title }}"
+            class="js-lazy-load"
+         >
+      </div>
    {% endif %}
 
 {% endmacro %}
