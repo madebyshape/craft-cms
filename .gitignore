@@ -33,4 +33,5 @@ vendor
 storage/*
 web/uploads
 web/uploads/*
+web/imager/*
 config/license.key
