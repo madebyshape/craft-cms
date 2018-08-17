@@ -32,7 +32,8 @@
     "verbb/default-dashboard": "1.0.1",
     "ether/simplemap": "v3.3.3",
     "craftcms/mailgun": "1.2.0",
-    "craftcms/redactor": "2.1.0"
+    "craftcms/redactor": "2.1.0",
+    "firstborn/migrationmanager": "v3.0.11"
   },
   "autoload": {
     "psr-4": {
