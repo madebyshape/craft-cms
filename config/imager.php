@@ -1,3 +1,11 @@
 <?php
-   return array(
-   );
+
+return [
+   '*' => [
+   ],
+    'dev' => [
+        'noop' => true,
+        'suppressExceptions' => true,
+        'skipExecutableExistCheck' => true
+    ]
+];
