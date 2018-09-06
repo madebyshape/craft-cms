@@ -22,7 +22,6 @@ return [
       'extraAllowedFileExtensions' => 'ico,xml,json',
       // Account
       'useEmailAsUsername' => true,
-      'testToEmailAddress' => 'development@madebyshape.co.uk',
       'autoLoginAfterAccountActivation' => true,
       // URL
       'omitScriptNameInUrls' => true,
@@ -40,7 +39,8 @@ return [
         'siteUrl' => null,
         'devMode' => true,
         'allowUpdates' => true,
-        'enableTemplateCaching' => false
+        'enableTemplateCaching' => false,
+        'testToEmailAddress' => 'development@madebyshape.co.uk'
     ],
     'staging' => [
         'siteUrl' => null,
