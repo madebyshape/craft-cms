@@ -10,17 +10,23 @@
 {# ------- Template ------- #}
 
 {% block content %}
-   {% cache %}
+   {%- minify -%}
 
-      <h1>Maintenance</h1>
+      <div class="section">
+         <div class="section-container">
 
-      <p>Sorry, but we are temporarily unavailable whilst we perform scheduled maintenance.</p>
-      <p>We don't expect this to last long so please try again shortly.</p>
-      <p>We're sorry for any inconvenience. </p>
+            <h1>Maintenance</h1>
 
-      <em>Error: 503 Service Unavailable</em>
+            <p>Sorry, but we are temporarily unavailable whilst we perform scheduled maintenance.</p>
+            <p>We don't expect this to last long so please try again shortly.</p>
+            <p>We're sorry for any inconvenience. </p>
 
-   {% endcache %}
+            <em>Error: 503 Service Unavailable</em>
+
+         </div>
+      </div>
+
+   {%- endminify -%}
 {% endblock %}
 
 {# ------- Critical ------- #}

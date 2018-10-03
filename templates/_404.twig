@@ -10,15 +10,21 @@
 {# ------- Template ------- #}
 
 {% block content %}
-   {% cache %}
+   {%- minify -%}
 
-      <h1>Page Not Found</h1>
+      <div class="section">
+         <div class="section-container">
 
-      <p>The page or file you requested can't be found.</p>
+            <h1>Page Not Found</h1>
 
-      <em>Error: 404 - Page Not Found</em>
+            <p>The page or file you requested can't be found.</p>
 
-   {% endcache %}
+            <em>Error: 404 - Page Not Found</em>
+
+         </div>
+      </div>
+
+   {%- endminify -%}
 {% endblock %}
 
 {# ------- Critical ------- #}
