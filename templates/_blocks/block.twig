@@ -1,4 +1,4 @@
-{% cache globally using block.id %}
-   {% minify %}
-   {% endminify %}
-{% endcache %}
+{%- cache globally using key 'block-' ~ block.id -%}
+   {%- minify -%}
+   {%- endminify -%}
+{%- endcache -%}

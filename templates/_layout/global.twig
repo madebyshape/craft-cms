@@ -8,9 +8,19 @@
 
 	{# Header #}
 
+	{%- cache globally using key 'site-header' -%}
+	   {%- minify -%}
+	   {%- endminify -%}
+	{%- endcache -%}
+
 	{% block content %}
 	{% endblock %}
 
 	{# Footer #}
+
+	{%- cache globally using key 'site-footer' -%}
+	   {%- minify -%}
+	   {%- endminify -%}
+	{%- endcache -%}
 
 {% endblock %}
