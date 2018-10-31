@@ -165,6 +165,7 @@
 # HTTPS & Remove www.
 # ----------------------------------------------------------------------
 
+   # Remove this block if HTTPS is required and use block below
    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
    RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 		
