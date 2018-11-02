@@ -33,7 +33,8 @@
     "ether/simplemap": "v3.3.3",
     "craftcms/mailgun": "1.2.0",
     "craftcms/redactor": "2.1.0",
-    "firstborn/migrationmanager": "v3.0.11"
+    "fruitstudios/linkit": "1.1.4",
+    "nystudio107/craft-retour": "3.0.15"
   },
   "autoload": {
     "psr-4": {
