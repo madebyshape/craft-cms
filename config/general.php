@@ -16,7 +16,8 @@ return [
       // Cache
       'enableTemplateCaching' => true,
       'cacheMethod' => 'file',
-      'cacheDuration' => 86400, // 24 Hours
+      'cacheDuration' => 0, // 86400 = 24 Hours
+      'cacheElementQueries' => false,
       // Images / Files
       'defaultImageQuality' => '100',
       'extraAllowedFileExtensions' => 'ico,xml,json',
@@ -32,8 +33,12 @@ return [
       'enableCsrfProtection' => true,
       'allowUpdates' => false,
       'backupOnUpdate' => true,
-      'errorTemplatePrefix' => '_'
-
+      'errorTemplatePrefix' => '_',
+      // Aliases
+      'aliases' => [
+         '@assetBaseUrl' => getenv('ASSETS_URL'),
+         '@assetBasePath' => getenv('ASSETS_PATH')
+      ]
     ],
     'dev' => [
         'siteUrl' => null,

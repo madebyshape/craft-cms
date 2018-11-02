@@ -16,7 +16,8 @@
          {# Inline / Critical CSS #}
          {% if
             block('inlineCss')|length or
-            block('criticalCss')|length
+            block('criticalCss')|length and
+            not craft.config.devMode
          %}
             <style>
                {% block criticalCss %}{% endblock %}
@@ -25,9 +26,9 @@
          {% endif %}
 
          {# CSS #}
-         <link rel="{{ block('criticalCss')|length ? 'preload' : 'stylesheet' }}" href="{{ rev('/dist/app.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+         <link rel="{{ block('criticalCss')|length and not craft.config.devMode ? 'preload' : 'stylesheet' }}" href="/dist/{{ rev('app.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
          <noscript>
-            <link rel="stylesheet" href="{{ rev('/dist/app.css') }}">
+            <link rel="stylesheet" href="/dist/{{ rev('app.css') }}">
          </noscript>
 
       </head>
