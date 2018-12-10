@@ -10,15 +10,13 @@
 {# ------- Template ------- #}
 
 {% block content %}
-   {%- cache globally using key 'site-footer' -%}
-      {%- minify -%}
-         {#
-            {% for block in entry.matrix %}
-               {% include '_blocks/' ~ block.type %}
-            {% endfor %}
-         #}
-      {%- endminify -%}
-   {%- endcache -%}
+   {%- minify -%}
+      {#
+         {% for block in entry.matrix %}
+            {% include '_blocks/' ~ block.type %}
+         {% endfor %}
+      #}
+   {%- endminify -%}
 {% endblock %}
 
 {# ------- Critical ------- #}
