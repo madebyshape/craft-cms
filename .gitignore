@@ -26,11 +26,14 @@ Thumbs.db
 
 # Craft CMS
 
+cpresources
 vendor
 .env
 *.log
 storage/*
-web/uploads
-web/uploads/*
-web/imager/*
 config/license.key
+
+web/uploads
+web/imager
+public_html/uploads
+public_html/imager
