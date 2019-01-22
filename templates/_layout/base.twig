@@ -38,7 +38,7 @@
          {% block body %}{% endblock %}
 
          {# Javascript #}
-         <script src="{{ rev('/dist/app.js') }}"></script>
+         <script src="/dist/{{ rev('app.js') }}"></script>
 
          {# Inline Javascript#}
          {% block inlineJs %}{% endblock %}
