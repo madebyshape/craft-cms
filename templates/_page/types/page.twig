@@ -10,13 +10,15 @@
 {# ------- Template ------- #}
 
 {% block content %}
-   {%- minify -%}
-      {#
-         {% for block in entry.matrix %}
-            {% include '_blocks/' ~ block.type %}
-         {% endfor %}
-      #}
-   {%- endminify -%}
+   {%- cache globally using key craft.app.request.pathInfo ~ (craft.app.request.pageNum ? '/p' ~ craft.app.request.pageNum) -%}
+      {%- minify -%}
+         {#
+            {% for block in entry.matrix %}
+               {% include '_blocks/' ~ block.type %}
+            {% endfor %}
+         #}
+      {%- endminify -%}
+   {%- endcache -%}
 {% endblock %}
 
 {# ------- Critical ------- #}
