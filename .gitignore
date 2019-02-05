@@ -33,7 +33,7 @@ vendor
 storage/*
 config/license.key
 
+# Asset Folders
+
 web/uploads
-web/imager
 public_html/uploads
-public_html/imager
