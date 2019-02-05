@@ -11,7 +11,7 @@
 return [
     '*' => [
       // Site / Environment
-      'isSystemOn' => true,
+      'isSystemLive' => true,
       'securityKey' => getenv('SECURITY_KEY'),
       'useProjectConfigFile' => true,
       'siteUrl' => null,
