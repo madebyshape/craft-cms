@@ -1,0 +1,178 @@
+dateModified: 1549365955
+email:
+  fromEmail: development@madebyshape.co.uk
+  fromName: 'Craft 3'
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  c25ff0fd-e302-4d33-98d2-acb0fd6d99fe:
+    name: Common
+  db54542b-ad10-4ea1-867a-7519166f5e1b:
+    name: 'Meta & Social Data'
+fields:
+  74c5f513-b57f-4ae2-97f3-fefcab6c5c5c:
+    contentColumnType: text
+    fieldGroup: db54542b-ad10-4ea1-867a-7519166f5e1b
+    handle: metaSocialData
+    instructions: null
+    name: 'Meta & Social Data'
+    searchable: '1'
+    settings:
+      facebookTabEnabled: ''
+      generalEnabledFields:
+        - seoTitle
+        - seoDescription
+        - seoImage
+      generalTabEnabled: '1'
+      sitemapTabEnabled: ''
+      twitterTabEnabled: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: nystudio107\seomatic\fields\SeoSettings
+plugins:
+  assetrev:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  cp-nav:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 2.0.0
+    settings: null
+  default-dashboard:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  freeform:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 2.1.3
+    settings: null
+  imager:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 2.0.0
+    settings: null
+  linkit:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.8
+    settings: null
+  mailgun:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  minify:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  redactor:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 2.2.1
+    settings: null
+  retour:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 3.0.6
+    settings: null
+  seomatic:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 3.0.6
+    settings: null
+  simplemap:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 3.0.0
+    settings: null
+  super-table:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 2.0.8
+    settings: null
+  wordsmith:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 0.0.0.0
+    settings: null
+sections:
+  d235d03c-2306-4585-a3fa-48f48c669a02:
+    enableVersioning: '1'
+    entryTypes:
+      fbfeddce-344d-4245-baa0-d4be582c9f98:
+        handle: page
+        hasTitleField: '1'
+        name: Page
+        sortOrder: '1'
+        titleFormat: null
+        titleLabel: Title
+    handle: page
+    name: Page
+    propagateEntries: '1'
+    siteSettings:
+      18e7409d-9630-420d-a560-141630439111:
+        enabledByDefault: '1'
+        hasUrls: '1'
+        template: _page/entry
+        uriFormat: '{parent.uri}/{slug}'
+    structure:
+      maxLevels: null
+      uid: c7a47758-0699-4815-8174-4ce0148edfc8
+    type: structure
+siteGroups:
+  5163b3a2-b6de-4022-ba4f-399addc3c08a:
+    name: 'Craft 3'
+sites:
+  18e7409d-9630-420d-a560-141630439111:
+    baseUrl: '@web/'
+    handle: default
+    hasUrls: '1'
+    language: en-GB
+    name: 'Craft 3'
+    primary: '1'
+    siteGroup: 5163b3a2-b6de-4022-ba4f-399addc3c08a
+    sortOrder: '1'
+system:
+  edition: solo
+  live: true
+  name: 'Craft 3'
+  schemaVersion: 3.1.23
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true
+volumes:
+  5ed2705d-54b7-4073-90f2-acf7159d6285:
+    handle: files
+    hasUrls: '1'
+    name: Files
+    settings:
+      path: '@webroot/uploads/files'
+    sortOrder: '2'
+    type: craft\volumes\Local
+    url: '@web/uploads/files'
+  8794889b-f2f8-44b5-b591-c54e770b05e7:
+    handle: images
+    hasUrls: '1'
+    name: Images
+    settings:
+      path: '@webroot/uploads/images'
+    sortOrder: '1'
+    type: craft\volumes\Local
+    url: '@web/uploads/images'
+  c6999de4-0ef8-4264-ac3a-7eff6af05101:
+    handle: icons
+    hasUrls: '1'
+    name: Icons
+    settings:
+      path: '@webroot/uploads/icons'
+    sortOrder: '3'
+    type: craft\volumes\Local
+    url: '@web/uploads/icons'

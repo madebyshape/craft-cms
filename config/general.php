@@ -13,6 +13,8 @@ return [
       // Site / Environment
       'isSystemOn' => true,
       'securityKey' => getenv('SECURITY_KEY'),
+      'useProjectConfigFile' => true,
+      'siteUrl' => null,
       // Cache
       'enableTemplateCaching' => true,
       'cacheMethod' => 'file',
@@ -41,17 +43,16 @@ return [
       ]
     ],
     'dev' => [
-        'siteUrl' => null,
         'devMode' => true,
         'allowUpdates' => true,
         'enableTemplateCaching' => false,
         'testToEmailAddress' => 'development@madebyshape.co.uk'
     ],
     'staging' => [
-        'siteUrl' => null,
-        'isSystemOn' => false
+        'isSystemLive' => false,
+        'allowAdminChanges' => false
     ],
     'production' => [
-        'siteUrl' => null
+        'allowAdminChanges' => false
     ]
 ];
