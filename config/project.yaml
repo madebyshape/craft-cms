@@ -1,4 +1,4 @@
-dateModified: 1549365955
+dateModified: 1549367099
 email:
   fromEmail: development@madebyshape.co.uk
   fromName: 'Craft 3'
@@ -13,15 +13,20 @@ fields:
     contentColumnType: text
     fieldGroup: db54542b-ad10-4ea1-867a-7519166f5e1b
     handle: metaSocialData
-    instructions: null
+    instructions: ''
     name: 'Meta & Social Data'
-    searchable: '1'
+    searchable: true
     settings:
+      elementDisplayPreviewType: google
       facebookTabEnabled: ''
       generalEnabledFields:
+        - seoPreview
         - seoTitle
+        - siteNamePosition
         - seoDescription
+        - seoKeywords
         - seoImage
+        - robots
       generalTabEnabled: '1'
       sitemapTabEnabled: ''
       twitterTabEnabled: ''
@@ -104,11 +109,21 @@ sections:
     enableVersioning: '1'
     entryTypes:
       fbfeddce-344d-4245-baa0-d4be582c9f98:
+        fieldLayouts:
+          693150cd-6246-4e09-b9e8-1581605cc7b0:
+            tabs:
+              -
+                fields:
+                  74c5f513-b57f-4ae2-97f3-fefcab6c5c5c:
+                    required: false
+                    sortOrder: 1
+                name: 'Meta & Social Data'
+                sortOrder: 1
         handle: page
-        hasTitleField: '1'
+        hasTitleField: true
         name: Page
-        sortOrder: '1'
-        titleFormat: null
+        sortOrder: 1
+        titleFormat: ''
         titleLabel: Title
     handle: page
     name: Page
@@ -141,14 +156,23 @@ system:
   live: true
   name: 'Craft 3'
   schemaVersion: 3.1.23
-  timeZone: America/Los_Angeles
+  timeZone: Europe/London
 users:
   allowPublicRegistration: false
   defaultGroup: null
-  photoSubpath: ''
-  photoVolumeUid: null
+  photoSubpath: photo
+  photoVolumeUid: 10489d0c-b5cb-4e1d-88d7-7d8410e09f34
   requireEmailVerification: true
 volumes:
+  10489d0c-b5cb-4e1d-88d7-7d8410e09f34:
+    handle: user
+    hasUrls: true
+    name: User
+    settings:
+      path: '@webroot/uploads/user'
+    sortOrder: 4
+    type: craft\volumes\Local
+    url: '@web/uploads/user'
   5ed2705d-54b7-4073-90f2-acf7159d6285:
     handle: files
     hasUrls: '1'
