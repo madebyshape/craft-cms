@@ -8,15 +8,6 @@ Feel free to use.
 
 `composer create-project madebyshape/craft-3`
 
-## Run Migrations
-
-Get the migration scripts from https://github.com/madebyshape/craft-3-build and run to:
-
-- Install Plugins
-- Add Default Sections
-- Add Default Fieldtypes
-- Add Default Asset Volumes
-
 ## Generate .env (If project exists)
 
 `./craft setup`
