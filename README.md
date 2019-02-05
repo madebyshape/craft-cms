@@ -8,6 +8,15 @@ Feel free to use.
 
 `composer create-project madebyshape/craft-3`
 
+## Run Migrations
+
+Get the migration scripts from https://github.com/madebyshape/craft-3-build and run to:
+
+- Install Plugins
+- Add Default Sections
+- Add Default Fieldtypes
+- Add Default Asset Volumes
+
 ## Generate .env (If project exists)
 
 `./craft setup`
@@ -16,13 +25,14 @@ If using MAMP, ensure the server name is `127.0.0.1` and `Allow network access t
 
 ## Whats included
 
-- Craft CMS 3.x
+- Craft CMS 3.1.x
 - Templates
    - Foundation base
    - Error / Exception
 - Config
    - Custom general config settings
    - Plugin settings (Asset Rev, Imager, Minify etc)
+   - Project YAML
 - Useful Plugins
 - .gitignore to ignore specific project files
 
