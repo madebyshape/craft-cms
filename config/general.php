@@ -26,7 +26,6 @@ return [
       // Account
       'useEmailAsUsername' => true,
       'autoLoginAfterAccountActivation' => true,
-      'allowAdminChanges' => false,
       // URL
       'omitScriptNameInUrls' => true,
       'cpTrigger' => 'admin',
@@ -46,7 +45,6 @@ return [
     'dev' => [
         'devMode' => true,
         'allowUpdates' => true,
-        'allowAdminChanges' => true,
         'enableTemplateCaching' => false,
         'testToEmailAddress' => 'development@madebyshape.co.uk'
     ],
