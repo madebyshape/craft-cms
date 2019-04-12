@@ -51,5 +51,12 @@ return [
         'noop' => true,
         'suppressExceptions' => true,
         'skipExecutableExistCheck' => true
+    ],
+   'staging' => [
+        'optimizers' => null
+    ],
+   'production' => [
+        'optimizers' => null
     ]
+   
 ];
