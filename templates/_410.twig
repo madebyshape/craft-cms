@@ -1,43 +1,7 @@
-{% extends "_layout/global" %}
+{% extends "_layout/exception" %}
 
-{# ------- Variables ------- #}
-
-{% set template = {
-   section: '',
-   folder: ''
+{% set exception = {
+   heading: "Page Not Found",
+   message: "<p>The page or file you requested can't be found.</p>",
+   errorCode: "Error: 410 - Page Not Found"
 } %}
-
-{# ------- Template ------- #}
-
-{% block content %}
-   {%- minify -%}
-
-      <div class="section">
-         <div class="section-container">
-
-            <h1>Page Not Found</h1>
-
-            <p>The page or file you requested is no longer available.</p>
-
-            <em>Error: 410 - Page Not Found</em>
-
-         </div>
-      </div>
-
-   {%- endminify -%}
-{% endblock %}
-
-{# ------- Critical ------- #}
-
-{% block criticalCss %}
-   {%- spaceless -%}
-   {%- endspaceless -%}
-{% endblock %}
-
-{# ------- Inline ------- #}
-
-{% block inlineCss %}
-{% endblock %}
-
-{% block inlineJs %}
-{% endblock %}

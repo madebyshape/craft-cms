@@ -43,7 +43,7 @@ return [
       ]
     ],
     'dev' => [
-        'devMode' => true,
+        'devMode' => false,
         'allowUpdates' => true,
         'enableTemplateCaching' => false,
         'testToEmailAddress' => 'development@madebyshape.co.uk'

@@ -1,0 +1,25 @@
+{% extends "_layout/global" %}
+
+{% block content %}
+
+	{# ------- Variables ------- #}
+
+	{# ------- Template ------- #}
+
+	<div class="section">
+		<div class="section__container">
+
+			<h1 class="text-3xl font-semibold mb-3">{{ exception.heading }}</h1>
+
+			<div class="mb-6">
+				{{ exception.message|raw }}
+			</div>
+
+			<div class="py-2 px-3 bg-gray-300 text-sm font-mono rounded-m inline-block">
+				<em>{{ exception.errorCode }}</em>
+			</div>
+
+		</div>
+	</div>
+
+{% endblock %}

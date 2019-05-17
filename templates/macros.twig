@@ -1,17 +1,3 @@
-{# ------- Example - Macro Attributes  ------- #}
-
-{#
-{% macro exampleMacroAttributes(attributes) %}
-
-   {% set defaults = {
-      list: null
-   } %}
-   {% set attributes = defaults|merge(attributes) %}
-   {{ attributes.list }}
-
-{% endmacro %}
-#}
-
 {# ------- Date ------- #}
 
 {% macro date(date, relative) %}

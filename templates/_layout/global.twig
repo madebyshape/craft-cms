@@ -1,22 +1,18 @@
 {% extends "_layout/base" %}
 
-{# ------- Variables ------- #}
-
-{# ------- Template ------- #}
-
 {% block body %}
 
-	{# Header #}
+	{# ------- Variables ------- #}
 
-	{%- cache globally using key 'site-header' -%}
+	{# ------- Template ------- #}
+
+	{%- cache globally using key 'site-header' ~ craft.app.request.pathInfo -%}
 	   {%- minify -%}
 	   {%- endminify -%}
 	{%- endcache -%}
 
 	{% block content %}
 	{% endblock %}
-
-	{# Footer #}
 
 	{%- cache globally using key 'site-footer' -%}
 	   {%- minify -%}

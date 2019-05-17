@@ -1,7 +1,5 @@
 {% minify %}
 
-   {% import '_partials/macros' as macro %}
-
    <!doctype html>
    <html class="no-js" lang="{{ craft.app.language|slice(0,2) }}">
       <head>
@@ -26,10 +24,14 @@
          {% endif %}
 
          {# CSS #}
-         <link rel="{{ block('criticalCss')|length and not craft.config.devMode ? 'preload' : 'stylesheet' }}" href="/dist/{{ rev('app.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-         <noscript>
-            <link rel="stylesheet" href="/dist/{{ rev('app.css') }}">
-         </noscript>
+         {% if block('criticalCss')|length and not craft.config.devMode %}
+            <link rel="preload" href="/dist/css/{{ rev('app.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+            <noscript>
+               <link rel="stylesheet" href="/dist/css/{{ rev('app.css') }}">
+            </noscript>
+         {% else %}
+            <link rel="stylesheet" href="/dist/css/{{ rev('app.css') }}">
+         {% endif %}
 
       </head>
 
@@ -38,7 +40,7 @@
          {% block body %}{% endblock %}
 
          {# Javascript #}
-         <script src="/dist/{{ rev('app.js') }}"></script>
+         <script src="/dist/js/{{ rev('app.js') }}" async></script>
 
          {# Inline Javascript#}
          {% block inlineJs %}{% endblock %}

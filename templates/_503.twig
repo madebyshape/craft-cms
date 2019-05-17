@@ -1,45 +1,11 @@
-{% extends "_layout/global" %}
+{% extends "_layout/exception" %}
 
-{# ------- Variables ------- #}
-
-{% set template = {
-   section: '',
-   folder: ''
+{% set exception = {
+   heading: "Maintenance",
+   message: "
+      <p>Sorry, but we are temporarily unavailable whilst we perform scheduled maintenance.</p>
+      <p>We don't expect this to last long so please try again shortly.</p>
+      <p>We're sorry for any inconvenience.</p>
+   ",
+   errorCode: "Error: 503 Service Unavailable"
 } %}
-
-{# ------- Template ------- #}
-
-{% block content %}
-   {%- minify -%}
-
-      <div class="section">
-         <div class="section-container">
-
-            <h1>Maintenance</h1>
-
-            <p>Sorry, but we are temporarily unavailable whilst we perform scheduled maintenance.</p>
-            <p>We don't expect this to last long so please try again shortly.</p>
-            <p>We're sorry for any inconvenience. </p>
-
-            <em>Error: 503 Service Unavailable</em>
-
-         </div>
-      </div>
-
-   {%- endminify -%}
-{% endblock %}
-
-{# ------- Critical ------- #}
-
-{% block criticalCss %}
-   {%- spaceless -%}
-   {%- endspaceless -%}
-{% endblock %}
-
-{# ------- Inline ------- #}
-
-{% block inlineCss %}
-{% endblock %}
-
-{% block inlineJs %}
-{% endblock %}

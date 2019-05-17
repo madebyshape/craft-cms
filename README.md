@@ -1,6 +1,6 @@
 # Craft CMS 3.x
 
-This is a boilerplate we use internally for Craft CMS 3.x projects. It's built with the intention of a custom gulp tasks as well as using Foundation CSS framework.
+This is a boilerplate we use internally for Craft CMS 3.x projects. It's built with the intention of being used with [Tailwind CSS](https://github.com/madebyshape/tailwind-css) framework
 
 Feel free to use / modify / fork.
 
@@ -12,32 +12,52 @@ Feel free to use / modify / fork.
 
 - Craft CMS 3.1.x
 - Templates
-   - Foundation layout
-   - Errors / Exceptions
-   - Macros
-   - Cache
+   - [Blocks](https://github.com/madebyshape/craft-3#blocks)
+   - [Components](https://github.com/madebyshape/craft-3#components)
+   - [Macros](https://github.com/madebyshape/craft-3#macros)
+   - Exception
+   - Pages (With dynamic page types)
+   - Email
    - Matrix Blocks
-   - Freeform
-   - Page / Page Types
+   - Plugin - Freeform
 - Config
-   - Custom general config settings
+   - Bespoke general config
    - Plugin settings (Asset Rev, Imager, Minify etc)
    - Project Config (Using `config/project.yaml`)
-- Regularly Used Plugins
-   - Imager
-   - Super Table
-   - SEOMatic
+- Plugins
    - Asset Rev
-   - Minify
-   - CP Nav
-   - Wordsmith
    - Default Dashboard
-   - Simple Map
-   - Mail Gun
-   - Redactor
+   - Imager
    - Linkit
+   - Mailgun
+   - Maps
+   - Minify
+   - Redactor
    - Retour
-- .gitignore to ignore specific project files
+   - SEOMatic
+   - Super Table
+- .gitignore
+   - Gulp / Packages
+   - SASS
+   - Javascript
+   - OS Files
+   - Craft CMS
+   - Asset Source Folders
+
+## Terminology
+
+### Macros
+Use the `macros.twig` file and import in to each template that requires it using `{% import 'macros' as macros %}`. The content of thus file should only be minor tasks for a temple, e.g. formatting a date, outputting a username etc.
+
+### Components
+Components are small bits of a template, e.g. a button, input field that then either make up a block or a full template. Use the `components` folder and name each component file by it's use case e.g. `inputField.twig`.
+
+Make sure to describe each component at the top of each component file so other developers know how it is used. If the component accepts any attributes, make sure you include a description of these at the top of each component (Camel Case) file (See the `components/_example.twig`) file.
+
+### Blocks
+Blocks are large chunks of markup, or made up of smaller components. E.g. a block could be a form, with button and input field components included. Use the `blocks` folder and name each component file (Camel Case) by it's use case e.g. `largeForm.twig` (If a SASS file exists for a block, use the same file name).
+
+Blocks ideally should be selectable via a Matrix Field so CP users can pick and choose these per template. In some cases this might not be possible though, e.g. if the page is dynamically generated.
 
 ## Generate .env (If project exists)
 

@@ -13,7 +13,7 @@ node_modules
 
 *.js.map
 
-# OS X Files
+# OS Files
 
 .DS_Store
 *.DS_Store
@@ -33,7 +33,7 @@ vendor
 storage/*
 config/license.key
 
-# Asset Folders
+# Asset Source Folders
 
 web/uploads
 public_html/uploads
