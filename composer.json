@@ -19,22 +19,21 @@
     "rss": "https://craftcms.com/changelog.rss"
   },
   "require": {
-    "craftcms/cms": "3.1.8",
+    "craftcms/cms": "3.1.27",
     "vlucas/phpdotenv": "^2.4.0",
-    "aelvan/imager": "v2.1.4",
-    "verbb/super-table": "2.1.6",
-    "nystudio107/craft-seomatic": "3.1.40",
-    "solspace/craft3-freeform": "2.5.11",
+    "aelvan/imager": "v2.1.10",
+    "verbb/super-table": "2.1.19",
+    "nystudio107/craft-seomatic": "3.1.50",
+    "solspace/craft3-freeform": "2.5.24",
     "clubstudioltd/craft-asset-rev": "6.0.2",
     "nystudio107/craft-minify": "1.2.9",
     "verbb/cp-nav": "2.0.9",
-    "topshelfcraft/wordsmith": "3.0.4",
-    "verbb/default-dashboard": "1.0.3",
-    "ether/simplemap": "3.3.4",
-    "craftcms/mailgun": "1.4.0",
-    "craftcms/redactor": "2.3.1",
-    "fruitstudios/linkit": "1.1.6",
-    "nystudio107/craft-retour": "3.1.6"
+    "verbb/default-dashboard": "1.0.5",
+    "ether/simplemap": "3.4.11",
+    "craftcms/mailgun": "1.4.2",
+    "craftcms/redactor": "2.3.3.2",
+    "fruitstudios/linkit": "1.1.11",
+    "nystudio107/craft-retour": "3.1.14"
   },
   "autoload": {
     "psr-4": {
