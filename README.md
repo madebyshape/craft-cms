@@ -47,7 +47,7 @@ Feel free to use / modify / fork.
 ## Terminology
 
 ### Macros
-Use the `macros.twig` file and import in to each template that requires it using `{% import 'macros' as macros %}`. The content of thus file should only be minor tasks for a temple, e.g. formatting a date, outputting a username etc.
+Use the `macros.twig` file and import in to each template that requires it using `{% import 'macros' as macros %}`. The content of this file should only be minor tasks for a temple, e.g. formatting a date, outputting a username etc.
 
 ### Components
 Components are small bits of a template, e.g. a button, input field that then either make up a block or a full template. Use the `components` folder and name each component file by it's use case e.g. `inputField.twig`.
