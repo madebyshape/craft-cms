@@ -1,8 +1,8 @@
 # Craft CMS 3.x
 
-This is a boilerplate we use internally for Craft CMS 3.x projects. It's built with the intention of being used with [Tailwind CSS](https://github.com/madebyshape/tailwind-css) framework
+This is a Craft CMS 3.x boilerplate [MadeByShape](https://madebyshape.co.uk) use internally for projects. 
 
-Feel free to use / modify / fork.
+It's built with the intention of being used with [Tailwind CSS](https://github.com/madebyshape/tailwind-css) framework.
 
 ## Install
 
