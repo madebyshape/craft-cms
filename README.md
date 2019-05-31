@@ -1,8 +1,8 @@
 # Craft CMS 3.x
 
-This is a boilerplate we use internally for Craft CMS 3.x projects. It's built with the intention of being used with [Tailwind CSS](https://github.com/madebyshape/tailwind-css) framework
+This is a Craft CMS 3.x boilerplate [MadeByShape](https://madebyshape.co.uk) use internally for projects. 
 
-Feel free to use / modify / fork.
+It's built with the intention of being used with [Tailwind CSS](https://github.com/madebyshape/tailwind-css) framework.
 
 ## Install
 
@@ -47,7 +47,7 @@ Feel free to use / modify / fork.
 ## Terminology
 
 ### Macros
-Use the `macros.twig` file and import in to each template that requires it using `{% import 'macros' as macros %}`. The content of thus file should only be minor tasks for a temple, e.g. formatting a date, outputting a username etc.
+Use the `macros.twig` file and import in to each template that requires it using `{% import 'macros' as macros %}`. The content of this file should only be minor tasks for a temple, e.g. formatting a date, outputting a username etc.
 
 ### Components
 Components are small bits of a template, e.g. a button, input field that then either make up a block or a full template. Use the `components` folder and name each component file by it's use case e.g. `inputField.twig`.
