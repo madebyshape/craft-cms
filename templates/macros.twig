@@ -12,41 +12,88 @@
 
 {% endmacro %}
 
-{# ------- SVG ------- #}
+{# --- Picture --- #}
 
-{% macro svg(asset, transforms) %}
+{% macro picture(attributes) %}
 
-   {% if asset|length %}
-      {% if asset.extension == 'svg' %}
-         {{ svg(asset) }}
-      {% else %}
-         {% set assetTransform = craft.imager.transformImage(
-            asset,
-            transformParams
-         ) %}
-         <img src="{{ assetTransform.url }}" alt="{{ asset.title }}">
-      {% endif %}
+   {% set defaults = {
+      image: null,
+      alt: null,
+      lazy: true,
+      sizes: [
+         { width: 1920 },
+         { width: 1400 },
+         { width: 768 },
+         { width: 360 }
+      ],
+      transforms: {
+         mode: 'crop',
+         allowUpscale: true
+      }
+   } %}
+
+   {% set attributes = defaults|merge(attributes) %}
+
+   {% set picture = craft.imager.transformImage(
+      attributes.image,
+      attributes.transforms
+   ) %}
+
+   {% set pictureTransform = craft.imager.transformImage(
+      picture,
+      attributes.sizes
+   ) %}
+
+   {% if craft.imager.serverSupportsWebp() %}
+      {% set pictureTransformWebp = craft.imager.transformImage(
+         picture,
+         attributes.sizes,
+         {
+            format: 'webp'
+         }
+      ) %}
    {% endif %}
 
-{% endmacro %}
+   {% if
+      pictureTransform|length or
+      pictureTransformWebp is defined and
+      pictureTransformWebp|length
+   %}
 
-{# ------- Lazy Load ------- #}
+      <picture>
+         {% if attributes.lazy %}
+            {% if craft.imager.serverSupportsWebp() %}
+               <source
+                  data-srcset="{{ craft.imager.srcset(pictureTransformWebp) }}"
+                  data-sizes="100vw"
+                  type="image/webp"
+               >
+            {% endif %}
+            <img
+               src="{{ craft.imager.placeholder({ width: picture.width, height: picture.height }) }}"
+               data-src="{{ craft.imager.serverSupportsWebp() ? pictureTransformWebp|last.url : pictureTransform|last.url }}"
+               data-srcset="{{ craft.imager.srcset(pictureTransform) }}"
+               data-sizes="100vw"
+               alt="{{ attributes.alt ?? attributes.image.title }}"
+               class="js-lazy-load"
+            >
+         {% else %}
+            {% if craft.imager.serverSupportsWebp() %}
+               <source
+                  srcset="{{ craft.imager.srcset(pictureTransformWebp) }}"
+                  sizes="100vw"
+                  type="image/webp"
+               >
+            {% endif %}
+            <img
+               src="{{ craft.imager.serverSupportsWebp() ? pictureTransformWebp|last.url : pictureTransform|last.url }}"
+               srcset="{{ craft.imager.srcset(pictureTransform) }}"
+               sizes="100vw"
+               alt="{{ attributes.alt ?? attributes.image.title }}"
+            >
+         {% endif %}
+      </picture>
 
-{% macro lazyLoad(asset, transforms) %}
-
-   {% if asset|length %}
-      {% set assetTransform = craft.imager.transformImage(
-         asset,
-         transforms
-      ) %}
-      <div class="lazy-load-container" style="background-color: {{ craft.imager.getDominantColor(assetTransform.url) }}">
-         <img
-            src="{{ craft.imager.placeholder({ width: transforms.width, height: transforms.height }) }}"
-            data-src="{{ assetTransform.url }}"
-            alt="{{ asset.title }}"
-            class="js-lazy-load"
-         >
-      </div>
    {% endif %}
 
 {% endmacro %}
