@@ -45,14 +45,14 @@
 # ----------------------------------------------------------------------
 
 	<IfModule mod_deflate.c>
-	
+
 		<IfModule mod_setenvif.c>
 			<IfModule mod_headers.c>
 				SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
 				RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
 			</IfModule>
 		</IfModule>
-	    
+
 	    <IfModule mod_filter.c>
 	        AddOutputFilterByType DEFLATE "application/atom+xml" \
 	                                      "application/javascript" \
@@ -91,13 +91,13 @@
 	                                      "text/x-component" \
 	                                      "text/x-cross-domain-policy" \
 	                                      "text/xml"
-	
+
 	    </IfModule>
-	
+
 		<IfModule mod_mime.c>
 			AddEncoding gzip              svgz
 		</IfModule>
-	
+
 	</IfModule>
 
 # ----------------------------------------------------------------------
@@ -105,50 +105,23 @@
 # ----------------------------------------------------------------------
 
 	<IfModule mod_expires.c>
-	
-		ExpiresActive on
-		
-		ExpiresDefault                          			"access plus 1 month"
-		ExpiresByType text/cache-manifest       			"access plus 0 seconds"
-	
-		# HTML
-			ExpiresByType text/html                 		"access plus 0 seconds"
-	
-		# Data
-			ExpiresByType text/xml                  		"access plus 0 seconds"
-			ExpiresByType application/xml           		"access plus 0 seconds"
-			ExpiresByType application/json          		"access plus 0 seconds"
-	
-		# Feed
-			ExpiresByType application/rss+xml       		"access plus 1 hour"
-			ExpiresByType application/atom+xml      		"access plus 1 hour"
-	
-		# Favicon
-			ExpiresByType image/x-icon              		"access plus 1 week"
-	
-		# Media
-			ExpiresByType image/gif                 		"access plus 1 month"
-			ExpiresByType image/png                 		"access plus 1 month"
-			ExpiresByType image/jpeg                		"access plus 1 month"
-			ExpiresByType video/ogg                 		"access plus 1 month"
-			ExpiresByType audio/ogg                 		"access plus 1 month"
-			ExpiresByType video/mp4                 		"access plus 1 month"
-			ExpiresByType video/webm                		"access plus 1 month"
-	
-		# HTC files
-			ExpiresByType text/x-component          		"access plus 1 month"
-	
-		# Webfonts
-			ExpiresByType application/x-font-ttf    		"access plus 1 month"
-			ExpiresByType font/opentype             		"access plus 1 month"
-			ExpiresByType application/x-font-woff   		"access plus 1 month"
-			ExpiresByType image/svg+xml             		"access plus 1 month"
-			ExpiresByType application/vnd.ms-fontobject 	"access plus 1 month"
-	
-		# CSS and JavaScript
-			ExpiresByType text/css                  		"access plus 1 year"
-			ExpiresByType application/javascript    		"access plus 1 year"
-	
+
+       <FilesMatch "\.(ttf|eot|woff2|woff)$">
+       	Header set Cache-Control "max-age=31557600, public"
+       </FilesMatch>
+
+       <FilesMatch "\.(ico|svg|gif|png|jpeg|jpg|webp|mp4|webm|ogg|htc)$">
+       	Header set Cache-Control "max-age=31557600, public"
+       </FilesMatch>
+
+       <FilesMatch "\.(css|js)$">
+       	Header set Cache-Control "max-age=31557600, public"
+       </FilesMatch>
+
+       <FilesMatch "\.(rss|atom|xml|json|html)$">
+       	Header set Cache-Control "max-age=31557600, public"
+       </FilesMatch>
+
 	</IfModule>
 
 # ----------------------------------------------------------------------
@@ -162,18 +135,15 @@
 	 </IfModule>
 
 # ----------------------------------------------------------------------
-# HTTPS & Remove www.
+# Remove www. and redirect to HTTPS
 # ----------------------------------------------------------------------
 
-   # Remove this block if HTTPS is required and use block below
-   RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-   RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
-		
-   # RewriteEngine on
-   # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-   # RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-   # RewriteCond %{HTTPS} !on
-   # RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+	RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+	RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [L,R=301]
+
+	# RewriteCond %{HTTPS} off
+	# RewriteCond %{HTTP:X-Forwarded-Proto} !https
+	# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # ------------------------------------------------------------
 # Remove Trailing Slash
@@ -230,20 +200,16 @@
 			RewriteRule ^(.*/)*\.git/ / [F,L]
 		</IfModule>
 
-# ------------------------------------------------------------
-# Redirects
-# ------------------------------------------------------------
-
 # ----------------------------------------------------------------------
 # Default Craft .htaccess
 # ----------------------------------------------------------------------
 
-    <IfModule mod_rewrite.c>
-        RewriteEngine On
+	<IfModule mod_rewrite.c>
+		RewriteEngine On
 
-        # Send would-be 404 requests to Craft
-        RewriteCond %{REQUEST_FILENAME} !-f
-        RewriteCond %{REQUEST_FILENAME} !-d
-        RewriteCond %{REQUEST_URI} !^/(favicon\.ico|apple-touch-icon.*\.png)$ [NC]
-        RewriteRule (.+) index.php?p=$1 [QSA,L]
-    </IfModule>
+		# Send would-be 404 requests to Craft
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteCond %{REQUEST_FILENAME} !-d
+		RewriteCond %{REQUEST_URI} !^/(favicon\.ico|apple-touch-icon.*\.png)$ [NC]
+		RewriteRule (.+) index.php?p=$1 [QSA,L]
+	</IfModule>
