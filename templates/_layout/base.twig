@@ -8,6 +8,9 @@
          <meta http-equiv="x-ua-compatible" content="ie=edge">
          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+         {# Preload Assets #}
+         {# <link rel="preload" href="/path/to/fonts/font.woff2" as="font" crossorigin> #}
+
          {# Inline / Critical CSS #}
          {% if
             block('inlineCss')|length or
@@ -21,13 +24,14 @@
          {% endif %}
 
          {# CSS #}
+         {% set cssUrl = siteUrl ~ 'dist/css/' ~ rev('app.css')  %}
          {% if block('criticalCss')|length and not craft.config.devMode %}
-            <link rel="preload" href="{{ siteUrl }}dist/css/{{ rev('app.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'" async>
+            <link rel="preload" href="{{ cssUrl }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
             <noscript>
-               <link rel="stylesheet" href="{{ siteUrl }}dist/css/{{ rev('app.css') }}">
+               <link rel="stylesheet" href="{{ cssUrl }}">
             </noscript>
          {% else %}
-            <link rel="stylesheet" href="{{ siteUrl }}dist/css/{{ rev('app.css') }}">
+            <link rel="stylesheet" href="{{ cssUrl }}">
          {% endif %}
 
          {# Favicons #}
@@ -40,7 +44,7 @@
          {% block body %}{% endblock %}
 
          {# Javascript #}
-         <script src="{{ siteUrl }}dist/js/{{ rev('app.js') }}"></script>
+         <script src="{{ siteUrl }}dist/js/{{ rev('app.js') }}" async></script>
 
          {# Inline Javascript#}
          {% block inlineJs %}{% endblock %}
