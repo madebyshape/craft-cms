@@ -58,9 +58,8 @@
       ],
       'staging' => [
          'useCwebp' => false,
-         'optimizers' => null,
+         'optimizers' => null
       ],
       'production' => [
-
       ]
    ];
