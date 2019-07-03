@@ -36,4 +36,5 @@ config/license.key
 # Asset Source Folders
 
 web/uploads
+public/uploads
 public_html/uploads
