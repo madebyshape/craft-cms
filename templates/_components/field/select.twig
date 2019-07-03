@@ -1,0 +1,28 @@
+{#
+   Field Select
+   Outputs a select field with the correct markup
+
+   @type {include}
+   @param {string} label
+   @param {string} name
+   @param {string} value
+   @param {array} options
+   @param {string} required
+#}
+
+{% set id = label is defined ? label|kebab : 'select-' ~ random() %}
+{% set class = 'field__field' ~ class is defined ? ' ' ~ class %}
+
+{% if label is defined %}
+   {% include '_components/field/label' %}
+{% endif %}
+
+<div class="field__container field__container--select">
+   <select name="{{ name }}" id="{{ id }}" class="{{ class }}"{{ required is defined ? ' required' }}>
+      {% for option in options %}
+         <option value="{{ option.value }}"{% if option.value == value %} selected{% endif %}>
+            {{ option.label }}
+         </option>
+      {% endfor %}
+   </select>
+</div>

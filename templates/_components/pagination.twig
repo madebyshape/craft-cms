@@ -1,0 +1,41 @@
+{#
+   Pagination
+   Pagination for entries and elements
+
+   @type {include}
+   @param {pagination} array
+   @param {string} urlLimit
+
+#}
+
+{% set queryString = craft.app.request.getQueryStringWithoutPath|length ? '?' ~ craft.app.request.getQueryStringWithoutPath() : '' %}
+
+{% if pagination is defined and pagination.totalPages > 1 %}
+
+   <div class="pagination">
+
+      {% if pagination.prevUrl %}
+         <a href="{{ pagination.prevUrl ~ queryString }}">
+            <i class="fas fa-caret-left"></i>
+         </a>
+      {% endif %}
+
+      {% for page, url in pagination.getPrevUrls(urlLimit) %}
+          <a href="{{ url }}">{{ page }}</a>
+      {% endfor %}
+
+      <span>{{ pagination.currentPage }}</span>
+
+      {% for page, url in pagination.getNextUrls(urlLimit) %}
+          <a href="{{ url }}">{{ page }}</a>
+      {% endfor %}
+
+      {% if pagination.nextUrl %}
+         <a href="{{ pagination.nextUrl ~ queryString }}">
+            <i class="fas fa-caret-right"></i>
+         </a>
+      {% endif %}
+
+   </div>
+
+{% endif %}

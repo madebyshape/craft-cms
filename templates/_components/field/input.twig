@@ -1,0 +1,32 @@
+{#
+   Field Input
+   Outputs a input field with the correct markup
+
+   @type {include}
+   @param {string} label
+   @param {string} type
+   @param {string} name
+   @param {string} value
+   @param {string} placeholder
+   @param {string} class
+   @param {string} required
+#}
+
+{% set id = label is defined ? label|kebab : 'input-' ~ random() %}
+{% set class = 'field__field' ~ class is defined ? ' ' ~ class %}
+
+{% if label is defined %}
+   {% include '_components/field/label' %}
+{% endif %}
+
+<div class="field__container">
+   <input
+      type="{{ type }}"
+      name="{{ name }}"
+      id="{{ id }}"
+      placeholder="{{ placeholder is defined ? placeholder }}"
+      value="{{ value is defined ? value }}"
+      class="{{ class }}"
+      {{ required is defined ? ' required' }}
+   >
+</div>

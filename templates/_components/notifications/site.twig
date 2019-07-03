@@ -1,0 +1,18 @@
+{#
+   Site Notifications
+   Adds site wide notifications
+
+   @type {include}
+#}
+
+{% set notifications =
+   {
+      signupSuccess: "Sign up successful, check your email inbox to verify your email address and login.",
+   }
+%}
+
+{% set notificationName = craft.app.request.param('notification') %}
+
+{% if notificationName %}
+   {{ notifications[notificationName] }}
+{% endif %}

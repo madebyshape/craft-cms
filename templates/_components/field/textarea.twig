@@ -1,0 +1,30 @@
+{#
+   Field Textarea
+   Outputs a textarea field with the correct markup
+
+   @type {include}
+   @param {string} label
+   @param {string} type
+   @param {string} name
+   @param {string} value
+   @param {string} placeholder
+   @param {string} class
+   @param {string} required
+#}
+
+{% set id = label is defined ? label|kebab : 'input-' ~ random() %}
+{% set class = 'field__field' ~ class is defined ? ' ' ~ class %}
+
+{% if label is defined %}
+   {% include '_components/field/label' %}
+{% endif %}
+
+<div class="field__container">
+   <textarea
+      name="{{ name }}"
+      id="{{ id }}"
+      placeholder="{{ placeholder is defined ? placeholder }}"
+      class="{{ class }}"
+      {{ required is defined ? ' required' }}
+   >{% spaceless %}{{ value is defined ? value }}{% endspaceless %}</textarea>
+</div>

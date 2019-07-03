@@ -1,0 +1,16 @@
+{#
+   Field Label
+   Outputs a field label with the correct markup
+
+   @type {include}
+   @param {string} id
+   @param {string} label
+   @param {string} required
+#}
+
+<label for="{{ id }}" class="field__label{{ required is defined ? ' field__label--required' }}">
+   {{ label }}
+   {% if required is defined %}
+      <span>*</span>
+   {% endif %}
+</label>
