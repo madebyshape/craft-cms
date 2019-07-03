@@ -3,8 +3,8 @@
    Pagination for entries and elements
 
    @type {include}
-   @param {pagination} array
-   @param {string} urlLimit
+   @param {array} pagination
+   @param {string} pageLimit
 
 #}
 
@@ -20,13 +20,13 @@
          </a>
       {% endif %}
 
-      {% for page, url in pagination.getPrevUrls(urlLimit) %}
+      {% for page, url in pagination.getPrevUrls(pageLimit) %}
           <a href="{{ url }}">{{ page }}</a>
       {% endfor %}
 
       <span>{{ pagination.currentPage }}</span>
 
-      {% for page, url in pagination.getNextUrls(urlLimit) %}
+      {% for page, url in pagination.getNextUrls(pageLimit) %}
           <a href="{{ url }}">{{ page }}</a>
       {% endfor %}
 
