@@ -1,5 +1,12 @@
+{% set fieldClass = 'form__field' %}
+{% set labelClass = 'form__label' %}
+{% set labelRequiredClass = ' form__label--required' %}
+
+{% set labelHidden = ['submit'] %}
+{% set labelAfter = ['checkbox'] %}
+
 {% if form.submittedSuccessfully %}
-    <div class="form-notification">
+   <div class="form__notification">
       Thank you for submitting your details, we will be in touch shortly.
    </div>
 {% endif %}
@@ -7,7 +14,7 @@
 {{ form.renderTag }}
 
    {% if form.pages|length > 1 %}
-      <nav class="form-pages">
+      <nav class="form__pages">
          <ul>
             {% for page in form.pages %}
                <li>
@@ -23,44 +30,54 @@
    {% endif %}
 
    {% for row in form %}
-       <div class="row field-container-row {{ form.customAttributes.rowClass }}">
-           {% for field in row %}
-               <div class="column medium-{{ 12 / row|length }} field-container field-{{ field.type }}{{ field.type == 'submit' ? " align-" ~ field.position }}">
-                  {% if field.type != "submit" %}
-                     {{ field.renderLabel(
-                        {
-                           labelClass: field.required ? "is-required",
-                        }
-                     ) }}
-                  {% endif %}
-                  {% if field.type == "submit" %}
-                     <button class="button">
-                        <span>{{ field.label }}</span>
-                     </button>
-                  {% elseif field.type == "select" %}
-                     <div class="field-select">
-                        {{ field.renderInput({
-                            labelClass: field.required ? "-required",
-                            errorClass: "field-errors",
-                            instructionsClass: "field-instructions",
-                        }) }}
-                     </div>
-                  {% else %}
-                      {{ field.renderInput() }}
-                   {% endif %}
-                   {{ field.renderInstructions(
-                      {
-                         instructionsClass: "field-instructions"
-                      }
-                   ) }}
-                   {{ field.renderErrors(
-                      {
-                         errorClass: "field-errors"
-                      }
-                   ) }}
-               </div>
-           {% endfor %}
-       </div>
+      {% set columnLength = row|length %}
+      <div class="{{ columnLength > 1 ? ' flex flex-wrap md:flex-no-wrap' }}{{ form.customAttributes.rowClass ? ' ' ~ form.customAttributes.rowClass }}">
+         {% for field in row %}
+            <div class="form__field-container form__field--{{ field.type }} {{ columnLength > 1 ? ' w-full md:w-' ~ (12 / columnLength) ~ '/12' }}{{ field.type == 'submit' ? ' text-' ~ field.position }} mb-5">
+               {# Label - Before #}
+               {% if field.type not in labelHidden and field.type not in labelAfter %}
+                  {{ field.renderLabel({
+                     labelClass: labelClass ~ (field.required ? labelRequiredClass),
+                  }) }}
+               {% endif %}
+               {% if field.type == "submit" %}
+                  {# Submit #}
+                  <button class="button">
+                     {{ field.label }}
+                  </button>
+               {% elseif field.type == "select" %}
+                  {# Field - Select #}
+                  <div class="form__field-container form__field-container--select">
+                     {{ field.renderInput({
+                        class: fieldClass,
+                        useRequiredAttribute: field.required ? 'true',
+                        inputAttributes: field.required ? { 'aria-required': 'true' }
+                     }) }}
+                  </div>
+               {% elseif field.type == "checkbox" %}
+                  {# Field - Checkbox #}
+                     {{ field.renderInput({
+                        class: 'mr-2',
+                        useRequiredAttribute: field.required ? 'true',
+                        inputAttributes: field.required ? { 'aria-required': 'true' }
+                     }) }}
+               {% else %}
+                  {# Field - All #}
+                  {{ field.renderInput({
+                     class: fieldClass,
+                     useRequiredAttribute: field.required ? 'true',
+                     inputAttributes: field.required ? { 'aria-required': 'true' }
+                  }) }}
+                {% endif %}
+                {# Label - After #}
+               {% if field.type not in labelHidden and field.type in labelAfter %}
+                  {{ field.renderLabel({
+                     labelClass: labelClass ~ (field.required ? labelRequiredClass)
+                  }) }}
+               {% endif %}
+            </div>
+         {% endfor %}
+      </div>
    {% endfor %}
 
 {{ form.renderClosingTag }}
