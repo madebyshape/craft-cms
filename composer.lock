@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c3677bcd4c0da7f36fca8c594341a00",
+    "content-hash": "adf681b2c41209bae705e96407b99eba",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -6585,63 +6585,6 @@
                 "templating"
             ],
             "time": "2019-06-18T15:37:11+00:00"
-        },
-        {
-            "name": "verbb/cp-nav",
-            "version": "2.0.9",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/verbb/cp-nav/zipball/f4667899e78363eeeb75ca57ee62da72e2d126c3",
-                "reference": "f4667899e78363eeeb75ca57ee62da72e2d126c3",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0-RC1"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Control Panel Nav",
-                "handle": "cp-nav",
-                "description": "Control Panel Nav helps you managing your Control Panel navigation.",
-                "schemaVersion": "2.0.0",
-                "hasCpSettings": true,
-                "hasCpSection": false,
-                "documentationUrl": "https://github.com/verbb/cp-nav",
-                "changelogUrl": "https://raw.githubusercontent.com/verbb/cp-nav/craft-3/CHANGELOG.md",
-                "class": "verbb\\cpnav\\CpNav"
-            },
-            "autoload": {
-                "psr-4": {
-                    "verbb\\cpnav\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Verbb",
-                    "homepage": "http://verbb.io"
-                }
-            ],
-            "description": "Control Panel Nav is a Craft CMS plugin to help manage your Control Panel navigation.",
-            "keywords": [
-                "cms",
-                "control panel nav",
-                "control panel navigation",
-                "cp nav",
-                "craft",
-                "craft-plugin",
-                "craftcms"
-            ],
-            "support": {
-                "email": "support@verbb.io",
-                "issues": "https://github.com/verbb/cp-nav/issues?state=open",
-                "source": "https://github.com/verbb/cp-nav",
-                "docs": "https://github.com/verbb/cp-nav",
-                "rss": "https://github.com/verbb/cp-nav/commits/v2.atom"
-            },
-            "time": "2018-11-10T03:25:58+00:00"
         },
         {
             "name": "verbb/default-dashboard",
