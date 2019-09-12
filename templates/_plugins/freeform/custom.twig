@@ -2,7 +2,7 @@
 {% set labelClass = 'form__label' %}
 {% set labelRequiredClass = ' form__label--required' %}
 
-{% set labelHidden = ['submit'] %}
+{% set labelHidden = ['submit', 'html'] %}
 {% set labelAfter = ['checkbox'] %}
 
 {% if form.submittedSuccessfully %}
@@ -33,7 +33,7 @@
       {% set columnLength = row|length %}
       <div class="{{ columnLength > 1 ? ' flex flex-wrap md:flex-no-wrap' }}{{ form.customAttributes.rowClass ? ' ' ~ form.customAttributes.rowClass }}">
          {% for field in row %}
-            <div class="form__field-container form__field--{{ field.type }} {{ columnLength > 1 ? ' w-full md:w-' ~ (12 / columnLength) ~ '/12' }}{{ field.type == 'submit' ? ' text-' ~ field.position }} mb-5">
+            <div class="form__field-container form__field--{{ field.type }} {{ columnLength > 1 ? ' w-full md:w-' ~ (12 / columnLength) ~ '/12' }}{{ field.type == 'submit' ? ' text-' ~ field.position }} mb-5"{{ field.rulesHtmlData }}>
                {# Label - Before #}
                {% if field.type not in labelHidden and field.type not in labelAfter %}
                   {{ field.renderLabel({
