@@ -13,7 +13,7 @@ return [
       // Site / Environment
       'isSystemLive' => true,
       'securityKey' => getenv('SECURITY_KEY'),
-      'useProjectConfigFile' => false,
+      'useProjectConfigFile' => true,
       'siteUrl' => null,
       // Cache
       'enableTemplateCaching' => true,
@@ -36,6 +36,7 @@ return [
       'allowUpdates' => false,
       'backupOnUpdate' => true,
       'errorTemplatePrefix' => '_',
+      'enableGql' => false,
       // Aliases
       'aliases' => [
          '@assetBaseUrl' => getenv('ASSETS_URL'),
@@ -46,12 +47,13 @@ return [
         'devMode' => true,
         'allowUpdates' => true,
         'enableTemplateCaching' => false,
-        'testToEmailAddress' => 'development@madebyshape.co.uk',
-        'useProjectConfigFile' => true
+        'testToEmailAddress' => 'development@madebyshape.co.uk'
     ],
     'staging' => [
-        'isSystemLive' => false
+        'isSystemLive' => false,
+        'useProjectConfigFile' => false
     ],
     'production' => [
+        'useProjectConfigFile' => false
     ]
 ];
