@@ -1,4 +1,4 @@
-dateModified: 1568882992
+dateModified: 1568885010
 email:
   fromEmail: development@madebyshape.co.uk
   fromName: 'Craft 3'
@@ -181,7 +181,7 @@ system:
   live: true
   name: 'Craft 3'
   schemaVersion: 3.3.3
-  timeZone: America/Los_Angeles
+  timeZone: Europe/London
 users:
   allowPublicRegistration: false
   defaultGroup: null
