@@ -11,13 +11,13 @@
 #}
 
 {% set id = label is defined ? label|kebab : 'select-' ~ random() %}
-{% set class = 'field__field' ~ class is defined ? ' ' ~ class %}
+{% set class = 'form__field' ~ class is defined ? ' ' ~ class %}
 
 {% if label is defined %}
    {% include '_components/field/label' %}
 {% endif %}
 
-<div class="field__container field__container--select">
+<div class="form__field-container form__field-container--select">
    <select name="{{ name }}" id="{{ id }}" class="{{ class }}"{{ required is defined ? ' required' }}>
       {% for option in options %}
          <option value="{{ option.value }}"{% if option.value == value %} selected{% endif %}>
