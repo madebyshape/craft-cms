@@ -8,14 +8,12 @@
 
 #}
 
-{% set queryString = craft.app.request.getQueryStringWithoutPath|length ? '?' ~ craft.app.request.getQueryStringWithoutPath() : '' %}
-
 {% if pagination is defined and pagination.totalPages > 1 %}
 
    <div class="pagination">
 
       {% if pagination.prevUrl %}
-         <a href="{{ pagination.prevUrl ~ queryString }}">
+         <a href="{{ pagination.prevUrl }}">
             <i class="fas fa-caret-left"></i>
          </a>
       {% endif %}
@@ -31,7 +29,7 @@
       {% endfor %}
 
       {% if pagination.nextUrl %}
-         <a href="{{ pagination.nextUrl ~ queryString }}">
+         <a href="{{ pagination.nextUrl }}">
             <i class="fas fa-caret-right"></i>
          </a>
       {% endif %}
