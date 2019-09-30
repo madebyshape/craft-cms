@@ -50,7 +50,7 @@ return [
         'testToEmailAddress' => 'development@madebyshape.co.uk'
     ],
     'staging' => [
-        'isSystemLive' => false,
+        'devMode' => true,
         'useProjectConfigFile' => false
     ],
     'production' => [
