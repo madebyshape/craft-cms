@@ -1,0 +1,22 @@
+{#
+   Fieldset
+   Formats each row/column of fields
+
+   @type {include}
+   @param {array} fields
+
+#}
+
+{% for field in fields %}
+   <div class="w-full{% if field['type'] is not defined %} flex{% endif %}{{ loop.last ? ' mb-0' : ' mb-6' }}">
+      {% if field['type'] is defined %}
+         {% include '_components/field/' ~ field.type with field.properties %}
+      {% else %}
+         {% for column in field %}
+            <div class="w-1/2{% if loop.first %} pr-3{% else %} pl-3{% endif %}">
+               {% include '_components/field/' ~ column.type with column.properties %}
+            </div>
+         {% endfor %}
+      {% endif %}
+   </div>   
+{% endfor %}
