@@ -8,9 +8,9 @@
    @param {bool} required
 #}
 
-<label for="{{ id }}" class="form__label{{ required is defined ? ' form__label--required' }}">
+<label for="{{ id }}" class="field__label">
    {{ label }}
    {% if required is defined %}
-      <span>*</span>
+      <span class="text-primary-500">*</span>
    {% endif %}
 </label>
