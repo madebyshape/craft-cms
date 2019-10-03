@@ -4,7 +4,6 @@
 
    @type {include}
    @param {array} pagination
-   @param {string} pageLimit
 
 #}
 
@@ -18,13 +17,13 @@
          </a>
       {% endif %}
 
-      {% for page, url in pagination.getPrevUrls(pageLimit) %}
+      {% for page, url in pagination.getPrevUrls(3) %}
           <a href="{{ url }}">{{ page }}</a>
       {% endfor %}
 
       <span>{{ pagination.currentPage }}</span>
 
-      {% for page, url in pagination.getNextUrls(pageLimit) %}
+      {% for page, url in pagination.getNextUrls(3) %}
           <a href="{{ url }}">{{ page }}</a>
       {% endfor %}
 
