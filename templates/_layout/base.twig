@@ -28,7 +28,7 @@
          {% endif %}
 
          {# CSS #}
-         {% set cssUrl = siteUrl ~ 'dist/css/' ~ rev('app.css')  %}
+         {% set cssUrl = siteUrl ~ 'dist/' ~ rev('css/app.css')  %}
          {% if block('criticalCss')|length and not craft.config.devMode %}
             <link rel="preload" href="{{ cssUrl }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
             <noscript>
@@ -48,7 +48,7 @@
          {% block body %}{% endblock %}
 
          {# Javascript #}
-         <script src="{{ siteUrl }}dist/js/{{ rev('app.js') }}" async></script>
+         <script src="{{ siteUrl }}dist/{{ rev('js/app.js') }}" async></script>
 
          {# Inline Javascript#}
          {% block inlineJs %}{% endblock %}
