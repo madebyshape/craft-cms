@@ -1,0 +1,5 @@
+{
+  "buttons": ["formatting", "bold", "italic", "unorderedlist", "orderedlist", "link", "file"],
+  "plugins": ["fullscreen"],
+  "toolbarFixed": true
+}
