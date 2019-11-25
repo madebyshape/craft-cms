@@ -52,9 +52,9 @@
       'dev' => [
          'useCwebp' => false,
          'optimizers' => null,
-         'noop' => true,
-         'suppressExceptions' => true,
-         'skipExecutableExistCheck' => true
+         'noop' => false,
+         'suppressExceptions' => false,
+         'skipExecutableExistCheck' => false
       ],
       'staging' => [
          'useCwebp' => false,
