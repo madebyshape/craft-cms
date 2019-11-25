@@ -1,4 +1,4 @@
-dateModified: 1568885010
+dateModified: 1574696210
 email:
   fromEmail: development@madebyshape.co.uk
   fromName: 'Craft 3'
@@ -6,6 +6,8 @@ email:
 fieldGroups:
   76965b0f-2a26-4f97-b661-ee066f6f255a:
     name: Common
+  f6d7d241-316e-4303-9b28-033f9f6c0379:
+    name: 'Meta & Social Data'
 fields:
   14b689f5-e126-442e-bcb5-fa7554d7a05f:
     name: 'Meta & Social Data'
@@ -30,7 +32,7 @@ fields:
       facebookTabEnabled: ''
       sitemapTabEnabled: ''
     contentColumnType: text
-    fieldGroup: 76965b0f-2a26-4f97-b661-ee066f6f255a
+    fieldGroup: f6d7d241-316e-4303-9b28-033f9f6c0379
 plugins:
   assetrev:
     edition: standard
@@ -194,25 +196,25 @@ volumes:
     handle: files
     type: craft\volumes\Local
     hasUrls: true
-    url: $ASSETS_URL/files
+    url: '@assetBaseUrl/files'
     settings:
-      path: $ASSETS_PATH/files
+      path: '@assetBasePath/files'
     sortOrder: 2
   a69ab470-0307-498e-a91e-1388e50453eb:
     name: Images
     handle: images
     type: craft\volumes\Local
     hasUrls: true
-    url: $ASSETS_URL/images
+    url: '@assetBaseUrl/images'
     settings:
-      path: $ASSETS_PATH/images
+      path: '@assetBasePath/images'
     sortOrder: 1
   c80f17d5-2ed9-48e8-b82f-2f8bdee5f731:
     name: User
     handle: user
     type: craft\volumes\Local
     hasUrls: true
-    url: $ASSETS_URL/user
+    url: '@assetBaseUrl/user'
     settings:
-      path: $ASSETS_PATH/user
+      path: '@assetBasePath/user'
     sortOrder: 3
