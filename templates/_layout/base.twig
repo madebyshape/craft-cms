@@ -41,11 +41,100 @@
          {# Favicons #}
          {{ source('_components/favicons', ignore_missing = true) }}
 
+         {# Cookie Policy #}
+         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+
       </head>
 
       <body>
 
          {% block body %}{% endblock %}
+
+{% minify %}
+
+   <!doctype html>
+   <html class="no-js" lang="{{ craft.app.language|slice(0,2) }}">
+      <head>
+
+         <meta charset="utf-8">
+         <meta http-equiv="x-ua-compatible" content="ie=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         
+         {% if craft.config.devMode %}
+            <meta name="robots" content="noindex">
+         {% endif %}
+
+         {# Preload Assets #}
+         {# <link rel="preload" href="/path/to/fonts/font.woff2" as="font" crossorigin> #}
+
+         {# Inline / Critical CSS #}
+         {% if
+            block('inlineCss')|length or
+            block('criticalCss')|length and
+            not craft.config.devMode
+         %}
+            <style>
+               {% block criticalCss %}{% endblock %}
+               {% block inlineCss %}{% endblock %}
+            </style>
+         {% endif %}
+
+         {# CSS #}
+         {% set cssUrl = siteUrl ~ 'dist/' ~ rev('css/app.css')  %}
+         {% if block('criticalCss')|length and not craft.config.devMode %}
+            <link rel="preload" href="{{ cssUrl }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+            <noscript>
+               <link rel="stylesheet" href="{{ cssUrl }}">
+            </noscript>
+         {% else %}
+            <link rel="stylesheet" href="{{ cssUrl }}">
+         {% endif %}
+
+         {# Favicons #}
+         {{ source('_components/favicons', ignore_missing = true) }}
+
+      </head>
+
+      <body>
+
+         {% block body %}{% endblock %}
+         
+        {# Cookie Policy #}
+         <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+         <script>
+            window.cookieconsent.initialise({
+               "palette": {
+                  "popup": {
+                     "background": "#f1f1f1",
+                     "text": "#000000"
+                  },
+                  "button": {
+                     "background": "#000000",
+                     "text": "#ffffff"
+                  }
+               },
+               "theme": "edgeless", // null, edgeless, classic, wire
+               "content": {
+                  "message": "This website uses cookies to ensure you get the best experience on our website.",
+                  "dismiss": "Got it!",
+                  "link": "Learn more",
+                  "href": "https://www.cookiesandyou.com"
+               }
+            });
+         </script>
+
+         {# Javascript #}
+         <script src="{{ siteUrl }}dist/{{ rev('js/app.js') }}" async></script>
+
+         {# Inline Javascript#}
+         {% block inlineJs %}{% endblock %}
+
+      </body>
+
+   </html>
+
+{% endminify %}
+
 
          {# Javascript #}
          <script src="{{ siteUrl }}dist/{{ rev('js/app.js') }}" async></script>
