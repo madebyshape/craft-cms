@@ -37,7 +37,6 @@ return [
       'backupOnUpdate' => true,
       'errorTemplatePrefix' => '_',
       'enableGql' => false,
-      'useSecureCookies' => true,
       // Aliases
       'aliases' => [
          '@assetBaseUrl' => getenv('ASSETS_URL'),
@@ -55,6 +54,7 @@ return [
         'useProjectConfigFile' => false
     ],
     'production' => [
-        'useProjectConfigFile' => false
+        'useProjectConfigFile' => false,
+        'useSecureCookies' => true
     ]
 ];
