@@ -23,6 +23,7 @@ return [
       // Images / Files
       'defaultImageQuality' => '100',
       'extraAllowedFileExtensions' => 'ico,xml,json',
+      'transformGifs' => false,
       // Account
       'useEmailAsUsername' => true,
       'autoLoginAfterAccountActivation' => true,
