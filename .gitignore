@@ -38,3 +38,19 @@ config/license.key
 web/uploads
 public/uploads
 public_html/uploads
+
+# Log files
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
