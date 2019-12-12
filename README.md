@@ -10,7 +10,7 @@ It's built with the intention of being used with [Tailwind CSS](https://github.c
 
 ## Whats included
 
-- Craft CMS 3.1.x
+- Craft CMS 3.x
 - Templates
    - [Blocks](https://github.com/madebyshape/craft-3#blocks)
    - [Components](https://github.com/madebyshape/craft-3#components)
