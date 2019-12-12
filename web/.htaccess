@@ -180,7 +180,7 @@
 		<IfModule mod_rewrite.c>
 			RewriteCond %{SCRIPT_FILENAME} -d [OR]
 			RewriteCond %{SCRIPT_FILENAME} -f
-			RewriteRule "(^|/)\." - [F]
+			RewriteRule "(^|/)\.(?!well-known)" - [F]
 		</IfModule>
 
 	# Block access to backup and source files
