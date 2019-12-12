@@ -1,6 +1,6 @@
 # Craft CMS 3.x
 
-This is a Craft CMS 3.x boilerplate [MadeByShape](https://madebyshape.co.uk) use internally for projects. 
+This is a [Craft CMS 3.x](https://github.com/craftcms/cms) boilerplate [MadeByShape](https://madebyshape.co.uk) use internally for projects. 
 
 It's built with the intention of being used with [Tailwind CSS](https://github.com/madebyshape/tailwind-css) framework.
 
@@ -10,7 +10,7 @@ It's built with the intention of being used with [Tailwind CSS](https://github.c
 
 ## Whats included
 
-- Craft CMS 3.x
+- [Craft CMS 3.x](https://github.com/craftcms/cms)
 - Templates
    - [Blocks](https://github.com/madebyshape/craft-3#blocks)
    - [Components](https://github.com/madebyshape/craft-3#components)
