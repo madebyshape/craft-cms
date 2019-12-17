@@ -1,4 +1,4 @@
-dateModified: 1576591003
+dateModified: 1576591227
 email:
   fromEmail: development@madebyshape.co.uk
   fromName: 'Craft 3'
@@ -137,6 +137,51 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.2.1
+  retcon:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  blitz:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+    settings:
+      debug: false
+      cachingEnabled: ''
+      includedUriPatterns:
+        -
+          uriPattern: '.*'
+      excludedUriPatterns: ''
+      cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
+      cacheStorageSettings:
+        folderPath: '@webroot/cache/blitz'
+      cacheWarmerType: putyourlightson\blitz\drivers\warmers\GuzzleWarmer
+      cacheWarmerSettings:
+        concurrency: '3'
+      customSiteUris: ''
+      cachePurgerType: putyourlightson\blitz\drivers\purgers\DummyPurger
+      cachePurgerTypes:
+        - putyourlightson\blitz\drivers\purgers\CloudflarePurger
+      deployerType: putyourlightson\blitz\drivers\deployers\DummyDeployer
+      deployerTypes:
+        - putyourlightson\blitz\drivers\deployers\GitDeployer
+      clearCacheAutomatically: '1'
+      warmCacheAutomatically: '1'
+      refreshCacheAutomaticallyForGlobals: true
+      queryStringCaching: '0'
+      apiKey: ''
+      cacheElements: true
+      cacheElementQueries: true
+      cacheDuration: null
+      integrations:
+        - putyourlightson\blitz\drivers\integrations\FeedMeIntegration
+        - putyourlightson\blitz\drivers\integrations\SeomaticIntegration
+      cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
+      sendPoweredByHeader: true
+      outputComments: true
+      refreshCacheJobPriority: 10
+      driverJobPriority: 100
+      mutexTimeout: 1
 sections:
   6d5425ea-3855-4860-9da2-b131f6f63a4a:
     name: Page

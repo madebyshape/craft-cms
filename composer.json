@@ -31,7 +31,9 @@
     "craftcms/redactor": "2.4.0",
     "fruitstudios/linkit": "1.1.11",
     "nystudio107/craft-retour": "3.1.31",
-    "solspace/craft-freeform": "3.5.8"
+    "solspace/craft-freeform": "3.5.8",
+    "mmikkel/retcon": "2.0.12",
+    "putyourlightson/craft-blitz": "3.0.1"
   },
   "autoload": {
     "psr-4": {
