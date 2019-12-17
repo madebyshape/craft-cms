@@ -33,6 +33,12 @@ vendor
 storage/*
 config/license.key
 
+# Caching
+
+web/cache
+public/cache
+public_html/cache
+
 # Asset Source Folders
 
 web/uploads
