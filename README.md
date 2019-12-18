@@ -22,17 +22,19 @@ It's built with the intention of being used with [Tailwind CSS](https://github.c
    - Plugin - Freeform
 - Config
    - Bespoke general config
-   - Plugin settings (Asset Rev, Imager, Minify etc)
+   - Plugin settings (Asset Rev, Blitz, Freeform, Imager, Minify & SEOMatic)
    - Project Config (Using `config/project.yaml`)
 - Plugins
    - Asset Rev
+   - Blitz
    - Default Dashboard
+   - Freeform
    - Imager
    - Linkit
    - Mailgun
-   - Maps
    - Minify
    - Redactor
+   - Retcon
    - Retour
    - SEOMatic
    - Super Table
@@ -42,7 +44,10 @@ It's built with the intention of being used with [Tailwind CSS](https://github.c
    - Javascript
    - OS Files
    - Craft CMS
+   - Caching
    - Asset Source Folders
+   - Log files
+   - Editor directories and files
 
 ## Terminology
 
