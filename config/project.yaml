@@ -238,25 +238,25 @@ volumes:
     handle: files
     type: craft\volumes\Local
     hasUrls: true
-    url: @assetBaseUrl/files
+    url: '@assetBaseUrl/files'
     settings:
-      path: @assetBasePath/files
+      path: '@assetBasePath/files'
     sortOrder: 2
   a69ab470-0307-498e-a91e-1388e50453eb:
     name: Images
     handle: images
     type: craft\volumes\Local
     hasUrls: true
-    url: @assetBaseUrl/images
+    url: '@assetBaseUrl/images'
     settings:
-      path: @assetBasePath/images
+      path: '@assetBasePath/images'
     sortOrder: 1
   c80f17d5-2ed9-48e8-b82f-2f8bdee5f731:
     name: User
     handle: user
     type: craft\volumes\Local
     hasUrls: true
-    url: @assetBaseUrl/user
+    url: '@assetBaseUrl/user'
     settings:
-      path: @assetBasePath/user
+      path: '@assetBasePath/user'
     sortOrder: 3
