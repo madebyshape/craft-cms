@@ -1,4 +1,4 @@
-dateModified: 1576591626
+dateModified: 1576591841
 email:
   fromEmail: development@madebyshape.co.uk
   fromName: 'Craft 3'
@@ -10,16 +10,15 @@ fieldGroups:
     name: 'Meta & Social Data'
 fields:
   14b689f5-e126-442e-bcb5-fa7554d7a05f:
-    name: 'Meta & Social Data'
+    contentColumnType: text
+    fieldGroup: f6d7d241-316e-4303-9b28-033f9f6c0379
     handle: metaSocialData
     instructions: ''
+    name: 'Meta & Social Data'
     searchable: true
-    translationMethod: none
-    translationKeyFormat: null
-    type: nystudio107\seomatic\fields\SeoSettings
     settings:
       elementDisplayPreviewType: google
-      generalTabEnabled: '1'
+      facebookTabEnabled: ''
       generalEnabledFields:
         - seoPreview
         - seoTitle
@@ -28,16 +27,63 @@ fields:
         - seoImage
         - robots
         - canonicalUrl
-      twitterTabEnabled: ''
-      facebookTabEnabled: ''
+      generalTabEnabled: '1'
       sitemapTabEnabled: ''
-    fieldGroup: f6d7d241-316e-4303-9b28-033f9f6c0379
-    contentColumnType: text
+      twitterTabEnabled: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: nystudio107\seomatic\fields\SeoSettings
+graphql:
+  schemas:
+    dc227a18-23ee-4955-b8d9-7e1f307beec2:
+      isPublic: true
+      name: 'Public Schema'
 plugins:
   assetrev:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  blitz:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+    settings:
+      apiKey: ''
+      cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
+      cacheDuration: null
+      cacheElementQueries: true
+      cacheElements: true
+      cachePurgerType: putyourlightson\blitz\drivers\purgers\DummyPurger
+      cachePurgerTypes:
+        - putyourlightson\blitz\drivers\purgers\CloudflarePurger
+      cacheStorageSettings:
+        folderPath: '@webroot/cache/blitz'
+      cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
+      cacheWarmerSettings:
+        concurrency: '3'
+      cacheWarmerType: putyourlightson\blitz\drivers\warmers\GuzzleWarmer
+      cachingEnabled: ''
+      clearCacheAutomatically: '1'
+      customSiteUris: ''
+      debug: false
+      deployerType: putyourlightson\blitz\drivers\deployers\DummyDeployer
+      deployerTypes:
+        - putyourlightson\blitz\drivers\deployers\GitDeployer
+      driverJobPriority: 100
+      excludedUriPatterns: ''
+      includedUriPatterns:
+        -
+          uriPattern: '.*'
+      integrations:
+        - putyourlightson\blitz\drivers\integrations\FeedMeIntegration
+        - putyourlightson\blitz\drivers\integrations\SeomaticIntegration
+      mutexTimeout: 1
+      outputComments: true
+      queryStringCaching: '0'
+      refreshCacheAutomaticallyForGlobals: true
+      refreshCacheJobPriority: 10
+      sendPoweredByHeader: true
+      warmCacheAutomatically: '1'
   default-dashboard:
     edition: standard
     enabled: true
@@ -47,48 +93,48 @@ plugins:
     enabled: true
     schemaVersion: 3.0.5
     settings:
-      pluginName: null
-      formTemplateDirectory: null
+      ajaxByDefault: false
+      autoScrollToErrors: true
+      blockedEmails: null
+      blockedEmailsError: 'Invalid Email Address'
+      blockedIpAddresses: null
+      blockedKeywords: null
+      blockedKeywordsError: 'Invalid Entry Data'
+      defaultTemplates: true
+      defaultView: dashboard
       emailTemplateDirectory: null
       emailTemplateStorage: db
-      defaultView: dashboard
       fieldDisplayOrder: name
-      showTutorial: true
-      removeNewlines: false
-      defaultTemplates: true
+      fillWithGet: false
       footerScripts: false
-      scriptInsertLocation: form
       formSubmitDisable: false
+      formTemplateDirectory: null
+      formattingTemplate: flexbox.html
       freeformHoneypot: true
       freeformHoneypotEnhancement: true
+      pluginName: null
+      purgableSpamAgeInDays: null
+      purgableSubmissionAgeInDays: null
+      recaptchaBehaviour: display_error
+      recaptchaEnabled: false
+      recaptchaKey: null
+      recaptchaMinScore: 0.5
+      recaptchaSecret: null
+      recaptchaType: v2_checkbox
+      removeNewlines: false
+      renderFormHtmlInCpViews: true
+      salesforce_client_id: null
+      salesforce_client_secret: null
+      salesforce_password: null
+      salesforce_username: null
+      scriptInsertLocation: form
+      showErrorsForBlockedEmails: false
+      showErrorsForBlockedKeywords: false
+      showTutorial: true
+      spamFolderEnabled: false
       spamProtectionBehaviour: simulate_success
       submissionThrottlingCount: null
       submissionThrottlingTimeFrame: null
-      blockedEmails: null
-      blockedKeywords: null
-      blockedKeywordsError: 'Invalid Entry Data'
-      blockedEmailsError: 'Invalid Email Address'
-      showErrorsForBlockedEmails: false
-      showErrorsForBlockedKeywords: false
-      blockedIpAddresses: null
-      purgableSubmissionAgeInDays: null
-      purgableSpamAgeInDays: null
-      salesforce_client_id: null
-      salesforce_client_secret: null
-      salesforce_username: null
-      salesforce_password: null
-      spamFolderEnabled: false
-      recaptchaEnabled: false
-      recaptchaKey: null
-      recaptchaSecret: null
-      recaptchaType: v2_checkbox
-      recaptchaMinScore: 0.5
-      recaptchaBehaviour: display_error
-      renderFormHtmlInCpViews: true
-      ajaxByDefault: false
-      autoScrollToErrors: true
-      fillWithGet: false
-      formattingTemplate: flexbox.html
   imager:
     edition: standard
     enabled: true
@@ -109,26 +155,30 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  retcon:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   retour:
     edition: standard
     enabled: true
     schemaVersion: 3.0.7
     settings:
-      pluginName: Redirects
-      createUriChangeRedirects: true
-      uriChangeRedirectSrcMatch: pathonly
       alwaysStripQueryString: false
+      automaticallyTrimStatistics: '1'
+      createUriChangeRedirects: true
+      dynamicRedirectDisplayLimit: 100
+      excludePatterns: ''
+      pluginName: Redirects
       preserveQueryString: false
       recordRemoteIp: true
-      staticRedirectDisplayLimit: 100
-      dynamicRedirectDisplayLimit: 100
-      stripQueryStringFromStats: true
-      statsStoredLimit: 1000
       refreshIntervalSecs: 5
-      automaticallyTrimStatistics: '1'
+      staticRedirectDisplayLimit: 100
       statisticsRateLimitMs: '3600000'
       statsDisplayLimit: 1000
-      excludePatterns: ''
+      statsStoredLimit: 1000
+      stripQueryStringFromStats: true
+      uriChangeRedirectSrcMatch: pathonly
   seomatic:
     edition: standard
     enabled: true
@@ -137,94 +187,52 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.2.1
-  retcon:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  blitz:
-    edition: standard
-    enabled: true
-    schemaVersion: 3.0.0
-    settings:
-      debug: false
-      cachingEnabled: ''
-      includedUriPatterns:
-        -
-          uriPattern: '.*'
-      excludedUriPatterns: ''
-      cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
-      cacheStorageSettings:
-        folderPath: '@webroot/cache/blitz'
-      cacheWarmerType: putyourlightson\blitz\drivers\warmers\GuzzleWarmer
-      cacheWarmerSettings:
-        concurrency: '3'
-      customSiteUris: ''
-      cachePurgerType: putyourlightson\blitz\drivers\purgers\DummyPurger
-      cachePurgerTypes:
-        - putyourlightson\blitz\drivers\purgers\CloudflarePurger
-      deployerType: putyourlightson\blitz\drivers\deployers\DummyDeployer
-      deployerTypes:
-        - putyourlightson\blitz\drivers\deployers\GitDeployer
-      clearCacheAutomatically: '1'
-      warmCacheAutomatically: '1'
-      refreshCacheAutomaticallyForGlobals: true
-      queryStringCaching: '0'
-      apiKey: ''
-      cacheElements: true
-      cacheElementQueries: true
-      cacheDuration: null
-      integrations:
-        - putyourlightson\blitz\drivers\integrations\FeedMeIntegration
-        - putyourlightson\blitz\drivers\integrations\SeomaticIntegration
-      cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
-      sendPoweredByHeader: true
-      outputComments: true
-      refreshCacheJobPriority: 10
-      driverJobPriority: 100
-      mutexTimeout: 1
 sections:
   6d5425ea-3855-4860-9da2-b131f6f63a4a:
-    name: Page
-    handle: page
-    type: structure
     enableVersioning: true
-    propagationMethod: all
-    previewTargets: null
-    structure:
-      uid: 989435ef-8345-4ff2-ba65-c2532f520533
-      maxLevels: null
     entryTypes:
       e8cb1b6d-f810-4689-a702-d56ad6ebeaa9:
-        name: Page
         handle: page
         hasTitleField: true
-        titleLabel: Title
-        titleFormat: null
+        name: Page
         sortOrder: 1
+        titleFormat: null
+        titleLabel: Title
+    handle: page
+    name: Page
+    previewTargets:
+      -
+        label: 'Primary entry page'
+        urlFormat: '{url}'
+    propagationMethod: all
     siteSettings:
       3bcc22ae-1ba3-46c7-8419-d637d972c4e0:
         enabledByDefault: true
         hasUrls: true
-        uriFormat: '{parent.uri}/{slug}'
         template: _page/entry
+        uriFormat: '{parent.uri}/{slug}'
+    structure:
+      maxLevels: null
+      uid: 989435ef-8345-4ff2-ba65-c2532f520533
+    type: structure
 siteGroups:
   0850a946-7053-4fb3-8a0b-a44e15fb4a2f:
     name: 'Craft 3'
 sites:
   3bcc22ae-1ba3-46c7-8419-d637d972c4e0:
-    name: 'Craft 3'
-    handle: default
-    language: en-GB
-    hasUrls: true
     baseUrl: $SITE_URL
-    sortOrder: 1
+    handle: default
+    hasUrls: true
+    language: en-GB
+    name: 'Craft 3'
     primary: true
     siteGroup: 0850a946-7053-4fb3-8a0b-a44e15fb4a2f
+    sortOrder: 1
 system:
   edition: pro
   live: true
   name: 'Craft 3'
-  schemaVersion: 3.3.3
+  schemaVersion: 3.4.4
   timeZone: Europe/London
 users:
   allowPublicRegistration: false
@@ -234,29 +242,29 @@ users:
   requireEmailVerification: true
 volumes:
   911286b2-a3e4-4c2d-aed8-663976e6e7f1:
-    name: Files
     handle: files
-    type: craft\volumes\Local
     hasUrls: true
-    url: $ASSETS_URL/files
+    name: Files
     settings:
       path: $ASSETS_PATH/files
     sortOrder: 2
-  a69ab470-0307-498e-a91e-1388e50453eb:
-    name: Images
-    handle: images
     type: craft\volumes\Local
+    url: $ASSETS_URL/files
+  a69ab470-0307-498e-a91e-1388e50453eb:
+    handle: images
     hasUrls: true
-    url: $ASSETS_URL/images
+    name: Images
     settings:
       path: $ASSETS_PATH/images
     sortOrder: 1
-  c80f17d5-2ed9-48e8-b82f-2f8bdee5f731:
-    name: User
-    handle: user
     type: craft\volumes\Local
+    url: $ASSETS_URL/images
+  c80f17d5-2ed9-48e8-b82f-2f8bdee5f731:
+    handle: user
     hasUrls: true
-    url: $ASSETS_URL/user
+    name: User
     settings:
       path: $ASSETS_PATH/user
     sortOrder: 3
+    type: craft\volumes\Local
+    url: $ASSETS_URL/user
