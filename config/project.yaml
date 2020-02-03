@@ -1,17 +1,32 @@
-dateModified: 1576591841
+dateModified: 1580733867
 email:
   fromEmail: development@madebyshape.co.uk
   fromName: 'Craft 3'
   transportType: craft\mail\transportadapters\Sendmail
 fieldGroups:
-  76965b0f-2a26-4f97-b661-ee066f6f255a:
-    name: Common
-  f6d7d241-316e-4303-9b28-033f9f6c0379:
+  2f26868b-418e-44a0-8e53-d367d9a163eb:
     name: 'Meta & Social Data'
+  a6548a8e-edd2-4cbb-9200-db7de2726f75:
+    name: Common
 fields:
-  14b689f5-e126-442e-bcb5-fa7554d7a05f:
+  90552b17-3ba7-452a-9dfd-0b13004b4659:
+    contentColumnType: string
+    fieldGroup: a6548a8e-edd2-4cbb-9200-db7de2726f75
+    handle: pageBlockContent
+    instructions: ''
+    name: 'Page - Block Content'
+    searchable: true
+    settings:
+      contentTable: '{{%matrixcontent_pageblockcontent}}'
+      maxBlocks: ''
+      minBlocks: ''
+      propagationMethod: all
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
+  d6471ab8-0d49-45bf-af5d-f0d2a860e267:
     contentColumnType: text
-    fieldGroup: f6d7d241-316e-4303-9b28-033f9f6c0379
+    fieldGroup: 2f26868b-418e-44a0-8e53-d367d9a163eb
     handle: metaSocialData
     instructions: ''
     name: 'Meta & Social Data'
@@ -23,7 +38,6 @@ fields:
         - seoPreview
         - seoTitle
         - seoDescription
-        - seoKeywords
         - seoImage
         - robots
         - canonicalUrl
@@ -33,11 +47,90 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: nystudio107\seomatic\fields\SeoSettings
-graphql:
-  schemas:
-    dc227a18-23ee-4955-b8d9-7e1f307beec2:
-      isPublic: true
-      name: 'Public Schema'
+matrixBlockTypes:
+  4edb6c61-ee7b-4a62-ae07-d27f2127a80a:
+    field: 90552b17-3ba7-452a-9dfd-0b13004b4659
+    fieldLayouts:
+      af512a4a-3b2f-4137-b331-1deeb26fa3cd:
+        tabs:
+          -
+            fields:
+              f64c5171-437f-45f4-ac5b-1164673e94f9:
+                required: false
+                sortOrder: 1
+              feb39789-b26f-45a4-99fb-d7e4cc376989:
+                required: false
+                sortOrder: 2
+            name: Content
+            sortOrder: 1
+    fields:
+      f64c5171-437f-45f4-ac5b-1164673e94f9:
+        contentColumnType: text
+        fieldGroup: null
+        handle: heading
+        instructions: ''
+        name: Heading
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: null
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      feb39789-b26f-45a4-99fb-d7e4cc376989:
+        contentColumnType: string
+        fieldGroup: null
+        handle: padding
+        instructions: ''
+        name: Padding
+        searchable: true
+        settings:
+          optgroups: true
+          options:
+            -
+              __assoc__:
+                -
+                  - label
+                  - 'Top & Bottom'
+                -
+                  - value
+                  - topBottom
+                -
+                  - default
+                  - '1'
+            -
+              __assoc__:
+                -
+                  - label
+                  - Top
+                -
+                  - value
+                  - top
+                -
+                  - default
+                  - ''
+            -
+              __assoc__:
+                -
+                  - label
+                  - Bottom
+                -
+                  - value
+                  - bottom
+                -
+                  - default
+                  - ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Dropdown
+    handle: block
+    name: Block
+    sortOrder: 1
 plugins:
   assetrev:
     edition: standard
@@ -46,95 +139,15 @@ plugins:
   blitz:
     edition: standard
     enabled: true
-    schemaVersion: 3.0.0
-    settings:
-      apiKey: ''
-      cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
-      cacheDuration: null
-      cacheElementQueries: true
-      cacheElements: true
-      cachePurgerType: putyourlightson\blitz\drivers\purgers\DummyPurger
-      cachePurgerTypes:
-        - putyourlightson\blitz\drivers\purgers\CloudflarePurger
-      cacheStorageSettings:
-        folderPath: '@webroot/cache/blitz'
-      cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
-      cacheWarmerSettings:
-        concurrency: '3'
-      cacheWarmerType: putyourlightson\blitz\drivers\warmers\GuzzleWarmer
-      cachingEnabled: ''
-      clearCacheAutomatically: '1'
-      customSiteUris: ''
-      debug: false
-      deployerType: putyourlightson\blitz\drivers\deployers\DummyDeployer
-      deployerTypes:
-        - putyourlightson\blitz\drivers\deployers\GitDeployer
-      driverJobPriority: 100
-      excludedUriPatterns: ''
-      includedUriPatterns:
-        -
-          uriPattern: '.*'
-      integrations:
-        - putyourlightson\blitz\drivers\integrations\FeedMeIntegration
-        - putyourlightson\blitz\drivers\integrations\SeomaticIntegration
-      mutexTimeout: 1
-      outputComments: true
-      queryStringCaching: '0'
-      refreshCacheAutomaticallyForGlobals: true
-      refreshCacheJobPriority: 10
-      sendPoweredByHeader: true
-      warmCacheAutomatically: '1'
+    schemaVersion: 3.1.0
   default-dashboard:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
   freeform:
-    edition: standard
+    edition: lite
     enabled: true
     schemaVersion: 3.0.5
-    settings:
-      ajaxByDefault: false
-      autoScrollToErrors: true
-      blockedEmails: null
-      blockedEmailsError: 'Invalid Email Address'
-      blockedIpAddresses: null
-      blockedKeywords: null
-      blockedKeywordsError: 'Invalid Entry Data'
-      defaultTemplates: true
-      defaultView: dashboard
-      emailTemplateDirectory: null
-      emailTemplateStorage: db
-      fieldDisplayOrder: name
-      fillWithGet: false
-      footerScripts: false
-      formSubmitDisable: false
-      formTemplateDirectory: null
-      formattingTemplate: flexbox.html
-      freeformHoneypot: true
-      freeformHoneypotEnhancement: true
-      pluginName: null
-      purgableSpamAgeInDays: null
-      purgableSubmissionAgeInDays: null
-      recaptchaBehaviour: display_error
-      recaptchaEnabled: false
-      recaptchaKey: null
-      recaptchaMinScore: 0.5
-      recaptchaSecret: null
-      recaptchaType: v2_checkbox
-      removeNewlines: false
-      renderFormHtmlInCpViews: true
-      salesforce_client_id: null
-      salesforce_client_secret: null
-      salesforce_password: null
-      salesforce_username: null
-      scriptInsertLocation: form
-      showErrorsForBlockedEmails: false
-      showErrorsForBlockedKeywords: false
-      showTutorial: true
-      spamFolderEnabled: false
-      spamProtectionBehaviour: simulate_success
-      submissionThrottlingCount: null
-      submissionThrottlingTimeFrame: null
   imager:
     edition: standard
     enabled: true
@@ -162,23 +175,7 @@ plugins:
   retour:
     edition: standard
     enabled: true
-    schemaVersion: 3.0.7
-    settings:
-      alwaysStripQueryString: false
-      automaticallyTrimStatistics: '1'
-      createUriChangeRedirects: true
-      dynamicRedirectDisplayLimit: 100
-      excludePatterns: ''
-      pluginName: Redirects
-      preserveQueryString: false
-      recordRemoteIp: true
-      refreshIntervalSecs: 5
-      staticRedirectDisplayLimit: 100
-      statisticsRateLimitMs: '3600000'
-      statsDisplayLimit: 1000
-      statsStoredLimit: 1000
-      stripQueryStringFromStats: true
-      uriChangeRedirectSrcMatch: pathonly
+    schemaVersion: 3.0.9
   seomatic:
     edition: standard
     enabled: true
@@ -188,52 +185,65 @@ plugins:
     enabled: true
     schemaVersion: 2.2.1
 sections:
-  6d5425ea-3855-4860-9da2-b131f6f63a4a:
+  a4cade2e-b351-4d0b-8087-3328bc132811:
     enableVersioning: true
     entryTypes:
-      e8cb1b6d-f810-4689-a702-d56ad6ebeaa9:
-        handle: page
+      0f92aa22-16d7-46d4-876a-135fba91d971:
+        fieldLayouts:
+          f5656723-1457-4216-a988-c5d52d84dbdf:
+            tabs:
+              -
+                fields:
+                  90552b17-3ba7-452a-9dfd-0b13004b4659:
+                    required: false
+                    sortOrder: 1
+                name: General
+                sortOrder: 1
+              -
+                fields:
+                  d6471ab8-0d49-45bf-af5d-f0d2a860e267:
+                    required: false
+                    sortOrder: 1
+                name: 'Meta & Social Data'
+                sortOrder: 2
+        handle: pageBlock
         hasTitleField: true
-        name: Page
+        name: 'Page - Block'
         sortOrder: 1
-        titleFormat: null
+        titleFormat: ''
         titleLabel: Title
     handle: page
     name: Page
-    previewTargets:
-      -
-        label: 'Primary entry page'
-        urlFormat: '{url}'
     propagationMethod: all
     siteSettings:
-      3bcc22ae-1ba3-46c7-8419-d637d972c4e0:
+      06fb793a-57ef-483e-8415-675d2cfa2fd8:
         enabledByDefault: true
         hasUrls: true
         template: _page/entry
-        uriFormat: '{parent.uri}/{slug}'
+        uriFormat: '{slug}'
     structure:
       maxLevels: null
-      uid: 989435ef-8345-4ff2-ba65-c2532f520533
+      uid: 31b45cde-2559-489e-8cd0-3b3a8023dd15
     type: structure
 siteGroups:
-  0850a946-7053-4fb3-8a0b-a44e15fb4a2f:
+  a37b06c6-894d-4dad-a768-46c1a840e80b:
     name: 'Craft 3'
 sites:
-  3bcc22ae-1ba3-46c7-8419-d637d972c4e0:
+  06fb793a-57ef-483e-8415-675d2cfa2fd8:
     baseUrl: $SITE_URL
     handle: default
     hasUrls: true
     language: en-GB
     name: 'Craft 3'
     primary: true
-    siteGroup: 0850a946-7053-4fb3-8a0b-a44e15fb4a2f
+    siteGroup: a37b06c6-894d-4dad-a768-46c1a840e80b
     sortOrder: 1
 system:
-  edition: pro
+  edition: solo
   live: true
   name: 'Craft 3'
-  schemaVersion: 3.4.4
-  timeZone: Europe/London
+  schemaVersion: 3.4.7
+  timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
   defaultGroup: null
@@ -241,33 +251,21 @@ users:
   photoVolumeUid: null
   requireEmailVerification: true
 volumes:
-  911286b2-a3e4-4c2d-aed8-663976e6e7f1:
+  0cf15aa5-fa7d-405e-9a99-aa30b099a53c:
     handle: files
     hasUrls: true
     name: Files
-    url: '@assetBaseUrl/files'
     settings:
       path: '@assetBasePath/files'
     sortOrder: 2
     type: craft\volumes\Local
-    url: $ASSETS_URL/files
-  a69ab470-0307-498e-a91e-1388e50453eb:
+    url: '@assetBaseUrl/files'
+  d22d8c4e-5130-4bb2-afad-a7c08be98605:
     handle: images
     hasUrls: true
     name: Images
-    url: '@assetBaseUrl/images'
     settings:
       path: '@assetBasePath/images'
     sortOrder: 1
     type: craft\volumes\Local
-    url: $ASSETS_URL/images
-  c80f17d5-2ed9-48e8-b82f-2f8bdee5f731:
-    handle: user
-    hasUrls: true
-    name: User
-    url: '@assetBaseUrl/user'
-    settings:
-      path: '@assetBasePath/user'
-    sortOrder: 3
-    type: craft\volumes\Local
-    url: $ASSETS_URL/user
+    url: '@assetBaseUrl/images'

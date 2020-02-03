@@ -8,7 +8,7 @@
          <meta http-equiv="x-ua-compatible" content="ie=edge">
          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
          
-         {% if craft.config.devMode %}
+         {% if craft.app.config.general.devMode %}
             <meta name="robots" content="noindex">
          {% endif %}
 
@@ -19,7 +19,7 @@
          {% if
             block('inlineCss')|length or
             block('criticalCss')|length and
-            not craft.config.devMode
+            not craft.app.config.general.devMode
          %}
             <style>
                {% block criticalCss %}{% endblock %}
@@ -29,7 +29,7 @@
 
          {# CSS #}
          {% set cssUrl = siteUrl ~ 'dist/' ~ rev('css/app.css')  %}
-         {% if block('criticalCss')|length and not craft.config.devMode %}
+         {% if block('criticalCss')|length and not craft.app.config.general.devMode %}
             <link rel="preload" href="{{ cssUrl }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
             <noscript>
                <link rel="stylesheet" href="{{ cssUrl }}">
