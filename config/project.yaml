@@ -245,8 +245,9 @@ volumes:
     handle: files
     hasUrls: true
     name: Files
+    url: '@assetBaseUrl/files'
     settings:
-      path: $ASSETS_PATH/files
+      path: '@assetBasePath/files'
     sortOrder: 2
     type: craft\volumes\Local
     url: $ASSETS_URL/files
@@ -254,8 +255,9 @@ volumes:
     handle: images
     hasUrls: true
     name: Images
+    url: '@assetBaseUrl/images'
     settings:
-      path: $ASSETS_PATH/images
+      path: '@assetBasePath/images'
     sortOrder: 1
     type: craft\volumes\Local
     url: $ASSETS_URL/images
@@ -263,8 +265,9 @@ volumes:
     handle: user
     hasUrls: true
     name: User
+    url: '@assetBaseUrl/user'
     settings:
-      path: $ASSETS_PATH/user
+      path: '@assetBasePath/user'
     sortOrder: 3
     type: craft\volumes\Local
     url: $ASSETS_URL/user
