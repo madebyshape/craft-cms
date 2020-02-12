@@ -21,7 +21,6 @@
   "require": {
     "craftcms/cms": "3.4.2",
     "vlucas/phpdotenv": "^2.4.0",
-    "aelvan/imager": "v2.3.1",
     "verbb/super-table": "2.4.4",
     "nystudio107/craft-seomatic": "3.2.41",
     "clubstudioltd/craft-asset-rev": "6.0.2",
@@ -33,7 +32,8 @@
     "nystudio107/craft-retour": "3.1.33",
     "solspace/craft-freeform": "3.6.1",
     "mmikkel/retcon": "2.0.12",
-    "putyourlightson/craft-blitz": "3.1.1"
+    "putyourlightson/craft-blitz": "3.1.1",
+    "spacecatninja/imager-x": "v3.0.0"
   },
   "autoload": {
     "psr-4": {

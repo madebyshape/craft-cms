@@ -1,4 +1,4 @@
-dateModified: 1580733867
+dateModified: 1581525043
 email:
   fromEmail: development@madebyshape.co.uk
   fromName: 'Craft 3'
@@ -148,10 +148,10 @@ plugins:
     edition: lite
     enabled: true
     schemaVersion: 3.0.5
-  imager:
-    edition: standard
+  imager-x:
+    edition: lite
     enabled: true
-    schemaVersion: 2.0.0
+    schemaVersion: 3.0.0
   linkit:
     edition: standard
     enabled: true
