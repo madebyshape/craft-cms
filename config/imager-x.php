@@ -4,6 +4,7 @@
       '*' => [
          'imagerUrl' => getenv('ASSETS_URL') . '/imager',
          'imagerSystemPath' => getenv('ASSETS_PATH') . '/imager',
+         'fallbackImage' => '/dist/images/fallback-image.jpg',
          'cacheEnabled' => true,
          'cacheDuration' => 31536000, // 1 year
          'cacheDurationRemoteFiles' => 31536000, // 1 year
@@ -52,9 +53,7 @@
       'dev' => [
          'useCwebp' => false,
          'optimizers' => null,
-         'noop' => false,
-         'suppressExceptions' => false,
-         'skipExecutableExistCheck' => false
+         'mockImage' => '/dist/images/mock-image.jpg'
       ],
       'staging' => [
          'useCwebp' => false,
