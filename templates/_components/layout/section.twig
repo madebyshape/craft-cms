@@ -1,0 +1,35 @@
+{#
+   Section
+   Outputs section layout with correct padding and container.
+
+   @type {embed}
+   @param {string} padding
+   @param {string} class
+   @param {bool} container
+
+#}
+
+{% if padding is not defined %}
+    {% set padding = 'topBottom' %}
+{% endif %}
+
+{% set paddingClass = {
+    top: 'pt-32',
+    bottom: 'pb-32',
+    topBottom: 'py-32',
+} %}
+
+<div class="section {{ class is defined ? class : 'bg-white' }} {{ attribute(paddingClass, padding) }}">
+
+    {% if container is not defined %}
+        <div class="section__container">
+    {% endif %}
+
+    {% block sectionContent %}
+    {% endblock %}
+
+    {% if container is not defined %}
+        </div>
+    {% endif %}
+
+</div>
