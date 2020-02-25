@@ -52,8 +52,7 @@
       ],
       'dev' => [
          'useCwebp' => false,
-         'optimizers' => null,
-         'mockImage' => '/dist/images/mock-image.jpg'
+         'optimizers' => null
       ],
       'staging' => [
          'useCwebp' => false,
