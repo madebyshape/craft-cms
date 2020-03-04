@@ -9,7 +9,7 @@
          {# ------- Template ------- #}
 
          {% for block in entry.pageBlockContent.all() %}
-            {% include '_blocks/' ~ block.type %}
+            {% include '_blocks/' ~ block.type.handle %}
          {% endfor %}
 
       {%- endminify -%}
