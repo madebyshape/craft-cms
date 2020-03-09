@@ -1,4 +1,4 @@
-dateModified: 1581525043
+dateModified: 1583753444
 email:
   fromEmail: development@madebyshape.co.uk
   fromName: 'Craft 3'
@@ -147,7 +147,7 @@ plugins:
   freeform:
     edition: lite
     enabled: true
-    schemaVersion: 3.0.5
+    schemaVersion: 3.0.6
   imager-x:
     edition: lite
     enabled: true
@@ -214,6 +214,7 @@ sections:
         titleLabel: Title
     handle: page
     name: Page
+    previewTargets: null
     propagationMethod: all
     siteSettings:
       06fb793a-57ef-483e-8415-675d2cfa2fd8:
@@ -242,7 +243,7 @@ system:
   edition: solo
   live: true
   name: 'Craft 3'
-  schemaVersion: 3.4.7
+  schemaVersion: 3.4.10
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
