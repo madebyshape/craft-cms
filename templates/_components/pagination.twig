@@ -7,28 +7,30 @@
 
 #}
 
+{% do seomatic.helper.paginate(pageInfo) %}
+
 {% if pagination is defined and pagination.totalPages > 1 %}
 
-   <div class="pagination">
+   <div class="flex flex-wrap">
 
       {% if pagination.prevUrl %}
-         <a href="{{ pagination.prevUrl }}">
+         <a href="{{ pagination.prevUrl }}" class="mr-1">
             <i class="fas fa-caret-left"></i>
          </a>
       {% endif %}
 
       {% for page, url in pagination.getPrevUrls(3) %}
-          <a href="{{ url }}">{{ page }}</a>
+          <a href="{{ url }}" class="mr-1">{{ page }}</a>
       {% endfor %}
 
-      <span>{{ pagination.currentPage }}</span>
+      <span class="mr-1">{{ pagination.currentPage }}</span>
 
       {% for page, url in pagination.getNextUrls(3) %}
-          <a href="{{ url }}">{{ page }}</a>
+          <a href="{{ url }}" class="mr-1">{{ page }}</a>
       {% endfor %}
 
       {% if pagination.nextUrl %}
-         <a href="{{ pagination.nextUrl }}">
+         <a href="{{ pagination.nextUrl }}" class="mr-1">
             <i class="fas fa-caret-right"></i>
          </a>
       {% endif %}
