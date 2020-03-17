@@ -19,7 +19,7 @@
 
 return [
     '*' => [
-        'cachingEnabled' => true,
+        'cachingEnabled' => false,
         'includedUriPatterns' => [
             [
                 'siteId' => '',
@@ -33,10 +33,10 @@ return [
         'refreshCacheAutomaticallyForGlobals' => true
     ],
     'dev' => [
-        'cachingEnabled' => false
     ],
     'staging' => [
     ],
     'production' => [
+        'cachingEnabled' => true
     ]
 ];
