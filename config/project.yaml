@@ -1,4 +1,4 @@
-dateModified: 1588850575
+dateModified: 1588862534
 email:
   fromEmail: development@madebyshape.co.uk
   fromName: 'Craft 3'
@@ -138,7 +138,7 @@ plugins:
     schemaVersion: 1.0.0
   blitz:
     edition: standard
-    enabled: true
+    enabled: false
     schemaVersion: 3.1.0
   default-dashboard:
     edition: standard
@@ -152,10 +152,6 @@ plugins:
     edition: lite
     enabled: true
     schemaVersion: 3.0.0
-  linkit:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.8
   mailgun:
     edition: standard
     enabled: true
@@ -184,6 +180,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.2.1
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 sections:
   a4cade2e-b351-4d0b-8087-3328bc132811:
     enableVersioning: true

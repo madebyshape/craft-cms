@@ -28,12 +28,12 @@
     "verbb/default-dashboard": "1.0.8",
     "craftcms/mailgun": "1.4.3",
     "craftcms/redactor": "2.6.1",
-    "fruitstudios/linkit": "1.1.11",
     "nystudio107/craft-retour": "3.1.37",
     "solspace/craft-freeform": "3.6.7",
     "mmikkel/retcon": "2.1.0",
     "putyourlightson/craft-blitz": "3.6.4",
-    "spacecatninja/imager-x": "v3.0.8"
+    "spacecatninja/imager-x": "v3.0.8",
+    "sebastianlenz/linkfield": "1.0.21"
   },
   "autoload": {
     "psr-4": {

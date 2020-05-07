@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "139b6a162aefa109e9e96f333ea504ad",
+    "content-hash": "493bead8685d4dbbfb60c00e6b7f9a67",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -1246,57 +1246,6 @@
                 "php"
             ],
             "time": "2020-03-25T18:49:23+00:00"
-        },
-        {
-            "name": "fruitstudios/linkit",
-            "version": "1.1.11",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fruitstudios/craft-linkit/zipball/354ec959094c6e8ae05af1ff345709e4776a7f66",
-                "reference": "354ec959094c6e8ae05af1ff345709e4776a7f66",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.1.8"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Linkit",
-                "handle": "linkit",
-                "hasCpSettings": false,
-                "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/fruitstudios/craft-linkit/master/CHANGELOG.md",
-                "class": "fruitstudios\\linkit\\Linkit",
-                "components": {
-                    "services": "fruitstudios\\linkit\\services\\LinkitService"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "fruitstudios\\linkit\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Fruit Studios",
-                    "homepage": "https://fruitstudios.co.uk"
-                }
-            ],
-            "description": "One link field to rule them all.",
-            "keywords": [
-                "Craft",
-                "cms",
-                "craft-plugin",
-                "craftcms",
-                "fruit studios",
-                "link it",
-                "linkit"
-            ],
-            "time": "2019-04-03T09:54:55+00:00"
         },
         {
             "name": "google/auth",
@@ -5130,6 +5079,37 @@
                 "uri"
             ],
             "time": "2017-06-14T03:57:53+00:00"
+        },
+        {
+            "name": "sebastianlenz/linkfield",
+            "version": "1.0.21",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastian-lenz/craft-linkfield/zipball/64fbbe853e7077f52fb4a1147d6e38eebccde80b",
+                "reference": "64fbbe853e7077f52fb4a1147d6e38eebccde80b",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1",
+                "php": "^7.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "handle": "typedlinkfield",
+                "name": "Typed link field",
+                "developer": "Sebastian Lenz",
+                "developerUrl": "https://github.com/sebastian-lenz/"
+            },
+            "autoload": {
+                "psr-4": {
+                    "typedlinkfield\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Craft field type for selecting links",
+            "time": "2020-04-01T13:03:23+00:00"
         },
         {
             "name": "seld/cli-prompt",
