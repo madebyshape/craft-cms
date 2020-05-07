@@ -19,21 +19,21 @@
     "rss": "https://craftcms.com/changelog.rss"
   },
   "require": {
-    "craftcms/cms": "3.4.9",
+    "craftcms/cms": "3.4.18",
     "vlucas/phpdotenv": "^2.4.0",
-    "verbb/super-table": "2.4.6",
-    "nystudio107/craft-seomatic": "3.2.47",
+    "verbb/super-table": "2.4.9",
+    "nystudio107/craft-seomatic": "3.3.1",
     "clubstudioltd/craft-asset-rev": "6.0.2",
-    "nystudio107/craft-minify": "1.2.9",
-    "verbb/default-dashboard": "1.0.6",
-    "craftcms/mailgun": "1.4.2",
-    "craftcms/redactor": "2.6.0.1",
+    "nystudio107/craft-minify": "1.2.10",
+    "verbb/default-dashboard": "1.0.8",
+    "craftcms/mailgun": "1.4.3",
+    "craftcms/redactor": "2.6.1",
     "fruitstudios/linkit": "1.1.11",
-    "nystudio107/craft-retour": "3.1.33",
-    "solspace/craft-freeform": "3.6.5",
+    "nystudio107/craft-retour": "3.1.37",
+    "solspace/craft-freeform": "3.6.7",
     "mmikkel/retcon": "2.1.0",
-    "putyourlightson/craft-blitz": "3.5.0",
-    "spacecatninja/imager-x": "v3.0.4"
+    "putyourlightson/craft-blitz": "3.6.4",
+    "spacecatninja/imager-x": "v3.0.8"
   },
   "autoload": {
     "psr-4": {

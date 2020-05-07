@@ -1,4 +1,4 @@
-dateModified: 1583753444
+dateModified: 1588850575
 email:
   fromEmail: development@madebyshape.co.uk
   fromName: 'Craft 3'
@@ -179,7 +179,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
-    schemaVersion: 3.0.8
+    schemaVersion: 3.0.9
   super-table:
     edition: standard
     enabled: true
