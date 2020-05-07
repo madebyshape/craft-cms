@@ -29,6 +29,7 @@ Thumbs.db
 cpresources
 vendor
 .env
+.env.sh
 *.log
 storage/*
 config/license.key
