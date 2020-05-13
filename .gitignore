@@ -34,6 +34,10 @@ vendor
 storage/*
 config/license.key
 
+# Backups
+
+backups
+
 # Caching
 
 web/cache
