@@ -22,19 +22,14 @@ return [
         'cachingEnabled' => false,
         'includedUriPatterns' => [
             [
-                'siteId' => '',
                 'uriPattern' => '.*',
             ]
         ],
         'excludedUriPatterns' => [],
-        'cacheStorageSettings' => ['folderPath' => '@webroot/cache/blitz'],
+        'cacheStorageSettings' => ['folderPath' => '@root/cache/blitz'],
         'clearCacheAutomatically' => true,
         'warmCacheAutomatically' => true,
         'refreshCacheAutomaticallyForGlobals' => true
-    ],
-    'dev' => [
-    ],
-    'staging' => [
     ],
     'production' => [
         'cachingEnabled' => true
