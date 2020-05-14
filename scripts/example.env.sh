@@ -25,7 +25,7 @@ LOCAL_WRITEABLE_DIRS=(
 )
 
 LOCAL_ASSETS_DIRS=(
-    "images",
+    "images"
     "imager"
 )
 
