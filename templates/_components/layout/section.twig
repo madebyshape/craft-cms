@@ -19,10 +19,10 @@
     topBottom: 'py-32',
 } %}
 
-<div class="section {{ class is defined ? class : 'bg-white' }} {{ attribute(paddingClass, padding) }}">
+<div class="w-full {{ class is defined ? class : 'bg-white' }} {{ attribute(paddingClass, padding) }}">
 
     {% if container is not defined %}
-        <div class="section__container">
+        <div class="container mx-auto px-4">
     {% endif %}
 
     {% block sectionContent %}
