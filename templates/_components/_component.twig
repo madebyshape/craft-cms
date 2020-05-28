@@ -6,3 +6,15 @@
    @param {string/bool/object/array/int} name
    @block {string/bool/object/array/int} name
 #}
+
+<div x-data="component()">
+</div>
+
+{% js %}
+   function component() {
+      return {
+         variable: false,
+         exampleFunction() { this.variable = true }
+      }
+   }
+{% endjs %}
