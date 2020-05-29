@@ -5,12 +5,17 @@
    @type {include}
    @param {string} id
    @param {string} label
+   @param {string} class
    @param {bool} required
 #}
 
-<label for="{{ id }}" class="field__label">
+{% set baseClass = 'block font-semibold mb-1' %}
+
+{% set class = class is defined ? baseClass ~ ' ' ~ class : baseClass %}
+
+<label for="{{ id }}" class="{{ class }}">
    {{ label }}
    {% if required is defined %}
-      <span class="text-primary-500">*</span>
+      <span class="text-primary-500 ml-px">*</span>
    {% endif %}
 </label>

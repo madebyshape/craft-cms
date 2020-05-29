@@ -7,20 +7,55 @@
    @param {string} name
    @param {string} value
    @param {array} options
+   @param {string} attributes
+   @param {string} placeholder
+   @param {bool} multiple
    @param {bool} required
 #}
 
-{% set id = label is defined ? label|kebab : 'select-' ~ random() %}
-{% set class = 'form__field' ~ class is defined ? ' ' ~ class %}
+{% set id = label is defined ? label|kebab : 'select-' ~ random(100,999) %}
 
 {% if label is defined %}
    {% include '_components/field/label' %}
 {% endif %}
 
-<div class="form__field-container form__field-container--select">
-   <select name="{{ name }}" id="{{ id }}" class="{{ class }}"{{ required is defined ? ' required' }}>
+{% set baseClass = '
+   transition--default
+   appearance-none
+   block
+   w-full
+   bg-white
+   text-gray-700
+   border
+   border-gray-400
+   px-3
+   py-3
+   rounded
+   shadow
+   leading-tight
+   hover:border-gray-500
+   focus:border-primary-500 
+   focus:outline-none
+   focus:shadow-outline
+' %}
+
+{% set class = class is defined ? baseClass ~ ' ' ~ class : baseClass %}
+
+<div class="relative">
+   <span class="absolute mr-3 border-gray-700 border-b-2 border-l-2 right-0 w-2 h-2 pointer-events-none top-1/2 transform -rotate-45 -translate-y-1/2"></span>
+   <select 
+      name="{{ name }}" 
+      id="{{ id }}" 
+      class="{{ class }}"
+      {{ attributes is defined ? attributes|raw }}
+      {{ required is defined ? 'required' }}
+      {{ multiple is defined ? 'multiple' }}
+   >
       {% for option in options %}
-         <option value="{{ option.value }}"{% if option.value == value %} selected{% endif %}>
+         {% if placeholder is defined %}
+            <option value="" disabled{% if value is not defined %} selected{% endif %}>{{ placeholder }}</option>
+         {% endif %}
+         <option value="{{ option.value }}"{% if value is defined and option.value in value %} selected{% endif %}>
             {{ option.label }}
          </option>
       {% endfor %}

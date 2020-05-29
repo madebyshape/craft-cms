@@ -1,5 +1,5 @@
 {#
-   Field Input
+   Input
    Outputs a input field with the correct markup
 
    @type {include}
@@ -9,24 +9,48 @@
    @param {string} value
    @param {string} placeholder
    @param {string} class
+   @param {string} attributes
    @param {bool} required
 #}
 
-{% set id = label is defined ? label|kebab : 'input-' ~ random() %}
-{% set class = 'form__field' ~ class is defined ? ' ' ~ class %}
+{% set id = label is defined ? label|kebab : 'input-' ~ random(100,999) %}
 
 {% if label is defined %}
    {% include '_components/field/label' %}
 {% endif %}
 
-<div class="form__field-container">
-   <input
-      type="{{ type }}"
-      name="{{ name }}"
-      id="{{ id }}"
-      placeholder="{{ placeholder is defined ? placeholder }}"
-      value="{{ value is defined ? value }}"
-      class="{{ class }}"
-      {{ required is defined ? ' required' }}
-   >
-</div>
+{% set baseClass = '
+   transition--default
+   appearance-none
+   block
+   w-full
+   bg-white
+   text-gray-700
+   border
+   border-gray-400
+   px-3
+   py-3
+   rounded
+   shadow
+   leading-tight
+   placeholder-gray-500
+   placeholder-opacity-100
+   hover:border-gray-500
+   focus:border-primary-500 
+   focus:outline-none
+   focus:shadow-outline
+' %}
+
+{% set class = class is defined ? baseClass ~ ' ' ~ class : baseClass %}
+{% set type = type ?? 'text' %}
+
+<input
+   type="{{ type }}"
+   name="{{ name }}"
+   id="{{ id }}"
+   class="{{ class }}"
+   {{ placeholder is defined ? ('placeholder="' ~ placeholder ~ '"')|raw }}
+   {{ value is defined ? ('value="' ~ value ~ '"')|raw }}
+   {{ attributes is defined ? attributes|raw }}
+   {{ required is defined ? 'required' }}
+>
