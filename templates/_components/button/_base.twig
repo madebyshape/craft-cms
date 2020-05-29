@@ -1,0 +1,22 @@
+{% set baseClass = '
+    transition--default
+    inline-block
+    font-medium
+    py-3
+    px-6
+    rounded
+    flex-shrink-0
+    focus:outline-none
+    focus:shadow-outline
+' %}
+
+{% set class = class is defined ? baseClass ~ ' ' ~ class : baseClass %}
+{% set type = type is defined ? type : 'button' %}
+
+<{{ type }}
+    {{ type == 'a' ? ('href="' ~ url ~ '"')|raw }} 
+    class="{{ class }}"
+    {{ attributes is defined ? attributes|raw }}
+>
+    {{ text|raw }}
+</{{ type }}>
