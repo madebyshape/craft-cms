@@ -6,17 +6,9 @@
 
 	{# ------- Template ------- #}
 
-	{%- cache globally using key 'site-header' ~ craft.app.request.pathInfo -%}
-	   {%- minify -%}
-	   {%- endminify -%}
-	{%- endcache -%}
+	{% include '_components/cookieConsent' %}
 
 	{% block content %}
 	{% endblock %}
-
-	{%- cache globally using key 'site-footer' -%}
-	   {%- minify -%}
-	   {%- endminify -%}
-	{%- endcache -%}
 
 {% endblock %}
