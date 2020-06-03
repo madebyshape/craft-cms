@@ -2,8 +2,8 @@
 
    return [
       '*' => [
-         'imagerUrl' => getenv('ASSETS_URL') . '/imager',
-         'imagerSystemPath' => getenv('ASSETS_PATH') . '/imager',
+         'imagerUrl' => getenv('ASSETS_URL') . '/' . getenv('TRANSFORMS_FOLDER'),
+         'imagerSystemPath' => getenv('ASSETS_PATH') . '/' . getenv('TRANSFORMS_FOLDER'),
          'fallbackImage' => '/dist/images/fallback-image.jpg',
          'cacheEnabled' => true,
          'cacheDuration' => 31536000, // 1 year

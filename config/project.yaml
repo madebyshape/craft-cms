@@ -1,7 +1,11 @@
-dateModified: 1591218788
+dateModified: 1591219780
 email:
-  fromEmail: development@madebyshape.co.uk
-  fromName: 'Craft 3'
+  fromEmail: $SITE_EMAIL
+  fromName: $SITE_NAME
+  replyToEmail: null
+  template: null
+  transportSettings:
+    command: ''
   transportType: craft\mail\transportadapters\Sendmail
 fieldGroups:
   2f26868b-418e-44a0-8e53-d367d9a163eb:
@@ -213,6 +217,37 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.9
+    settings:
+      addHrefLang: true
+      addPaginatedHreflang: true
+      addXDefaultHrefLang: true
+      cpTitlePrefix: '⚙ '
+      devModeCpTitlePrefix: '&#x1f6a7;⚙ '
+      devModeTitlePrefix: '&#x1f6a7; '
+      displayAnalysisSidebar: true
+      displayPreviewSidebar: true
+      enableJsonLdEndpoint: ''
+      enableMetaContainerEndpoint: ''
+      environment: live
+      generatorEnabled: true
+      headersEnabled: true
+      lowercaseCanonicalUrl: '1'
+      maxDescriptionLength: 155
+      maxTitleLength: 70
+      metaCacheDuration: '604800'
+      pluginName: SEO
+      regenerateSitemapsAutomatically: true
+      renderEnabled: true
+      separatorChar: '|'
+      sidebarDisplayPreviewTypes:
+        - google
+        - twitter
+        - facebook
+      siteGroupsSeparate: '1'
+      siteUrlOverride: ''
+      sitemapsEnabled: true
+      socialMediaPreviewTarget: true
+      submitSitemaps: true
   super-table:
     edition: standard
     enabled: true
@@ -277,16 +312,16 @@ sites:
     siteGroup: a37b06c6-894d-4dad-a768-46c1a840e80b
     sortOrder: 1
 system:
-  edition: solo
+  edition: pro
   live: true
-  name: 'Craft 3'
+  name: $SITE_NAME
   schemaVersion: 3.4.10
-  timeZone: America/Los_Angeles
+  timeZone: Europe/London
 users:
   allowPublicRegistration: false
   defaultGroup: null
   photoSubpath: ''
-  photoVolumeUid: null
+  photoVolumeUid: d22d8c4e-5130-4bb2-afad-a7c08be98605
   requireEmailVerification: true
 volumes:
   0cf15aa5-fa7d-405e-9a99-aa30b099a53c:
