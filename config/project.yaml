@@ -1,4 +1,4 @@
-dateModified: 1588862534
+dateModified: 1591218788
 email:
   fromEmail: development@madebyshape.co.uk
   fromName: 'Craft 3'
@@ -9,6 +9,29 @@ fieldGroups:
   a6548a8e-edd2-4cbb-9200-db7de2726f75:
     name: Common
 fields:
+  1b7a3230-f24a-4ac2-a997-3289e43ddf25:
+    contentColumnType: text
+    fieldGroup: a6548a8e-edd2-4cbb-9200-db7de2726f75
+    handle: cookieConsent
+    instructions: ''
+    name: 'Cookie Consent'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: 'Text Full.json'
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
   90552b17-3ba7-452a-9dfd-0b13004b4659:
     contentColumnType: string
     fieldGroup: a6548a8e-edd2-4cbb-9200-db7de2726f75
@@ -47,6 +70,20 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: nystudio107\seomatic\fields\SeoSettings
+globalSets:
+  b59ae72a-8b0b-4bb9-83b9-a351b70b54a7:
+    fieldLayouts:
+      57d35cc6-d1f9-4d2a-8e1f-f4afe08c9e66:
+        tabs:
+          -
+            fields:
+              1b7a3230-f24a-4ac2-a997-3289e43ddf25:
+                required: false
+                sortOrder: 1
+            name: Misc
+            sortOrder: 1
+    handle: site
+    name: Site
 matrixBlockTypes:
   4edb6c61-ee7b-4a62-ae07-d27f2127a80a:
     field: 90552b17-3ba7-452a-9dfd-0b13004b4659
@@ -138,7 +175,7 @@ plugins:
     schemaVersion: 1.0.0
   blitz:
     edition: standard
-    enabled: false
+    enabled: true
     schemaVersion: 3.1.0
   default-dashboard:
     edition: standard
