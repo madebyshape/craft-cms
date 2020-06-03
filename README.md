@@ -1,4 +1,4 @@
-# Craft CMS 3.x
+# Craft CMS 3.x + Tailwind CSS
 
 This is a [Craft CMS 3.x](https://github.com/craftcms/cms) boilerplate [MadeByShape](https://madebyshape.co.uk) use internally for projects. 
 
