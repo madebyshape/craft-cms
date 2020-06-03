@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cbe54dfee7529f2b1a892f58be1df08c",
+    "content-hash": "6d43f410e0029710c575d9dbf0f2de43",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.138.9",
+            "version": "3.139.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/aaee8d1639e0f92a9617c4842c4fb8e527281d2a",
-                "reference": "aaee8d1639e0f92a9617c4842c4fb8e527281d2a",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/31fc7fc73d550e237b34f7c6802250fd4ade9a01",
+                "reference": "31fc7fc73d550e237b34f7c6802250fd4ade9a01",
                 "shasum": ""
             },
             "require": {
@@ -24,21 +24,6 @@
                 "guzzlehttp/psr7": "^1.4.1",
                 "mtdowling/jmespath.php": "^2.5",
                 "php": ">=5.5"
-            },
-            "require-dev": {
-                "andrewsville/php-token-reflection": "^1.4",
-                "aws/aws-php-sns-message-validator": "~1.0",
-                "behat/behat": "~3.0",
-                "doctrine/cache": "~1.4",
-                "ext-dom": "*",
-                "ext-openssl": "*",
-                "ext-pcntl": "*",
-                "ext-sockets": "*",
-                "nette/neon": "^2.3",
-                "phpunit/phpunit": "^4.8.35|^5.4.3",
-                "psr/cache": "^1.0",
-                "psr/simple-cache": "^1.0",
-                "sebastian/comparator": "^1.2.3"
             },
             "suggest": {
                 "aws/aws-php-sns-message-validator": "To validate incoming SNS notifications",
@@ -61,7 +46,6 @@
                     "src/functions.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -83,7 +67,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-05-27T18:13:35+00:00"
+            "time": "2020-06-02T18:12:38+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -515,11 +499,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.4.20",
+            "version": "3.4.22.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/a4e4ae5ce7b067f31d00c27770bc3e7c8434ba91",
-                "reference": "a4e4ae5ce7b067f31d00c27770bc3e7c8434ba91",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/2cf3a90ea6b76d44323c13da0a149e1c6462f387",
+                "reference": "2cf3a90ea6b76d44323c13da0a149e1c6462f387",
                 "shasum": ""
             },
             "require": {
@@ -600,7 +584,7 @@
                 "docs": "https://docs.craftcms.com/v3/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2020-05-18T15:31:36+00:00"
+            "time": "2020-05-30T15:10:56+00:00"
         },
         {
             "name": "craftcms/mailgun",
@@ -789,11 +773,11 @@
         },
         {
             "name": "craftcms/server-check",
-            "version": "1.1.8",
+            "version": "1.1.9",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/server-check/zipball/a7b6c172b631ec822fbdccbe011dbcf77395a9ee",
-                "reference": "a7b6c172b631ec822fbdccbe011dbcf77395a9ee",
+                "url": "https://api.github.com/repos/craftcms/server-check/zipball/0f445599b3a2ccbeba4a83cf34a8070f56326909",
+                "reference": "0f445599b3a2ccbeba4a83cf34a8070f56326909",
                 "shasum": ""
             },
             "type": "library",
@@ -802,7 +786,6 @@
                     "server/requirements"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -814,7 +797,7 @@
                 "requirements",
                 "yii2"
             ],
-            "time": "2020-01-17T22:23:26+00:00"
+            "time": "2020-05-28T16:57:05+00:00"
         },
         {
             "name": "creocoder/yii2-nested-sets",
@@ -3580,11 +3563,11 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.3.5",
+            "version": "3.3.6",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/568d8eecb91f13adc82219537d0b16a4749606be",
-                "reference": "568d8eecb91f13adc82219537d0b16a4749606be",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/7deb649f73e725cf3f4f2e894c368a29460d77e7",
+                "reference": "7deb649f73e725cf3f4f2e894c368a29460d77e7",
                 "shasum": ""
             },
             "require": {
@@ -3648,7 +3631,7 @@
                 "docs": "https://nystudio107.com/plugins/seomatic/documentation",
                 "issues": "https://nystudio107.com/plugins/seomatic/support"
             },
-            "time": "2020-05-26T18:01:28+00:00"
+            "time": "2020-06-03T18:22:33+00:00"
         },
         {
             "name": "opis/closure",
@@ -5240,11 +5223,11 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "3.6.9",
+            "version": "3.6.10",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/7b352dcc787186d2aa73e4d6652939ed8cebac44",
-                "reference": "7b352dcc787186d2aa73e4d6652939ed8cebac44",
+                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/09278eb4408bdefb0a0d80c7b19205b749e3f1c7",
+                "reference": "09278eb4408bdefb0a0d80c7b19205b749e3f1c7",
                 "shasum": ""
             },
             "require": {
@@ -5284,7 +5267,7 @@
                 }
             ],
             "description": "The most reliable, intuitive and powerful form builder for Craft.",
-            "time": "2020-05-21T20:29:09+00:00"
+            "time": "2020-06-03T05:41:19+00:00"
         },
         {
             "name": "solspace/craft3-commons",
@@ -5313,11 +5296,11 @@
         },
         {
             "name": "spacecatninja/imager-x",
-            "version": "v3.0.9",
+            "version": "v3.0.10",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/3018c7b7353d9550995fb48cee34f6713565c315",
-                "reference": "3018c7b7353d9550995fb48cee34f6713565c315",
+                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/5be084d04c43f9da951ba1c906e995c1d53dabd5",
+                "reference": "5be084d04c43f9da951ba1c906e995c1d53dabd5",
                 "shasum": ""
             },
             "require": {
@@ -5373,7 +5356,7 @@
                 "docs": "http://imager-x.spacecat.ninja/",
                 "issues": "https://github.com/spacecatninja/craft-imager-x/issues"
             },
-            "time": "2020-05-07T19:19:19+00:00"
+            "time": "2020-06-02T20:25:23+00:00"
         },
         {
             "name": "ssnepenthe/color-utils",
@@ -5440,11 +5423,11 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v7.36.0",
+            "version": "v7.36.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/b0f4e9afe20285297fc48b06b28adcf88ac79e0d",
-                "reference": "b0f4e9afe20285297fc48b06b28adcf88ac79e0d",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/80979c8959dff86bf7b0610e44599a67132ebcd3",
+                "reference": "80979c8959dff86bf7b0610e44599a67132ebcd3",
                 "shasum": ""
             },
             "require": {
@@ -5452,13 +5435,6 @@
                 "ext-json": "*",
                 "ext-mbstring": "*",
                 "php": ">=5.6.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "2.16.1",
-                "php-coveralls/php-coveralls": "^2.1",
-                "phpunit/phpunit": "^5.7",
-                "squizlabs/php_codesniffer": "^3.3",
-                "symfony/process": "~3.4"
             },
             "type": "library",
             "extra": {
@@ -5471,7 +5447,6 @@
                     "Stripe\\": "lib/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5488,7 +5463,7 @@
                 "payment processing",
                 "stripe"
             ],
-            "time": "2020-05-22T02:18:11+00:00"
+            "time": "2020-05-28T18:11:30+00:00"
         },
         {
             "name": "sunra/php-simple-html-dom-parser",
@@ -7300,15 +7275,15 @@
         },
         {
             "name": "verbb/super-table",
-            "version": "2.4.9",
+            "version": "2.5.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/super-table/zipball/cf3237d0e5be608561bfcf02d77e9bef03855a69",
-                "reference": "cf3237d0e5be608561bfcf02d77e9bef03855a69",
+                "url": "https://api.github.com/repos/verbb/super-table/zipball/a9b0a35620796b6ffe396d41dff3928b3c9c8763",
+                "reference": "a9b0a35620796b6ffe396d41dff3928b3c9c8763",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.4.8",
+                "craftcms/cms": "^3.4.22",
                 "verbb/base": "^1.0.2"
             },
             "type": "craft-plugin",
@@ -7349,7 +7324,7 @@
                 "docs": "https://github.com/verbb/super-table",
                 "rss": "https://github.com/verbb/super-table/commits/v2.atom"
             },
-            "time": "2020-04-15T22:45:13+00:00"
+            "time": "2020-05-30T03:27:47+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
