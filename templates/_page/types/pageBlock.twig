@@ -1,33 +1,25 @@
 {% extends "_layout/global" %}
 
 {% block content %}
-   {%- cache globally using key craft.app.request.pathInfo ~ (craft.app.request.pageNum ? '/p' ~ craft.app.request.pageNum) -%}
-      {%- minify -%}
+   {%- minify -%}
 
-         {# ------- Variables ------- #}
+      {# ------- Variables ------- #}
 
-         {# ------- Template ------- #}
+      {# ------- Template ------- #}
 
-         {% for block in entry.pageBlockContent.all() %}
-            {% include '_blocks/' ~ block.type.handle %}
-         {% endfor %}
+      {% for block in entry.pageBlockContent.all() %}
+         {% include '_blocks/' ~ block.type.handle %}
+      {% endfor %}
 
-      {%- endminify -%}
-   {%- endcache -%}
+   {%- endminify -%}
 {% endblock %}
 
-{# ------- Critical ------- #}
+{# ------- Critical CSS ------- #}
 
-{% block criticalCss %}
-   {%- spaceless -%}
-      {{ source (entry.slug ~ '.css', ignore_missing = true) }}
-   {%- endspaceless -%}
-{% endblock %}
-
-{# ------- Inline ------- #}
-
-{% block inlineCss %}
-{% endblock %}
-
-{% block inlineJs %}
-{% endblock %}
+{% if entry is defined %}
+   {% block criticalCss %}
+      {%- spaceless -%}
+         {{ source (entry.slug ~ '.css', ignore_missing = true) }}
+      {%- endspaceless -%}
+   {% endblock %}
+{% endif %}
