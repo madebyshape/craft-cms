@@ -1,6 +1,6 @@
 {#
    Pagination
-   Pagination for entries and elements
+   Pagination for entries and elements.
 
    @type {include}
    @param {array} pagination
@@ -15,7 +15,7 @@
 
       {% if pagination.prevUrl %}
          <a href="{{ pagination.prevUrl }}" class="mr-1">
-            <i class="fas fa-caret-left"></i>
+            &larr;
          </a>
       {% endif %}
 
@@ -31,7 +31,7 @@
 
       {% if pagination.nextUrl %}
          <a href="{{ pagination.nextUrl }}" class="mr-1">
-            <i class="fas fa-caret-right"></i>
+            &rarr;
          </a>
       {% endif %}
 
