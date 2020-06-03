@@ -1,0 +1,8 @@
+.transition {
+   &--default {
+      @apply 
+         transition-all
+         duration-500
+         ease-out;
+   }
+}

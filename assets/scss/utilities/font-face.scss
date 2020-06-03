@@ -1,0 +1,22 @@
+$font-path: '../fonts';
+
+@mixin font-face($family, $filename, $weight, $style) {
+
+   $weight: '400' !default;
+   $style: 'normal' !default;
+
+   @font-face {
+      font-family: "#{$family}";
+      src: url("#{$font-path}/#{$filename}.eot");
+      src: local("#{$family}"),
+           url("#{$font-path}/#{$filename}.eot?#iefix") format("embedded-opentype"),
+           url("#{$font-path}/#{$filename}.woff2") format("woff2"),
+           url("#{$font-path}/#{$filename}.woff") format("woff"),
+           url("#{$font-path}/#{$filename}.ttf") format("truetype"),
+           url("#{$font-path}/#{$filename}.svg##{$filename}") format("svg");
+      font-weight: $weight;
+      font-style: $style;
+      font-display: swap;
+   }
+
+}

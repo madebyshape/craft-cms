@@ -1,0 +1,12 @@
+.link {
+    @apply transition--default;
+    &--primary {
+        @apply 
+            text-primary-500
+            underline;
+        &:hover,
+        &:active {
+            @apply text-primary-700;
+        }
+    }
+}

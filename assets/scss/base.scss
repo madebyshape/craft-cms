@@ -1,0 +1,50 @@
+// Font Face
+// @include font-face('family', 'filename', 500, 'normal');
+
+// Body
+
+html {
+   @apply text-base;
+}
+
+body {
+  @apply
+     font-sans-primary
+     text-gray-800
+     text-optimize-legibility
+     antialiased;
+}
+
+// Links
+
+a {
+   @apply transition--default;
+}
+
+// Typography
+
+p {
+   @apply mb-4;
+   &:last-of-type {
+      @apply mb-0;
+   }
+}
+
+// Selection
+
+::selection {
+   @apply
+      text-primary-500
+      bg-primary-100;
+}
+
+// FOUT fix
+
+.wf-loading {
+   @apply invisible;
+}
+
+.wf-active,
+.wf-inactive {
+   @apply visible;
+}
