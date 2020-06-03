@@ -8,13 +8,13 @@
          'cacheEnabled' => true,
          'cacheDuration' => 31536000, // 1 year
          'cacheDurationRemoteFiles' => 31536000, // 1 year
-         'jpegQuality' => 100,
+         'jpegQuality' => 95,
          'pngCompressionLevel' => 0,
          'resizeFilter' => 'lanczos',
          'hashPath' => true,
          'useCwebp' => true,
          'cwebpPath' => '/usr/bin/cwebp',
-         'cwebpOptions' => '-q 75',
+         'cwebpOptions' => '-q 95',
          'optimizeType' => 'job',
          'optimizers' => ['jpegoptim', 'jpegtran', 'optipng', 'gifsicle'],
          'optimizerConfig' => [
