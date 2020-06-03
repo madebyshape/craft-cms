@@ -47,11 +47,6 @@
     },
     "purgeCss": {
         "whitelistPatterns": [
-            "is-.*",
-            "aos.*",
-            "choices.*",
-            "flickity.*",
-            "mfp.*"
         ]
     },
     "cssDependencies": [],
@@ -101,13 +96,13 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/madebyshape/tailwind-css.git"
+        "url": "git+https://github.com/madebyshape/craft-3.git"
     },
     "author": "Jason Mayo (@bymayo)",
     "authorUrl": "https://madebyshape.co.uk",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/madebyshape/tailwind-css/issues"
+        "url": "https://github.com/madebyshape/craft-3/issues"
     },
-    "homepage": "https://github.com/madebyshape/tailwind-css#readme"
+    "homepage": "https://github.com/madebyshape/craft-3#readme"
 }
