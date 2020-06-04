@@ -3,14 +3,20 @@
    Outputs a consitantly formatted date string.
 
    @type {include}
-   @param {string} date
-   @block {bool} relative
+   @param {object} date
+   @param {bool} relative
 #}
 
-{% set dateFormat = 'jS F Y' %}
+{% set relative = relative ?? true %}
+{% set dateFormat = 'js F Y' %}
 
-{% if relative and now|date('U') <= date|date_modify('+14 day')|date('U') %}
-    {{ date|date('U') }}
+{% if relative and now|date('U') <= date|date_modify('+7 days')|date('U') %}
+    {% set dateDifference = date.diff(now)|duration %}
+    {% if 'hours' not in dateDifference %}
+        {{ dateDifference|split('and')|first }} ago
+    {% else %}
+        {{ dateDifference|split(',')|first }} ago
+    {% endif %}
 {% else %}
     {{ date|date(dateFormat) }}
 {% endif %}
