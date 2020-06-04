@@ -15,6 +15,7 @@ return [
       'securityKey' => getenv('SECURITY_KEY'),
       'useProjectConfigFile' => true,
       'siteUrl' => null,
+      'env' => getenv('ENVIRONMENT'),
       // Cache
       'enableTemplateCaching' => true,
       'cacheMethod' => 'file',
