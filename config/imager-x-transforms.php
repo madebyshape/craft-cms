@@ -1,18 +1,37 @@
 <?php
 
 return [
-   //  'example' => [
-   //      'transforms' => [
-   //          ['width' => 600],
-   //          ['width' => 1800],
-   //      ],
-   //      'defaults' => [
-   //          'ratio' => 16/9,
-   //          'jpegQuality' => 80
-   //      ],
-   //      'configOverrides' => [
-   //          'fillTransforms' => true,
-   //          'fillInterval' => 300,
-   //      ]
-   //  ]
+    'square' => [
+        'transforms' => [
+            ['width' => 400],
+            ['width' => 800],
+            ['width' => 1200],
+            ['width' => 1800]
+        ],
+        'defaults' => [
+            'ratio' => 1/1
+        ]
+    ],
+    '4x3' => [
+        'transforms' => [
+            ['width' => 400],
+            ['width' => 800],
+            ['width' => 1200],
+            ['width' => 1800]
+        ],
+        'defaults' => [
+            'ratio' => 4/3
+        ]
+    ]
+    '16x9' => [
+        'transforms' => [
+            ['width' => 400],
+            ['width' => 800],
+            ['width' => 1200],
+            ['width' => 1800]
+        ],
+        'defaults' => [
+            'ratio' => 16/9
+        ]
+    ]
 ];
