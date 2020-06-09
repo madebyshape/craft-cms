@@ -22,18 +22,18 @@
     "craftcms/cms": "3.4.22.1",
     "vlucas/phpdotenv": "^2.4.0",
     "verbb/super-table": "2.5.0",
-    "nystudio107/craft-seomatic": "3.3.6",
+    "nystudio107/craft-seomatic": "3.3.8",
     "clubstudioltd/craft-asset-rev": "6.0.2",
     "nystudio107/craft-minify": "1.2.10",
     "verbb/default-dashboard": "1.0.8",
     "craftcms/mailgun": "1.4.3",
     "craftcms/redactor": "2.6.1",
-    "nystudio107/craft-retour": "3.1.37",
-    "solspace/craft-freeform": "3.6.10",
+    "nystudio107/craft-retour": "3.1.39",
+    "solspace/craft-freeform": "3.6.11",
     "mmikkel/retcon": "2.1.0",
     "putyourlightson/craft-blitz": "3.6.5",
     "spacecatninja/imager-x": "v3.0.10",
-    "sebastianlenz/linkfield": "1.0.21"
+    "sebastianlenz/linkfield": "1.0.22"
   },
   "autoload": {
     "psr-4": {
