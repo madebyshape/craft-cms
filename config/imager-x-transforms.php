@@ -22,7 +22,7 @@ return [
         'defaults' => [
             'ratio' => 4/3
         ]
-    ]
+        ],
     '16x9' => [
         'transforms' => [
             ['width' => 400],
