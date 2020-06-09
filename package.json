@@ -1,5 +1,5 @@
 {
-    "name": "Craft CMS + Tailwind CSS",
+    "name": "craftcms-tailwind",
     "version": "1.0.0",
     "description": "",
     "main": "gulpfile.js",

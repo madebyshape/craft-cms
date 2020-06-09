@@ -14,9 +14,9 @@
 {% set type = type is defined ? type : 'button' %}
 
 <{{ type }}
-    {{ type == 'a' ? ('href="' ~ url ~ '"')|raw }} 
+    {{ type == 'a' ? ('href="' ~ button.url ~ '"')|raw }} 
     class="{{ class }}"
     {{ attributes is defined ? attributes|raw }}
 >
-    {{ text|raw }}
+    {{ button.text|raw }}
 </{{ type }}>

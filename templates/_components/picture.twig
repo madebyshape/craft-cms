@@ -14,8 +14,9 @@
 
 #}
 
-{% set lazy = lazy ?? true %}
+{% set lazy = lazy ?? false %}
 {% set transform = transform ?? [] %}
+{% set webp = craft.imager.serverSupportsWebp() and craft.app.config.env != 'production' ? true : false %}
 
 {% if image['extension'] is defined and image.extension == 'svg' %}
 
@@ -41,7 +42,7 @@
       transform
    ) %}
 
-   {% if craft.imager.serverSupportsWebp() %}
+   {% if webp %}
       {% set pictureTransformWebp = craft.imager.transformImage(
          image,
          transform,
@@ -59,7 +60,7 @@
 
       <picture{% if pictureClass is defined %} class="{{ pictureClass }}"{% endif %}>
          {% if lazy %}
-            {% if craft.imager.serverSupportsWebp() %}
+            {% if webp %}
                <source
                   data-srcset="{{ craft.imager.srcset(pictureTransformWebp) }}"
                   data-sizes="100vw"
@@ -68,14 +69,14 @@
             {% endif %}
             <img
                src="{{ craft.imager.placeholder({ width: pictureTransform.width, height: pictureTransform.height }) }}"
-               data-src="{{ craft.imager.serverSupportsWebp() ? pictureTransformWebp|last : pictureTransform|last }}"
+               data-src="{{ webp ? pictureTransformWebp|last : pictureTransform|last }}"
                data-srcset="{{ craft.imager.srcset(pictureTransform) }}"
                data-sizes="100vw"
                alt="{{ alt ?? image.title }}"
                class="js-lazy-load{% if imgClass is defined %} {{ imgClass }}{% endif %}"
             >
          {% else %}
-            {% if craft.imager.serverSupportsWebp() %}
+            {% if webp %}
                <source
                   srcset="{{ craft.imager.srcset(pictureTransformWebp) }}"
                   sizes="100vw"
@@ -83,7 +84,7 @@
                >
             {% endif %}
             <img
-               src="{{ craft.imager.serverSupportsWebp() ? pictureTransformWebp|last : pictureTransform|last }}"
+               src="{{ webp ? pictureTransformWebp|last : pictureTransform|last }}"
                srcset="{{ craft.imager.srcset(pictureTransform) }}"
                sizes="100vw"
                alt="{{ alt ?? image.title }}"
