@@ -6,7 +6,9 @@ It's built with the intention of being used with [Tailwind CSS](https://github.c
 
 ## Install
 
-`composer create-project madebyshape/craft-3`
+1. `composer create-project madebyshape/craft-3`
+2. Don't run, `./craft setup`, instead manually edit the `.env` file.
+3. Once the `.env` is filled in, run `./craft install`
 
 ## Whats included
 
