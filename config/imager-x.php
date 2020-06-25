@@ -12,16 +12,16 @@
          'pngCompressionLevel' => 0,
          'resizeFilter' => 'lanczos',
          'hashPath' => true,
-         'useCwebp' => true,
+         'useCwebp' => false,
          'cwebpPath' => '/usr/bin/cwebp',
-         'cwebpOptions' => '-q 95',
+         'cwebpOptions' => '-q 90',
          'optimizeType' => 'job',
-         'optimizers' => ['jpegoptim', 'jpegtran', 'optipng', 'gifsicle'],
+         'optimizers' => null,
          'optimizerConfig' => [
             'jpegoptim' => [
                'extensions' => ['jpg'],
                'path' => '/usr/bin/jpegoptim',
-               'optionString' => '--strip-all -m85 -o -p'
+               'optionString' => '--strip-all -m90 -o -p'
             ],
             'jpegtran' => [
                'extensions' => ['jpg'],
@@ -41,7 +41,7 @@
             'pngquant' => [
                'extensions' => ['png'],
                'path' => '/usr/bin/pngquant',
-               'optionString' => '--strip --skip-if-larger --quality=80-85 --speed 1'
+               'optionString' => '--strip --skip-if-larger --quality=85-90 --speed 1'
             ],
             'gifsicle' => [
                'extensions' => ['gif'],
@@ -50,14 +50,9 @@
             ]
          ]
       ],
-      'dev' => [
-         'useCwebp' => false,
-         'optimizers' => null
-      ],
-      'staging' => [
-         'useCwebp' => false,
-         'optimizers' => null
-      ],
+      'dev' => [],
+      'staging' => [],
       'production' => [
+        'optimizers' => ['jpegoptim', 'jpegtran', 'optipng', 'gifsicle'],
       ]
    ];
