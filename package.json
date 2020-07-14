@@ -55,6 +55,7 @@
         "js-cookie/src/js.cookie.js"
     ],
     "dependencies": {
+        "@tailwindcss/typography": "^0.1.2",
         "alpinejs": "^2.3.5",
         "fg-loadcss": "^2.1.0",
         "js-cookie": "^2.2.1",

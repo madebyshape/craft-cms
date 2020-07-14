@@ -81,63 +81,17 @@ module.exports = {
         '0': 0,
         '1/2': '50%'
       },
-      // Plugins
-      textStyles: theme => ({
-        richText: {
-          fontSize: theme('fontSize.base')[0],
-          lineHeight: theme('fontSize.base')[1],
-          'h1, h2, h3, h4, h5, h6': {
-            marginBottom: theme('spacing.4')
-          },
-          'h1': {
-            fontSize: theme('fontSize.3xl')[0],
-            lineHeight: theme('fontSize.3xl')[1]
-          },
-          'h2': {
-            fontSize: theme('fontSize.2xl')[0],
-            lineHeight: theme('fontSize.2xl')[1]
-          },
-          'h3': {
-            fontSize: theme('fontSize.xl')[0],
-            lineHeight: theme('fontSize.xl')[1]
-          },
-          'h4': {
-            fontSize: theme('fontSize.lg')[0],
-            lineHeight: theme('fontSize.lg')[1]
-          },
-          'h5': {
-            fontSize: theme('fontSize.md')[0],
-            lineHeight: theme('fontSize.md')[1]
-          },
-          'h6': {
-            fontSize: theme('fontSize.base')[0],
-            lineHeight: theme('fontSize.base')[1]
-          },
-          'ul,ol': {
-            listStylePosition: 'inside',
-            marginBottom: theme('spacing.4')
-          },
-          'ul': {
-            listStyleType: 'disc',
-          },
-          'ol': {
-            listStyleType: 'decimal',
-          },
-          'a': {
-            textDecoration: 'underline',
+      typography: theme => ({
+        css: {
+          a: {
             color: theme('colors.primary.500'),
             '&:hover': {
-              color: theme('colors.primary.600')
+              color: theme('colors.primary.600'),
             }
-          },
-          'b, strong': {
-            fontWeight: theme('fontWeight.bold'),
-          },
-          'i, em': {
-            fontStyle: 'italic',
           }
         }
       }),
+      // Plugins
       animations: {},
       aspectRatio: {
         'square': [1, 1],
@@ -158,8 +112,9 @@ module.exports = {
     animations: ['responsive', 'hover', 'group-hover']
   },
   plugins: [
+    require('@tailwindcss/typography'),
     require('tailwindcss-typography')({ componentPrefix: '' }),
-    require('tailwindcss-aspect-ratio')(),
+    require('tailwindcss-aspect-ratio'),
     require('tailwindcss-animations')
   ],
   purge: []
