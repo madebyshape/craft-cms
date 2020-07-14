@@ -1,4 +1,4 @@
-dateModified: 1591219780
+dateModified: 1594716394
 email:
   fromEmail: $SITE_EMAIL
   fromName: $SITE_NAME
@@ -188,7 +188,7 @@ plugins:
   freeform:
     edition: lite
     enabled: true
-    schemaVersion: 3.0.6
+    schemaVersion: 3.0.7
   imager-x:
     edition: lite
     enabled: true
