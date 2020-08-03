@@ -82,11 +82,13 @@ module.exports = {
         '1/2': '50%'
       },
       typography: theme => ({
-        css: {
-          a: {
-            color: theme('colors.primary.500'),
-            '&:hover': {
-              color: theme('colors.primary.600'),
+        default: {
+          css: {
+            a: {
+              color: theme('colors.primary.500'),
+              '&:hover': {
+                color: theme('colors.primary.600'),
+              }
             }
           }
         }
@@ -114,7 +116,7 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography'),
     require('tailwindcss-typography')({ componentPrefix: '' }),
-    require('tailwindcss-aspect-ratio'),
+    require('tailwindcss-aspect-ratio')(),
     require('tailwindcss-animations')
   ],
   purge: []
