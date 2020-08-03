@@ -1,4 +1,4 @@
-dateModified: 1595328663
+dateModified: 1596446368
 email:
   fromEmail: $SITE_EMAIL
   fromName: $SITE_NAME
@@ -180,7 +180,7 @@ plugins:
   blitz:
     edition: standard
     enabled: true
-    schemaVersion: 3.1.0
+    schemaVersion: 3.6.6
   default-dashboard:
     edition: standard
     enabled: true
