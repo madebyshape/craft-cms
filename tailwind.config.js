@@ -94,7 +94,6 @@ module.exports = {
         }
       }),
       // Plugins
-      animations: {},
       aspectRatio: {
         'square': [1, 1],
         '16/9': [16, 9],
@@ -110,14 +109,12 @@ module.exports = {
     backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
     opacity: ['responsive', 'hover', 'group-hover'],
     translate: ['responsive', 'hover', 'group-hover'],
-    scale: ['responsive', 'hover', 'group-hover'],
-    animations: ['responsive', 'hover', 'group-hover']
+    scale: ['responsive', 'hover', 'group-hover']
   },
   plugins: [
     require('@tailwindcss/typography'),
     require('tailwindcss-typography')({ componentPrefix: '' }),
-    require('tailwindcss-aspect-ratio')(),
-    require('tailwindcss-animations')
+    require('tailwindcss-aspect-ratio')()
   ],
   purge: []
 }
