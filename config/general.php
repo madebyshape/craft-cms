@@ -49,7 +49,7 @@ return [
         'devMode' => true,
         'allowUpdates' => true,
         'enableTemplateCaching' => false,
-        'testToEmailAddress' => 'development@madebyshape.co.uk'
+        'testToEmailAddress' => getenv('SITE_EMAIL')
     ],
     'staging' => [
         'devMode' => true,
