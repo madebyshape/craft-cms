@@ -26,7 +26,7 @@ LOCAL_WRITEABLE_DIRS=(
 
 LOCAL_ASSETS_DIRS=(
     "images"
-    "imager"
+    "transforms"
 )
 
 LOCAL_CRAFT_FILE_DIRS=(
