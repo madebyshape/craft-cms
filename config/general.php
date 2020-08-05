@@ -52,11 +52,10 @@ return [
         'testToEmailAddress' => getenv('SITE_EMAIL')
     ],
     'staging' => [
-        'devMode' => true,
-        'useProjectConfigFile' => false
+        'devMode' => true
     ],
     'production' => [
-        'useProjectConfigFile' => false,
-        'useSecureCookies' => true
+        'useSecureCookies' => true,
+        'allowAdminChanges' => false
     ]
 ];
