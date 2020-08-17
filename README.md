@@ -46,16 +46,18 @@ It's built with the intention of being used with [Tailwind CSS](https://github.c
    - Retour
    - SEOMatic
    - Super Table
-- .gitignore
-   - Gulp / Packages
-   - SASS
-   - Javascript
-   - OS Files
-   - Craft CMS
-   - Caching
-   - Asset Source Folders
-   - Log files
-   - Editor directories and files
+- Extras
+   - Scripts (To pull assets, db etc from different environments)
+   - .gitignore
+      - Gulp / Packages
+      - SASS
+      - Javascript
+      - OS Files
+      - Craft CMS
+      - Caching
+      - Asset Source Folders
+      - Log files
+      - Editor directories and files
 
 ## Terminology
 
