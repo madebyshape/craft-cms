@@ -2,7 +2,7 @@
 
 This is a [Craft CMS 3.x](https://github.com/craftcms/cms) boilerplate [MadeByShape](https://madebyshape.co.uk) use internally for projects. 
 
-It's built with the intention of being used with [Tailwind CSS](https://github.com/madebyshape/tailwind-css) framework.
+It's built with the intention of being used with [Tailwind CSS](https://github.com/madebyshape/tailwind-css) and [AlpineJS](https://github.com/alpinejs/alpine) framework.
 
 ## Install
 
@@ -16,23 +16,29 @@ It's built with the intention of being used with [Tailwind CSS](https://github.c
 - Templates
    - [Blocks](https://github.com/madebyshape/craft-3#blocks)
    - [Components](https://github.com/madebyshape/craft-3#components)
-   - [Macros](https://github.com/madebyshape/craft-3#macros)
-   - Exception
    - Pages (With dynamic page types)
    - Email
-   - Matrix Blocks
-   - Plugin - Freeform
+   - Exceptions (404 etc)
+   - Plugins
+      - Freeform
 - Config
-   - Bespoke general config
-   - Plugin settings (Asset Rev, Blitz, Freeform, Imager, Minify & SEOMatic)
+   - Customised `.env` file
+   - Customised `general.php`
    - Project Config (Using `config/project.yaml`)
+   - Plugin configs:
+      - Asset Rev
+      - Blitz
+      - Freeform
+      - Imager X
+      - Minify
+      - SEOMatic
 - Plugins
    - Asset Rev
    - Blitz
    - Default Dashboard
    - Freeform
-   - Imager
-   - Linkit
+   - Imager X
+   - Link Field
    - Mailgun
    - Minify
    - Redactor
@@ -52,9 +58,6 @@ It's built with the intention of being used with [Tailwind CSS](https://github.c
    - Editor directories and files
 
 ## Terminology
-
-### Macros
-Use the `macros.twig` file and import in to each template that requires it using `{% import 'macros' as macros %}`. The content of this file should only be minor tasks for a temple, e.g. formatting a date, outputting a username etc.
 
 ### Components
 Components are small bits of a template, e.g. a button, input field that then either make up a block or a full template. Use the `components` folder and name each component file by it's use case e.g. `inputField.twig`.
