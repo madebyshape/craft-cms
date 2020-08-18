@@ -12,13 +12,17 @@
             <meta name="robots" content="noindex">
          {% endif %}
 
-         {# Preload Assets #}
-         {# <link rel="preload" href="/path/to/fonts/font.woff2" as="font" crossorigin> #}
+         {# Preload Fonts #}
+         {% set preloadedFonts = [] %}
+         {% for font in preloadedFonts %}
+   		   <link rel="preload" href="/dist/fonts/{{ font }}.woff" as="font" crossorigin>
+            <link rel="preload" href="/dist/fonts/{{ font }}.woff2" as="font" crossorigin>
+         {% endfor %}
 
          {# CSS #}
          {% set cssUrl = siteUrl ~ 'dist/' ~ rev('css/app.css')  %}
 
-         {% if block('criticalCss')|length and not craft.app.config.general.devMode %}
+         {% if block('criticalCss')|length and craft.app.config.env == 'production' %}
             <style>
                {% block criticalCss %}{% endblock %}
             </style>
