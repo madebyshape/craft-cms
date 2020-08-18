@@ -13,7 +13,6 @@ return [
       // Site / Environment
       'isSystemLive' => true,
       'securityKey' => getenv('SECURITY_KEY'),
-      'useProjectConfigFile' => true,
       'siteUrl' => null,
       'env' => getenv('ENVIRONMENT'),
       // Cache
