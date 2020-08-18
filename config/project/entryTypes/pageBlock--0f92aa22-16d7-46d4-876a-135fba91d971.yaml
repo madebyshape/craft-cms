@@ -1,0 +1,29 @@
+fieldLayouts:
+  f5656723-1457-4216-a988-c5d52d84dbdf:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 90552b17-3ba7-452a-9dfd-0b13004b4659
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: General
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: d6471ab8-0d49-45bf-af5d-f0d2a860e267
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Meta & Social Data'
+        sortOrder: 2
+handle: pageBlock
+hasTitleField: true
+name: 'Page - Block'
+section: a4cade2e-b351-4d0b-8087-3328bc132811
+sortOrder: 1
+titleFormat: ''

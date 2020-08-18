@@ -1,0 +1,22 @@
+contentColumnType: text
+fieldGroup: 2f26868b-418e-44a0-8e53-d367d9a163eb
+handle: metaSocialData
+instructions: ''
+name: 'Meta & Social Data'
+searchable: true
+settings:
+  elementDisplayPreviewType: google
+  facebookTabEnabled: ''
+  generalEnabledFields:
+    - seoPreview
+    - seoTitle
+    - seoDescription
+    - seoImage
+    - robots
+    - canonicalUrl
+  generalTabEnabled: '1'
+  sitemapTabEnabled: ''
+  twitterTabEnabled: ''
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\seomatic\fields\SeoSettings

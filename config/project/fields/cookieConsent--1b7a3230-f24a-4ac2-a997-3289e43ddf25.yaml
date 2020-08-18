@@ -1,0 +1,22 @@
+contentColumnType: text
+fieldGroup: a6548a8e-edd2-4cbb-9200-db7de2726f75
+handle: cookieConsent
+instructions: ''
+name: 'Cookie Consent'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: ''
+  cleanupHtml: true
+  columnType: text
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: 'Text Full.json'
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

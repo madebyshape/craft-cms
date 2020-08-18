@@ -1,0 +1,82 @@
+field: 90552b17-3ba7-452a-9dfd-0b13004b4659
+fieldLayouts:
+  af512a4a-3b2f-4137-b331-1deeb26fa3cd:
+    tabs:
+      -
+        fields:
+          f64c5171-437f-45f4-ac5b-1164673e94f9:
+            required: false
+            sortOrder: 1
+          feb39789-b26f-45a4-99fb-d7e4cc376989:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  f64c5171-437f-45f4-ac5b-1164673e94f9:
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  feb39789-b26f-45a4-99fb-d7e4cc376989:
+    contentColumnType: string
+    fieldGroup: null
+    handle: padding
+    instructions: ''
+    name: Padding
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 'Top & Bottom'
+            -
+              - value
+              - topBottom
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Top
+            -
+              - value
+              - top
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Bottom
+            -
+              - value
+              - bottom
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: block
+name: Block
+sortOrder: 1

@@ -1,0 +1,8 @@
+baseUrl: $SITE_URL
+handle: default
+hasUrls: true
+language: en-GB
+name: 'Craft 3'
+primary: true
+siteGroup: a37b06c6-894d-4dad-a768-46c1a840e80b
+sortOrder: 1

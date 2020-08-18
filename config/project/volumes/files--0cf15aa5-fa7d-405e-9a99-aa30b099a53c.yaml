@@ -1,0 +1,8 @@
+handle: files
+hasUrls: true
+name: Files
+settings:
+  path: '@assetBasePath/files'
+sortOrder: 2
+type: craft\volumes\Local
+url: '@assetBaseUrl/files'

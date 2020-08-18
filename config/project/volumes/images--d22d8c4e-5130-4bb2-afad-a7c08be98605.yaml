@@ -1,0 +1,8 @@
+handle: images
+hasUrls: true
+name: Images
+settings:
+  path: '@assetBasePath/images'
+sortOrder: 1
+type: craft\volumes\Local
+url: '@assetBaseUrl/images'
