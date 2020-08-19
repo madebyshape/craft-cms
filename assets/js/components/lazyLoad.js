@@ -6,7 +6,7 @@ var lazyLoad = {
 
       new LazyLoad(
          { 
-            elements_selector: lazyLoad.var.oject 
+            elements_selector: lazyLoad.var.object 
          }
       );
 
