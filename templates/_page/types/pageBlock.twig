@@ -19,7 +19,7 @@
 {% if entry is defined %}
    {% block criticalCss %}
       {%- spaceless -%}
-         {{ source ('_page/types/' ~ entry.slug ~ '-critical.css', ignore_missing = true) }}
+         {{ source ('_criticalCss/' ~ entry.slug ~ '.css', ignore_missing = true) }}
       {%- endspaceless -%}
    {% endblock %}
 {% endif %}

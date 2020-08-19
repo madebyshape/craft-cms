@@ -255,7 +255,7 @@ const processCriticalCSS = (element, i, callback) => {
    critical
       .generate({
             src: package.critical.url + element.url,
-            dest: package.paths.templates + element.path + '/' + element.slug + "-critical.css",
+            dest: package.paths.templates + package.critical.dest + '/' + element.slug + ".css",
             inline: false,
             ignore: [],
             base: "./",

@@ -36,12 +36,12 @@
         }
     },
     "critical": {
-        "url": "http://website.local/",
+        "url": "https://website.production/",
+        "dest": "_criticalCss/",
         "elements": [
             {
                 "uri": "",
-                "slug": "__home__",
-                "path": "_pages/types"
+                "slug": "__home__"
             }
         ]
     },
