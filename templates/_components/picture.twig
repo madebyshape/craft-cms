@@ -7,35 +7,44 @@
    @param {string} transform
    @param {string} pictureClass
    @param {string} imgClass
-   @param {string} svgClass
    @param {bool} svgConvert
+   @param {string} svgConvertClass
    @param {string} alt
    @param {bool} lazy
 
 #}
 
-{% set lazy = lazy ?? false %}
-{% set transform = transform ?? [] %}
-{% set webp = craft.imager.serverSupportsWebp() and craft.app.config.env != 'production' ? true : false %}
-
-{% if image['extension'] is defined and image.extension == 'svg' %}
+{% if 
+    image['extension'] is defined and image.extension == 'svg' or
+    image['extension'] is defined and image.extension == 'gif' or
+    image['extension'] is not defined and '.gif' in image
+%}    
 
    {% if svgConvert is defined %}
 
-      {% set svgClass = svgClass ?? 'fill-current' %}
-      {{ svg(image, class=svgClass) }}
+        {# Inline SVG #}
+        {% set svgConvertClass = svgConvertClass ?? 'fill-current' %}
+        {{ svg(image)|attr({ class: svgConvertClass }) }}
 
    {% else %}
 
-      <img 
-         src="{{ image.url }}" 
-         alt="{{ alt ?? image.title }}"
-         {% if imgClass is defined %} class="{{ imgClass }}"{% endif %}
-      >
+        {# SVG & Animated Gif #}
+        <img 
+            src="{{ image['extension'] is defined ? image.url : image }}" 
+            alt="{{ alt ?? image.title }}"
+            {% if imgClass is defined %} class="{{ imgClass }}"{% endif %}
+        >
       
    {% endif %}
 
 {% else %}
+
+   {# All other image types #}
+
+   {% set production = craft.app.config.env == 'production' ? true : false %}
+   {% set lazy = lazy ?? true %}
+   {% set transform = transform ?? [] %}
+   {% set webp = craft.imager.serverSupportsWebp() and production %}
 
    {% set pictureTransform = craft.imager.transformImage(
       image,
@@ -54,21 +63,20 @@
 
    {% if
       pictureTransform|length or
-      pictureTransformWebp is defined and
-      pictureTransformWebp|length
+      webp
    %}
 
       <picture{% if pictureClass is defined %} class="{{ pictureClass }}"{% endif %}>
          {% if lazy %}
             {% if webp %}
                <source
+                  type="image/webp"
                   data-srcset="{{ craft.imager.srcset(pictureTransformWebp) }}"
                   data-sizes="100vw"
-                  type="image/webp"
                >
             {% endif %}
             <img
-               src="{{ craft.imager.placeholder({ width: pictureTransform.width, height: pictureTransform.height }) }}"
+               src="{{ production ? craft.imager.placeholder({ width: pictureTransform.width, height: pictureTransform.height }) }}"
                data-src="{{ webp ? pictureTransformWebp|last : pictureTransform|last }}"
                data-srcset="{{ craft.imager.srcset(pictureTransform) }}"
                data-sizes="100vw"
@@ -78,9 +86,9 @@
          {% else %}
             {% if webp %}
                <source
+                  type="image/webp"
                   srcset="{{ craft.imager.srcset(pictureTransformWebp) }}"
                   sizes="100vw"
-                  type="image/webp"
                >
             {% endif %}
             <img
