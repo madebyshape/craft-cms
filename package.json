@@ -40,8 +40,8 @@
         "elements": [
             {
                 "uri": "",
-                "slug": "",
-                "path": ""
+                "slug": "__home__",
+                "path": "_pages/types"
             }
         ]
     },
