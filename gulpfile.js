@@ -216,6 +216,7 @@ function purgeCss() {
                package.paths.templates + "**/*.{html,twig,vue}",
                package.paths.public + package.paths.dist.base + "**/*.{js}"
             ],
+            whitelist: package.purgeCss.whitelist,
             whitelistPatterns: whitelistPatterns,
             whitelistPatternsChildren: whitelistPatterns,
             extractors: [
