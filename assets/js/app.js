@@ -10,6 +10,7 @@ window.addEventListener(
 	'load', 
 	function() {
 		// e.g. component.init();
+		lazyLoad.init();
 	}
 );
 
