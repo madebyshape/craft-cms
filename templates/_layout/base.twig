@@ -47,7 +47,7 @@
          {% block body %}{% endblock %}
          
          {# Javascript #}
-         <script src="{{ siteUrl }}dist/{{ rev('js/app.js') }}" async></script>
+         <script src="{{ siteUrl }}dist/{{ rev('js/app.js') }}" defer></script>
 
          {% js %}
             function app() {
