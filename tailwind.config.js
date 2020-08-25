@@ -1,5 +1,5 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-const alpha = { 100: 'FF', 90: 'E6', 80: 'CC', 70: 'B3', 60: '99', 50: '80', 40: '66', 30: '4D', 20: '33', 10: '1A' };
+let defaultTheme = require('tailwindcss/defaultTheme');
+let alpha = { 100: 'FF', 90: 'E6', 80: 'CC', 70: 'B3', 60: '99', 50: '80', 40: '66', 30: '4D', 20: '33', 10: '1A' };
 
 module.exports = {
   theme: {
@@ -116,5 +116,8 @@ module.exports = {
     require('tailwindcss-typography')({ componentPrefix: '' }),
     require('tailwindcss-aspect-ratio')()
   ],
-  purge: []
+  purge: [],
+  future: {
+    removeDeprecatedGapUtilities: true
+  }
 }
