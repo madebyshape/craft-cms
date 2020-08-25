@@ -128,7 +128,7 @@ function images() {
          imagemin(
             [
             	imagemin.gifsicle({ interlaced: true }),
-            	imagemin.jpegtran({ progressive: true }),
+            	imagemin.mozjpeg({ progressive: true }),
             	imagemin.optipng({ optimizationLevel: 5 }),
             	imagemin.svgo({
             		plugins: [
@@ -252,29 +252,28 @@ function doSynchronousLoop(data, processData, done) {
 
 const processCriticalCSS = (element, i, callback) => {
 
-   critical
-      .generate({
-            src: package.critical.url + element.url,
-            dest: package.paths.templates + package.critical.dest + '/' + element.slug + ".css",
-            inline: false,
-            ignore: [],
-            base: "./",
-            pathPrefix: "/",
-            css: [package.paths.public + package.paths.dist.css + package.files.dist.css],
-            width: 1400,
-            height: 900,
-            minify: true,
-            timeout: 60000
+   critical.generate(
+      {
+         inline: false,
+         base: './',
+         src: package.critical.url + element.url,
+         css: [package.paths.public + package.paths.dist.css + package.files.dist.css],
+         width: 1920,
+         height: 1200,
+         target: {
+            css: package.paths.templates + package.critical.dest + element.slug + ".css"
          },
-         (err, output) => {
-            if (err) {
-               notify({
-                  message: "Error [processCriticalCSS]: " + err
-               })
-            }
-            callback();
+         minify: true,
+         extract: true,
+         ignore: {
+            atrule: ['@font-face'],
+            rule: [/some-regexp/],
+            decl: (node, value) => /big-image\.png/.test(value),
          }
-      );
+      }
+   );
+
+   callback();
 
 }
 
