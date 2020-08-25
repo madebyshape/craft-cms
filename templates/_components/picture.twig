@@ -11,6 +11,7 @@
    @param {string} svgConvertClass
    @param {string} alt
    @param {bool} lazy
+   @param {bool} ratio
 
 #}
 
@@ -42,8 +43,9 @@
    {# All other image types #}
 
    {% set production = craft.app.config.env == 'production' ? true : false %}
-   {% set lazy = lazy ?? true %}
    {% set transform = transform ?? [] %}
+   {% set lazy = lazy ?? true %}
+   {% set ratio = ratio ?? true %}
    {% set webp = craft.imager.serverSupportsWebp() and production %}
 
    {% set pictureTransform = craft.imager.transformImage(
@@ -66,7 +68,14 @@
       webp
    %}
 
-      <picture{% if pictureClass is defined %} class="{{ pictureClass }}"{% endif %}>
+      {% if ratio is defined %}
+         <div 
+            class="relative overflow-hidden w-full h-full" 
+            style="padding-top: {{ (pictureTransform[0].height / pictureTransform[0].width) * 100 }}%;"
+         >
+      {% endif %}
+
+      <picture{% if pictureClass is defined or ratio is defined %} class="{{ ratio is defined ? 'absolute top-0 left-0 w-full h-full' }} {{ pictureClass is defined ? pictureClass }}"{% endif %}>
          {% if lazy %}
             {% if webp %}
                <source
@@ -100,6 +109,10 @@
             >
          {% endif %}
       </picture>
+
+      {% if ratio is defined %}
+         </div>
+      {% endif %}
 
    {% endif %}
 
