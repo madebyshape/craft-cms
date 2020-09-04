@@ -53,7 +53,8 @@
     "jsDependencies": [
         "fg-loadcss/dist/cssrelpreload.js",
         "alpinejs/dist/alpine.js",
-        "js-cookie/src/js.cookie.js"
+        "js-cookie/src/js.cookie.js",
+        "vanilla-lazyload/dist/lazyload.js"
     ],
     "dependencies": {
         "@tailwindcss/typography": "^0.2.0",
