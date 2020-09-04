@@ -85,7 +85,7 @@
                >
             {% endif %}
             <img
-               src="{{ production ? craft.imager.placeholder({ width: pictureTransform.width, height: pictureTransform.height }) }}"
+               src="{{ craft.imager.placeholder({ width: pictureTransform|last.width, height: pictureTransform|last.height }) }}"
                data-src="{{ webp ? pictureTransformWebp|last : pictureTransform|last }}"
                data-srcset="{{ craft.imager.srcset(pictureTransform) }}"
                data-sizes="100vw"
