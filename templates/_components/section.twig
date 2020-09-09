@@ -9,17 +9,31 @@
 
 #}
 
-{% if padding is not defined %}
-    {% set padding = 'topBottom' %}
-{% endif %}
+{% set padding = padding ?? 'topBottom' %}
+{% set paddingSize = paddingSize ?? 'base' %}
 
 {% set paddingClass = {
-    top: 'pt-24',
-    bottom: 'pb-24',
-    topBottom: 'py-24',
+    small: {
+        top: 'pt-20',
+        bottom: 'pb-20',
+        topBottom: 'py-20',
+        none: 'py-0'
+    },
+    base: {
+        top: 'pt-24',
+        bottom: 'pb-24',
+        topBottom: 'py-24',
+        none: 'py-0'
+    },
+    large: {
+        top: 'pt-32',
+        bottom: 'pb-32',
+        topBottom: 'py-32',
+        none: 'py-0'
+    }
 } %}
 
-<div class="w-full {{ class is defined ? class : 'bg-white' }} {{ attribute(paddingClass, padding) }}">
+<div class="w-full {{ class is defined ? class }} {{ attribute(attribute(paddingClass, paddingSize), padding) }}">
 
     {% if container is not defined %}
         <div class="container">
