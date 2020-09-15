@@ -15,6 +15,7 @@ return [
       'securityKey' => getenv('SECURITY_KEY'),
       'siteUrl' => null,
       'env' => getenv('ENVIRONMENT'),
+      'allowAdminChanges' => false,
       // Cache
       'enableTemplateCaching' => true,
       'cacheMethod' => 'file',
@@ -48,13 +49,13 @@ return [
         'devMode' => true,
         'allowUpdates' => true,
         'enableTemplateCaching' => false,
-        'testToEmailAddress' => getenv('SITE_EMAIL')
+        'testToEmailAddress' => getenv('SITE_EMAIL'),
+        'allowAdminChanges' => true
     ],
     'staging' => [
         'devMode' => true
     ],
     'production' => [
-        'useSecureCookies' => true,
-        'allowAdminChanges' => false
+        'useSecureCookies' => true
     ]
 ];
