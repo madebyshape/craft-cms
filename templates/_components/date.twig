@@ -8,7 +8,7 @@
 #}
 
 {% set relative = relative ?? true %}
-{% set dateFormat = 'js F Y' %}
+{% set dateFormat = 'jS F Y' %}
 
 {% if relative and now|date('U') <= date|date_modify('+7 days')|date('U') %}
     {% set dateDifference = date.diff(now)|duration %}
