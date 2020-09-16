@@ -1,12 +1,8 @@
-{% set fieldClass = 'form__field' %}
-{% set labelClass = 'form__label' %}
-{% set labelRequiredClass = ' form__label--required' %}
-
 {% set labelHidden = ['submit', 'html'] %}
 {% set labelAfter = ['checkbox'] %}
 
 {% if form.submittedSuccessfully %}
-   <div class="form__notification">
+   <div class="w-full bg-primary-100 text-primary-500 p-4 rounded text-sm">
       Thank you for submitting your details, we will be in touch shortly.
    </div>
 {% endif %}
@@ -14,7 +10,7 @@
 {{ form.renderTag }}
 
    {% if form.pages|length > 1 %}
-      <nav class="form__pages">
+      <nav>
          <ul>
             {% for page in form.pages %}
                <li>
@@ -33,47 +29,63 @@
       {% set columnLength = row|length %}
       <div class="{{ columnLength > 1 ? ' flex flex-wrap md:flex-no-wrap' }}{{ form.customAttributes.rowClass ? ' ' ~ form.customAttributes.rowClass }}">
          {% for field in row %}
-            <div class="form__field-container form__field--{{ field.type }} {{ columnLength > 1 ? ' w-full md:w-' ~ (12 / columnLength) ~ '/12' }}{{ field.type == 'submit' ? ' text-' ~ field.position }} mb-5"{{ field.rulesHtmlData }}>
+            <div class="px-2 mb-5{{ columnLength > 1 ? ' w-full md:w-' ~ (12 / columnLength) ~ '/12' }}{{ field.type == 'submit' ? ' text-' ~ field.position }}"{{ field.rulesHtmlData }}>
                {# Label - Before #}
                {% if field.type not in labelHidden and field.type not in labelAfter %}
-                  {{ field.renderLabel({
-                     labelClass: labelClass ~ (field.required ? labelRequiredClass),
-                  }) }}
+                  {% include '_components/field/label' with {
+                     id: field.idAttribute,
+                     label: field.label,
+                     required: field.required
+                  } %}
                {% endif %}
-               {% if field.type == "submit" %}
-                  {# Submit #}
-                  <button class="button">
-                     {{ field.label }}
-                  </button>
-               {% elseif field.type == "select" %}
-                  {# Field - Select #}
-                  <div class="form__field-container form__field-container--select">
-                     {{ field.renderInput({
-                        class: fieldClass,
-                        useRequiredAttribute: field.required ? 'true',
-                        inputAttributes: field.required ? { 'aria-required': 'true' }
-                     }) }}
-                  </div>
-               {% elseif field.type == "checkbox" %}
-                  {# Field - Checkbox #}
+               {% if field.type == 'submit' %}
+                  {% include '_components/button/primary' with {
+                     type: 'button',
+                     button: {
+                        text: field.label
+                     }
+                  } %}
+               {% elseif field.type == 'select' %}
+                  {% include '_components/field/select' with {
+                     type: field.type,
+                     name: field.handle,
+                     id: field.idAttribute,
+                     required: field.required,
+                     options: field.options
+                  } %}
+               {% elseif field.type == 'textarea' %}
+                  {% include '_components/field/textarea' with {
+                     type: field.type,
+                     name: field.handle,
+                     id: field.idAttribute,
+                     required: field.required
+                  } %}
+               {% elseif field.type == 'checkbox' %}
                      {{ field.renderInput({
                         class: 'mr-2',
                         useRequiredAttribute: field.required ? 'true',
                         inputAttributes: field.required ? { 'aria-required': 'true' }
                      }) }}
+               {% elseif field.type in ['text', 'email'] %}
+                  {% include '_components/field/input' with {
+                     type: field.type,
+                     name: field.handle,
+                     id: field.idAttribute,
+                     required: field.required
+                  } %}
                {% else %}
-                  {# Field - All #}
                   {{ field.renderInput({
-                     class: fieldClass,
                      useRequiredAttribute: field.required ? 'true',
                      inputAttributes: field.required ? { 'aria-required': 'true' }
                   }) }}
                 {% endif %}
-                {# Label - After #}
                {% if field.type not in labelHidden and field.type in labelAfter %}
-                  {{ field.renderLabel({
-                     labelClass: labelClass ~ (field.required ? labelRequiredClass)
-                  }) }}
+                  {# Label - After #}
+                  {% include '_components/field/label' with {
+                     id: field.idAttribute,
+                     label: field.label,
+                     required: field.required
+                  } %}
                {% endif %}
             </div>
          {% endfor %}

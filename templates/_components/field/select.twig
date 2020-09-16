@@ -3,6 +3,7 @@
    Outputs a select field with the correct markup
 
    @type {include}
+   @param {integer} id
    @param {string} label
    @param {string} name
    @param {string} value
@@ -13,7 +14,7 @@
    @param {bool} required
 #}
 
-{% set id = label is defined ? label|kebab : 'select-' ~ random(100,999) %}
+{% set id = id ?? (label is defined ? label|kebab : 'select-' ~ random(100,999)) %}
 
 {% if label is defined %}
    {% include '_components/field/label' %}
@@ -48,8 +49,8 @@
       id="{{ id }}" 
       class="{{ class }}"
       {{ attributes is defined ? attributes|raw }}
-      {{ required is defined ? 'required' }}
-      {{ multiple is defined ? 'multiple' }}
+      {{ required is defined and required ? 'required' }}
+      {{ multiple is defined and multiple ? 'multiple' }}
    >
       {% for option in options %}
          {% if placeholder is defined %}

@@ -3,6 +3,7 @@
    Outputs a textarea field with the correct markup
 
    @type {include}
+   @param {integer} id
    @param {string} label
    @param {string} type
    @param {string} name
@@ -13,7 +14,7 @@
    @param {bool} required
 #}
 
-{% set id = label is defined ? label|kebab : 'textarea-' ~ random(100,999) %}
+{% set id = id ?? (label is defined ? label|kebab : 'textarea-' ~ random(100,999)) %}
 
 {% if label is defined %}
    {% include '_components/field/label' %}
@@ -33,6 +34,7 @@
    rounded
    shadow
    leading-tight
+   min-h-32
    placeholder-gray-500
    placeholder-opacity-100
    hover:border-gray-500
@@ -51,5 +53,5 @@
    class="{{ class }}"
    {{ placeholder is defined ? ('placeholder="' ~ placeholder ~ '"')|raw }}
    {{ attributes is defined ? attributes|raw }}
-   {{ required is defined ? 'required' }}
+   {{ required is defined and required ? 'required' }}
 >{% spaceless %}{{ value is defined ? value }}{% endspaceless %}</textarea>

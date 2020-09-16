@@ -15,7 +15,7 @@
 
 <label for="{{ id }}" class="{{ class }}">
    {{ label }}
-   {% if required is defined %}
+   {% if required is defined and required %}
       <span class="text-primary-500 ml-px">*</span>
    {% endif %}
 </label>
