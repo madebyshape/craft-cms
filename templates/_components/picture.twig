@@ -75,7 +75,7 @@
          >
       {% endif %}
 
-      <picture{% if pictureClass is defined or ratio is defined %} class="{{ ratio is defined ? 'absolute top-0 left-0 w-full h-full' }} {{ pictureClass is defined ? pictureClass }}"{% endif %}>
+      <picture{% if pictureClass is defined or ratio %} class="{{ ratio ? 'absolute top-0 left-0 w-full h-full' }} {{ pictureClass is defined ? pictureClass }}"{% endif %}>
          {% if lazy %}
             {% if webp %}
                <source
