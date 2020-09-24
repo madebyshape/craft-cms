@@ -1,0 +1,10 @@
+{% header "Content-Type: application/json" %}
+{% set form = craft.freeform.form(craft.app.request.get('form')) %}
+{{ {
+    hash: form.hash,
+    honeypot: craft.freeform.honeypot(form),
+    csrf: {
+        name: craft.app.config.general.csrfTokenName,
+        value: craft.app.request.csrfToken,
+    }
+}|json_encode|raw }}

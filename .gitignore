@@ -43,6 +43,7 @@ backups
 web/cache
 public/cache
 public_html/cache
+cache/*
 
 # Asset Source Folders
 

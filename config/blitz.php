@@ -25,11 +25,14 @@ return [
                 'uriPattern' => '.*',
             ]
         ],
-        'excludedUriPatterns' => [],
+        'excludedUriPatterns' => [
+            ['uriPattern' => 'dynamic/form']
+        ],
         'cacheStorageSettings' => ['folderPath' => '@root/cache/blitz'],
         'clearCacheAutomatically' => true,
         'warmCacheAutomatically' => true,
-        'refreshCacheAutomaticallyForGlobals' => true
+        'refreshCacheAutomaticallyForGlobals' => true,
+        'queryStringCaching' => 1
     ],
     'production' => [
         'cachingEnabled' => true

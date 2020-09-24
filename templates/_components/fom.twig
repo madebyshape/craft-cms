@@ -1,0 +1,47 @@
+{% set baseOptions = {
+    id: handle
+} %}
+
+{% if options is defined %}
+    {% set baseOptions = baseOptions|merge(options) %}
+{% endif %}
+
+<div x-data="form()" x-init="dynamicForm('{{ handle }}')">
+
+    {% set form = craft.freeform.form(
+        handle, 
+        baseOptions
+    ) %}
+
+    {{ form.render }}
+
+</div>
+
+{% js %}
+    function form() {
+        return {
+            test: false,
+            dynamicForm(handle) {
+
+                form = document.getElementById(handle);
+
+                fetch(
+                    '{{ siteUrl }}dynamic/form?form=' + handle
+                )
+                .then(
+                    response => {
+                        if (!response.ok) { throw response }
+                        return response.json()
+                    }
+                )
+                .then(
+                    data => {
+                        form.querySelector('input[name=' + data.csrf.name + ']').value = data.csrf.value;
+                        form.querySelector('input[name=formHash]').value = data.hash;
+                    }
+                );
+
+            }
+        }
+    }
+{% endjs %}
