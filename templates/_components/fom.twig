@@ -35,8 +35,17 @@
                 )
                 .then(
                     data => {
+
                         form.querySelector('input[name=' + data.csrf.name + ']').value = data.csrf.value;
+
                         form.querySelector('input[name=formHash]').value = data.hash;
+
+                        honeypot = data.honeypot;
+                        honeypotInput = form.querySelector('input[name^="freeform_form_handle"]');
+                        honeypotInput.setAttribute('id', honeypot.name);
+                        honeypotInput.setAttribute('name', honeypot.name);
+                        honeypotInput.value = honeypot.hash;
+
                     }
                 );
 
