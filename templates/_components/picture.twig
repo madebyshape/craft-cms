@@ -12,14 +12,15 @@
    @param {string} alt
    @param {bool} lazy
    @param {bool} ratio
+   @param {bool} focalPoint
 
 #}
 
-{% if 
+{% if
     image['extension'] is defined and image.extension == 'svg' or
     image['extension'] is defined and image.extension == 'gif' or
     image['extension'] is not defined and '.gif' in image
-%}    
+%}
 
    {% if svgConvert is defined %}
 
@@ -30,12 +31,12 @@
    {% else %}
 
         {# SVG & Animated Gif #}
-        <img 
-            src="{{ image['extension'] is defined ? image.url : image }}" 
+        <img
+            src="{{ image['extension'] is defined ? image.url : image }}"
             alt="{{ alt ?? image.title }}"
             {% if imgClass is defined %} class="{{ imgClass }}"{% endif %}
         >
-      
+
    {% endif %}
 
 {% else %}
@@ -46,6 +47,7 @@
    {% set transform = transform ?? [] %}
    {% set lazy = lazy ?? true %}
    {% set ratio = ratio ?? true %}
+   {% set focalPoint = focalPoint ?? false %}
    {% set webp = craft.imager.serverSupportsWebp() and production %}
 
    {% set pictureTransform = craft.imager.transformImage(
@@ -69,8 +71,8 @@
    %}
 
       {% if ratio %}
-         <div 
-            class="relative overflow-hidden w-full" 
+         <div
+            class="relative overflow-hidden w-full"
             style="padding-top: {{ (pictureTransform[0].height / pictureTransform[0].width) * 100 }}%;"
          >
       {% endif %}
@@ -91,6 +93,7 @@
                data-sizes="100vw"
                alt="{{ alt ?? image.title }}"
                class="js-lazy-load{% if imgClass is defined %} {{ imgClass }}{% endif %}"
+               {% if focalPoint %} style="object-position: {{ image.hasFocalPoint ? image.getFocalPoint()|first * 100 : '10' }}% {{ image.hasFocalPoint ? image.getFocalPoint()|last * 100 : '50' }}%"{% endif %}
             >
          {% else %}
             {% if webp %}
@@ -106,6 +109,7 @@
                sizes="100vw"
                alt="{{ alt ?? image.title }}"
                {% if imgClass is defined %} class="{{ imgClass }}"{% endif %}
+               {% if focalPoint %} style="object-position: {{ image.hasFocalPoint ? image.getFocalPoint()|first * 100 : '10' }}% {{ image.hasFocalPoint ? image.getFocalPoint()|last * 100 : '50' }}%"{% endif %}
             >
          {% endif %}
       </picture>
