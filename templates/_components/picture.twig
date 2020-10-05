@@ -92,7 +92,7 @@
                data-srcset="{{ craft.imager.srcset(pictureTransform) }}"
                data-sizes="100vw"
                alt="{{ alt ?? image.title }}"
-               class="js-lazy-load{% if imgClass is defined %} {{ imgClass }}{% endif %}"
+               class="lazy-load js-lazy-load{% if imgClass is defined %} {{ imgClass }}{% endif %}"
                {% if focalPoint %} style="object-position: {{ image.hasFocalPoint ? image.getFocalPoint()|first * 100 : '10' }}% {{ image.hasFocalPoint ? image.getFocalPoint()|last * 100 : '50' }}%"{% endif %}
             >
          {% else %}
