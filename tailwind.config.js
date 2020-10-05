@@ -118,6 +118,7 @@ module.exports = {
   ],
   purge: [],
   future: {
-    removeDeprecatedGapUtilities: true
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true
   }
 }
