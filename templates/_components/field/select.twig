@@ -56,7 +56,7 @@
          {% if placeholder is defined %}
             <option value="" disabled{% if value is not defined %} selected{% endif %}>{{ placeholder }}</option>
          {% endif %}
-         <option value="{{ option.value }}"{% if value is defined and option.value in value %} selected{% endif %}>
+         <option value="{{ option.value }}"{% if value is defined and option.value in value or option.checked is defined and option.checked %} selected{% endif %}>
             {{ option.label }}
          </option>
       {% endfor %}
