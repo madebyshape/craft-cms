@@ -16,11 +16,11 @@
 
 #}
 
-{% if
+{% if 
     image['extension'] is defined and image.extension == 'svg' or
     image['extension'] is defined and image.extension == 'gif' or
     image['extension'] is not defined and '.gif' in image
-%}
+%}    
 
    {% if svgConvert is defined %}
 
@@ -31,12 +31,12 @@
    {% else %}
 
         {# SVG & Animated Gif #}
-        <img
-            src="{{ image['extension'] is defined ? image.url : image }}"
+        <img 
+            src="{{ image['extension'] is defined ? image.url : image }}" 
             alt="{{ alt ?? image.title }}"
             {% if imgClass is defined %} class="{{ imgClass }}"{% endif %}
         >
-
+      
    {% endif %}
 
 {% else %}
@@ -65,16 +65,25 @@
       ) %}
    {% endif %}
 
+   {% if image['hasFocalPoint'] is not defined %}
+      {% set focalPoint = false %}
+   {% else %}
+      {% set focalPointClass = 'absolute z-0 top-0 left-0 w-full h-full object-cover absolute z-0 top-0 left-0 w-full h-full object-cover' %}
+      {% set focalPointPosition = 'object-position: ' ~ (image.hasFocalPoint ? image.getFocalPoint()|first * 100 : '50') ~ '% ' ~ (image.hasFocalPoint ? image.getFocalPoint()|last * 100 : '50') ~ '%' %}
+   {% endif %}
+
    {% if
       pictureTransform|length or
       webp
    %}
 
       {% if ratio %}
-         <div
-            class="relative overflow-hidden w-full"
+         <div 
+            class="relative overflow-hidden w-full" 
             style="padding-top: {{ (pictureTransform[0].height / pictureTransform[0].width) * 100 }}%;"
          >
+      {% elseif focalPoint %}
+         <div class="relative overflow-hidden w-full h-full">
       {% endif %}
 
       <picture{% if pictureClass is defined or ratio %} class="{{ ratio ? 'absolute top-0 left-0 w-full h-full' }} {{ pictureClass is defined ? pictureClass }}"{% endif %}>
@@ -92,8 +101,8 @@
                data-srcset="{{ craft.imager.srcset(pictureTransform) }}"
                data-sizes="100vw"
                alt="{{ alt ?? image.title }}"
-               class="lazy-load js-lazy-load{% if imgClass is defined %} {{ imgClass }}{% endif %}"
-               {% if focalPoint %} style="object-position: {{ image.hasFocalPoint ? image.getFocalPoint()|first * 100 : '10' }}% {{ image.hasFocalPoint ? image.getFocalPoint()|last * 100 : '50' }}%"{% endif %}
+               class="lazy-load js-lazy-load{% if focalPoint %} {{ focalPointClass }}{% endif %}{% if imgClass is defined %} {{ imgClass }}{% endif %}"
+               {% if focalPoint %}style="{{ focalPointPosition }}"{% endif %}
             >
          {% else %}
             {% if webp %}
@@ -108,13 +117,13 @@
                srcset="{{ craft.imager.srcset(pictureTransform) }}"
                sizes="100vw"
                alt="{{ alt ?? image.title }}"
-               {% if imgClass is defined %} class="{{ imgClass }}"{% endif %}
-               {% if focalPoint %} style="object-position: {{ image.hasFocalPoint ? image.getFocalPoint()|first * 100 : '10' }}% {{ image.hasFocalPoint ? image.getFocalPoint()|last * 100 : '50' }}%"{% endif %}
+               class="{% if focalPoint %}{{ focalPointClass }}{% endif %}{% if imgClass is defined %} {{ imgClass }}{% endif %}"
+               {% if focalPoint %}style="{{ focalPointPosition }}"{% endif %}
             >
          {% endif %}
       </picture>
 
-      {% if ratio %}
+      {% if ratio or focalPoint %}
          </div>
       {% endif %}
 
