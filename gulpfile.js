@@ -20,7 +20,6 @@ const rev = require("gulp-rev");
 const revDel = require("rev-del");
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
-const del = require("del");
 const critical = require("critical");
 const clean = require("gulp-dest-clean");
 
@@ -195,12 +194,6 @@ function faviconHtml() {
 }
 
 function purgeCss() {
-
-   class TailwindExtractor {
-      static extract(content) {
-         return content.match(/[A-z0-9-:\/]+/g);
-      }
-   }
 
    var whitelistPatterns = [];
    for (i = 0; i < package.purgeCss.whitelistPatterns.length; i++) {
