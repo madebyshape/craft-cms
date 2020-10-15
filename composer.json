@@ -27,12 +27,12 @@
     "nystudio107/craft-minify": "1.2.10",
     "verbb/default-dashboard": "1.0.8",
     "craftcms/mailgun": "1.4.3",
-    "craftcms/redactor": "2.8.1",
+    "craftcms/redactor": "2.8.2",
     "nystudio107/craft-retour": "3.1.42",
-    "solspace/craft-freeform": "3.8.2",
+    "solspace/craft-freeform": "3.8.4",
     "mmikkel/retcon": "2.2.1",
-    "putyourlightson/craft-blitz": "3.6.10",
-    "spacecatninja/imager-x": "v3.2.2",
+    "putyourlightson/craft-blitz": "3.6.11",
+    "spacecatninja/imager-x": "v3.2.3",
     "sebastianlenz/linkfield": "1.0.23"
   },
   "autoload": {
