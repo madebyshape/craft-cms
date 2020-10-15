@@ -219,12 +219,7 @@ function purgeCss() {
             whitelist: package.purgeCss.whitelist,
             whitelistPatterns: whitelistPatterns,
             whitelistPatternsChildren: whitelistPatterns,
-            extractors: [
-               {
-                  extractor: TailwindExtractor,
-                  extensions: ["html", "twig", "vue"]
-               }
-            ]
+            defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
          })
       )
       .pipe(gulp.dest(package.paths.public + package.paths.dist.css));
