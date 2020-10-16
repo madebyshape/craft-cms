@@ -25,6 +25,10 @@ return [
       'defaultImageQuality' => '100',
       'extraAllowedFileExtensions' => 'ico,xml,json',
       'transformGifs' => false,
+      'preserveImageColorProfiles' => true,
+      'preserveCmykColorspace' => true,
+      'optimizeImageFilesize' => false,
+      'imageDriver' => 'imagick',
       // Account
       'useEmailAsUsername' => true,
       'autoLoginAfterAccountActivation' => true,
