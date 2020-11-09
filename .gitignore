@@ -32,7 +32,6 @@ vendor
 .env.sh
 *.log
 storage/*
-config/license.key
 
 # Backups
 
