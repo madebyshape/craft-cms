@@ -1,4 +1,4 @@
-dateModified: 1600936697
+dateModified: 1605118717
 email:
   fromEmail: $SITE_EMAIL
   fromName: $SITE_NAME
@@ -27,7 +27,7 @@ plugins:
   freeform:
     edition: lite
     enabled: true
-    schemaVersion: 3.0.8
+    schemaVersion: 3.1.0
   imager-x:
     edition: lite
     enabled: true
@@ -91,6 +91,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.2.1
+  twigpack:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   typedlinkfield:
     edition: standard
     enabled: true
