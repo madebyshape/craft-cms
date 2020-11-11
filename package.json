@@ -8,7 +8,7 @@
     },
     "paths": {
         "dependencies": "node_modules/",
-        "public": "web/",
+        "public": "public/",
         "templates": "templates/",
         "dist": {
             "base": "dist/",
