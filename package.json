@@ -47,7 +47,12 @@
     },
     "purgeCss": {
         "whitelist": [],
-        "whitelistPatterns": []
+        "whitelistPatterns": [
+            "lazy-load.*",
+            "x-.*",
+            "flickity.*",
+            "aos.*"
+        ]
     },
     "cssDependencies": [],
     "jsDependencies": [
