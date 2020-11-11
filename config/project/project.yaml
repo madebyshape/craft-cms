@@ -1,4 +1,4 @@
-dateModified: 1605118837
+dateModified: 1605118954
 email:
   fromEmail: $SITE_EMAIL
   fromName: $SITE_NAME
@@ -13,10 +13,6 @@ email:
     useAuthentication: '1'
     username: $SMTP_USERNAME
   transportType: craft\mail\transportadapters\Smtp
-graphql:
-  publicToken:
-    enabled: false
-    expiryDate: null
 plugins:
   assetrev:
     edition: standard

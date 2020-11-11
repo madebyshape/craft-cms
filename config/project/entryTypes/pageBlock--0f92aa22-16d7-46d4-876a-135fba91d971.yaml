@@ -4,21 +4,50 @@ fieldLayouts:
       -
         elements:
           -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
             instructions: null
-            label: Title
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
             type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
           -
             fieldUid: 90552b17-3ba7-452a-9dfd-0b13004b4659
-            required: false
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: General
         sortOrder: 1
       -
         elements:
           -
             fieldUid: d6471ab8-0d49-45bf-af5d-f0d2a860e267
-            required: false
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: 'Meta & Social Data'
         sortOrder: 2
 handle: pageBlock
@@ -26,4 +55,6 @@ hasTitleField: true
 name: 'Page - Block'
 section: a4cade2e-b351-4d0b-8087-3328bc132811
 sortOrder: 1
-titleFormat: ''
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
