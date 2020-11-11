@@ -1,12 +1,18 @@
-dateModified: 1605118717
+dateModified: 1605118803
 email:
   fromEmail: $SITE_EMAIL
   fromName: $SITE_NAME
   replyToEmail: null
-  template: null
+  template: ''
   transportSettings:
-    command: ''
-  transportType: craft\mail\transportadapters\Sendmail
+    encryptionMethod: tls
+    host: $SMTP_HOSTNAME
+    password: $SMTP_PASSWORD
+    port: $SMTP_PORT
+    timeout: '10'
+    useAuthentication: '1'
+    username: $SMTP_USERNAME
+  transportType: craft\mail\transportadapters\Smtp
 graphql:
   publicToken:
     enabled: false
