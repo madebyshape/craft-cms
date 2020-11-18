@@ -73,6 +73,26 @@ module.exports = {
       typography: theme => ({
         default: {
           css: {
+            'h2, h3, h4, h5, h6': { 
+              fontFamily: theme('fontFamily.sans-primary').join(', '),
+              fontWeight: theme('fontWeight.semibold'),
+              color: theme('colors.gray.800')
+            },
+            'h2': {
+              fontSize: theme('fontSize.3xl[0]')
+            },
+            'h3': {
+              fontSize: theme('fontSize.2xl[0]')
+            },
+            'h4': {
+              fontSize: theme('fontSize.xl[0]')
+            },
+            'h5': {
+              fontSize: theme('fontSize.lg[0]')
+            },
+            'h6': {
+              fontSize: theme('fontSize.md[0]')
+            },
             a: {
               color: theme('colors.primary.500'),
               '&:hover': {
