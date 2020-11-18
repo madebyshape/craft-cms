@@ -1,4 +1,4 @@
-dateModified: 1605118954
+dateModified: 1605733701
 email:
   fromEmail: $SITE_EMAIL
   fromName: $SITE_NAME
@@ -26,6 +26,12 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+    settings:
+      excludeAdmin: ''
+      logErrors: false
+      logInfo: false
+      override: '1'
+      userDashboard: '1'
   freeform:
     edition: lite
     enabled: true
