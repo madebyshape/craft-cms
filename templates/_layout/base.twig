@@ -33,6 +33,10 @@
             <link rel="stylesheet" href="{{ cssUrl }}">
          {% endif %}
 
+         <style>
+            [x-cloak] { display: none; }
+         </style>
+
          {# Favicons #}
          {{ source('_components/favicons', ignore_missing = true) }}
 

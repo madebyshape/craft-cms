@@ -1,32 +1,15 @@
-let defaultTheme = require('tailwindcss/defaultTheme');
-let alpha = { 100: 'FF', 90: 'E6', 80: 'CC', 70: 'B3', 60: '99', 50: '80', 40: '66', 30: '4D', 20: '33', 10: '1A' };
+const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
+
+const alpha = { 100: 'FF', 90: 'E6', 80: 'CC', 70: 'B3', 60: '99', 50: '80', 40: '66', 30: '4D', 20: '33', 10: '1A' };
 
 module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          100: '#F0F2FD',
-          200: '#D9DFFA',
-          300: '#C2CBF7',
-          400: '#94A5F0',
-          500: '#667EEA',
-          600: '#5C71D3',
-          700: '#3D4C8C',
-          800: '#2E3969',
-          900: '#1F2646'
-        },
-        secondary: {
-          100: '#EBF7F7',
-          200: '#CDECEA',
-          300: '#AFE0DE',
-          400: '#74C9C5',
-          500: '#38B2AC',
-          600: '#32A09B',
-          700: '#226B67',
-          800: '#19504D',
-          900: '#113534'
-        },          
+        primary: colors.indigo,
+        secondary: colors.teal,   
+        gray: colors.gray,       
         brands: {
           facebook: '#3b5998',
           twitter: '#55acee',
@@ -81,6 +64,13 @@ module.exports = {
         '0': 0,
         '1/2': '50%'
       },
+      transitionDuration: {
+        default: '500ms'
+      },
+      transitionTimingFunction: {
+        default: 'cubic-bezier(0.4, 0, 0.2, 1)'
+      },
+      // Plugins
       typography: theme => ({
         default: {
           css: {
@@ -93,7 +83,6 @@ module.exports = {
           }
         }
       }),
-      // Plugins
       aspectRatio: {
         'square': [1, 1],
         '16/9': [16, 9],
@@ -105,18 +94,16 @@ module.exports = {
     }
   },
   variants: {
-    textColor: ['responsive', 'hover', 'focus', 'group-hover'],
-    backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
-    opacity: ['responsive', 'hover', 'group-hover'],
-    translate: ['responsive', 'hover', 'group-hover'],
-    scale: ['responsive', 'hover', 'group-hover']
+    extend: {
+      translate: ['group-hover'],
+      scale: ['group-hover']
+    }
   },
   plugins: [
     require('@tailwindcss/typography'),
     require('tailwindcss-typography')({ componentPrefix: '' }),
     require('tailwindcss-aspect-ratio')()
   ],
-  purge: [],
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true
