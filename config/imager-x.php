@@ -4,11 +4,11 @@
       '*' => [
          'imagerUrl' => getenv('ASSETS_URL') . '/' . getenv('TRANSFORMS_FOLDER'),
          'imagerSystemPath' => getenv('ASSETS_PATH') . '/' . getenv('TRANSFORMS_FOLDER'),
-         'fallbackImage' => '/dist/images/fallback-image.jpg',
+         'fallbackImage' => '/dist/images/fallback-image.png',
          'cacheEnabled' => true,
          'cacheDuration' => 31536000, // 1 year
          'cacheDurationRemoteFiles' => 31536000, // 1 year
-         'jpegQuality' => 95,
+         'jpegQuality' => 90,
          'pngCompressionLevel' => 0,
          'resizeFilter' => 'lanczos',
          'hashPath' => true,

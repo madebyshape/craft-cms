@@ -1,12 +1,11 @@
 <?php
 
 return [
-    'square' => [
+    '1x1' => [
         'transforms' => [
             ['width' => 400],
             ['width' => 800],
-            ['width' => 1200],
-            ['width' => 1800]
+            ['width' => 1200]
         ],
         'defaults' => [
             'ratio' => 1/1
@@ -16,8 +15,7 @@ return [
         'transforms' => [
             ['width' => 400],
             ['width' => 800],
-            ['width' => 1200],
-            ['width' => 1800]
+            ['width' => 1200]
         ],
         'defaults' => [
             'ratio' => 4/3
@@ -27,8 +25,7 @@ return [
         'transforms' => [
             ['width' => 400],
             ['width' => 800],
-            ['width' => 1200],
-            ['width' => 1800]
+            ['width' => 1200]
         ],
         'defaults' => [
             'ratio' => 16/9
