@@ -2,7 +2,7 @@
 
 This is a [Craft CMS 3.x](https://github.com/craftcms/cms) boilerplate [MadeByShape](https://madebyshape.co.uk) use internally for projects. 
 
-It's built with the intention of being used with [Tailwind CSS](https://github.com/madebyshape/tailwind-css) and [AlpineJS](https://github.com/alpinejs/alpine) framework.
+It's built with the intention of being used with [Tailwind CSS](https://tailwindcss.com/) and [Alpine.js](https://github.com/alpinejs/alpine) framework.
 
 ## Install
 
@@ -13,12 +13,19 @@ It's built with the intention of being used with [Tailwind CSS](https://github.c
 ## Whats included
 
 - [Craft CMS 3.x](https://github.com/craftcms/cms)
+- CSS
+   - [Tailwind CSS 2.0.x](https://tailwindcss.com/)
+- Javascript
+   - [Alpine.js](https://github.com/alpinejs/alpine)
+   - [loadCSS](https://github.com/filamentgroup/loadCSS)
+   - [Javascript Cookie](https://github.com/js-cookie/js-cookie)
+   - [Vanilla Lazyload](https://github.com/verlok/vanilla-lazyload)
 - Templates
    - [Blocks](https://github.com/madebyshape/craft-3#blocks)
    - [Components](https://github.com/madebyshape/craft-3#components)
    - Pages (With dynamic page types)
    - Email
-   - Exceptions (404 etc)
+   - Exceptions
    - Plugins
       - Freeform
 - Config
@@ -39,10 +46,8 @@ It's built with the intention of being used with [Tailwind CSS](https://github.c
    - Freeform
    - Imager X
    - Link Field
-   - Mailgun
    - Minify
    - Redactor
-   - Retcon
    - Retour
    - SEOMatic
    - Super Table
@@ -70,12 +75,6 @@ Make sure to describe each component at the top of each component file so other 
 Blocks are large chunks of markup, or made up of smaller components. E.g. a block could be a form, with button and input field components included. Use the `blocks` folder and name each component file (Camel Case) by it's use case e.g. `largeForm.twig` (If a SASS file exists for a block, use the same file name).
 
 Blocks ideally should be selectable via a Matrix Field so CP users can pick and choose these per template. In some cases this might not be possible though, e.g. if the page is dynamically generated.
-
-## Generate .env (If project exists)
-
-`./craft setup`
-
-If using MAMP, ensure the server name is `127.0.0.1` and `Allow network access to MySQL` is enabled in MAMP - https://craftcms.stackexchange.com/questions/23056/craft-cli-rc1-connectivity-issues-with-mamp-pro/23058
 
 ## Developers
 
