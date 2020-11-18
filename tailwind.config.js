@@ -1,6 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
-
 const alpha = { 100: 'FF', 90: 'E6', 80: 'CC', 70: 'B3', 60: '99', 50: '80', 40: '66', 30: '4D', 20: '33', 10: '1A' };
 
 module.exports = {
@@ -21,17 +20,17 @@ module.exports = {
         }
       },
       fontSize: theme => ({
-        'xs': ['0.75rem', theme('lineHeight.normal')],    // 12
-        'sm': ['0.875rem', theme('lineHeight.normal')],   // 14
+        'xs':   ['0.75rem', theme('lineHeight.normal')],  // 12
+        'sm':   ['0.875rem', theme('lineHeight.normal')], // 14
         'base': ['1rem', theme('lineHeight.normal')],     // 16
-        'md': ['1.125rem', theme('lineHeight.normal')],   // 18
-        'lg': ['1.25rem', theme('lineHeight.normal')],    // 20
-        'xl': ['1.5rem', theme('lineHeight.normal')],     // 24
-        '2xl': ['1.875rem', theme('lineHeight.normal')],  // 30
-        '3xl': ['2.25rem', theme('lineHeight.normal')],   // 36
-        '4xl': ['3rem', theme('lineHeight.normal')],      // 48
-        '5xl': ['4rem', theme('lineHeight.normal')],      // 64
-        '6xl': ['4.5rem', theme('lineHeight.normal')]     // 72
+        'md':   ['1.125rem', theme('lineHeight.normal')], // 18
+        'lg':   ['1.25rem', theme('lineHeight.normal')],  // 20
+        'xl':   ['1.5rem', theme('lineHeight.normal')],   // 24
+        '2xl':  ['1.875rem', theme('lineHeight.normal')], // 30
+        '3xl':  ['2.25rem', theme('lineHeight.normal')],  // 36
+        '4xl':  ['3rem', theme('lineHeight.normal')],     // 48
+        '5xl':  ['4rem', theme('lineHeight.normal')],     // 64
+        '6xl':  ['4.5rem', theme('lineHeight.normal')]    // 72
       }),
       fontFamily: {
         'sans-primary': [
@@ -84,7 +83,7 @@ module.exports = {
         }
       }),
       aspectRatio: {
-        'square': [1, 1],
+        '1/1': [1, 1],
         '16/9': [16, 9],
         '4/3': [4, 3]
       }
@@ -101,8 +100,8 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
-    require('tailwindcss-typography')({ componentPrefix: '' }),
-    require('tailwindcss-aspect-ratio')()
+    require('tailwindcss-aspect-ratio')(),
+    require('tailwindcss-typography')({ componentPrefix: '' })
   ],
   future: {
     removeDeprecatedGapUtilities: true,
