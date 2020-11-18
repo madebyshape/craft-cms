@@ -12,7 +12,6 @@ const cssnano = require("cssnano");
 const newer = require("gulp-newer");
 const imagemin = require("gulp-imagemin");
 const minify = require("gulp-minify");
-const modernizr = require("gulp-modernizr");
 const purgecss = require("gulp-purgecss");
 const concat = require("gulp-concat");
 const favicons = require("favicons").stream;
@@ -83,7 +82,6 @@ function js() {
    const jsArray = [];
 
    const jsFiles = [
-      "modernizr.js",
       "components/**/*.js",
       package.files.assets.js
    ];
@@ -310,7 +308,6 @@ function browserFeatures() {
 
    return gulp
       .src(package.paths.assets.js + "**/*")
-      .pipe(modernizr())
       .pipe(gulp.dest(package.paths.assets.js));
 
 }
