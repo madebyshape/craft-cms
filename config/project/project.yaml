@@ -1,4 +1,4 @@
-dateModified: 1605733701
+dateModified: 1605734154
 email:
   fromEmail: $SITE_EMAIL
   fromName: $SITE_NAME
@@ -99,10 +99,6 @@ plugins:
     edition: lite
     enabled: true
     schemaVersion: 3.0.0
-  mailgun:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   minify:
     edition: standard
     enabled: true
@@ -111,10 +107,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
-  retcon:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   retour:
     edition: standard
     enabled: true

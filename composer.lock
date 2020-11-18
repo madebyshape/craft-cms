@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e36c24e49883351e6c43f5933edac0ed",
+    "content-hash": "367cba5942fa92289beb9a1676620cc5",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -618,51 +618,6 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
             "time": "2020-11-04T11:25:55+00:00"
-        },
-        {
-            "name": "craftcms/mailgun",
-            "version": "1.4.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/mailgun/zipball/fcd9c9fb4021881ae681f461021bd4f41c5c7f5c",
-                "reference": "fcd9c9fb4021881ae681f461021bd4f41c5c7f5c",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.1.5",
-                "cspoo/swiftmailer-mailgun-bundle": "^1.0.0",
-                "php-http/guzzle6-adapter": "^1.1.1 || ^2.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Mailgun",
-                "handle": "mailgun",
-                "documentationUrl": "https://github.com/craftcms/mailgun/blob/v1/README.md"
-            },
-            "autoload": {
-                "psr-4": {
-                    "craft\\mailgun\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Pixel & Tonic",
-                    "homepage": "https://pixelandtonic.com/"
-                }
-            ],
-            "description": "Mailgun integration for Craft CMS",
-            "keywords": [
-                "cms",
-                "craftcms",
-                "mailer",
-                "mailgun",
-                "yii2"
-            ],
-            "time": "2020-05-05T06:56:32+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -2629,60 +2584,6 @@
                 "shell"
             ],
             "time": "2020-08-30T09:56:40+00:00"
-        },
-        {
-            "name": "mmikkel/retcon",
-            "version": "2.2.1",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mmikkel/Retcon-Craft/zipball/07eb048c5bd08a055b498511ca3a2c49a87f5037",
-                "reference": "07eb048c5bd08a055b498511ca3a2c49a87f5037",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0-RC1",
-                "masterminds/html5": "^2.3",
-                "symfony/css-selector": "^3.3.6",
-                "symfony/dom-crawler": "^3.3.6"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Retcon",
-                "handle": "retcon",
-                "schemaVersion": "1.0.0",
-                "hasCpSettings": false,
-                "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/mmikkel/Retcon-Craft/master/CHANGELOG.md",
-                "components": [],
-                "class": "mmikkel\\retcon\\Retcon"
-            },
-            "autoload": {
-                "psr-4": {
-                    "mmikkel\\retcon\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mats Mikkel Rummelhoff",
-                    "homepage": "https://vaersaagod.no"
-                }
-            ],
-            "description": "Powerful Twig filters for mutating and querying HTML",
-            "keywords": [
-                "cms",
-                "craft",
-                "craft-plugin",
-                "craftcms",
-                "retcon"
-            ],
-            "support": {
-                "docs": "https://github.com/mmikkel/Retcon-Craft/blob/master/README.md",
-                "issues": "https://github.com/mmikkel/Retcon-Craft/issues"
-            },
-            "time": "2020-07-19T16:32:23+00:00"
         },
         {
             "name": "monolog/monolog",
