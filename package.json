@@ -4,7 +4,7 @@
     "description": "",
     "main": "gulpfile.js",
     "env": {
-        "local": ""
+        "local": "http://website.local"
     },
     "paths": {
         "dependencies": "node_modules/",
@@ -36,7 +36,6 @@
         }
     },
     "critical": {
-        "url": "https://website.production/",
         "dest": "_criticalCss/",
         "elements": [
             {
@@ -49,7 +48,6 @@
         "whitelist": [],
         "whitelistPatterns": [
             "lazy-load.*",
-            "x-.*",
             "flickity.*",
             "aos.*"
         ]
