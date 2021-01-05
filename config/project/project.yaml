@@ -1,4 +1,4 @@
-dateModified: 1605734154
+dateModified: 1609850525
 email:
   fromEmail: $SITE_EMAIL
   fromName: $SITE_NAME
@@ -150,10 +150,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.2.1
-  twigpack:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   typedlinkfield:
     edition: standard
     enabled: true
