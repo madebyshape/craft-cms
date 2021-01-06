@@ -1,8 +1,16 @@
 import 'alpinejs';
-// import Cookies from 'js-cookie';
 import Vue from 'vue';
+import Cookies from 'js-cookie';
 
-// Vue Components
+// Modules
+
+import { exampleModule } from './modules/example';
+import { lazyLoadModule } from './modules/lazyLoad';
+
+exampleModule();
+lazyLoadModule();
+
+// Vue
 
 import Example from '../vue/Example.vue';
 
@@ -12,11 +20,3 @@ new Vue({
 		Example
 	}
 });
-
-// Modules
-
-import { exampleModule } from './modules/example';
-import { lazyLoadModule } from './modules/lazyLoad';
-
-exampleModule();
-lazyLoadModule();
