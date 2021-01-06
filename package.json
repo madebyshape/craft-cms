@@ -18,6 +18,7 @@
             "favicon": "dist/images/favicon/"
         },
         "assets": {
+            "base": "src/",
             "scss": "src/scss/",
             "js": "src/js/",
             "images": "src/images/",
@@ -32,7 +33,7 @@
         },
         "assets": {
             "scss": "app.scss",
-            "js": "app.js"
+            "js": "main.js"
         }
     },
     "critical": {
@@ -52,7 +53,6 @@
             "aos.*"
         ]
     },
-    "cssDependencies": [],
     "dependencies": {
         "@tailwindcss/typography": "^0.2.0",
         "alpinejs": "^2.7.3",
