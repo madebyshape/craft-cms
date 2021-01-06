@@ -50,7 +50,7 @@ module.exports = {
       container: {
         center: true,
         padding: {
-          default: '1rem',
+          DEFAULT: '1rem',
           sm: '2rem',
           lg: '4rem',
           xl: '5rem'
@@ -64,10 +64,10 @@ module.exports = {
         '1/2': '50%'
       },
       transitionDuration: {
-        default: '500ms'
+        DEFAULT: '500ms'
       },
       transitionTimingFunction: {
-        default: 'cubic-bezier(0.4, 0, 0.2, 1)'
+        DEFAULT: 'cubic-bezier(0.4, 0, 0.2, 1)'
       },
       // Plugins
       typography: theme => ({
