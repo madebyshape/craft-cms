@@ -58,14 +58,6 @@ function browserSyncReload(done) {
 
 function css() {
 
-   const cssFiles = [
-      package.paths.assets.scss + package.files.assets.scss
-   ];
-
-   for (var i = 0; i < package.cssDependencies.length; i++) {
-      cssFiles.unshift(package.paths.dependencies + package.cssDependencies[i]);
-   }
-
    const plugins = [
       tailwindcss(package.files.tailwind),
       autoprefixer(),
@@ -73,7 +65,7 @@ function css() {
    ];
 
    return gulp
-      .src(cssFiles)
+      .src(package.paths.assets.scss + package.files.assets.scss)
       .pipe(plumber({ errorHandler: notify.onError("Error [css]: <%= error.message %>") }))
       .pipe(concat(package.files.dist.css))
       .pipe(sourcemaps.init())
@@ -89,7 +81,7 @@ function css() {
 function js() {
 
    return gulp
-      .src(package.paths.assets.js + package.files.assets.js)
+      .src(package.paths.assets.base + package.files.assets.js)
       .pipe(plumber({ errorHandler: notify.onError("Error [js]: <%= error.message %>") }))
       .pipe(webpackStream(webpackConfiguration), webpack)
       .pipe(concat(package.files.dist.js))
@@ -305,7 +297,7 @@ function watch(done) {
       [
          "package.json",
          package.files.tailwind,
-         package.paths.assets.scss + "**/*",
+         package.paths.assets.base + "**/*.{css,scss,vue}",
       ],
       css
    );
@@ -313,14 +305,14 @@ function watch(done) {
    gulp.watch(
       [
          "package.json",
-         package.paths.assets.js + "**/*"
+         package.paths.assets.base + "**/*.{js,vue}"
       ],
       js
    );
 
    gulp.watch(package.paths.public + "**/*", browserSyncReload);
 
-   gulp.watch(package.paths.templates + "**/*.{html,twig,vue}", browserSyncReload);
+   gulp.watch(package.paths.templates + "**/*.{html,twig}", browserSyncReload);
 
    gulp.watch(package.paths.assets.images + "**/*", images);
 
