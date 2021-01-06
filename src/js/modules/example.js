@@ -1,0 +1,4 @@
+const exampleModule = () => {   
+}
+   
+export { exampleModule };

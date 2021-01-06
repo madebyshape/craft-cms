@@ -1,26 +1,35 @@
+
+const isProduction = process.env.NODE_ENV === 'production';
+
 const package = require("./package.json");
 
-const gulp = require("gulp");
-const sass = require("gulp-sass");
-const postcss = require("gulp-postcss");
-const tailwindcss = require("tailwindcss");
-const browsersync = require("browser-sync").create();
-const sassglob = require("gulp-sass-glob");
-const sourcemaps = require("gulp-sourcemaps");
-const autoprefixer = require("autoprefixer");
-const cssnano = require("cssnano");
-const newer = require("gulp-newer");
-const imagemin = require("gulp-imagemin");
-const minify = require("gulp-minify");
-const purgecss = require("gulp-purgecss");
-const concat = require("gulp-concat");
-const favicons = require("favicons").stream;
-const rev = require("gulp-rev");
-const revDel = require("rev-del");
-const plumber = require("gulp-plumber");
-const notify = require("gulp-notify");
-const critical = require("critical");
-const clean = require("gulp-dest-clean");
+const webpackDev = require('./webpack.dev'),
+      webpackProduction = require('./webpack.production'),
+      webpackConfiguration = isProduction ? webpackProduction : webpackDev;
+
+const gulp = require("gulp"),
+      sass = require("gulp-sass"),
+      postcss = require("gulp-postcss"),
+      tailwindcss = require("tailwindcss"),
+      browsersync = require("browser-sync"),
+      sassglob = require("gulp-sass-glob"),
+      sourcemaps = require("gulp-sourcemaps"),
+      autoprefixer = require("autoprefixer"),
+      cssnano = require("cssnano"),
+      newer = require("gulp-newer"),
+      imagemin = require("gulp-imagemin"),
+      minify = require("gulp-minify"),
+      purgecss = require("gulp-purgecss"),
+      concat = require("gulp-concat"),
+      favicons = require("favicons"),
+      rev = require("gulp-rev"),
+      revDel = require("rev-del"),
+      plumber = require("gulp-plumber"),
+      notify = require("gulp-notify"),
+      critical = require("critical"),
+      clean = require("gulp-dest-clean"),
+      webpack = require('webpack'),
+      webpackStream = require('webpack-stream');
 
 function browserSync(done) {
 
@@ -79,24 +88,10 @@ function css() {
 
 function js() {
 
-   const jsArray = [];
-
-   const jsFiles = [
-      "components/**/*.js",
-      package.files.assets.js
-   ];
-
-   for (var i = 0; i < package.jsDependencies.length; i++) {
-      jsArray.push(package.paths.dependencies + package.jsDependencies[i]);
-   }
-
-   for (var i = 0; i < jsFiles.length; i++) {
-      jsArray.push(package.paths.assets.js + jsFiles[i]);
-   }
-
    return gulp
-      .src(jsArray)
+      .src(package.paths.assets.js + package.files.assets.js)
       .pipe(plumber({ errorHandler: notify.onError("Error [js]: <%= error.message %>") }))
+      .pipe(webpackStream(webpackConfiguration), webpack)
       .pipe(concat(package.files.dist.js))
       .pipe(sourcemaps.init())
       .pipe(
@@ -304,14 +299,6 @@ function revCssJs(done) {
 
 }
 
-function browserFeatures() {
-
-   return gulp
-      .src(package.paths.assets.js + "**/*")
-      .pipe(gulp.dest(package.paths.assets.js));
-
-}
-
 function watch(done) {
 
    gulp.watch(
@@ -351,12 +338,12 @@ exports.faviconHtml = faviconHtml;
 exports.purgeCss = purgeCss;
 exports.criticalCss = criticalCss;
 exports.revCssJs = revCssJs;
-exports.browserFeatures = browserFeatures;
 exports.watch = watch;
 
-exports.dev = gulp.series(browserFeatures, css, js, images, watch, browserSync);
+exports.dev = gulp.series(css, js, images, watch, browserSync);
+
 exports.production = gulp.series(
-   gulp.parallel(browserFeatures, css, js),
+   gulp.parallel(css, js),
    purgeCss,
    criticalCss,
    revCssJs,

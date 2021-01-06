@@ -1,29 +1,22 @@
-const state = {
-	hidden: 'is-hidden',
-	visible: 'is-visible',
-	selected: 'is-selected',
-	active: 'is-active',
-	loading: 'is-loading'
-}
+import 'alpinejs';
+// import Cookies from 'js-cookie';
+import Vue from 'vue';
 
-window.addEventListener(
-	'load', 
-	function() {
-		// e.g. component.init();
-		lazyLoad.init();
-	}
-);
+// Vue Components
 
-window.addEventListener(
-	'resize', 
-	function() {
-		// e.g. component.resize();
-	}
-);
+import Example from '../vue/Example.vue';
 
-window.addEventListener(
-	'scroll', 
-	function() {
-		// e.g. component.scroll();
+new Vue({
+	el: '#app',
+	components: {
+		Example
 	}
-);
+});
+
+// Modules
+
+import { exampleModule } from './modules/example';
+import { lazyLoadModule } from './modules/lazyLoad';
+
+exampleModule();
+lazyLoadModule();

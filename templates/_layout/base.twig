@@ -48,7 +48,9 @@
          x-on:resize.window="viewportHeight()"
       >
 
-         {% block body %}{% endblock %}
+         <div id="app">
+            {% block body %}{% endblock %}
+         </div>
          
          {# Javascript #}
          <script src="{{ siteUrl }}dist/{{ rev('js/app.js') }}" defer></script>
