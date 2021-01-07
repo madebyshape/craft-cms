@@ -1,28 +1,24 @@
 <template>
     <div>
-        <a href="#" @click.prevent="getVisibility" v-show="visible">Click Me</a>
     </div>
 </template>
 
 <script>
+
+    // const Component = () => import('../vue/Component.vue');
+
     export default {
+        // components: {
+        //    Component
+        // },
         data() {
             return {
-                visible: true
+                property: 'value'
             }
         },
         methods: {
-            getVisibility(event){
-                console.log(this.visible);
-                this.visible = false;
-            }
         },
         computed: {
-        },
-        watch: {
-            visible() {
-                console.log('Visibility has changed!');
-            }
         }
     }
 </script>
