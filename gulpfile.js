@@ -1,11 +1,11 @@
 
-const isProduction = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === 'prod';
 
 const package = require("./package.json");
 
 const webpackDev = require('./webpack.dev'),
-      webpackProduction = require('./webpack.production'),
-      webpackConfiguration = isProduction ? webpackProduction : webpackDev;
+      webpackProd = require('./webpack.prod'),
+      webpackConfiguration = isProd ? webpackProd : webpackDev;
 
 const gulp = require("gulp"),
       sass = require("gulp-sass"),
@@ -334,7 +334,7 @@ exports.watch = watch;
 
 exports.dev = gulp.series(css, js, images, watch, browserSync);
 
-exports.production = gulp.series(
+exports.prod = gulp.series(
    gulp.parallel(css, js),
    purgeCss,
    criticalCss,

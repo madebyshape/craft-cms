@@ -110,7 +110,7 @@
     },
     "scripts": {
         "dev": "gulp dev",
-        "production": " NODE_ENV=production gulp production"
+        "prod": " NODE_ENV=prod gulp prod"
     },
     "repository": {
         "type": "git",
