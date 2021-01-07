@@ -33,7 +33,7 @@
         },
         "assets": {
             "scss": "app.scss",
-            "js": "main.js"
+            "js": "index.js"
         }
     },
     "critical": {

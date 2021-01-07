@@ -1,4 +1,4 @@
-const exampleModule = (props) => {   
+const exampleModule = (props) => {
 }
    
 export { exampleModule };
