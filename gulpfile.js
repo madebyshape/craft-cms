@@ -1,11 +1,7 @@
+const env = process.env.NODE_ENV ?? 'dev';
 
-const isProd = process.env.NODE_ENV === 'prod';
-
-const package = require("./package.json");
-
-const webpackDev = require('./webpack.dev'),
-      webpackProd = require('./webpack.prod'),
-      webpackConfiguration = isProd ? webpackProd : webpackDev;
+const package = require("./package.json"),
+      webpackConfig = require('./webpack.' + env);
 
 const gulp = require("gulp"),
       sass = require("gulp-sass"),
@@ -83,7 +79,7 @@ function js() {
    return gulp
       .src(package.paths.assets.base + package.files.assets.js)
       .pipe(plumber({ errorHandler: notify.onError("Error [js]: <%= error.message %>") }))
-      .pipe(webpackStream(webpackConfiguration), webpack)
+      .pipe(webpackStream(webpackConfig), webpack)
       .pipe(concat(package.files.dist.js))
       .pipe(sourcemaps.init())
       .pipe(
