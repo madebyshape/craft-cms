@@ -1,6 +1,6 @@
 {
     "name": "craftcms-tailwind",
-    "version": "1.0.0",
+    "version": "3.0.0",
     "description": "",
     "main": "gulpfile.js",
     "env": {
@@ -114,7 +114,7 @@
     "scripts": {
         "dev": "gulp dev",
         "prod": " NODE_ENV=prod gulp prod",
-        "setup": "git pull && npm install && composer install && ./craft migrate/all && ./craft project-config/apply && gulp dev"
+        "setup": "git pull && npm install && composer install && ./craft migrate/all --interactive=0 && ./craft project-config/apply --interactive=0 && gulp dev"
     },
     "repository": {
         "type": "git",

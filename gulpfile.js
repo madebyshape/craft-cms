@@ -56,8 +56,7 @@ function css() {
 
    const plugins = [
       tailwindcss(package.files.tailwind),
-      autoprefixer(),
-      // cssnano()
+      autoprefixer()
    ];
 
    return gulp
@@ -82,19 +81,38 @@ function js() {
       .pipe(webpackStream(webpackConfig), webpack)
       .pipe(concat(package.files.dist.js))
       .pipe(sourcemaps.init())
-      // .pipe(
-      //    minify(
-      //       {
-      //          ext:{
-      //             min:".js"
-      //          },
-      //          noSource: true
-      //       }
-      //    )
-      // )
       .pipe(sourcemaps.write("/"))
       .pipe(gulp.dest(package.paths.public + package.paths.dist.js))
       .pipe(browsersync.stream());
+}
+
+function minifyCss() {
+
+   return gulp
+      .src(package.paths.public + package.paths.dist.css + package.files.dist.css)
+      .pipe(plumber({ errorHandler: notify.onError("Error [css]: <%= error.message %>") }))
+      .pipe(postcss([cssnano()]))
+      .pipe(gulp.dest(package.paths.public + package.paths.dist.css));
+
+}
+
+function minifyJs() {
+
+   return gulp
+      .src(package.paths.public + package.paths.dist.js + package.files.dist.js)
+      .pipe(plumber({ errorHandler: notify.onError("Error [js]: <%= error.message %>") }))
+      .pipe(
+         minify(
+            {
+               ext:{
+                  min:".js"
+               },
+               noSource: true
+            }
+         )
+      )
+      .pipe(gulp.dest(package.paths.public + package.paths.dist.js));
+
 }
 
 function images() {
@@ -323,6 +341,8 @@ exports.js = js;
 exports.images = images;
 exports.favicon = favicon;
 exports.faviconHtml = faviconHtml;
+exports.minifyCss = minifyCss;
+exports.minifyJs = minifyJs;
 exports.purgeCss = purgeCss;
 exports.criticalCss = criticalCss;
 exports.revCssJs = revCssJs;
@@ -332,6 +352,8 @@ exports.dev = gulp.series(css, js, images, watch, browserSync);
 
 exports.prod = gulp.series(
    gulp.parallel(css, js),
+   minifyCss,
+   minifyJs,
    purgeCss,
    criticalCss,
    revCssJs,

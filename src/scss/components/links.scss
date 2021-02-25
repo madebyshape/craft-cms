@@ -2,7 +2,7 @@
     @apply transition;
     &--primary {
         @apply 
-            text-primary-500
+            text-primary-500 
             underline;
         &:hover,
         &:active {
