@@ -1,27 +1,20 @@
 <template>
     <div>
+        {{ description }}
     </div>
 </template>
 
 <script>
-
-    // const Component = () => import('../vue/Component.vue');
-
     export default {
-        // components: {
-        //    Component
-        // },
+        props: [],
         data() {
             return {
-                property: 'value'
+                description: 'Example Vue Component'
             }
         },
-        methods: {
-        },
-        computed: {
-        }
+        methods: {},
+        computed: {}
     }
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

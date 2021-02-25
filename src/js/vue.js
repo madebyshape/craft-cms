@@ -1,11 +1,12 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 
-const Example = () => import('../vue/Example.vue');
+import Example from '../vue/Example.vue';
 
-new Vue({
-	el: '#app',
+const app = createApp({
 	delimiters: ['${', '}'],
 	components: {
 		Example
 	}
 });
+
+app.mount('#app');

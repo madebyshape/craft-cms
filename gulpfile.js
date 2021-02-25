@@ -57,7 +57,7 @@ function css() {
    const plugins = [
       tailwindcss(package.files.tailwind),
       autoprefixer(),
-      cssnano()
+      // cssnano()
    ];
 
    return gulp
@@ -82,16 +82,16 @@ function js() {
       .pipe(webpackStream(webpackConfig), webpack)
       .pipe(concat(package.files.dist.js))
       .pipe(sourcemaps.init())
-      .pipe(
-         minify(
-            {
-               ext:{
-                  min:".js"
-               },
-               noSource: true
-            }
-         )
-      )
+      // .pipe(
+      //    minify(
+      //       {
+      //          ext:{
+      //             min:".js"
+      //          },
+      //          noSource: true
+      //       }
+      //    )
+      // )
       .pipe(sourcemaps.write("/"))
       .pipe(gulp.dest(package.paths.public + package.paths.dist.js))
       .pipe(browsersync.stream());

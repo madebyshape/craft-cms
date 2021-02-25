@@ -3,7 +3,7 @@ const { VueLoaderPlugin } = require('vue-loader');
 module.exports = {
 	resolve: {
         alias: {
-			vue: 'vue/dist/vue.js'
+			vue: "vue/dist/vue.esm-bundler.js"
 		}
     },
 	plugins: [
