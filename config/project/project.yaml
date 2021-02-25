@@ -1,4 +1,4 @@
-dateModified: 1614274862
+dateModified: 1614274906
 email:
   fromEmail: $SITE_EMAIL
   fromName: $SITE_NAME
@@ -21,6 +21,7 @@ plugins:
   blitz:
     edition: standard
     enabled: true
+    licenseKey: QTOQ5VPO0CW4I2OBJ7TDM7R8
     schemaVersion: 3.6.6
   default-dashboard:
     edition: standard
@@ -35,6 +36,7 @@ plugins:
   freeform:
     edition: lite
     enabled: true
+    licenseKey: Y0XXZ8LG3PYJJVF1PY0HZRWT
     schemaVersion: 3.3.0
     settings:
       ajaxByDefault: false
@@ -98,6 +100,7 @@ plugins:
   imager-x:
     edition: lite
     enabled: true
+    licenseKey: 6BVMD74TZC33I1BUXVIKN6D3
     schemaVersion: 3.0.0
   minify:
     edition: standard
@@ -110,10 +113,12 @@ plugins:
   retour:
     edition: standard
     enabled: true
+    licenseKey: 081C3N7O2G6RQGTIYTZGT9YV
     schemaVersion: 3.0.9
   seomatic:
     edition: standard
     enabled: true
+    licenseKey: PJQHH4X9DG4FAEH96LMMZBUY
     schemaVersion: 3.0.9
     settings:
       addHrefLang: true
