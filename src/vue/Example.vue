@@ -8,7 +8,7 @@
 <script>
 
     // import { defineAsyncComponent } from 'vue';
-    // const AnotherComponent = defineAsyncComponent (() => import('../vue/AnotherComponent.vue'));
+    // const AnotherComponent = defineAsyncComponent (() => import(/* webpackChunkName: "AnotherComponent" */'../vue/AnotherComponent.vue'));
 
     export default {
         // components: {
