@@ -4,7 +4,9 @@ const lazyLoadModule = () => {
 
    new LazyLoad(
       { 
-         elements_selector: '.js-lazy-load'
+         elements_selector: '.js-lazy-load',
+         class_loaded: 'lazy-load--loaded',
+         threshold: (window.innerHeight / 5)
       }
    );
     
