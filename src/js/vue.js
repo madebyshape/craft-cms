@@ -1,6 +1,6 @@
-import { createApp } from 'vue';
+import { createApp, defineAsyncComponent } from 'vue';
 
-import Example from '../vue/Example.vue';
+const Example = defineAsyncComponent (() => import('../vue/Example.vue'));
 
 const app = createApp({
 	delimiters: ['${', '}'],

@@ -1,11 +1,19 @@
 <template>
     <div>
         {{ description }}
+        <AnotherComponent></AnotherComponent>
     </div>
 </template>
 
 <script>
+
+    // import { defineAsyncComponent } from 'vue';
+    // const AnotherComponent = defineAsyncComponent (() => import('../vue/AnotherComponent.vue'));
+
     export default {
+        // components: {
+        //     AnotherComponent
+        // },
         props: [],
         data() {
             return {
@@ -15,6 +23,7 @@
         methods: {},
         computed: {}
     }
+
 </script>
 
 <style lang="scss" scoped></style>
