@@ -1,8 +1,10 @@
-# Craft CMS 3.x + Tailwind CSS
+# Craft CMS 3.x, Tailwind CSS, VueJS and AlpineJS
 
 This is a [Craft CMS 3.x](https://github.com/craftcms/cms) boilerplate [MadeByShape](https://madebyshape.co.uk) use internally for projects. 
 
-It's built with the intention of being used with [Tailwind CSS](https://tailwindcss.com/) and [Alpine.js](https://github.com/alpinejs/alpine) framework.
+It's built with the intention of being used with [Tailwind CSS](https://tailwindcss.com/), [VueJS](https://vuejs.org/) and [Alpine.js](https://github.com/alpinejs/alpine) frameworks.
+
+It uses both Webpack and Gulp (For now) to build the project.
 
 ## Install
 
@@ -16,6 +18,7 @@ It's built with the intention of being used with [Tailwind CSS](https://tailwind
 - CSS
    - [Tailwind CSS 2.0.x](https://tailwindcss.com/)
 - Javascript
+   - [Vue.js](https://github.com/vuejs)
    - [Alpine.js](https://github.com/alpinejs/alpine)
    - [loadCSS](https://github.com/filamentgroup/loadCSS)
    - [Javascript Cookie](https://github.com/js-cookie/js-cookie)
@@ -75,6 +78,13 @@ Make sure to describe each component at the top of each component file so other 
 Blocks are large chunks of markup, or made up of smaller components. E.g. a block could be a form, with button and input field components included. Use the `blocks` folder and name each component file (Camel Case) by it's use case e.g. `largeForm.twig` (If a SASS file exists for a block, use the same file name).
 
 Blocks ideally should be selectable via a Matrix Field so CP users can pick and choose these per template. In some cases this might not be possible though, e.g. if the page is dynamically generated.
+
+## Roadmap
+
+[] Use Webpack solely instead of a mixture of Webpack and Gulp
+[] Add Google Workbox
+[] rel="preload" fonts via a Webpack task
+[] Move some Twig components in to VueJS 
 
 ## Developers
 
