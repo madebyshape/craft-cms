@@ -6,6 +6,11 @@ It's built with the intention of being used with [Tailwind CSS](https://tailwind
 
 It uses both Webpack and Gulp (For now) to build the project.
 
+## Requirements
+
+- PHP 7.3+
+- Composer 2.x.x
+
 ## Install
 
 1. `composer create-project madebyshape/craft-3`
