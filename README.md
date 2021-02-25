@@ -17,6 +17,18 @@ It uses both Webpack and Gulp (For now) to build the project.
 2. Don't run, `./craft setup`, instead manually edit the `.env` file.
 3. Once the `.env` is filled in, run `./craft install`
 
+## npm Scripts
+
+`npm run dev`
+Your go to for local development
+
+`npm run prod`
+Generates production assets (Minify, favicon etc). Perfect for running on server.
+
+`npm run setup`
+If project already exists, this will pull, migrate and apply project config and run dev tasks
+
+
 ## Whats included
 
 - [Craft CMS 3.x](https://github.com/craftcms/cms)
