@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["Example"],{
 
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/dist/index.js?!./src/vue/Example.vue?vue&type=script&lang=js":
 /*!**************************************************************************************************************************************!*\
@@ -8,7 +8,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// import { defineAsyncComponent } from 'vue';\n// const AnotherComponent = defineAsyncComponent (() => import('../vue/AnotherComponent.vue'));\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  // components: {\n  //     AnotherComponent\n  // },\n  props: [],\n  data: function data() {\n    return {\n      description: 'Example Vue Component'\n    };\n  },\n  methods: {},\n  computed: {}\n});\n\n//# sourceURL=webpack:///./src/vue/Example.vue?./node_modules/babel-loader/lib??ref--1!./node_modules/vue-loader/dist??ref--8-0");
+eval("__webpack_require__.r(__webpack_exports__);\n// import { defineAsyncComponent } from 'vue';\n// const AnotherComponent = defineAsyncComponent (() => import(/* webpackChunkName: \"AnotherComponent\" */'../vue/AnotherComponent.vue'));\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  // components: {\n  //     AnotherComponent\n  // },\n  props: [],\n  data: function data() {\n    return {\n      description: 'Example Vue Component'\n    };\n  },\n  methods: {},\n  computed: {}\n});\n\n//# sourceURL=webpack:///./src/vue/Example.vue?./node_modules/babel-loader/lib??ref--1!./node_modules/vue-loader/dist??ref--8-0");
 
 /***/ }),
 
@@ -412,7 +412,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ \"./node_modules/alpinejs/dist/alpine.js\");\n/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(alpinejs__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! js-cookie */ \"./node_modules/js-cookie/src/js.cookie.js\");\n/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_example__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/example */ \"./src/js/modules/example.js\");\n/* harmony import */ var _modules_lazyLoad__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/lazyLoad */ \"./src/js/modules/lazyLoad.js\");\n\n // Modules\n\n\n\nObject(_modules_example__WEBPACK_IMPORTED_MODULE_2__[\"exampleModule\"])();\nObject(_modules_lazyLoad__WEBPACK_IMPORTED_MODULE_3__[\"lazyLoadModule\"])();\n\n//# sourceURL=webpack:///./src/js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ \"./node_modules/alpinejs/dist/alpine.js\");\n/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(alpinejs__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! js-cookie */ \"./node_modules/js-cookie/src/js.cookie.js\");\n/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_example__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/example */ \"./src/js/modules/example.js\");\n/* harmony import */ var _modules_lazyLoad__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/lazyLoad */ \"./src/js/modules/lazyLoad.js\");\n\n\ndocument.documentElement.classList.remove('no-js'); // Modules\n\n\n // Exports\n\nObject(_modules_example__WEBPACK_IMPORTED_MODULE_2__[\"exampleModule\"])();\nObject(_modules_lazyLoad__WEBPACK_IMPORTED_MODULE_3__[\"lazyLoadModule\"])(); // Global Exports\n\nwindow.Cookies = js_cookie__WEBPACK_IMPORTED_MODULE_1___default.a;\n\n//# sourceURL=webpack:///./src/js/app.js?");
 
 /***/ }),
 
@@ -448,7 +448,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.esm-bundler.js\");\n\nvar Example = Object(vue__WEBPACK_IMPORTED_MODULE_0__[\"defineAsyncComponent\"])(function () {\n  return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ../vue/Example.vue */ \"./src/vue/Example.vue\"));\n});\nvar app = Object(vue__WEBPACK_IMPORTED_MODULE_0__[\"createApp\"])({\n  delimiters: ['${', '}'],\n  components: {\n    Example: Example\n  }\n});\napp.mount('#app');\n\n//# sourceURL=webpack:///./src/js/vue.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.esm-bundler.js\");\n\nvar Example = Object(vue__WEBPACK_IMPORTED_MODULE_0__[\"defineAsyncComponent\"])(function () {\n  return __webpack_require__.e(/*! import() | Example */ \"Example\").then(__webpack_require__.bind(null, /*! ../vue/Example.vue */ \"./src/vue/Example.vue\"));\n});\nvar app = Object(vue__WEBPACK_IMPORTED_MODULE_0__[\"createApp\"])({\n  delimiters: ['${', '}'],\n  components: {\n    Example: Example\n  }\n});\napp.mount('#app');\n\n//# sourceURL=webpack:///./src/js/vue.js?");
 
 /***/ })
 
