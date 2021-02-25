@@ -251,12 +251,7 @@ const processCriticalCSS = (element, i, callback) => {
             css: package.paths.templates + package.critical.dest + element.slug + ".css"
          },
          minify: true,
-         extract: true,
-         ignore: {
-            atrule: ['@font-face'],
-            rule: [/some-regexp/],
-            decl: (node, value) => /big-image\.png/.test(value),
-         }
+         extract: true
       }
    );
 
