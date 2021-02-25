@@ -1,5 +1,5 @@
 import 'alpinejs';
-import Cookies from 'js-cookie';
+import { Cookies } from 'js-cookie';
 
 // Modules
 

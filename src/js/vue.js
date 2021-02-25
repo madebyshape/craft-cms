@@ -1,9 +1,10 @@
 import Vue from 'vue';
 
-import Example from '../vue/Example.vue';
+const Example = () => import('../vue/Example.vue');
 
 new Vue({
 	el: '#app',
+	delimiters: ['${', '}'],
 	components: {
 		Example
 	}
