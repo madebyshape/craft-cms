@@ -1,7 +1,6 @@
 <template>
     <div>
         {{ description }}
-        <AnotherComponent></AnotherComponent>
     </div>
 </template>
 
