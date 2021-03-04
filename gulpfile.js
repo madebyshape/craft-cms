@@ -326,12 +326,12 @@ function watch(done) {
       ],
       js
    );
+      
+   gulp.watch(package.paths.assets.images + "**/*", images);
 
    gulp.watch(package.paths.public + "**/*", browserSyncReload);
 
    gulp.watch(package.paths.templates + "**/*.{html,twig}", browserSyncReload);
-
-   gulp.watch(package.paths.assets.images + "**/*", images);
 
    done();
 
