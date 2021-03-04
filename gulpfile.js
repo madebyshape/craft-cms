@@ -54,13 +54,21 @@ function browserSyncReload(done) {
 
 function css() {
 
+   const cssFiles = [
+      package.paths.assets.scss + package.files.assets.scss
+   ];
+
+   for (var i = 0; i < package.cssDependencies.length; i++) {
+      cssFiles.unshift(package.paths.dependencies + package.cssDependencies[i]);
+   }
+
    const plugins = [
       tailwindcss(package.files.tailwind),
       autoprefixer()
    ];
 
    return gulp
-      .src(package.paths.assets.scss + package.files.assets.scss)
+      .src(cssFiles)
       .pipe(plumber({ errorHandler: notify.onError("Error [css]: <%= error.message %>") }))
       .pipe(concat(package.files.dist.css))
       .pipe(sourcemaps.init())

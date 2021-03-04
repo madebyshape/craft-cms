@@ -53,6 +53,7 @@
             "aos.*"
         ]
     },
+    "cssDependencies": [],
     "dependencies": {
         "@tailwindcss/typography": "^0.2.0",
         "alpinejs": "^2.8.1",
