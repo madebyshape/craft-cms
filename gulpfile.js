@@ -64,6 +64,7 @@ function css() {
 
    const plugins = [
       tailwindcss(package.files.tailwind),
+      // require("@tailwindcss/jit"),
       autoprefixer()
    ];
 

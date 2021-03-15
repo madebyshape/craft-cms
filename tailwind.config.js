@@ -3,6 +3,7 @@ const colors = require('tailwindcss/colors');
 const alpha = { 100: 'FF', 90: 'E6', 80: 'CC', 70: 'B3', 60: '99', 50: '80', 40: '66', 30: '4D', 20: '33', 10: '1A' };
 
 module.exports = {
+  mode: 'jit',
   theme: {
     extend: {
       colors: {
@@ -70,38 +71,6 @@ module.exports = {
         DEFAULT: 'cubic-bezier(0.4, 0, 0.2, 1)'
       },
       // Plugins
-      typography: theme => ({
-        default: {
-          css: {
-            'h2, h3, h4, h5, h6': { 
-              fontFamily: theme('fontFamily.sans-primary').join(', '),
-              fontWeight: theme('fontWeight.semibold'),
-              color: theme('colors.gray.800')
-            },
-            'h2': {
-              fontSize: theme('fontSize.3xl[0]')
-            },
-            'h3': {
-              fontSize: theme('fontSize.2xl[0]')
-            },
-            'h4': {
-              fontSize: theme('fontSize.xl[0]')
-            },
-            'h5': {
-              fontSize: theme('fontSize.lg[0]')
-            },
-            'h6': {
-              fontSize: theme('fontSize.md[0]')
-            },
-            a: {
-              color: theme('colors.primary.500'),
-              '&:hover': {
-                color: theme('colors.primary.600'),
-              }
-            }
-          }
-        }
-      }),
       aspectRatio: {
         '1/1': [1, 1],
         '16/9': [16, 9],
@@ -119,7 +88,6 @@ module.exports = {
     }
   },
   plugins: [
-    require('@tailwindcss/typography'),
     require('tailwindcss-aspect-ratio')(),
     require('tailwindcss-typography')({ componentPrefix: '' })
   ],
