@@ -60,8 +60,8 @@
                return {
                   viewportHeight: null,
                   viewportHeight() {
-                     viewportHeight = window.innerHeight * 0.01; 
-                     document.documentElement.style.setProperty('--vh', `${viewportHeight}px`);
+                     this.viewportHeight = window.innerHeight * 0.01; 
+                     document.documentElement.style.setProperty('--vh', `${this.viewportHeight}px`);
                   }
                }
             }
