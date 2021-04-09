@@ -8,14 +8,14 @@
 #}
 
 {% set relative = relative ?? true %}
-{% set dateFormat = 'jS F Y' %}
+{% set dateFormat = 'j F Y' %}
 
 {% if relative and now|date('U') <= date|date_modify('+7 days')|date('U') %}
     {% set dateDifference = date.diff(now)|duration %}
-    {% if 'hours' not in dateDifference %}
-        {{ dateDifference|split('and')|first }} ago
-    {% else %}
+    {% if 'days' in dateDifference or 'hours' in dateDifference %}
         {{ dateDifference|split(',')|first }} ago
+    {% else %}
+        {{ dateDifference|split('and')|first }} ago
     {% endif %}
 {% else %}
     {{ date|date(dateFormat) }}
