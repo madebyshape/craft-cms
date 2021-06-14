@@ -1,13 +1,16 @@
-{% if site.cookieConsent|length %}
+{% if site.siteCookieConsent|length %}
+
    <div 
       x-data="cookieConsent()" 
       x-init="show()"
-      x-show.transition.opacity.duration.450ms="visible"
+      x-show.transition.opacity.duration.300ms="visible"
       x-cloak
       class="fixed bottom-0 left-0 w-screen flex justify-center z-50" 
    >
       <div class="flex items-center px-3 py-1 mb-4 bg-gray-100 rounded">
-         <span class="text-base">{{ site.cookieConsent }}</span>
+         <span class="text-base">
+            {% include '_components/redactor' with { content: site.siteCookieConsent } %}
+         </span>
          <a href="#" class="ml-2 text-lg font-bold text-primary-500 | hover:text-primary-600" x-on:click.prevent="hide()">
             &times;
          </a>
@@ -23,9 +26,10 @@
             },
             hide() {
                this.visible = false; 
-               Cookies.set('cookieConsent', 'false', { expires: 6 });
+               Cookies.set('cookieConsent', 'false', { expires: 3 });
             }
          }
       }
    {% endjs %}
+
 {% endif %}
