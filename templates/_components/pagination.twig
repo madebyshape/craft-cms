@@ -8,6 +8,7 @@
 #}
 
 {% do seomatic.helper.paginate(pagination) %}
+{% do craft.blitz.options.paginate(pagination.totalPages) %}
 
 {% if pagination is defined and pagination.totalPages > 1 %}
 
