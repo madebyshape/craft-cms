@@ -5,15 +5,15 @@
    @type {embed}
    @param {string} paddingX
    @param {string} paddingY
-   @param {string} paddingXSize
+   @param {string} paddingYSize
    @param {string} class
 
 #}
 
-{% set paddingX = padding ?? 'leftRight' %}
-{% set paddingY = padding ?? 'topBottom' %}
+{% set paddingX = paddingX ?? 'leftRight' %}
+{% set paddingY = paddingY ?? 'topBottom' %}
 
-{% set paddingXSize = paddingSize ?? 'base' %}
+{% set paddingYSize = paddingYSize ?? 'base' %}
 
 {% set paddingXClass = {
     leftRight: 'px-10',
@@ -22,7 +22,7 @@
     none: 'px-0'
 } %}
 
-{% set paddingClass = {
+{% set paddingYClass = {
     small: {
         top: 'pt-16',
         bottom: 'pb-16',
@@ -37,7 +37,7 @@
     }
 } %}
 
-<div class="w-full {{ attribute(attribute(paddingYClass, paddingSize), paddingY) }}{{ class is defined ? ' ' ~ class }}">
+<div class="w-full {{ attribute(attribute(paddingYClass, paddingYSize), paddingY) }}{{ class is defined ? ' ' ~ class }}">
 
     <div class="{{ attribute(paddingXClass, paddingX) }}">
 
