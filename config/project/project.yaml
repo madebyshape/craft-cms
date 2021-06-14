@@ -1,4 +1,4 @@
-dateModified: 1614274906
+dateModified: 1623695670
 email:
   fromEmail: $SITE_EMAIL
   fromName: $SITE_NAME
@@ -37,7 +37,7 @@ plugins:
     edition: lite
     enabled: true
     licenseKey: Y0XXZ8LG3PYJJVF1PY0HZRWT
-    schemaVersion: 3.3.0
+    schemaVersion: 3.3.1
     settings:
       ajaxByDefault: false
       alertNotificationRecipients: null
@@ -114,12 +114,12 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: 081C3N7O2G6RQGTIYTZGT9YV
-    schemaVersion: 3.0.9
+    schemaVersion: 3.0.10
   seomatic:
     edition: standard
     enabled: true
     licenseKey: PJQHH4X9DG4FAEH96LMMZBUY
-    schemaVersion: 3.0.9
+    schemaVersion: 3.0.10
     settings:
       addHrefLang: true
       addPaginatedHreflang: true
@@ -163,7 +163,7 @@ system:
   edition: pro
   live: true
   name: $SITE_NAME
-  schemaVersion: 3.6.4
+  schemaVersion: 3.6.8
   timeZone: Europe/London
 users:
   allowPublicRegistration: false
