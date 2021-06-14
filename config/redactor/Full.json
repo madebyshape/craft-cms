@@ -1,5 +1,16 @@
 {
-  "buttons": ["formatting", "bold", "italic", "unorderedlist", "orderedlist", "link", "image", "video", "file"],
+  "buttons": [
+    "html",
+    "formatting", 
+    "bold", 
+    "italic", 
+    "unorderedlist", 
+    "orderedlist", 
+    "link", 
+    "image", 
+    "video", 
+    "file"
+  ],
   "plugins": ["fullscreen", "video", "table"],
   "toolbarFixed": true
 }
