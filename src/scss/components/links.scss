@@ -1,12 +1,45 @@
 .link {
-    @apply transition;
-    &--primary {
+    @apply 
+        relative
+        transition
+        inline-block;
+    &:before,
+    &:after {
+        content: '';
         @apply 
-            text-primary-500 
-            underline;
-        &:hover,
-        &:active {
-            @apply text-primary-700;
+            transition-all
+            absolute
+            bottom-0
+            left-0
+            block
+            h-px
+            pointer-events-none;
+    }
+    &:before {
+        @apply w-full;
+    }
+    &:after {
+        @apply w-0;
+    }
+    &:hover,
+    &:active,
+    &--active {
+       &:after {
+          @apply w-full;
+       }
+    }
+    &--primary {
+        @apply text-primary-500;
+        &:before {
+            @apply bg-primary-300;
+        }
+        &:after {
+            @apply bg-primary-500;
+        }
+    }
+    &--no-underline {
+        &:before {
+            @apply hidden;
         }
     }
 }

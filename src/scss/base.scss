@@ -18,13 +18,13 @@ body {
 // Links
 
 a {
-   @apply transition;
+   @apply transition-all;
 }
 
 // Typography
 
 p {
-   @apply mb-4;
+   @apply mb-6;
    &:last-of-type {
       @apply mb-0;
    }

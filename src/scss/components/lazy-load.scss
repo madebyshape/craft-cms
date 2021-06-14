@@ -1,6 +1,6 @@
 .lazy-load {
     @apply 
-        transition
+        transition-all
         opacity-0;
     &--loaded {
         @apply 
