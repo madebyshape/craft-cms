@@ -1,2 +1,8 @@
-{%- minify -%}
-{%- endminify -%}
+{% embed '_components/section' with {
+    paddingX: block.padding
+} %}
+
+    {% block sectionContent %}
+    {% endblock %}
+
+{% endembed %}
