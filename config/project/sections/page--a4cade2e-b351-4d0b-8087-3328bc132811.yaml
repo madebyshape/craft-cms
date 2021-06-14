@@ -3,7 +3,7 @@ handle: page
 name: Page
 propagationMethod: all
 siteSettings:
-  06fb793a-57ef-483e-8415-675d2cfa2fd8:
+  06fb793a-57ef-483e-8415-675d2cfa2fd8: # $SITE_NAME
     enabledByDefault: true
     hasUrls: true
     template: _page/entry
