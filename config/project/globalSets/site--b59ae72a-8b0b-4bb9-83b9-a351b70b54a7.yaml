@@ -4,7 +4,20 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 1b7a3230-f24a-4ac2-a997-3289e43ddf25 # Cookie Consent
+            fieldUid: 00cbe002-253f-4fca-b75f-ffc4cd309519 # Site - Header Navigation
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Header
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 1b7a3230-f24a-4ac2-a997-3289e43ddf25 # Site - Cookie Consent
             instructions: null
             label: null
             required: '0'
@@ -13,6 +26,6 @@ fieldLayouts:
             warning: null
             width: 100
         name: Misc
-        sortOrder: 1
+        sortOrder: 2
 handle: site
 name: Site

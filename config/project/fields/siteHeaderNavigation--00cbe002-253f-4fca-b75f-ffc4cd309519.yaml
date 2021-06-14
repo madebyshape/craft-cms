@@ -1,0 +1,27 @@
+contentColumnType: string
+fieldGroup: a6548a8e-edd2-4cbb-9200-db7de2726f75 # Common
+handle: siteHeaderNavigation
+instructions: ''
+name: 'Site - Header Navigation'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - 07997af2-2846-44ff-a240-009561640c19 # Links To
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_siteheadernavigation}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

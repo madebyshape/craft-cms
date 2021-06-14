@@ -1,8 +1,8 @@
 contentColumnType: text
 fieldGroup: a6548a8e-edd2-4cbb-9200-db7de2726f75 # Common
-handle: cookieConsent
+handle: siteCookieConsent
 instructions: ''
-name: 'Cookie Consent'
+name: 'Site - Cookie Consent'
 searchable: true
 settings:
   availableTransforms: '*'
@@ -18,7 +18,7 @@ settings:
   removeEmptyTags: '1'
   removeInlineStyles: '1'
   removeNbsp: '1'
-  showHtmlButtonForNonAdmins: true
+  showHtmlButtonForNonAdmins: '1'
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   uiMode: enlarged
