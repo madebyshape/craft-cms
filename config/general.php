@@ -8,58 +8,57 @@
  * @see craft\config\GeneralConfig
  */
 
+use craft\helpers\App;
+
 return [
     '*' => [
       // Site / Environment
       'isSystemLive' => true,
-      'securityKey' => getenv('SECURITY_KEY'),
-      'siteUrl' => null,
-      'env' => getenv('ENVIRONMENT'),
       'allowAdminChanges' => false,
-      // Cache
-      'enableTemplateCaching' => true,
-      'cacheMethod' => 'file',
-      'cacheDuration' => 0, // 86400 = 24 Hours
-      'cacheElementQueries' => false,
-      // Images / Files
+      'env' => App::env('ENVIRONMENT'),
+      'securityKey' => App::env('SECURITY_KEY'),
+      // Images
       'defaultImageQuality' => '100',
-      'extraAllowedFileExtensions' => 'ico,xml,json',
       'transformGifs' => false,
       'preserveImageColorProfiles' => true,
       'preserveCmykColorspace' => true,
       'optimizeImageFilesize' => false,
-      'imageDriver' => 'imagick',
+      'generateTransformsBeforePageLoad' => true,
+      'maxUploadFileSize' => '100M',
+      // 'imageDriver' => 'imagick',
       // Account
       'useEmailAsUsername' => true,
       'autoLoginAfterAccountActivation' => true,
       // URL
       'omitScriptNameInUrls' => true,
-      'cpTrigger' => 'admin',
+      'cpTrigger' => App::env('CP_TRIGGER') ?: 'admin',
       // Misc
-      'timezone' => 'Europe/London',
-      'defaultWeekStartDay' => 1,
-      'enableCsrfProtection' => true,
       'allowUpdates' => false,
       'backupOnUpdate' => true,
       'errorTemplatePrefix' => '_',
       'enableGql' => false,
+      'disallowRobots' => true,
+      'devMode' => true,
+      'defaultSearchTermOptions' => [
+        'subLeft' => true,
+        'subRight' => true
+      ],
       // Aliases
       'aliases' => [
-         '@assetBaseUrl' => getenv('ASSETS_URL'),
-         '@assetBasePath' => getenv('ASSETS_PATH')
+         '@assetBaseUrl' => App::env('ASSETS_URL'),
+         '@assetBasePath' => App::env('ASSETS_PATH')
       ]
     ],
     'dev' => [
-        'devMode' => true,
         'allowUpdates' => true,
         'enableTemplateCaching' => false,
-        'testToEmailAddress' => getenv('SITE_EMAIL'),
+        'testToEmailAddress' => App::env('SITE_EMAIL'),
         'allowAdminChanges' => true
     ],
-    'staging' => [
-        'devMode' => true
-    ],
+    'staging' => [],
     'production' => [
-        'useSecureCookies' => true
+        'useSecureCookies' => true,
+        'disallowRobots' => false,
+        'devMode' => false
     ]
 ];

@@ -2,6 +2,7 @@
 
    return [
       '*' => [
+         # 'transformer' => 'servd',
          'imagerUrl' => getenv('ASSETS_URL') . '/' . getenv('TRANSFORMS_FOLDER'),
          'imagerSystemPath' => getenv('ASSETS_PATH') . '/' . getenv('TRANSFORMS_FOLDER'),
          'fallbackImage' => '/dist/images/fallback-image.png',
