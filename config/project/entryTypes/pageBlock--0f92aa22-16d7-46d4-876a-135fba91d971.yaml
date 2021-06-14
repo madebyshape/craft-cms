@@ -40,7 +40,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: d6471ab8-0d49-45bf-af5d-f0d2a860e267
+            fieldUid: d6471ab8-0d49-45bf-af5d-f0d2a860e267 # Meta & Social Data
             instructions: null
             label: null
             required: '0'

@@ -15,7 +15,9 @@ settings:
     - robots
     - canonicalUrl
   generalTabEnabled: '1'
-  sitemapTabEnabled: ''
+  sitemapEnabledFields:
+    - sitemapUrls
+  sitemapTabEnabled: '1'
   twitterTabEnabled: ''
 translationKeyFormat: null
 translationMethod: none
