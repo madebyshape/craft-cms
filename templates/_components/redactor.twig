@@ -1,0 +1,22 @@
+{% set styles = [
+    ['attr', ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'], { class: 'mb-10' }],
+    ['attr', 'h1', { class: 'text-6xl' }],
+    ['attr', 'h2', { class: 'text-5xl' }],
+    ['attr', 'h3', { class: 'text-4xl' }],
+    ['attr', 'h4', { class: 'text-3xl' }],
+    ['attr', 'h5', { class: 'text-2xl' }],
+    ['attr', 'h6', { class: 'text-xl' }],
+    ['attr', 'a', { class: 'text-primary-500 | hover:text-primary-400' }],
+    ['attr', 'p', { class: 'mb-10' }],
+    ['attr', ['ul', 'ol'], { class: 'list-outside my-10' }],
+    ['attr', 'ul', { class: 'pl-7' }],
+    ['attr', 'ol', { class: 'pl-7' }],
+    ['attr', 'li', { class: 'mb-2' }],
+    ['attr', 'strong', { class: 'font-medium' }],
+    ['attr', 'img', { class: 'w-full h-auto' }]
+    ['attr', 'blockquote', { class: 'font-medium'],
+    ['inject', 'blockquote', '<span class="absolute top-0 left-0">"</span>'],
+    ['inject', 'blockquote', '<span class="absolute bottom-0 right-0">"</span>'],
+] %}
+
+{{ content|retcon(styles) }}
