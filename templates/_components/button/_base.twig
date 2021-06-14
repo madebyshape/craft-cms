@@ -1,13 +1,16 @@
 {% set baseClass = '
-    transition
+    transition-all
     inline-block
     font-medium
     py-3
     px-6
     rounded
     flex-shrink-0
+    ring-4
+    shadow-none
+    ring-transparent
+    focus:ring-opacity-30
     focus:outline-none
-    focus:shadow-outline
 ' %}
 
 {% set class = class is defined ? baseClass ~ ' ' ~ class : baseClass %}
