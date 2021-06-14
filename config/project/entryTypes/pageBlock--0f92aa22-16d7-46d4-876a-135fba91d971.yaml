@@ -53,7 +53,7 @@ fieldLayouts:
 handle: pageBlock
 hasTitleField: true
 name: 'Page - Block'
-section: a4cade2e-b351-4d0b-8087-3328bc132811
+section: a4cade2e-b351-4d0b-8087-3328bc132811 # Page
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

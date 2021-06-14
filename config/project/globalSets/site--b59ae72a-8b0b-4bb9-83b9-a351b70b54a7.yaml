@@ -4,7 +4,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 1b7a3230-f24a-4ac2-a997-3289e43ddf25
+            fieldUid: 1b7a3230-f24a-4ac2-a997-3289e43ddf25 # Cookie Consent
             instructions: null
             label: null
             required: '0'

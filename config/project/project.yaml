@@ -1,4 +1,4 @@
-dateModified: 1623706769
+dateModified: 1623707110
 email:
   fromEmail: $SITE_EMAIL
   fromName: $SITE_NAME
@@ -175,5 +175,5 @@ users:
   allowPublicRegistration: false
   defaultGroup: null
   photoSubpath: ''
-  photoVolumeUid: d22d8c4e-5130-4bb2-afad-a7c08be98605
+  photoVolumeUid: d22d8c4e-5130-4bb2-afad-a7c08be98605 # Images
   requireEmailVerification: true
