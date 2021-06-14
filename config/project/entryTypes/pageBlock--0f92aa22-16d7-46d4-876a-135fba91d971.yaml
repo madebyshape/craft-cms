@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 90552b17-3ba7-452a-9dfd-0b13004b4659
+            fieldUid: 90552b17-3ba7-452a-9dfd-0b13004b4659 # Page - Block Content
             instructions: null
             label: null
             required: '0'

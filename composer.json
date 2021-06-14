@@ -31,7 +31,8 @@
     "solspace/craft-freeform": "3.11.6",
     "putyourlightson/craft-blitz": "3.9.0",
     "spacecatninja/imager-x": "v3.4.0",
-    "sebastianlenz/linkfield": "1.0.25"
+    "sebastianlenz/linkfield": "1.0.25",
+    "lewisjenkins/craft-dynamic-fields": "3.0.11"
   },
   "autoload": {
     "psr-4": {

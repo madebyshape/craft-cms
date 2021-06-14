@@ -1,0 +1,16 @@
+{ 
+    "label": "Top & Bottom", 
+    "value": "topBottom" 
+},
+{ 
+    "label": "Top", 
+    "value": "top" 
+},
+{ 
+    "label": "Bottom", 
+    "value": "bottom" 
+},
+{ 
+    "label": "None", 
+    "value": "none" 
+}

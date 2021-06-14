@@ -1,4 +1,4 @@
-dateModified: 1623695670
+dateModified: 1623696097
 email:
   fromEmail: $SITE_EMAIL
   fromName: $SITE_NAME
@@ -23,6 +23,11 @@ plugins:
     enabled: true
     licenseKey: QTOQ5VPO0CW4I2OBJ7TDM7R8
     schemaVersion: 3.6.6
+  craft-dynamic-fields:
+    edition: standard
+    enabled: true
+    licenseKey: 0HV2A91ADENGZZRGTTCHC8V8
+    schemaVersion: 1.0.0
   default-dashboard:
     edition: standard
     enabled: true

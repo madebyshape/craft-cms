@@ -1,23 +1,23 @@
-field: 90552b17-3ba7-452a-9dfd-0b13004b4659
+field: 90552b17-3ba7-452a-9dfd-0b13004b4659 # Page - Block Content
 fieldLayouts:
   af512a4a-3b2f-4137-b331-1deeb26fa3cd:
     tabs:
       -
         elements:
           -
-            fieldUid: f64c5171-437f-45f4-ac5b-1164673e94f9
+            fieldUid: f64c5171-437f-45f4-ac5b-1164673e94f9 # Heading
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: feb39789-b26f-45a4-99fb-d7e4cc376989
+            fieldUid: feb39789-b26f-45a4-99fb-d7e4cc376989 # Padding
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -25,7 +25,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  f64c5171-437f-45f4-ac5b-1164673e94f9:
+  f64c5171-437f-45f4-ac5b-1164673e94f9: # Heading
     contentColumnType: text
     fieldGroup: null
     handle: heading
@@ -39,57 +39,24 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  feb39789-b26f-45a4-99fb-d7e4cc376989:
-    contentColumnType: string
+  feb39789-b26f-45a4-99fb-d7e4cc376989: # Padding
+    contentColumnType: text
     fieldGroup: null
     handle: padding
     instructions: ''
     name: Padding
     searchable: true
     settings:
-      optgroups: true
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - 'Top & Bottom'
-            -
-              - value
-              - topBottom
-            -
-              - default
-              - '1'
-        -
-          __assoc__:
-            -
-              - label
-              - Top
-            -
-              - value
-              - top
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - Bottom
-            -
-              - value
-              - bottom
-            -
-              - default
-              - ''
+      columnType: text
+      dropdownOptions: '{% include ''_data/padding.json'' ignore missing %}'
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\Dropdown
+    type: lewisjenkins\craftdynamicfields\fields\Dropdown
 handle: block
 name: Block
 sortOrder: 1
