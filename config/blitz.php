@@ -28,6 +28,7 @@ return [
         'excludedUriPatterns' => [
             ['uriPattern' => 'dynamic/form']
         ],
+        // 'cacheStorageType' => 'putyourlightson\blitz\drivers\storage\YiiCacheStorage',
         'cacheStorageSettings' => ['folderPath' => '@root/cache/blitz'],
         'clearCacheAutomatically' => true,
         'warmCacheAutomatically' => true,
