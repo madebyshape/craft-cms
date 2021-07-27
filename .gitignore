@@ -50,6 +50,7 @@ cache/*
 web/uploads
 public/uploads
 public_html/uploads
+httpdocs/uploads
 
 # Log files
 
