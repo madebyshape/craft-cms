@@ -1,0 +1,55 @@
+{#
+   Radio
+   Outputs a radio field with the correct markup
+
+   @type {include}
+   @param {integer} id
+   @param {string} label
+   @param {string} name
+   @param {string} value
+   @param {array} options
+   @param {string} attributes
+   @param {string} placeholder
+   @param {bool} multiple
+   @param {bool} required
+#}
+
+{% set id = id ?? (label is defined ? label|kebab : 'input-' ~ random(100,999)) %}
+{% set type = type ?? 'checkbox' %}
+
+{% set baseClass = '
+   transition-all 
+   appearance-none 
+   w-3 
+   h-3 
+   ring-1 
+   ring-gray-400 
+   bg-white 
+   ring-offset-2 
+   flex-shrink-0 
+   cursor-pointer 
+   mr-2
+   checked:bg-primary-500
+' %}
+
+{% if type == 'radio' %}
+   {% set baseClass = baseClass ~ ' rounded-full' %}
+{% endif %}
+
+{% set class = class is defined ? baseClass ~ ' ' ~ class : baseClass %}
+
+<label 
+   class="flex items-center cursor-pointer" 
+   for="{{ id }}"
+   {{ attributes is defined ? attributes|raw }}
+>
+   <input 
+      type="{{ type }}"
+      name="{{ name }}" 
+      id="{{ id }}" 
+      class="{{ class }}"
+      {{ value is defined ? ('value="' ~ value ~ '"')|raw }}
+      {{ checked is defined ? 'checked' }}
+   >
+   <span>{{ label }}</span>
+</label>
