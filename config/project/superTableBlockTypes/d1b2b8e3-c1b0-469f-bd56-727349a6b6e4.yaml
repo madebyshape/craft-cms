@@ -17,6 +17,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   07997af2-2846-44ff-a240-009561640c19: # Links To
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: linksTo

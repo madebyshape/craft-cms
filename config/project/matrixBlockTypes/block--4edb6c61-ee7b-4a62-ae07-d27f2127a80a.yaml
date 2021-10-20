@@ -26,6 +26,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   f64c5171-437f-45f4-ac5b-1164673e94f9: # Heading
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: heading
@@ -45,6 +46,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   feb39789-b26f-45a4-99fb-d7e4cc376989: # Padding
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: padding

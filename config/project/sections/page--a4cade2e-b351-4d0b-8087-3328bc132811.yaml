@@ -1,3 +1,4 @@
+defaultPlacement: end
 enableVersioning: true
 handle: page
 name: Page
