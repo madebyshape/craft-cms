@@ -29,3 +29,4 @@ fieldLayouts:
         sortOrder: 2
 handle: site
 name: Site
+sortOrder: 1

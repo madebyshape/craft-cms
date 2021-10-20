@@ -1,4 +1,4 @@
-dateModified: 1623707641
+dateModified: 1634724196
 email:
   fromEmail: $SITE_EMAIL
   fromName: $SITE_NAME
@@ -13,6 +13,26 @@ email:
     useAuthentication: '1'
     username: $SMTP_USERNAME
   transportType: craft\mail\transportadapters\Smtp
+meta:
+  __names__:
+    00cbe002-253f-4fca-b75f-ffc4cd309519: 'Site - Header Navigation' # Site - Header Navigation
+    0cf15aa5-fa7d-405e-9a99-aa30b099a53c: Files # Files
+    0f92aa22-16d7-46d4-876a-135fba91d971: 'Page - Block' # Page - Block
+    1b7a3230-f24a-4ac2-a997-3289e43ddf25: 'Site - Cookie Consent' # Site - Cookie Consent
+    2f26868b-418e-44a0-8e53-d367d9a163eb: 'Meta & Social Data' # Meta & Social Data
+    4edb6c61-ee7b-4a62-ae07-d27f2127a80a: Block # Block
+    06fb793a-57ef-483e-8415-675d2cfa2fd8: $SITE_NAME # $SITE_NAME
+    07997af2-2846-44ff-a240-009561640c19: 'Links To' # Links To
+    90552b17-3ba7-452a-9dfd-0b13004b4659: 'Page - Block Content' # Page - Block Content
+    a4cade2e-b351-4d0b-8087-3328bc132811: Page # Page
+    a37b06c6-894d-4dad-a768-46c1a840e80b: 'Craft 3' # Craft 3
+    a6548a8e-edd2-4cbb-9200-db7de2726f75: Common # Common
+    b59ae72a-8b0b-4bb9-83b9-a351b70b54a7: Site # Site
+    d22d8c4e-5130-4bb2-afad-a7c08be98605: Images # Images
+    d6471ab8-0d49-45bf-af5d-f0d2a860e267: 'Meta & Social Data' # Meta & Social Data
+    f64c5171-437f-45f4-ac5b-1164673e94f9: Heading # Heading
+    f733677f-fb59-4704-839a-4c90aa4b2d05: 'Public Schema' # Public Schema
+    feb39789-b26f-45a4-99fb-d7e4cc376989: Padding # Padding
 plugins:
   assetrev:
     edition: standard
@@ -22,7 +42,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: QTOQ5VPO0CW4I2OBJ7TDM7R8
-    schemaVersion: 3.6.6
+    schemaVersion: 3.10.0
   craft-dynamic-fields:
     edition: standard
     enabled: true
@@ -42,7 +62,7 @@ plugins:
     edition: lite
     enabled: true
     licenseKey: Y0XXZ8LG3PYJJVF1PY0HZRWT
-    schemaVersion: 3.3.1
+    schemaVersion: 3.3.2
     settings:
       ajaxByDefault: false
       alertNotificationRecipients: null
@@ -128,7 +148,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: PJQHH4X9DG4FAEH96LMMZBUY
-    schemaVersion: 3.0.10
+    schemaVersion: 3.0.11
     settings:
       addHrefLang: true
       addPaginatedHreflang: true
@@ -173,7 +193,7 @@ system:
   live: true
   name: $SITE_NAME
   retryDuration: null
-  schemaVersion: 3.6.8
+  schemaVersion: 3.7.8
   timeZone: Europe/London
 users:
   allowPublicRegistration: false
