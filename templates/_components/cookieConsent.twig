@@ -1,9 +1,9 @@
 {% if site.siteCookieConsent|length %}
 
    <div 
-      x-data="cookieConsent()" 
-      x-init="show()"
-      x-show.transition.opacity.duration.300ms="visible"
+      x-data="cookieConsent" 
+      x-show="visible"
+      x-transition.opacity.duration.300ms="visible"
       x-cloak
       class="fixed bottom-0 left-0 w-screen flex justify-center z-50" 
    >
@@ -18,18 +18,20 @@
    </div>
 
    {% js %}
-      function cookieConsent() {
-         return {
+
+      document.addEventListener('alpine:init', () => {
+         Alpine.data('cookieConsent', () => ({
             visible: true,
-            show() {
+            init() {
                this.visible = Cookies.get('cookieConsent') ? false : true;
             },
             hide() {
                this.visible = false; 
                Cookies.set('cookieConsent', 'false', { expires: 3 });
             }
-         }
-      }
+         }))
+      });
+      
    {% endjs %}
 
 {% endif %}

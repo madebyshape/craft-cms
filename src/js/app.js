@@ -1,4 +1,4 @@
-import 'alpinejs';
+import Alpine from 'alpinejs';
 import Cookies from 'js-cookie';
 
 document.documentElement.classList.remove('no-js');
@@ -15,4 +15,9 @@ lazyLoadModule();
 
 // Global Exports
 
-window.Cookies = Cookies
+window.Cookies = Cookies;
+window.Alpine = Alpine;
+
+// Inits
+
+Alpine.start();

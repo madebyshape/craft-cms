@@ -3,7 +3,7 @@
 
 // JS
 import './js/app.js'
-import './js/vue.js'
+// import './js/vue.js'
 
 // Fonts
 

@@ -7,14 +7,18 @@
    @block {string/bool/object/array/int} name
 #}
 
-<div x-data="component()">
+<div x-data="component">
 </div>
 
 {% js %}
-   function component() {
-      return {
+
+   document.addEventListener('alpine:init', () => {
+      Alpine.data('component', () => ({
          variable: false,
-         exampleFunction() { this.variable = true }
-      }
-   }
+         init() { 
+            this.variable = true 
+         }
+      }))
+   })
+   
 {% endjs %}

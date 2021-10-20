@@ -39,7 +39,7 @@
       </head>
 
       <body 
-         x-data="app()"
+         x-data="app"
          x-init="viewportHeight()"
          x-on:resize.window="viewportHeight()"
       >
@@ -51,20 +51,22 @@
          {# Javascript #}
          <script src="{{ siteUrl }}dist/{{ rev('js/app.js') }}" defer></script>
 
-         {% js %}
-            function app() {
-               return {
-                  viewportHeight: null,
-                  viewportHeight() {
-                     this.viewportHeight = window.innerHeight * 0.01; 
-                     document.documentElement.style.setProperty('--vh', `${this.viewportHeight}px`);
-                  }
-               }
-            }
-         {% endjs %}
-
       </body>
 
    </html>
 
 {% endminify %}
+
+{% js %}
+
+   document.addEventListener('alpine:init', () => {
+      Alpine.data('app', () => ({
+         viewportHeightPx: null,
+         viewportHeight() {
+            this.viewportHeightPx = window.innerHeight * 0.01; 
+            document.documentElement.style.setProperty('--vh', `${this.viewportHeightPx}px`);
+         }
+      }))
+   });
+   
+{% endjs %}

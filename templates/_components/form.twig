@@ -6,7 +6,7 @@
     {% set baseOptions = baseOptions|merge(options) %}
 {% endif %}
 
-<div x-data="formRender()" x-init="dynamicForm('{{ handle }}')">
+<div x-data="form" x-init="dynamicForm('{{ handle }}')">
 
     {% set form = craft.freeform.form(
         handle, 
@@ -18,8 +18,9 @@
 </div>
 
 {% js %}
-    function formRender() {
-        return {
+
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('form', () => ({
             dynamicForm(handle) {
 
                 form = document.getElementById(handle);
@@ -50,6 +51,7 @@
                 );
 
             }
-        }
-    }
+        }))
+    })
+    
 {% endjs %}
