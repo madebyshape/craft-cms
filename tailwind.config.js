@@ -21,17 +21,17 @@ module.exports = {
         }
       },
       fontSize: theme => ({
-        'xs':   ['0.75rem', theme('lineHeight.normal')],  // 12
-        'sm':   ['0.875rem', theme('lineHeight.normal')], // 14
-        'base': ['1rem', theme('lineHeight.normal')],     // 16
-        'md':   ['1.125rem', theme('lineHeight.normal')], // 18
-        'lg':   ['1.25rem', theme('lineHeight.normal')],  // 20
-        'xl':   ['1.5rem', theme('lineHeight.normal')],   // 24
-        '2xl':  ['1.875rem', theme('lineHeight.normal')], // 30
-        '3xl':  ['2.25rem', theme('lineHeight.normal')],  // 36
-        '4xl':  ['3rem', theme('lineHeight.normal')],     // 48
-        '5xl':  ['4rem', theme('lineHeight.normal')],     // 64
-        '6xl':  ['4.5rem', theme('lineHeight.normal')]    // 72
+        'xs':   '0.75rem',  // 12
+        'sm':   '0.875rem', // 14
+        'base': '1rem',     // 16
+        'md':   '1.125rem', // 18
+        'lg':   '1.25rem',  // 20
+        'xl':   '1.5rem',   // 24
+        '2xl':  '1.875rem', // 30
+        '3xl':  '2.25rem',  // 36
+        '4xl':  '3rem',     // 48
+        '5xl':  '4rem',     // 64
+        '6xl':  '4.5rem'   // 72
       }),
       fontFamily: {
         'sans-primary': [
