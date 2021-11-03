@@ -30,8 +30,11 @@ module.exports = {
         '2xl':  '1.875rem', // 30
         '3xl':  '2.25rem',  // 36
         '4xl':  '3rem',     // 48
-        '5xl':  '4rem',     // 64
-        '6xl':  '4.5rem'   // 72
+        '5xl':  '3.75rem',  // 60
+        '6xl':  '4.5rem',   // 72
+        '7xl':  '6rem',     // 96
+        '8xl':  '8rem',     // 128
+        '9xl':  '10rem',    // 160
       }),
       fontFamily: {
         'sans-primary': [
