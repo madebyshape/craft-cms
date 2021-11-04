@@ -252,7 +252,7 @@ const processCriticalCSS = (element, i, callback) => {
       {
          inline: false,
          base: './',
-         src: package.env.local + element.url,
+         src: package.env.local + element.uri,
          css: [package.paths.public + package.paths.dist.css + package.files.dist.css],
          width: 1920,
          height: 1200,
