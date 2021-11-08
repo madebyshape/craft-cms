@@ -73,6 +73,9 @@ module.exports = {
       transitionTimingFunction: {
         DEFAULT: 'cubic-bezier(0.1, 0.6, 0.4, 1)'
       },
+      transitionProperty: {
+        'width': 'width'
+      },
       // Plugins
       aspectRatio: {
         '1/1': [1, 1],
