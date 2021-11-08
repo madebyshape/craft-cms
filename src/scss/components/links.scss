@@ -1,45 +1,59 @@
 .link {
-    @apply 
+    @apply
         relative
-        transition
         inline-block;
     &:before,
     &:after {
         content: '';
-        @apply 
-            transition-all
+        @apply
+            transition-width
             absolute
             bottom-0
-            left-0
+            left-auto
+            right-0
             block
             h-px
+            w-0
+            bg-current
             pointer-events-none;
     }
-    &:before {
-        @apply w-full;
-    }
     &:after {
-        @apply w-0;
-    }
+        @apply hidden;
+     }
     &:hover,
     &:active,
     &--active {
-       &:after {
-          @apply w-full;
-       }
-    }
-    &--primary {
-        @apply text-primary-500;
         &:before {
-            @apply bg-primary-300;
-        }
+            @apply
+               w-full
+               left-0
+               right-auto;
+         }
+    }
+    &--visible {
         &:after {
-            @apply bg-primary-500;
+           @apply
+                block
+                w-full
+                left-0
+                right-auto;
         }
-    }
-    &--no-underline {
         &:before {
-            @apply hidden;
+           @apply delay-200;
         }
-    }
+        &:hover {
+        &:after {
+              @apply
+                w-0
+                right-0
+                left-auto;
+        }
+        &:before {
+              @apply
+                 w-full
+                 left-0
+                 right-auto;
+           }
+        }
+     }
 }
