@@ -60,6 +60,9 @@ module.exports = {
           xl: '5rem'
         }
       },
+      width: {
+        'fit': 'fit-content'
+      },
       height: {
         'screen-fix': 'calc(var(--vh, 1vh) * 100);'
       },
