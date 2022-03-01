@@ -135,24 +135,17 @@
 	 </IfModule>
 
 # ----------------------------------------------------------------------
-# Remove www. and redirect to HTTPS
+# Non-www / Redirect HTTPS / Trailing Slash
 # ----------------------------------------------------------------------
+	
+	# Add Trailing Slash
 
-	RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-	RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [L,R=301]
-
-	# RewriteCond %{HTTPS} off
-	# RewriteCond %{HTTP:X-Forwarded-Proto} !https
-	# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# ------------------------------------------------------------
-# Remove Trailing Slash
-# ------------------------------------------------------------
-
-	 RewriteCond %{REQUEST_METHOD} !=POST
-	 RewriteCond %{REQUEST_FILENAME} !-f
-	 RewriteCond %{REQUEST_FILENAME} !-d
-	 RewriteRule ^(.+)/$ /$1 [R=301,L]
+	# RewriteCond %{REQUEST_FILENAME} !-f
+	# RewriteCond %{REQUEST_URI} !/$
+	# RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+	# RewriteRule [^/]$ https://%1%{REQUEST_URI}/ [L,NE,R=301]
+	
+	# Remove Trailing Slash
 
 # ----------------------------------------------------------------------
 # Prevent 404 errors for non-existing redirected folders
