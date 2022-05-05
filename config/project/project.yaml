@@ -1,4 +1,4 @@
-dateModified: 1634724212
+dateModified: 1651760363
 email:
   fromEmail: $SITE_EMAIL
   fromName: $SITE_NAME
@@ -193,7 +193,7 @@ system:
   live: true
   name: $SITE_NAME
   retryDuration: null
-  schemaVersion: 3.7.8
+  schemaVersion: 3.7.33
   timeZone: Europe/London
 users:
   allowPublicRegistration: false
