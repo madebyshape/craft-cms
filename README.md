@@ -1,6 +1,6 @@
-# Craft CMS 3.x, Tailwind CSS, VueJS and AlpineJS
+# Craft CMS 4.x, Tailwind CSS, VueJS and AlpineJS
 
-This is a [Craft CMS 3.x](https://github.com/craftcms/cms) boilerplate [MadeByShape](https://madebyshape.co.uk) use internally for projects. 
+This is a [Craft CMS 4.x](https://github.com/craftcms/cms) boilerplate [MadeByShape](https://madebyshape.co.uk) use internally for projects. 
 
 It's built with the intention of being used with [Tailwind CSS](https://tailwindcss.com/), [VueJS](https://vuejs.org/) and [Alpine.js](https://github.com/alpinejs/alpine) frameworks.
 
@@ -31,7 +31,7 @@ If project already exists, this will pull, migrate and apply project config and 
 
 ## Whats included
 
-- [Craft CMS 3.x](https://github.com/craftcms/cms)
+- [Craft CMS 4.x](https://github.com/craftcms/cms)
 - CSS
    - [Tailwind CSS 2.0.x](https://tailwindcss.com/)
 - Javascript
