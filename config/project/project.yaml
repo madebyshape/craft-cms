@@ -1,4 +1,4 @@
-dateModified: 1651760363
+dateModified: 1651823944
 email:
   fromEmail: $SITE_EMAIL
   fromName: $SITE_NAME
@@ -41,12 +41,12 @@ plugins:
   blitz:
     edition: standard
     enabled: true
-    licenseKey: QTOQ5VPO0CW4I2OBJ7TDM7R8
+    licenseKey: Z26DBU6KBBP9D9N5CYNY8FZS
     schemaVersion: 3.10.0
   craft-dynamic-fields:
     edition: standard
     enabled: true
-    licenseKey: 0HV2A91ADENGZZRGTTCHC8V8
+    licenseKey: S03RKKDVB1K1BSHHMYTCZC37
     schemaVersion: 1.0.0
   default-dashboard:
     edition: standard
@@ -61,8 +61,8 @@ plugins:
   freeform:
     edition: lite
     enabled: true
-    licenseKey: Y0XXZ8LG3PYJJVF1PY0HZRWT
-    schemaVersion: 3.3.2
+    licenseKey: 0UVJ1P0GOQYD0YX37FIOG4BA
+    schemaVersion: 3.6.3
     settings:
       ajaxByDefault: false
       alertNotificationRecipients: null
@@ -125,7 +125,7 @@ plugins:
   imager-x:
     edition: lite
     enabled: true
-    licenseKey: 6BVMD74TZC33I1BUXVIKN6D3
+    licenseKey: TKVOKSS2U01529832N77BNJ7
     schemaVersion: 3.0.0
   minify:
     edition: standard
@@ -142,12 +142,12 @@ plugins:
   retour:
     edition: standard
     enabled: true
-    licenseKey: 081C3N7O2G6RQGTIYTZGT9YV
+    licenseKey: SSDKKI8KRTRDVR7Y7E7TR9PP
     schemaVersion: 3.0.10
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: PJQHH4X9DG4FAEH96LMMZBUY
+    licenseKey: 60VNMWMK2ZMQGDKABZWE2GV6
     schemaVersion: 3.0.11
     settings:
       addHrefLang: true
