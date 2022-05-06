@@ -11,6 +11,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 0b21bc7f-953d-4003-a7d6-e27bea14f66e
             warning: null
             width: 100
           -
@@ -20,26 +21,27 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: d178e82b-f190-4274-b459-af92f1f0339c
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: bde7f3d4-80a0-4bf2-8e74-9786f724493c
 fields:
   f64c5171-437f-45f4-ac5b-1164673e94f9: # Heading
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: heading
-    instructions: ''
+    instructions: null
     name: Heading
     searchable: true
     settings:
       byteLimit: null
       charLimit: null
-      code: ''
+      code: false
       columnType: null
-      initialRows: '4'
-      multiline: ''
+      initialRows: 4
+      multiline: false
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -50,7 +52,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: padding
-    instructions: ''
+    instructions: null
     name: Padding
     searchable: true
     settings:

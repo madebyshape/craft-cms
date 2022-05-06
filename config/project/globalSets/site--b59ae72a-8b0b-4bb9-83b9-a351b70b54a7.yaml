@@ -10,23 +10,25 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: d2f1251c-702a-4d33-982e-633e98e1e758
             warning: null
             width: 100
         name: Header
-        sortOrder: 1
+        uid: 14937b1b-538e-4931-967a-128c2e599825
       -
         elements:
           -
             fieldUid: 1b7a3230-f24a-4ac2-a997-3289e43ddf25 # Site - Cookie Consent
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 8fa01246-d448-4f1f-838c-41ebf7355103
             warning: null
             width: 100
         name: Misc
-        sortOrder: 2
+        uid: 3b904e21-a2bf-400d-b9cb-e29f019d4706
 handle: site
 name: Site
 sortOrder: 1

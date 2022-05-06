@@ -23,33 +23,36 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 67f10ba1-ab2b-46d1-bf88-d66640d47849
             warning: null
             width: 100
           -
             fieldUid: 90552b17-3ba7-452a-9dfd-0b13004b4659 # Page - Block Content
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 9614bf45-dfc8-4f1f-a637-a595191781aa
             warning: null
             width: 100
         name: General
-        sortOrder: 1
+        uid: 3c919082-eb32-41a6-a612-e4fab1b61438
       -
         elements:
           -
             fieldUid: d6471ab8-0d49-45bf-af5d-f0d2a860e267 # Meta & Social Data
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: a249f9df-c224-499e-bd9b-53d007dc5955
             warning: null
             width: 100
         name: 'Meta & Social Data'
-        sortOrder: 2
+        uid: 6861ccae-0a7d-4656-88cf-99650154ff13
 handle: pageBlock
 hasTitleField: true
 name: 'Page - Block'

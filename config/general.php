@@ -15,7 +15,6 @@ return [
       // Site / Environment
       'isSystemLive' => true,
       'allowAdminChanges' => false,
-      'env' => App::env('ENVIRONMENT'),
       'securityKey' => App::env('SECURITY_KEY'),
       // Images
       'defaultImageQuality' => '100',

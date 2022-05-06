@@ -1,4 +1,4 @@
-dateModified: 1651823944
+dateModified: 1651824722
 email:
   fromEmail: $SITE_EMAIL
   fromName: $SITE_NAME
@@ -13,6 +13,21 @@ email:
     useAuthentication: '1'
     username: $SMTP_USERNAME
   transportType: craft\mail\transportadapters\Smtp
+fs:
+  files:
+    hasUrls: true
+    name: Files
+    settings:
+      path: '@assetBasePath/files'
+    type: craft\fs\Local
+    url: '@assetBaseUrl/files'
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@assetBasePath/images'
+    type: craft\fs\Local
+    url: '@assetBaseUrl/images'
 meta:
   __names__:
     00cbe002-253f-4fca-b75f-ffc4cd309519: 'Site - Header Navigation' # Site - Header Navigation
@@ -42,7 +57,10 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: Z26DBU6KBBP9D9N5CYNY8FZS
-    schemaVersion: 3.10.0
+    schemaVersion: 4.0.0
+    settings:
+      cacheGeneratorType: putyourlightson\blitz\drivers\generators\HttpGenerator
+      refreshMode: 3
   craft-dynamic-fields:
     edition: standard
     enabled: true
@@ -62,10 +80,11 @@ plugins:
     edition: lite
     enabled: true
     licenseKey: 0UVJ1P0GOQYD0YX37FIOG4BA
-    schemaVersion: 3.6.3
+    schemaVersion: 4.1.0
     settings:
       ajaxByDefault: false
       alertNotificationRecipients: null
+      autoScroll: true
       autoScrollToErrors: true
       badgeType: all
       blockedEmails: null
@@ -73,21 +92,27 @@ plugins:
       blockedIpAddresses: null
       blockedKeywords: null
       blockedKeywordsError: 'Invalid Entry Data'
+      bypassSpamCheckOnLoggedInUsers: false
+      clientDigestFrequency: 1
+      clientDigestRecipients: null
       customErrorMessage: null
       customHoneypotName: null
       defaultTemplates: true
       defaultView: dashboard
+      digestFrequency: 1
+      digestOnlyOnProduction: false
       digestRecipients: null
       displayFeed: true
       emailTemplateDirectory: null
-      emailTemplateStorage: db
+      exportLabels: false
       fieldDisplayOrder: name
       fillWithGet: false
       footerScripts: false
+      formFieldShowOnlyAllowedForms: false
       formSubmitDisable: false
       formSubmitExpiration: null
       formTemplateDirectory: _plugins/freeform
-      formattingTemplate: flexbox.html
+      formattingTemplate: flexbox.twig
       freeformHoneypot: true
       freeformHoneypotEnhancement: false
       hideBannerDemo: true
@@ -101,18 +126,27 @@ plugins:
       recaptchaEnabled: false
       recaptchaErrorMessage: 'Please verify that you are not a robot.'
       recaptchaKey: null
+      recaptchaLazyLoad: false
       recaptchaMinScore: 0.5
       recaptchaSecret: null
       recaptchaSize: normal
       recaptchaTheme: light
       recaptchaType: v2_checkbox
+      rememberPageSubmitOrder: true
       removeNewlines: false
       renderFormHtmlInCpViews: true
       salesforce_client_id: null
       salesforce_client_secret: null
       salesforce_password: null
       salesforce_username: null
+      saveFormSessionLimit: 10
+      saveFormTtl: 30
       scriptInsertLocation: footer
+      scriptInsertType: pointers
+      sessionContext: payload
+      sessionContextCount: 100
+      sessionContextSecret: ''
+      sessionContextTimeToLiveMinutes: 180
       sessionEntryMaxCount: 50
       sessionEntryTTL: 10800
       showErrorsForBlockedEmails: false
@@ -122,11 +156,15 @@ plugins:
       spamProtectionBehaviour: simulate_success
       submissionThrottlingCount: null
       submissionThrottlingTimeFrame: null
+      successTemplateDirectory: null
+      twigInHtml: true
+      twigInHtmlIsolatedMode: true
+      updateSearchIndexes: true
   imager-x:
     edition: lite
     enabled: true
     licenseKey: TKVOKSS2U01529832N77BNJ7
-    schemaVersion: 3.0.0
+    schemaVersion: 4.0.0
   minify:
     edition: standard
     enabled: true
@@ -183,20 +221,21 @@ plugins:
   super-table:
     edition: standard
     enabled: true
-    schemaVersion: 2.2.1
+    schemaVersion: 3.0.0
   typedlinkfield:
     edition: standard
     enabled: true
-    schemaVersion: 1.0.0
+    schemaVersion: 2.0.0
 system:
   edition: pro
   live: true
   name: $SITE_NAME
   retryDuration: null
-  schemaVersion: 3.7.33
+  schemaVersion: 4.0.0.9
   timeZone: Europe/London
 users:
   allowPublicRegistration: false
+  deactivateByDefault: false
   defaultGroup: null
   photoSubpath: ''
   photoVolumeUid: d22d8c4e-5130-4bb2-afad-a7c08be98605 # Images

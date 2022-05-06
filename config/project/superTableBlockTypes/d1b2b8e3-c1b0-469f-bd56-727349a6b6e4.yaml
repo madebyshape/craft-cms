@@ -11,117 +11,72 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: e1a3f108-d22e-4298-b626-ed6317e2872a
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 994b8647-2e99-4753-805e-bb8ecf386dde
 fields:
   07997af2-2846-44ff-a240-009561640c19: # Links To
     columnSuffix: null
-    contentColumnType: text
+    contentColumnType: string
     fieldGroup: null
     handle: linksTo
-    instructions: ''
+    instructions: null
     name: 'Links To'
     searchable: false
     settings:
-      allowCustomText: '1'
-      allowTarget: '1'
-      allowedLinkNames: '*'
-      autoNoReferrer: '1'
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: true
+      customTextMaxLength: 0
+      customTextRequired: false
       defaultLinkName: entry
       defaultText: ''
-      enableAriaLabel: ''
-      enableTitle: ''
+      enableAllLinkTypes: true
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
       typeSettings:
-        __assoc__:
-          -
-            - asset
-            -
-              __assoc__:
-                -
-                  - sources
-                  - '*'
-                -
-                  - allowCustomQuery
-                  - ''
-          -
-            - category
-            -
-              __assoc__:
-                -
-                  - sources
-                  - '*'
-                -
-                  - allowCustomQuery
-                  - ''
-          -
-            - entry
-            -
-              __assoc__:
-                -
-                  - sources
-                  - '*'
-                -
-                  - allowCustomQuery
-                  - ''
-          -
-            - site
-            -
-              __assoc__:
-                -
-                  - sites
-                  - '*'
-          -
-            - user
-            -
-              __assoc__:
-                -
-                  - sources
-                  - '*'
-                -
-                  - allowCustomQuery
-                  - ''
-          -
-            - custom
-            -
-              __assoc__:
-                -
-                  - disableValidation
-                  - ''
-                -
-                  - allowAliases
-                  - ''
-          -
-            - email
-            -
-              __assoc__:
-                -
-                  - disableValidation
-                  - ''
-                -
-                  - allowAliases
-                  - ''
-          -
-            - tel
-            -
-              __assoc__:
-                -
-                  - disableValidation
-                  - ''
-                -
-                  - allowAliases
-                  - ''
-          -
-            - url
-            -
-              __assoc__:
-                -
-                  - disableValidation
-                  - ''
-                -
-                  - allowAliases
-                  - ''
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
     translationKeyFormat: null
     translationMethod: none
-    type: typedlinkfield\fields\LinkField
+    type: lenz\linkfield\fields\LinkField

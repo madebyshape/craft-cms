@@ -2,7 +2,7 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: a6548a8e-edd2-4cbb-9200-db7de2726f75 # Common
 handle: siteHeaderNavigation
-instructions: ''
+instructions: null
 name: 'Site - Header Navigation'
 searchable: false
 settings:
@@ -17,13 +17,12 @@ settings:
               - ''
   contentTable: '{{%stc_siteheadernavigation}}'
   fieldLayout: row
-  maxRows: ''
-  minRows: ''
-  placeholderKey: null
+  maxRows: null
+  minRows: null
   propagationKeyFormat: null
   propagationMethod: all
-  selectionLabel: ''
-  staticField: ''
+  selectionLabel: null
+  staticField: null
 translationKeyFormat: null
 translationMethod: site
 type: verbb\supertable\fields\SuperTableField

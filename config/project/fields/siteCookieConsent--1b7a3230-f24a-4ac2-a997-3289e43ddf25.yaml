@@ -2,7 +2,7 @@ columnSuffix: null
 contentColumnType: text
 fieldGroup: a6548a8e-edd2-4cbb-9200-db7de2726f75 # Common
 handle: siteCookieConsent
-instructions: ''
+instructions: null
 name: 'Site - Cookie Consent'
 searchable: true
 settings:
@@ -12,13 +12,13 @@ settings:
   configSelectionMode: choose
   defaultTransform: ''
   manualConfig: ''
-  purifierConfig: ''
-  purifyHtml: '1'
+  purifierConfig: null
+  purifyHtml: true
   redactorConfig: 'Text Full.json'
-  removeEmptyTags: '1'
-  removeInlineStyles: '1'
-  removeNbsp: '1'
-  showHtmlButtonForNonAdmins: '1'
+  removeEmptyTags: true
+  removeInlineStyles: true
+  removeNbsp: true
+  showHtmlButtonForNonAdmins: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   uiMode: enlarged

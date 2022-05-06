@@ -2,13 +2,13 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: a6548a8e-edd2-4cbb-9200-db7de2726f75 # Common
 handle: pageBlockContent
-instructions: ''
+instructions: null
 name: 'Page - Block Content'
 searchable: true
 settings:
   contentTable: '{{%matrixcontent_pageblockcontent}}'
-  maxBlocks: ''
-  minBlocks: ''
+  maxBlocks: null
+  minBlocks: null
   propagationKeyFormat: null
   propagationMethod: all
 translationKeyFormat: null
