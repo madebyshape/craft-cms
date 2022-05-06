@@ -8,12 +8,12 @@ It uses both Webpack and Gulp (For now) to build the project.
 
 ## Requirements
 
-- PHP 7.3+
+- PHP 8.0+
 - Composer 2.x.x
 
 ## Install
 
-1. `composer create-project madebyshape/craft-3`
+1. `composer create-project madebyshape/craft-cms`
 2. Don't run, `./craft setup`, instead manually edit the `.env` file.
 3. Once the `.env` is filled in, run `./craft install`
 
