@@ -54,4 +54,4 @@
    {{ placeholder is defined ? ('placeholder="' ~ placeholder ~ '"')|raw }}
    {{ attributes is defined ? attributes|raw }}
    {{ required is defined and required ? 'required' }}
->{% spaceless %}{{ value is defined ? value }}{% endspaceless %}</textarea>
+>{% apply spaceless %}{{ value is defined ? value }}{% endspaceless %}</textarea>

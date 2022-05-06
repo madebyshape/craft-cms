@@ -18,7 +18,7 @@
 
 {% if entry is defined %}
    {% block criticalCss %}
-      {%- spaceless -%}
+      {%- apply spaceless -%}
          {{ source ('_criticalCss/' ~ entry.slug ~ '.css', ignore_missing = true) }}
       {%- endspaceless -%}
    {% endblock %}

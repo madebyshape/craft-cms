@@ -4,7 +4,7 @@ fieldGroup: a6548a8e-edd2-4cbb-9200-db7de2726f75 # Common
 handle: siteCookieConsent
 instructions: null
 name: 'Site - Cookie Consent'
-searchable: true
+searchable: false
 settings:
   availableTransforms: '*'
   availableVolumes: ''
