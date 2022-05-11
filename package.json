@@ -1,10 +1,10 @@
 {
     "name": "craftcms-tailwind",
-    "version": "3.0.0",
+    "version": "4.0.0",
     "description": "",
     "main": "gulpfile.js",
     "env": {
-        "local": "http://craft-3.local"
+        "local": "http://craft-cms.local"
     },
     "paths": {
         "dependencies": "node_modules/",
@@ -119,13 +119,13 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/madebyshape/craft-3.git"
+        "url": "git+https://github.com/madebyshape/craft-cms.git"
     },
     "author": "Jason Mayo (@bymayo)",
     "authorUrl": "https://madebyshape.co.uk",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/madebyshape/craft-3/issues"
+        "url": "https://github.com/madebyshape/craft-cms/issues"
     },
-    "homepage": "https://github.com/madebyshape/craft-3#readme"
+    "homepage": "https://github.com/madebyshape/craft-cms#readme"
 }

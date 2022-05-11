@@ -3,10 +3,6 @@
 {% block content %}
    {%- minify -%}
 
-      {# ------- Variables ------- #}
-
-      {# ------- Template ------- #}
-
       {% for block in entry.pageBlockContent.all() %}
          {% include '_blocks/' ~ block.type.handle %}
       {% endfor %}
@@ -16,10 +12,10 @@
 
 {# ------- Critical CSS ------- #}
 
-{% if entry is defined %}
-   {% block criticalCss %}
-      {%- apply spaceless -%}
+{% block criticalCss %}
+   {% if entry is defined %}
+      {% apply spaceless %}
          {{ source ('_criticalCss/' ~ entry.slug ~ '.css', ignore_missing = true) }}
-      {%- endspaceless -%}
-   {% endblock %}
-{% endif %}
+      {% endapply %}
+   {% endif %}
+{% endblock %}
