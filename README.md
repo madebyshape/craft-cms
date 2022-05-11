@@ -13,7 +13,7 @@ It uses both Webpack and Gulp (For now) to build the project.
 
 ## Install
 
-1. `composer create-project madebyshape/craft-3`
+1. `composer create-project madebyshape/craft-cms:dev-craft-cms-3-webpack`
 2. Don't run, `./craft setup`, instead manually edit the `.env` file.
 3. Once the `.env` is filled in, run `./craft install`
 
