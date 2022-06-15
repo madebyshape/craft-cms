@@ -8,7 +8,7 @@
     {% set baseOptions = baseOptions|merge(options) %}
 {% endif %}
 
-<div x-data="form" x-init="dynamicForm('{{ handle }}', '{{ formId }}')">
+<div x-data="form" x-init="dynamicForm('{{ handle }}', '{{ id }}')">
 
     {% set form = craft.freeform.form(
         handle, 
