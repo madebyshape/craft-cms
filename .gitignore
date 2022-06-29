@@ -1,6 +1,7 @@
-# Gulp / Packages
+# Build
 
 node_modules
+vendor
 
 # Sass
 
@@ -27,7 +28,6 @@ Thumbs.db
 # Craft CMS
 
 cpresources
-vendor
 .env
 .env.sh
 *.log
