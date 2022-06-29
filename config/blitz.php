@@ -31,7 +31,7 @@ return [
         // 'cacheStorageType' => 'putyourlightson\blitz\drivers\storage\YiiCacheStorage',
         'cacheStorageSettings' => ['folderPath' => '@root/cache/blitz'],
         'clearCacheAutomatically' => true,
-        'warmCacheAutomatically' => true,
+        'warmCacheAutomatically' => false,
         'refreshCacheAutomaticallyForGlobals' => true,
         'queryStringCaching' => 1
     ],
