@@ -1,0 +1,22 @@
+dateModified: 1656498768
+email:
+  fromEmail: development@madebyshape.co.uk
+  fromName: 'Craft 4'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    5d8ef08b-2e7b-49f9-9531-d078e3c96a07: Common # Common
+    6a261e28-4654-42ce-b1ff-717a92c20a62: 'Craft 4' # Craft 4
+    b1844c50-2dd3-47a6-9b07-756dff453134: 'Craft 4' # Craft 4
+system:
+  edition: pro
+  live: true
+  name: 'Craft 4'
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
