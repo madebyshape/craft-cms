@@ -1,4 +1,4 @@
-dateModified: 1656500115
+dateModified: 1656501575
 email:
   fromEmail: $PRIMARY_SITE_EMAIL
   fromName: $PRIMARY_SITE_NAME
@@ -17,8 +17,197 @@ meta:
   __names__:
     5d8ef08b-2e7b-49f9-9531-d078e3c96a07: Common # Common
     6a261e28-4654-42ce-b1ff-717a92c20a62: $PRIMARY_SITE_NAME # $PRIMARY_SITE_NAME
-    36e33606-4615-4fe9-aec4-32ddc70e8d8a: 'Public Schema'
+    36e33606-4615-4fe9-aec4-32ddc70e8d8a: 'Public Schema' # Public Schema
     b1844c50-2dd3-47a6-9b07-756dff453134: 'Craft 4' # Craft 4
+plugins:
+  blitz:
+    edition: standard
+    enabled: true
+    licenseKey: O2KVZZVRPT1RYPA17BY1VC4N
+    schemaVersion: 4.1.2
+  craft-dynamic-fields:
+    edition: standard
+    enabled: true
+    licenseKey: 0AUN7TO1958MM7KHESCW54G3
+    schemaVersion: 1.0.0
+  freeform:
+    edition: pro
+    enabled: true
+    licenseKey: IUGZEK57OIFKESLE4NJKKH4V
+    schemaVersion: 4.2.2
+    settings:
+      ajaxByDefault: false
+      alertNotificationRecipients: ''
+      autoScroll: true
+      autoScrollToErrors: true
+      badgeType: all
+      blockedEmails: null
+      blockedEmailsError: 'Invalid Email Address'
+      blockedIpAddresses: null
+      blockedKeywords: null
+      blockedKeywordsError: 'Invalid Entry Data'
+      bypassSpamCheckOnLoggedInUsers: false
+      clientDigestFrequency: 1
+      clientDigestRecipients: ''
+      customErrorMessage: null
+      customHoneypotName: null
+      defaultTemplates: true
+      defaultView: dashboard
+      digestFrequency: 1
+      digestOnlyOnProduction: false
+      digestRecipients: ''
+      displayFeed: true
+      emailTemplateDirectory: null
+      exportHandlesAsNames: ''
+      exportLabels: ''
+      fieldDisplayOrder: name
+      fillWithGet: false
+      footerScripts: false
+      formFieldShowOnlyAllowedForms: ''
+      formSubmitDisable: true
+      formSubmitExpiration: null
+      formTemplateDirectory: null
+      formattingTemplate: tailwind-1.twig
+      freeformHoneypot: true
+      freeformHoneypotEnhancement: false
+      hideBannerDemo: '1'
+      hideBannerOldFreeform: false
+      minimumSubmitTime: null
+      pluginName: Forms
+      purgableSpamAgeInDays: null
+      purgableSubmissionAgeInDays: '0'
+      purgableUnfinalizedAssetAgeInMinutes: 180
+      recaptchaBehaviour: display_error
+      recaptchaEnabled: false
+      recaptchaErrorMessage: 'Please verify that you are not a robot.'
+      recaptchaKey: null
+      recaptchaLazyLoad: false
+      recaptchaMinScore: 0.5
+      recaptchaSecret: null
+      recaptchaSize: normal
+      recaptchaTheme: light
+      recaptchaType: v2_checkbox
+      rememberPageSubmitOrder: true
+      removeNewlines: ''
+      renderFormHtmlInCpViews: true
+      salesforce_client_id: null
+      salesforce_client_secret: null
+      salesforce_password: null
+      salesforce_username: null
+      saveFormSessionLimit: 10
+      saveFormTtl: 30
+      scriptInsertLocation: footer
+      scriptInsertType: pointers
+      sessionContext: payload
+      sessionContextCount: 100
+      sessionContextSecret: ''
+      sessionContextTimeToLiveMinutes: 180
+      sessionEntryMaxCount: 50
+      sessionEntryTTL: 10800
+      showErrorsForBlockedEmails: false
+      showErrorsForBlockedKeywords: false
+      showTutorial: true
+      spamFolderEnabled: true
+      spamProtectionBehaviour: simulate_success
+      submissionThrottlingCount: null
+      submissionThrottlingTimeFrame: null
+      successTemplateDirectory: null
+      twigInHtml: true
+      twigInHtmlIsolatedMode: true
+      updateSearchIndexes: '1'
+  imager-x:
+    edition: pro
+    enabled: true
+    licenseKey: DUKBTN8YNLUPW4QV6JT11TOK
+    schemaVersion: 4.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  retcon:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  retour:
+    edition: standard
+    enabled: true
+    licenseKey: 0ZKVJX9SZG8YPH46B96KCJ58
+    schemaVersion: 3.0.10
+    settings:
+      alwaysStripQueryString: false
+      automaticallyTrimStatistics: true
+      createUriChangeRedirects: true
+      csvColumnDelimiter: ','
+      dynamicRedirectDisplayLimit: 100
+      enableApiEndpoint: false
+      pluginName: Redirects
+      preserveQueryString: false
+      recordRemoteIp: true
+      refreshIntervalSecs: 5
+      staticRedirectDisplayLimit: 100
+      statisticsRateLimitMs: 3600000
+      statsDisplayLimit: 1000
+      statsStoredLimit: 1000
+      stripQueryStringFromStats: true
+      uriChangeRedirectSrcMatch: pathonly
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: 2Y6WRTRH0JET7RNXQCT0V4FJ
+    schemaVersion: 3.0.11
+    settings:
+      addHrefLang: true
+      addPaginatedHreflang: true
+      addXDefaultHrefLang: true
+      alwaysIncludeCanonicalUrls: false
+      cpTitlePrefix: '⚙ '
+      cspNonce: ''
+      cspScriptSrcPolicies:
+        -
+          __assoc__:
+            -
+              - policy
+              - '''self'''
+      devModeCpTitlePrefix: '&#x1f6a7;⚙ '
+      devModeTitlePrefix: '&#x1f6a7; '
+      displayAnalysisSidebar: true
+      displayPreviewSidebar: true
+      enableJsonLdEndpoint: false
+      enableMetaContainerEndpoint: false
+      enableSeoFileLinkEndpoint: false
+      environment: live
+      excludeNonCanonicalUrls: false
+      generatorEnabled: true
+      headersEnabled: true
+      includeHomepageInBreadcrumbs: true
+      lowercaseCanonicalUrl: true
+      manuallySetEnvironment: false
+      maxDescriptionLength: 155
+      maxTitleLength: 70
+      metaCacheDuration: 0
+      pluginName: SEO
+      regenerateSitemapsAutomatically: true
+      renderEnabled: true
+      separatorChar: '|'
+      sidebarDisplayPreviewTypes:
+        - google
+        - twitter
+        - facebook
+      siteGroupsSeparate: true
+      siteUrlOverride: ''
+      sitemapsEnabled: true
+      socialMediaPreviewTarget: true
+      submitSitemaps: true
+      truncateDescriptionTags: true
+      truncateTitleTags: true
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
 system:
   edition: pro
   live: $SYSTEM_STATUS
