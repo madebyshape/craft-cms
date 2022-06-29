@@ -1,19 +1,31 @@
-dateModified: 1656498768
+dateModified: 1656500115
 email:
-  fromEmail: development@madebyshape.co.uk
-  fromName: 'Craft 4'
-  transportType: craft\mail\transportadapters\Sendmail
+  fromEmail: $PRIMARY_SITE_EMAIL
+  fromName: $PRIMARY_SITE_NAME
+  replyToEmail: $PRIMARY_SITE_EMAIL
+  template: ''
+  transportSettings:
+    encryptionMethod: none
+    host: $SMTP_HOSTNAME
+    password: $SMTP_PASSWORD
+    port: $SMTP_PORT
+    timeout: '10'
+    useAuthentication: '1'
+    username: $SMTP_USERNAME
+  transportType: craft\mail\transportadapters\Smtp
 meta:
   __names__:
     5d8ef08b-2e7b-49f9-9531-d078e3c96a07: Common # Common
-    6a261e28-4654-42ce-b1ff-717a92c20a62: 'Craft 4' # Craft 4
+    6a261e28-4654-42ce-b1ff-717a92c20a62: $PRIMARY_SITE_NAME # $PRIMARY_SITE_NAME
+    36e33606-4615-4fe9-aec4-32ddc70e8d8a: 'Public Schema'
     b1844c50-2dd3-47a6-9b07-756dff453134: 'Craft 4' # Craft 4
 system:
   edition: pro
-  live: true
-  name: 'Craft 4'
+  live: $SYSTEM_STATUS
+  name: $PRIMARY_SITE_NAME
+  retryDuration: null
   schemaVersion: 4.0.0.9
-  timeZone: America/Los_Angeles
+  timeZone: America/Creston
 users:
   allowPublicRegistration: false
   defaultGroup: null
