@@ -42,6 +42,9 @@ return [
         'subLeft' => true,
         'subRight' => true
       ],
+      'cpHeadTags' => [
+         ['link', ['rel' => 'icon', 'href' => '/dist/images/favicon/favicon.ico']],
+      ],
       // Aliases
       'aliases' => [
          '@assetBaseUrl' => App::env('ASSETS_URL'),
