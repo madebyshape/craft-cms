@@ -35,7 +35,8 @@
     "spacecatninja/imager-x": "4.2.1",
     "sebastianlenz/linkfield": "2.1.5",
     "lewisjenkins/craft-dynamic-fields": "4.0.3",
-    "mmikkel/retcon": "2.7.1"
+    "mmikkel/retcon": "2.7.1",
+    "putyourlightson/craft-sprig": "2.6.2"
   },
   "autoload": {
     "psr-4": {

@@ -28,6 +28,6 @@ return [
         'queue' => [
            'ttr' => 600, // 10 mins
         ]
-     ]
+    ],
     //'bootstrap' => ['my-module'],
 ];

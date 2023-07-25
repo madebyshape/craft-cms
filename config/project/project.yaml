@@ -1,4 +1,4 @@
-dateModified: 1690285236
+dateModified: 1690286030
 email:
   fromEmail: $SITE_EMAIL
   fromName: $SITE_NAME
@@ -56,7 +56,7 @@ plugins:
   blitz:
     edition: standard
     enabled: true
-    licenseKey: null
+    licenseKey: 1QO8JWLTZWX2YJDI8EAVJIDJ
     schemaVersion: 4.5.0
     settings:
       cacheGeneratorType: putyourlightson\blitz\drivers\generators\HttpGenerator
@@ -66,7 +66,7 @@ plugins:
   craft-dynamic-fields:
     edition: standard
     enabled: true
-    licenseKey: null
+    licenseKey: BYOLIZLPHM7QT8VL5XUXWXOR
     schemaVersion: 1.0.0
   default-dashboard:
     edition: standard
@@ -81,7 +81,7 @@ plugins:
   freeform:
     edition: lite
     enabled: true
-    licenseKey: null
+    licenseKey: C8Q4AXLNCJ1BSU7W59X9HCTM
     schemaVersion: 4.2.6
     settings:
       ajaxByDefault: false
@@ -165,7 +165,7 @@ plugins:
   imager-x:
     edition: lite
     enabled: true
-    licenseKey: null
+    licenseKey: 5V67SCYN9KHJ5SZJ9FY5R0K7
     schemaVersion: 4.0.0
   minify:
     edition: standard
@@ -182,12 +182,12 @@ plugins:
   retour:
     edition: standard
     enabled: true
-    licenseKey: null
+    licenseKey: 0LH0RD0DVN80Z5BXTVS6J670
     schemaVersion: 3.0.11
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: null
+    licenseKey: VLA5NG7EHWO60LQPXRWGLP0C
     schemaVersion: 3.0.12
     settings:
       addHrefLang: true
@@ -220,6 +220,10 @@ plugins:
       sitemapsEnabled: true
       socialMediaPreviewTarget: true
       submitSitemaps: true
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
   super-table:
     edition: standard
     enabled: true
