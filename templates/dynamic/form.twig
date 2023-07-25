@@ -3,6 +3,7 @@
 {{ {
     hash: form.hash,
     honeypot: craft.freeform.honeypot(form),
+    payload: form.payload,
     csrf: {
         name: craft.app.config.general.csrfTokenName,
         value: craft.app.request.csrfToken,

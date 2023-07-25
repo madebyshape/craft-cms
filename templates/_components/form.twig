@@ -43,6 +43,8 @@
 
                         form.querySelector('input[name=formHash]').value = data.hash;
 
+                        form.querySelector('input[name=freeform_payload]').value = response.payload;
+
                         honeypot = data.honeypot;
                         honeypotInput = form.querySelector('input[name^="freeform_form_handle"]');
                         honeypotInput.setAttribute('id', honeypot.name);
