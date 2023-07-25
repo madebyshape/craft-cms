@@ -2,8 +2,10 @@ fieldLayouts:
   57d35cc6-d1f9-4d2a-8e1f-f4afe08c9e66:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 00cbe002-253f-4fca-b75f-ffc4cd309519 # Site - Header Navigation
             instructions: null
             label: null
@@ -11,13 +13,17 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: d2f1251c-702a-4d33-982e-633e98e1e758
+            userCondition: null
             warning: null
             width: 100
         name: Header
         uid: 14937b1b-538e-4931-967a-128c2e599825
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 1b7a3230-f24a-4ac2-a997-3289e43ddf25 # Site - Cookie Consent
             instructions: null
             label: null
@@ -25,10 +31,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 8fa01246-d448-4f1f-838c-41ebf7355103
+            userCondition: null
             warning: null
             width: 100
         name: Misc
         uid: 3b904e21-a2bf-400d-b9cb-e29f019d4706
+        userCondition: null
 handle: site
 name: Site
 sortOrder: 1

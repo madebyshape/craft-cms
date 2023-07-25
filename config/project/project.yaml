@@ -1,4 +1,4 @@
-dateModified: 1651824952
+dateModified: 1690285236
 email:
   fromEmail: $SITE_EMAIL
   fromName: $SITE_NAME
@@ -56,15 +56,17 @@ plugins:
   blitz:
     edition: standard
     enabled: true
-    licenseKey: Z26DBU6KBBP9D9N5CYNY8FZS
-    schemaVersion: 4.0.0
+    licenseKey: null
+    schemaVersion: 4.5.0
     settings:
       cacheGeneratorType: putyourlightson\blitz\drivers\generators\HttpGenerator
+      integrations:
+        - putyourlightson\blitz\drivers\integrations\CommerceIntegration
       refreshMode: 3
   craft-dynamic-fields:
     edition: standard
     enabled: true
-    licenseKey: S03RKKDVB1K1BSHHMYTCZC37
+    licenseKey: null
     schemaVersion: 1.0.0
   default-dashboard:
     edition: standard
@@ -79,8 +81,8 @@ plugins:
   freeform:
     edition: lite
     enabled: true
-    licenseKey: 0UVJ1P0GOQYD0YX37FIOG4BA
-    schemaVersion: 4.1.0
+    licenseKey: null
+    schemaVersion: 4.2.6
     settings:
       ajaxByDefault: false
       alertNotificationRecipients: null
@@ -163,7 +165,7 @@ plugins:
   imager-x:
     edition: lite
     enabled: true
-    licenseKey: TKVOKSS2U01529832N77BNJ7
+    licenseKey: null
     schemaVersion: 4.0.0
   minify:
     edition: standard
@@ -180,13 +182,13 @@ plugins:
   retour:
     edition: standard
     enabled: true
-    licenseKey: SSDKKI8KRTRDVR7Y7E7TR9PP
-    schemaVersion: 3.0.10
+    licenseKey: null
+    schemaVersion: 3.0.11
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: 60VNMWMK2ZMQGDKABZWE2GV6
-    schemaVersion: 3.0.11
+    licenseKey: null
+    schemaVersion: 3.0.12
     settings:
       addHrefLang: true
       addPaginatedHreflang: true
@@ -231,7 +233,7 @@ system:
   live: true
   name: $SITE_NAME
   retryDuration: null
-  schemaVersion: 4.0.0.9
+  schemaVersion: 4.4.0.4
   timeZone: Europe/London
 users:
   allowPublicRegistration: false

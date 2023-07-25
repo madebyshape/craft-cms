@@ -6,6 +6,8 @@ instructions: null
 name: 'Site - Header Navigation'
 searchable: false
 settings:
+  blockTypeFields: 0
+  changedFieldIndicator: null
   columns:
     __assoc__:
       -

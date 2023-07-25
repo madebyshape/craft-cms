@@ -1,10 +1,13 @@
+changedFieldIndicator: null
 field: 00cbe002-253f-4fca-b75f-ffc4cd309519 # Site - Header Navigation
 fieldLayouts:
   67b08afb-73c7-4cee-91bf-ae120c11f5f3:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 07997af2-2846-44ff-a240-009561640c19 # Links To
             instructions: null
             label: null
@@ -12,10 +15,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: e1a3f108-d22e-4298-b626-ed6317e2872a
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 994b8647-2e99-4753-805e-bb8ecf386dde
+        userCondition: null
 fields:
   07997af2-2846-44ff-a240-009561640c19: # Links To
     columnSuffix: null

@@ -21,21 +21,21 @@
   "minimum-stability": "dev",
   "prefer-stable" : true,
   "require": {
-    "craftcms/cms": "4.0.0.1",
+    "craftcms/cms": "4.4.16.1",
     "vlucas/phpdotenv": "^3.4.0",
-    "verbb/super-table": "3.0.0-beta.3",
-    "nystudio107/craft-seomatic": "4.0.0-beta.8",
+    "verbb/super-table": "3.0.9",
+    "nystudio107/craft-seomatic": "4.0.30",
     "clubstudioltd/craft-asset-rev": "7.0.0",
     "nystudio107/craft-minify": "4.0.0-beta.2",
-    "verbb/default-dashboard": "2.0.0-beta.1",
-    "craftcms/redactor": "3.0.0",
-    "nystudio107/craft-retour": "4.0.0-beta.4",
-    "solspace/craft-freeform": "4.0.0-beta.6",
-    "putyourlightson/craft-blitz": "4.0.2",
-    "spacecatninja/imager-x": "4.0.0",
-    "sebastianlenz/linkfield": "2.1.1-rc",
+    "verbb/default-dashboard": "2.0.0",
+    "craftcms/redactor": "3.0.4",
+    "nystudio107/craft-retour": "4.1.12",
+    "solspace/craft-freeform": "4.1.6",
+    "putyourlightson/craft-blitz": "4.5.0",
+    "spacecatninja/imager-x": "4.2.1",
+    "sebastianlenz/linkfield": "2.1.5",
     "lewisjenkins/craft-dynamic-fields": "4.0.3",
-    "mmikkel/retcon": "2.4.2"
+    "mmikkel/retcon": "2.7.1"
   },
   "autoload": {
     "psr-4": {
