@@ -56,7 +56,7 @@ plugins:
   blitz:
     edition: standard
     enabled: true
-    licenseKey: 1QO8JWLTZWX2YJDI8EAVJIDJ
+    licenseKey: null
     schemaVersion: 4.5.0
     settings:
       cacheGeneratorType: putyourlightson\blitz\drivers\generators\HttpGenerator
@@ -66,7 +66,7 @@ plugins:
   craft-dynamic-fields:
     edition: standard
     enabled: true
-    licenseKey: BYOLIZLPHM7QT8VL5XUXWXOR
+    licenseKey: null
     schemaVersion: 1.0.0
   default-dashboard:
     edition: standard
@@ -81,7 +81,7 @@ plugins:
   freeform:
     edition: lite
     enabled: true
-    licenseKey: C8Q4AXLNCJ1BSU7W59X9HCTM
+    licenseKey: null
     schemaVersion: 4.2.6
     settings:
       ajaxByDefault: false
@@ -165,7 +165,7 @@ plugins:
   imager-x:
     edition: lite
     enabled: true
-    licenseKey: 5V67SCYN9KHJ5SZJ9FY5R0K7
+    licenseKey: null
     schemaVersion: 4.0.0
   minify:
     edition: standard
@@ -182,12 +182,12 @@ plugins:
   retour:
     edition: standard
     enabled: true
-    licenseKey: 0LH0RD0DVN80Z5BXTVS6J670
+    licenseKey: null
     schemaVersion: 3.0.11
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: VLA5NG7EHWO60LQPXRWGLP0C
+    licenseKey: null
     schemaVersion: 3.0.12
     settings:
       addHrefLang: true
