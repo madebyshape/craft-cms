@@ -24,5 +24,10 @@ return [
     'modules' => [
         'my-module' => \modules\Module::class,
     ],
+    'components' => [
+        'queue' => [
+           'ttr' => 600, // 10 mins
+        ]
+     ]
     //'bootstrap' => ['my-module'],
 ];
