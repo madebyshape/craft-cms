@@ -46,6 +46,8 @@
          <div id="app">
             {% block body %}{% endblock %}
          </div>
+
+         {{ sprig.script }}
          
          {# Javascript #}
          <script src="{{ siteUrl }}dist/{{ rev('js/app.js') }}" defer></script>
