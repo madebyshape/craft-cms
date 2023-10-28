@@ -101,7 +101,7 @@
         "gulp-sass-glob": "^1.1.0",
         "gulp-sourcemaps": "^2.6.5",
         "mini-css-extract-plugin": "^1.3.9",
-        "node-sass": "^4.14.1",
+        "node-sass": "^7.0.0",
         "postcss": "^8.3.4",
         "purgecss": "^2.3.0",
         "rev-del": "^2.0.0",
