@@ -77,7 +77,7 @@
      }
      var script = document.createElement('script');
      script.defer = 1;
-     script.src = 'https://widget.usersnap.com/global/load/' ~ parseEnv('USERSNAP_API_KEY') ~ '?onload=onUsersnapLoad';
+     script.src = 'https://widget.usersnap.com/global/load/{{ parseEnv('$USERSNAP_API_KEY') }}?onload=onUsersnapLoad';
      document.getElementsByTagName('head')[0].appendChild(script);
 
    {% endif %}
