@@ -26,7 +26,7 @@
                <link rel="stylesheet" href="{{ cssUrl }}">
             </noscript>
          {% else %}
-            <link rel="stylesheet" href="{{ cssUrl }}">
+            <link rel="stylesheet" href="{{ cssUrl }}?v={{ getenv('SERVD_BUNDLE_HASH') }}">
          {% endif %}
 
          <style>
@@ -46,11 +46,9 @@
          <div id="app">
             {% block body %}{% endblock %}
          </div>
-
-         {{ sprig.script }}
          
          {# Javascript #}
-         <script src="{{ siteUrl }}dist/{{ rev('js/app.js') }}" defer></script>
+         <script src="{{ siteUrl }}dist/js/app.js?v={{ getenv('SERVD_BUNDLE_HASH') }}" defer></script>
 
       </body>
 
