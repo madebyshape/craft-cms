@@ -22,17 +22,13 @@ return [
         'cachingEnabled' => true,
         'cacheStorageType' => 'putyourlightson\blitz\drivers\storage\YiiCacheStorage',
         'includedUriPatterns' => [
-            [
-                'uriPattern' => '.*',
-            ]
+            ['uriPattern' => '.*']
         ],
         'excludedUriPatterns' => [
             ['uriPattern' => 'dynamic/.*']
         ],
         'includedQueryStringParams' => [
-            [
-                'uriPattern' => '.*',
-            ]
+            ['uriPattern' => '.*']
          ],
         'clearCacheAutomatically' => true,
         'warmCacheAutomatically' => false,
