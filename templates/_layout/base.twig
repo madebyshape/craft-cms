@@ -51,7 +51,7 @@
          <script src="{{ siteUrl }}dist/js/app.js?v={{ getenv('SERVD_BUNDLE_HASH') }}" defer></script>
 
          {# Usersnap #}
-         {{ sprig('_sprig/userSnap', {}, { 's-trigger': 'load, refresh' }) }}
+         {{ sprig('_sprig/usersnap', {}, { 's-trigger': 'load, refresh' }) }}
 
       </body>
 
