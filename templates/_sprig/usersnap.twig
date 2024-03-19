@@ -1,0 +1,19 @@
+{% if sprig.isRequest %}
+
+    <script>
+
+        {% if currentUser and currentUser.can('accessCp') %}
+
+            window.onUsersnapLoad = function(api) {
+                api.init();
+            }
+            var script = document.createElement('script');
+            script.defer = 1;
+            script.src = 'https://widget.usersnap.com/global/load/{{ parseEnv('$USERSNAP_API_KEY') }}?onload=onUsersnapLoad';
+            document.getElementsByTagName('head')[0].appendChild(script);
+
+        {% endif %}
+
+    </script>
+
+{% endif %}

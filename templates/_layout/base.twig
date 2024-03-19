@@ -50,6 +50,9 @@
          {# Javascript #}
          <script src="{{ siteUrl }}dist/js/app.js?v={{ getenv('SERVD_BUNDLE_HASH') }}" defer></script>
 
+         {# Usersnap #}
+         {{ sprig('_sprig/userSnap', {}, { 's-trigger': 'load, refresh' }) }}
+
       </body>
 
    </html>
@@ -67,17 +70,5 @@
          }
       }))
    });
-
-   {% if currentUser and currentUser.can('accessCp') %}
-
-     window.onUsersnapLoad = function(api) {
-       api.init();
-     }
-     var script = document.createElement('script');
-     script.defer = 1;
-     script.src = 'https://widget.usersnap.com/global/load/{{ parseEnv('$USERSNAP_API_KEY') }}?onload=onUsersnapLoad';
-     document.getElementsByTagName('head')[0].appendChild(script);
-
-   {% endif %}
 
 {% endjs %}
