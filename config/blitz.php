@@ -21,6 +21,7 @@ return [
     '*' => [
         'cachingEnabled' => true,
         'cacheStorageType' => 'putyourlightson\blitz\drivers\storage\YiiCacheStorage',
+        'cacheStorageSettings' => [],
         'includedUriPatterns' => [
             ['uriPattern' => '.*']
         ],
@@ -31,18 +32,20 @@ return [
             ['uriPattern' => '.*']
          ],
         'clearCacheAutomatically' => true,
-        'warmCacheAutomatically' => false,
+        'warmCacheAutomatically' => true,
         'refreshCacheAutomaticallyForGlobals' => true,
         'queueJobTtr' => 600, // 10 mins
-        'queryStringCaching' => 1
+        'queryStringCaching' => 1,
+        'debug' => true
     ],
     'dev' => [
         'cachingEnabled' => false,
-        'cacheStorageSettings' => ['folderPath' => '@root/cache/blitz'],
         'cacheStorageType' => 'putyourlightson\blitz\drivers\storage\FileStorage',
+        'cacheStorageSettings' => ['folderPath' => '@root/cache/blitz']
     ],
     'staging' => [
     ],
     'production' => [
+        'debug' => false
     ]
 ];
