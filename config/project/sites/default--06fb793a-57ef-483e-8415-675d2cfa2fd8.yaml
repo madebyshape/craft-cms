@@ -1,9 +1,0 @@
-baseUrl: $SITE_URL
-enabled: true
-handle: default
-hasUrls: true
-language: en-GB
-name: $SITE_NAME
-primary: true
-siteGroup: a37b06c6-894d-4dad-a768-46c1a840e80b # Craft 3
-sortOrder: 1
