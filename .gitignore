@@ -1,7 +1,3 @@
-# Gulp / Packages
-
-node_modules
-
 # Sass
 
 *.sassc
@@ -29,11 +25,14 @@ Thumbs.db
 cpresources
 vendor
 .env
-.env.sh
 *.log
 storage/*
 !storage/rebrand
 license.key
+
+# Node / npm
+
+node_modules
 
 # Backups
 
@@ -44,6 +43,7 @@ backups
 web/cache
 public/cache
 public_html/cache
+httpdocs/cache
 cache/*
 
 # Asset Source Folders
