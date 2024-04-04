@@ -32,7 +32,8 @@ install:
 	ddev exec php craft plugin/install formie
 	ddev exec php craft plugin/install imager-x
 	ddev exec php craft plugin/install craft-dynamic-fields
-	ddev exec php craft plugin/install craft-dynamic-fields
+	ddev exec php craft plugin/install minify
+	deev exec php craft plugin/install ckeditor
 	ddev launch; \
 	echo "Install complete 🎉"
 

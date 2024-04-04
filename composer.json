@@ -2,8 +2,10 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
+    "craftcms/ckeditor": "^4.0.3",
     "craftcms/cms": "5.0.1",
     "lewisjenkins/craft-dynamic-fields": "^5.0.1",
+    "nystudio107/craft-minify": "^5.0.0-beta.2",
     "nystudio107/craft-seomatic": "^5.0.0-beta.8",
     "nystudio107/craft-vite": "^5.0.0-beta.3",
     "putyourlightson/craft-blitz": "^5.0.0-beta.4",
