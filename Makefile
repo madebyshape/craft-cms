@@ -41,6 +41,5 @@ setup:
 	ddev start
 	ddev exec npm install
 	ddev composer install
-	ddev exec php craft migrate/all --interactive=0
-	ddec exec php craft project-config/apply --interactive=0
+	ddev exec php craft up --interactive=0
 	@echo "Setup complete 🎉"
