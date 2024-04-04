@@ -1,0 +1,7 @@
+{% set preloadedFonts = [] %}
+
+{% for font in preloadedFonts %}
+
+    <link rel="preload" href="/dist/fonts/{{ font }}.woff2" as="font" crossorigin>
+
+{% endfor %}

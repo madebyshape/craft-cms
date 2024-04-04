@@ -1,0 +1,41 @@
+{% extends "_layout/base" %}
+
+{# Use {{ vars.class.gap.x }} #}
+
+{% set vars = {
+	class: {
+		siteMargin: {
+			x: 'px-10',
+			r: 'pr-10',
+			l: 'pl-10'
+		},
+		gutter: {
+			x: 'px-10',
+			y: 'py-10',
+			t: 'pt-10',
+			r: 'pr-10',
+			b: 'pb-10',
+			l: 'pl-10'
+		},
+		gap: {
+			x: 'gap-x-10',
+			y: 'gap-y-10'
+		}
+	}
+} %}
+
+{% block body %}
+
+	{# Cookie Consent #}
+	{% include '_components/cookieConsent' %}
+
+	{# Global Site Header #}
+    {% include '_partials/global/header' %}
+
+	{% block content %}
+	{% endblock %}
+
+	{# Global Site Footer #}
+    {% include '_partials/global/footer' %}
+
+{% endblock %}
