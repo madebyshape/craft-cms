@@ -1,4 +1,4 @@
-dateModified: 1712232002
+dateModified: 1712239446
 email:
   fromEmail: $CRAFT_SYSTEM_EMAIL
   fromName: $CRAFT_SITE_NAME
@@ -10,6 +10,7 @@ email:
 meta:
   __names__:
     08c386f4-5a41-4c9f-8282-f6785af06bfc: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
+    19d6d897-1cde-4d59-914a-2bf8a23e7916: 'Public Schema' # Public Schema
     d99bf7af-1eb1-4b77-814e-624eeec1a0e3: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
 system:
   edition: solo

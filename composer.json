@@ -11,6 +11,7 @@
     "putyourlightson/craft-blitz": "^5.0.0-beta.4",
     "putyourlightson/craft-sprig": "^3.0.0-beta.2",
     "servd/craft-asset-storage": "^4.0.2",
+    "spacecatninja/imager-x": "^5.0.0-beta.2",
     "verbb/hyper": "^2.0.0-beta.7",
     "vlucas/phpdotenv": "^5.4.0"
   },
