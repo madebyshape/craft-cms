@@ -4,6 +4,7 @@
   "require": {
     "craftcms/ckeditor": "^4.0.3",
     "craftcms/cms": "5.0.1",
+    "craftcms/mailgun": "^3.1.0",
     "nystudio107/craft-minify": "^5.0.0-beta.2",
     "nystudio107/craft-seomatic": "^5.0.0-beta.8",
     "nystudio107/craft-vite": "^5.0.0-beta.3",

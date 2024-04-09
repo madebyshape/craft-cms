@@ -34,7 +34,8 @@ install:
 	ddev exec php craft plugin/install formie
 	ddev exec php craft plugin/install imager-x
 	ddev exec php craft plugin/install minify
-	deev exec php craft plugin/install ckeditor
+	ddev exec php craft plugin/install ckeditor
+	ddev exec php craft plugin/install mailgun
 	ddev launch; \
 	echo "Install complete 🎉"
 
