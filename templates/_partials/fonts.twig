@@ -1,0 +1,34 @@
+{#
+
+{% set fonts = {
+    inter: [
+        {
+            file: 'inter',
+            weight: 400,
+            style: 'normal'
+        }
+    ]
+} %}
+
+{% for family in fonts %}
+    {% for font in family %}
+        <link rel="preload" href="/dist/fonts/{{ font.file }}.woff2" as="font" crossorigin>
+        <style>
+            @font-face {
+                font-family: "{{ family }}";
+                src: url("/dist/fonts/{{ font.file }}.eot");
+                src: local("{{ family }}"),
+                    url("/dist/fonts/{{ font.file }}.eot?#iefix") format("embedded-opentype"),
+                    url("/dist/fonts/{{ font.file }}.woff2") format("woff2"),
+                    url("/dist/fonts/{{ font.file }}.woff") format("woff"),
+                    url("/dist/fonts/{{ font.file }}.ttf") format("truetype"),
+                    url("/dist/fonts/{{ font.file }}.svg#{{ font.file }}") format("svg");
+                font-weight: "{{ font.weight }}";
+                font-style: "{{ font.style }}";
+                font-display: swap;
+            }
+        </style>
+    {% endfor %}
+{% endfor %}
+
+#}

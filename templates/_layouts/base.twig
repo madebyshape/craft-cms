@@ -8,14 +8,14 @@
          <meta http-equiv="x-ua-compatible" content="ie=edge">
          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-         {# Preload Fonts #}
-         {{ include ('_partials/preloadedFonts', ignore_missing = true) }}
-
-         {# Favicons #}
-         {{ craft.vite.inline('@webroot/dist/favicons/webapp.html') }}
+         {# Fonts #}
+         {{ include ('_partials/fonts', ignore_missing = true) }}
 
          {# CSS / JS #}
          {{ craft.vite.script('/src/index.js') }}
+
+         {# Favicons #}
+         {{ craft.vite.inline('@webroot/dist/favicons/webapp.html') }}
 
          {# AlpineJS "blip" Fix #}
          <style>[x-cloak] { display: none; }</style>
