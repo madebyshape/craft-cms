@@ -33,6 +33,7 @@ vendor
 storage/*
 !storage/rebrand
 license.key
+license.key.*
 
 # Node / npm
 
