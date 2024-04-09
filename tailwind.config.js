@@ -53,8 +53,7 @@ export default {
   plugins: [
     require('@tailwindcss/aspect-ratio'),
   ],
-  safelist: [
-  ],
+  safelist: [],
   content: [
     './templates/**/*.{twig,html,js}',
     './src/**/*.{css,js}'
