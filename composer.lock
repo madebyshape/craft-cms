@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a2adc8f34b9735e59a5d5e0e9353af8",
+    "content-hash": "20d336d8341cbfd7466ca0516d5cf223",
     "packages": [
         {
             "name": "amphp/amp",
@@ -3538,60 +3538,6 @@
                 "ws"
             ],
             "time": "2024-03-23T07:42:40+00:00"
-        },
-        {
-            "name": "lewisjenkins/craft-dynamic-fields",
-            "version": "5.0.1",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/lewisjenkins/craft-dynamic-fields/zipball/ad15d8d85e39e5c664699fe2e0ba627b70b87ac6",
-                "reference": "ad15d8d85e39e5c664699fe2e0ba627b70b87ac6",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^5.0.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "LJ Dynamic Fields",
-                "handle": "craft-dynamic-fields",
-                "developer": "Lewis Jenkins",
-                "developerUrl": "https://lj.io",
-                "hasCpSettings": false,
-                "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/lewisjenkins/craft-dynamic-fields/master/CHANGELOG.md",
-                "documentationUrl": "https://github.com/lewisjenkins/craft-dynamic-fields/blob/master/README.md",
-                "class": "lewisjenkins\\craftdynamicfields\\CraftDynamicFields"
-            },
-            "autoload": {
-                "psr-4": {
-                    "lewisjenkins\\craftdynamicfields\\": "src/"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Lewis Jenkins",
-                    "homepage": "https://lj.io"
-                }
-            ],
-            "description": "Populate Craft fields with dynamic data using the power of Twig.",
-            "keywords": [
-                "cms",
-                "craft",
-                "craft dynamic fields",
-                "craft-plugin",
-                "craftcms",
-                "lj dynamic fields"
-            ],
-            "support": {
-                "docs": "https://github.com/lewisjenkins/craft-dynamic-fields/blob/master/README.md",
-                "issues": "https://github.com/lewisjenkins/craft-dynamic-fields/issues",
-                "email": "lewis@lj.io"
-            },
-            "time": "2024-03-27T09:30:44+00:00"
         },
         {
             "name": "marcusschwarz/lesserphp",
@@ -9331,5 +9277,5 @@
     "platform-overrides": {
         "php": "8.2"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
