@@ -1,4 +1,4 @@
-dateModified: 1712592735
+dateModified: 1712681220
 email:
   fromEmail: $CRAFT_SYSTEM_EMAIL
   fromName: $CRAFT_SITE_NAME
@@ -17,6 +17,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  servd-asset-storage:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
   vite:
     edition: standard
     enabled: true

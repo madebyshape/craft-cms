@@ -36,6 +36,7 @@ install:
 	ddev exec php craft plugin/install minify
 	ddev exec php craft plugin/install ckeditor
 	ddev exec php craft plugin/install mailgun
+	ddev exec php craft plugin/install servd-asset-storage
 	ddev launch; \
 	echo "Install complete 🎉"
 
