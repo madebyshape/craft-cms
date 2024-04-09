@@ -1,15 +1,17 @@
 export default ({ command }) => ({
     base: command === 'serve' ? '' : '/dist/',
+    publicDir: 'web',
     build: {
-        manifest: true,
         outDir: 'web/dist/',
+        sourcemap: true,
+        manifest: 'manifest.json',
+        minify: 'esbuild',
         rollupOptions: {
             input: {
-                app: './src/index.js',
+                index: './src/index.js',
             }
         },
     },
-    publicDir: 'web',
     server: {
         fs: {
           strict: false
@@ -18,5 +20,5 @@ export default ({ command }) => ({
         origin: 'http://localhost:3000',
         port: 3000,
         strictPort: true
-      }
+    }
 });
