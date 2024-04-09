@@ -1,5 +1,7 @@
+.PHONY: prod dev install setup clean
+
 prod: 
-	ddev exec npm run prod
+	ddev exec npm run build
 
 dev: 
 	ddev exec npm run dev
@@ -43,4 +45,10 @@ setup:
 	ddev exec npm install
 	ddev composer install
 	ddev exec php craft up --interactive=0
-	@echo "Setup complete 🎉"
+	dev
+
+clean: 
+	rm -rf vendor/
+	rm -rf node_modules/
+	ddev composer clear-cache
+	ddev exec npm cache clean --force
