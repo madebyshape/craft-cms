@@ -2,3 +2,7 @@
 - Vite 5
 - Craft CMS 5
 - Tailwind 3
+- PostCSS (Instead of previous SASS/SCSS)
+- Favicon 
+- Image compression
+- Fonts and font face
