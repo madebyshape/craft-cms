@@ -3,10 +3,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 export default {
-  content: [
-    './templates/**/*.{twig,html,js}',
-    './src/**/*.{css,js}'
-  ],
   theme: {
     screens: {
       'xs': '375px',
@@ -56,5 +52,11 @@ export default {
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
+  ],
+  safelist: [
+  ],
+  content: [
+    './templates/**/*.{twig,html,js}',
+    './src/**/*.{css,js}'
   ],
 }
