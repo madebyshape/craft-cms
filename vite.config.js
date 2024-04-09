@@ -1,4 +1,6 @@
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import { ViteFaviconsPlugin } from 'vite-plugin-favicon2';
+import copy from 'rollup-plugin-copy';
 
 export default ({ command }) => ({
     base: command === 'serve' ? '' : '/dist/',
@@ -12,6 +14,9 @@ export default ({ command }) => ({
         rollupOptions: {
             input: {
                 index: './src/index.js',
+            },
+            output: {
+                dir: 'web/dist/',
             }
         },
     },
@@ -25,6 +30,19 @@ export default ({ command }) => ({
         strictPort: true
     },
     plugins: [
+        ViteFaviconsPlugin({
+            logo: "src/public/images/favicon.png",
+            inject: false,
+            outputPath: '../favicons'
+        }),
+        copy({
+            targets: [
+                { 
+                    src: 'src/public/**/*', 
+                    dest: 'web/dist'
+                }
+            ]
+        }),
         ViteImageOptimizer({})
     ]
 });

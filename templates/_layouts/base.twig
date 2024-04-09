@@ -12,7 +12,7 @@
          {{ include ('_partials/preloadedFonts', ignore_missing = true) }}
 
          {# Favicons #}
-         {{ include ('_partials/favicons', ignore_missing = true) }}
+         {{ craft.vite.inline('@webroot/dist/favicons/webapp.html') }}
 
          {# CSS / JS #}
          {{ craft.vite.script('/src/index.js') }}
