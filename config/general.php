@@ -29,14 +29,17 @@ return GeneralConfig::create()
     ->preloadSingles(1)
     ->preventUserEnumeration(1)
     ->defaultImageQuality(100)
+    ->brokenImagePath('@webroot/dist/images/fallback.png')
     ->transformGifs(false)
     ->generateTransformsBeforePageLoad(true)
     ->maxUploadFileSize('25M')
     ->enableTemplateCaching(false)
+    ->partialTemplatesPath('_blocks')
     ->cpHeadTags([
         ['link', ['rel' => 'icon', 'href' => '/dist/favicons/favicon.ico']],
     ])
     ->aliases([
-        '@webroot' => dirname(__DIR__) . '/' . App::env('PUBLIC_FOLDER'),
+        '@web' => App::env('SITE_URL'),
+        '@webroot' => App::env('WEB_ROOT'),
     ])
 ;
