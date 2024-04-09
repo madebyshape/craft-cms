@@ -1,0 +1,30 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - bdf6317d-0df7-449f-a937-a1a274ffb106 # Page - Blocks
+handle: pages
+maxAuthors: 1
+name: Pages
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - Page
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  08c386f4-5a41-4c9f-8282-f6785af06bfc: # $CRAFT_SITE_NAME
+    enabledByDefault: true
+    hasUrls: true
+    template: _pages/base.twig
+    uriFormat: '{slug}'
+structure:
+  maxLevels: null
+  uid: 4c0a1eed-b32a-43d6-ad31-77d4dc6ba447
+type: structure

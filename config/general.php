@@ -11,17 +11,32 @@
 use craft\config\GeneralConfig;
 use craft\helpers\App;
 
+
 return GeneralConfig::create()
-    // Set the default week start day for date pickers (0 = Sunday, 1 = Monday, etc.)
-    ->defaultWeekStartDay(1)
-    // Prevent generated URLs from including "index.php"
-    ->omitScriptNameInUrls()
-    // Preload Single entries as Twig variables
-    ->preloadSingles()
-    // Prevent user enumeration attacks
-    ->preventUserEnumeration()
-    // Set the @webroot alias so the clear-caches command knows where to find CP resources
+    ->isSystemLive(App::env('IS_SYSTEM_LIVE') ?? true)
+    ->devMode(App::env('DEV_MODE') ?? false)
+    ->allowAdminChanges(App::env('ALLOW_ADMIN_CHANGES') ?? false)
+    ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
+    ->testToEmailAddress(App::env('TEST_TO_EMAIL_ADDRESS') ?? false)
+    ->cpTrigger(App::env('CP_TRIGGER') ?? 'admin')
+    ->allowUpdates(App::env('ALLOW_UPDATES') ?? true)
+    ->timezone(App::env('TIMEZONE') ?? 'Europe/London')
+    ->errorTemplatePrefix('_')
+    ->enableGql(0)
+    ->useEmailAsUsername(1)
+    ->autoLoginAfterAccountActivation(1)
+    ->omitScriptNameInUrls(1)
+    ->preloadSingles(1)
+    ->preventUserEnumeration(1)
+    ->defaultImageQuality(100)
+    ->transformGifs(false)
+    ->generateTransformsBeforePageLoad(true)
+    ->maxUploadFileSize('25M')
+    ->enableTemplateCaching(false)
+    ->cpHeadTags([
+        ['link', ['rel' => 'icon', 'href' => '/dist/favicons/favicon.ico']],
+    ])
     ->aliases([
-        '@webroot' => dirname(__DIR__) . '/web',
+        '@webroot' => dirname(__DIR__) . '/' . App::env('PUBLIC_FOLDER'),
     ])
 ;
