@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - bdf6317d-0df7-449f-a937-a1a274ffb106
+  - bdf6317d-0df7-449f-a937-a1a274ffb106 # Page - Blocks
 handle: pages
 maxAuthors: 1
 name: Pages
