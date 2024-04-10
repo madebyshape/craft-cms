@@ -12,11 +12,11 @@ previewTargets:
         - label
         - Page
       -
-        - urlFormat
-        - '{url}'
-      -
         - refresh
         - '1'
+      -
+        - urlFormat
+        - '{url}'
 propagationMethod: all
 siteSettings:
   08c386f4-5a41-4c9f-8282-f6785af06bfc: # $CRAFT_SITE_NAME
