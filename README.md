@@ -6,3 +6,6 @@
 - Favicon 
 - Image compression
 - Fonts and font face
+- Load via // E.g. @import 'components/lazyLoad.pcss'; CSS
+- Load via // import "./components/lazyLoad"; JS
+- {# Use {{ vars.class.gap.x }} #}

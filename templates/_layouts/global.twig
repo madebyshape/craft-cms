@@ -1,7 +1,5 @@
 {% extends '_layouts/base' %}
 
-{# Use {{ vars.class.gap.x }} #}
-
 {% set vars = {
 	class: {
 		siteMargin: {
@@ -29,7 +27,7 @@
 	{# Global Site Header #}
     {% include '_components/global/header' %}
 
-	{% block content %}
+	{% block site %}
 	{% endblock %}
 
 	{# Global Site Footer #}
