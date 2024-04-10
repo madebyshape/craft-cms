@@ -1,7 +1,7 @@
 import Alpine from 'alpinejs';
 
 // Components
-import "./components/lazyLoading";
+import "./components/lazyLoad";
 
 // Global
 window.Alpine = Alpine;

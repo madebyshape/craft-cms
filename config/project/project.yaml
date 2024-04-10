@@ -9,14 +9,14 @@ email:
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
-    7b662bcd-ea91-4c91-86ce-c60348c664d1: Pages # Pages
-    8b610edc-f2dd-46b6-9597-96fcbb6d302a: Simple # Simple
+    7b662bcd-ea91-4c91-86ce-c60348c664d1: Pages
+    8b610edc-f2dd-46b6-9597-96fcbb6d302a: Simple
     08c386f4-5a41-4c9f-8282-f6785af06bfc: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
     19d6d897-1cde-4d59-914a-2bf8a23e7916: 'Public Schema' # Public Schema
-    82622d73-a650-49b4-9dc7-86697b6b8560: 'Contact Form' # Contact Form
-    bdf6317d-0df7-449f-a937-a1a274ffb106: 'Page - Blocks' # Page - Blocks
+    82622d73-a650-49b4-9dc7-86697b6b8560: 'Contact Form'
+    bdf6317d-0df7-449f-a937-a1a274ffb106: 'Page - Blocks'
     d99bf7af-1eb1-4b77-814e-624eeec1a0e3: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
-    eaf2a29e-5cf9-4770-9177-0bb0c1c973aa: New # New
+    eaf2a29e-5cf9-4770-9177-0bb0c1c973aa: New
 plugins:
   blitz:
     edition: standard

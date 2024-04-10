@@ -1,4 +1,4 @@
-{% extends "_layouts/base" %}
+{% extends '_layouts/base' %}
 
 {# Use {{ vars.class.gap.x }} #}
 
@@ -30,12 +30,12 @@
 	{% include '_components/cookieConsent' %}
 
 	{# Global Site Header #}
-    {% include '_partials/global/header' %}
+    {% include '_components/global/header' %}
 
 	{% block content %}
 	{% endblock %}
 
 	{# Global Site Footer #}
-    {% include '_partials/global/footer' %}
+    {% include '_components/global/footer' %}
 
 {% endblock %}

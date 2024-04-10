@@ -1,0 +1,20 @@
+{% extends '_layouts/global' %}
+
+{% block content %}
+
+    <div class="max-w-xl mx-auto space-y-3">
+    
+        <h1 class="text-2xl font-medium">{{ exception.heading }}</h1>
+
+        <div class="text-base">{{ exception.text }}</div>
+
+        {% if exception.code %}
+            <div class="text-xs font-mono bg-slate-100 p-2">
+                {{ statusCode }} - {{ message }}<br>
+                (Line {{ line }}) {{ file }}
+            </div>
+        {% endif %}
+    
+    </div>
+
+{% endblock %}

@@ -1,5 +1,5 @@
 // CSS
-import "./css/index.css";
+import "./css/index.pcss";
 
 // JS
 import "./js/index.js";
