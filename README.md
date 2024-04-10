@@ -69,13 +69,17 @@ Create an empty folder and CD to it in terminal (If you plan to use Option 1 or 
 
 If you have composer installed locally, open terminal and run:
 
-`composer create-project madebyshape/craft-cms`
+```shell
+composer create-project madebyshape/craft-cms
+```
 
 ### 1b. Option 2: Git
 
 You can clone the repo from Github using Git CLI:
 
-`git clone git@github.com:madebyshape/craft-cms.git`
+```shell
+git clone git@github.com:madebyshape/craft-cms.git
+```
 
 ### 1c. Option 3: Manual
 
@@ -85,13 +89,17 @@ Download a copy of this repo to your computer using the `Code` button above, and
 
 There are a few CLI commands (See below) we've created that allow starting DDEV, installing Craft CMS and installing dependencies (Node particularly). The one to get you started:
 
-`make install`
+```shell
+make install
+```
 
 ### 3. Starting Vite
 
 Once you've followed step 2 and it's successfully ran through the steps, you'll need to start Vite which allows you to start using front end tooling:
 
-`make dev`
+```shell
+make dev
+```
 
 ## CLI commands
 
