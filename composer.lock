@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "21a79ca5acdc8deab2c915265ed28798",
+    "content-hash": "e2a32624f9b145da3cff38b08616e407",
     "packages": [
         {
             "name": "amphp/amp",
@@ -283,11 +283,6 @@
         {
             "name": "amphp/http",
             "version": "v2.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/amphp/http.git",
-                "reference": "fe6b4dd50c1e70caf823092398074b5082e1d6da"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/amphp/http/zipball/fe6b4dd50c1e70caf823092398074b5082e1d6da",
@@ -301,12 +296,6 @@
                 "php": ">=8.1",
                 "psr/http-message": "^1 | ^2"
             },
-            "require-dev": {
-                "amphp/php-cs-fixer-config": "^2",
-                "league/uri": "^6.8 | ^7.1",
-                "phpunit/phpunit": "^9",
-                "psalm/phar": "^5.4"
-            },
             "type": "library",
             "autoload": {
                 "files": [
@@ -317,7 +306,6 @@
                     "Amp\\Http\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -332,16 +320,6 @@
                 }
             ],
             "description": "Basic HTTP primitives which can be shared by servers and clients.",
-            "support": {
-                "issues": "https://github.com/amphp/http/issues",
-                "source": "https://github.com/amphp/http/tree/v2.1.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/amphp",
-                    "type": "github"
-                }
-            ],
             "time": "2024-04-03T18:00:53+00:00"
         },
         {
@@ -838,11 +816,11 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.303.2",
+            "version": "3.304.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c087819351de027791d830ffc7f45195488ae988",
-                "reference": "c087819351de027791d830ffc7f45195488ae988",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6dac9b3257873a807ac73f6dc4418bdc49a5d9db",
+                "reference": "6dac9b3257873a807ac73f6dc4418bdc49a5d9db",
                 "shasum": ""
             },
             "require": {
@@ -899,7 +877,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2024-04-03T18:08:21+00:00"
+            "time": "2024-04-09T19:25:27+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -1225,11 +1203,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.0.1",
+            "version": "5.0.3",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/856f45f2766b1a1df5db437b5cd3fe5cce896b5b",
-                "reference": "856f45f2766b1a1df5db437b5cd3fe5cce896b5b",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/fee50a394b60c4f54b728ae29f94e8fa7bebf8b1",
+                "reference": "fee50a394b60c4f54b728ae29f94e8fa7bebf8b1",
                 "shasum": ""
             },
             "require": {
@@ -1326,7 +1304,7 @@
                 "docs": "https://craftcms.com/docs/5.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2024-04-03T23:27:13+00:00"
+            "time": "2024-04-09T22:40:23+00:00"
         },
         {
             "name": "craftcms/flysystem",
@@ -3009,7 +2987,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v10.48.4",
+            "version": "v10.48.5",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/collections/zipball/f9589f1063a449111dcaa1d68285b507d9483a95",
@@ -3054,7 +3032,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v10.48.4",
+            "version": "v10.48.5",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/conditionable/zipball/d0958e4741fc9d6f516a552060fd1b829a85e009",
@@ -3090,7 +3068,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v10.48.4",
+            "version": "v10.48.5",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/contracts/zipball/8d7152c4a1f5d9cf7da3e8b71f23e4556f6138ac",
@@ -3128,7 +3106,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v10.48.4",
+            "version": "v10.48.5",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/macroable/zipball/dff667a46ac37b634dcf68909d9d41e94dc97c27",
@@ -5432,11 +5410,6 @@
         {
             "name": "phpoption/phpoption",
             "version": "1.9.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "80735db690fe4fc5c76dfa7f9b770634285fa820"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/80735db690fe4fc5c76dfa7f9b770634285fa820",
@@ -5445,10 +5418,6 @@
             },
             "require": {
                 "php": "^7.2.5 || ^8.0"
-            },
-            "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.8.2",
-                "phpunit/phpunit": "^8.5.34 || ^9.6.13 || ^10.4.2"
             },
             "type": "library",
             "extra": {
@@ -5465,7 +5434,6 @@
                     "PhpOption\\": "src/PhpOption/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -5487,20 +5455,6 @@
                 "option",
                 "php",
                 "type"
-            ],
-            "support": {
-                "issues": "https://github.com/schmittjoh/php-option/issues",
-                "source": "https://github.com/schmittjoh/php-option/tree/1.9.2"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/GrahamCampbell",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/phpoption/phpoption",
-                    "type": "tidelift"
-                }
             ],
             "time": "2023-11-12T21:59:55+00:00"
         },
@@ -6141,20 +6095,20 @@
         },
         {
             "name": "putyourlightson/craft-blitz",
-            "version": "5.0.0-beta.4",
+            "version": "5.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/df6181078b06de5bf39c3f654d6be7e24fbf006a",
-                "reference": "df6181078b06de5bf39c3f654d6be7e24fbf006a",
+                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/64416d59033a5870e077b312c131c547599d8ea3",
+                "reference": "64416d59033a5870e077b312c131c547599d8ea3",
                 "shasum": ""
             },
             "require": {
                 "amphp/http-client": "^5.0",
                 "amphp/parallel": "^2.0",
-                "craftcms/cms": "^5.0.0-beta.1",
+                "craftcms/cms": "^5.0",
                 "cypresslab/gitelephant": "^4.0",
                 "php": "^8.2",
-                "putyourlightson/craft-sprig-core": "^3.0.0-beta.1"
+                "putyourlightson/craft-sprig-core": "^3.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -6163,7 +6117,7 @@
                 "developer": "PutYourLightsOn",
                 "developerUrl": "https://putyourlightson.com/",
                 "documentationUrl": "https://putyourlightson.com/plugins/blitz",
-                "changelogUrl": "https://raw.githubusercontent.com/putyourlightson/craft-blitz/v5/CHANGELOG.md",
+                "changelogUrl": "https://raw.githubusercontent.com/putyourlightson/craft-blitz/develop/CHANGELOG.md",
                 "class": "putyourlightson\\blitz\\Blitz"
             },
             "autoload": {
@@ -6189,22 +6143,22 @@
                 "source": "https://github.com/putyourlightson/craft-blitz",
                 "issues": "https://github.com/putyourlightson/craft-blitz/issues"
             },
-            "time": "2024-03-25T14:02:45+00:00"
+            "time": "2024-04-08T14:11:35+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig",
-            "version": "3.0.0-beta.2",
+            "version": "3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/35cb9d0de8fd53123a71c260517bd116f0b05a6e",
-                "reference": "35cb9d0de8fd53123a71c260517bd116f0b05a6e",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig/zipball/1f27df0b51408e2ceed7432e9f776f3785d90072",
+                "reference": "1f27df0b51408e2ceed7432e9f776f3785d90072",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0",
-                "nystudio107/craft-code-editor": "^1.0.0",
+                "craftcms/cms": "^5.0",
+                "nystudio107/craft-code-editor": "^1.0",
                 "php": "^8.2",
-                "putyourlightson/craft-sprig-core": "^3.0.0-beta.2"
+                "putyourlightson/craft-sprig-core": "^3.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -6213,7 +6167,7 @@
                 "developer": "PutYourLightsOn",
                 "developerUrl": "https://putyourlightson.com/",
                 "documentationUrl": "https://putyourlightson.com/plugins/sprig",
-                "changelogUrl": "https://raw.githubusercontent.com/putyourlightson/craft-sprig/v3/CHANGELOG.md",
+                "changelogUrl": "https://raw.githubusercontent.com/putyourlightson/craft-sprig/develop/CHANGELOG.md",
                 "class": "putyourlightson\\sprig\\plugin\\Sprig"
             },
             "autoload": {
@@ -6230,19 +6184,19 @@
                 "source": "https://github.com/putyourlightson/craft-sprig",
                 "issues": "https://github.com/putyourlightson/craft-sprig/issues"
             },
-            "time": "2024-03-27T02:48:17+00:00"
+            "time": "2024-04-08T13:41:13+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig-core",
-            "version": "3.0.0-beta.2",
+            "version": "3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/7e99eef43feb43a5707c8f1dc06a31b40c5099a7",
-                "reference": "7e99eef43feb43a5707c8f1dc06a31b40c5099a7",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/38ce5c826b46ab4067734a89bcb9a62075a074b5",
+                "reference": "38ce5c826b46ab4067734a89bcb9a62075a074b5",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0",
+                "craftcms/cms": "^5.0",
                 "php": "^8.2"
             },
             "type": "craft-module",
@@ -6260,7 +6214,7 @@
                 "source": "https://github.com/putyourlightson/craft-sprig-core",
                 "issues": "https://github.com/putyourlightson/craft-sprig-core/issues"
             },
-            "time": "2024-03-27T02:45:48+00:00"
+            "time": "2024-04-08T13:34:31+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -6569,16 +6523,16 @@
         },
         {
             "name": "spacecatninja/imager-x",
-            "version": "5.0.0-beta.2",
+            "version": "5.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/60c54ac7383df09e055230159590626a94c91cf0",
-                "reference": "60c54ac7383df09e055230159590626a94c91cf0",
+                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/e46473f61f0098f1853c440f4131a51a21cc5043",
+                "reference": "e46473f61f0098f1853c440f4131a51a21cc5043",
                 "shasum": ""
             },
             "require": {
                 "aws/aws-sdk-php": "^3.0.0",
-                "craftcms/cms": "^5.0.0-beta.2",
+                "craftcms/cms": "^5.0.0",
                 "google/cloud-storage": "~1.0",
                 "imgix/imgix-php": "^3.0",
                 "kornrunner/blurhash": "^1.1",
@@ -6630,7 +6584,7 @@
                 "docs": "http://imager-x.spacecat.ninja/",
                 "issues": "https://github.com/spacecatninja/craft-imager-x/issues"
             },
-            "time": "2024-02-16T15:04:38+00:00"
+            "time": "2024-04-10T12:36:07+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",
@@ -8169,11 +8123,6 @@
         {
             "name": "symfony/serializer",
             "version": "v6.4.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/serializer.git",
-                "reference": "3697adf91f83516c86b4912c08c28084711ed560"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/serializer/zipball/3697adf91f83516c86b4912c08c28084711ed560",
@@ -8196,30 +8145,6 @@
                 "symfony/validator": "<6.4",
                 "symfony/yaml": "<5.4"
             },
-            "require-dev": {
-                "doctrine/annotations": "^1.12|^2",
-                "phpdocumentor/reflection-docblock": "^3.2|^4.0|^5.0",
-                "seld/jsonlint": "^1.10",
-                "symfony/cache": "^5.4|^6.0|^7.0",
-                "symfony/config": "^5.4|^6.0|^7.0",
-                "symfony/console": "^5.4|^6.0|^7.0",
-                "symfony/dependency-injection": "^5.4|^6.0|^7.0",
-                "symfony/error-handler": "^5.4|^6.0|^7.0",
-                "symfony/filesystem": "^5.4|^6.0|^7.0",
-                "symfony/form": "^5.4|^6.0|^7.0",
-                "symfony/http-foundation": "^5.4|^6.0|^7.0",
-                "symfony/http-kernel": "^5.4|^6.0|^7.0",
-                "symfony/messenger": "^5.4|^6.0|^7.0",
-                "symfony/mime": "^5.4|^6.0|^7.0",
-                "symfony/property-access": "^5.4.26|^6.3|^7.0",
-                "symfony/property-info": "^5.4.24|^6.2.11|^7.0",
-                "symfony/translation-contracts": "^2.5|^3",
-                "symfony/uid": "^5.4|^6.0|^7.0",
-                "symfony/validator": "^6.4|^7.0",
-                "symfony/var-dumper": "^5.4|^6.0|^7.0",
-                "symfony/var-exporter": "^5.4|^6.0|^7.0",
-                "symfony/yaml": "^5.4|^6.0|^7.0"
-            },
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -8229,7 +8154,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -8245,23 +8169,6 @@
             ],
             "description": "Handles serializing and deserializing data structures, including object graphs, into array structures or other formats like XML and JSON.",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/serializer/tree/v6.4.6"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2024-03-27T22:00:14+00:00"
         },
         {
@@ -9467,7 +9374,7 @@
         },
         {
             "name": "web-auth/metadata-service",
-            "version": "4.8.3",
+            "version": "4.8.5",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/web-auth/webauthn-metadata-service/zipball/fb7c1f107639285fab90f870aab38360252c82f5",
@@ -9532,11 +9439,11 @@
         },
         {
             "name": "web-auth/webauthn-lib",
-            "version": "4.8.3",
+            "version": "4.8.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/web-auth/webauthn-lib/zipball/d296fde8450ce6972c54315a70e32159cad7e35b",
-                "reference": "d296fde8450ce6972c54315a70e32159cad7e35b",
+                "url": "https://api.github.com/repos/web-auth/webauthn-lib/zipball/925873eb504a1db8a77dc2b4d2b578334736fa16",
+                "reference": "925873eb504a1db8a77dc2b4d2b578334736fa16",
                 "shasum": ""
             },
             "require": {
@@ -9552,7 +9459,7 @@
                 "spomky-labs/cbor-php": "^3.0",
                 "symfony/uid": "^6.1|^7.0",
                 "web-auth/cose-lib": "^4.2.3",
-                "web-auth/metadata-service": "4.8.3"
+                "web-auth/metadata-service": "4.8.5"
             },
             "suggest": {
                 "phpdocumentor/reflection-docblock": "As of 4.5.x, the phpdocumentor/reflection-docblock component will become mandatory for converting objects such as the Metadata Statement",
@@ -9595,7 +9502,7 @@
                 "fido",
                 "webauthn"
             ],
-            "time": "2024-03-22T20:51:36+00:00"
+            "time": "2024-04-08T10:04:23+00:00"
         },
         {
             "name": "webmozart/assert",

@@ -53,3 +53,6 @@ clean:
 	rm -rf node_modules/
 	ddev composer clear-cache
 	ddev exec npm cache clean --force
+
+update: 
+	ddev exec php craft update all
