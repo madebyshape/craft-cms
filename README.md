@@ -1,3 +1,5 @@
+<img src="https://github.com/madebyshape/craft-cms/blob/src/public/images/favicon.png" width="60">
+
 # Craft CMS 5 Starter
 
 This is a [Craft CMS 5.x](https://github.com/craftcms/cms) starter [MadeByShape](https://madebyshape.co.uk) use internally for projects, that we open sourced so anybody can use it.
