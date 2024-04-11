@@ -30,6 +30,11 @@ export default ({ command }) => ({
         strictPort: true
     },
     plugins: [
+        ViteRestart({
+            reload: [
+                'templates/**/*'
+            ]
+        }),
         ViteFaviconsPlugin({
             logo: "src/public/images/favicon.png",
             inject: false,
