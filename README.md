@@ -1,4 +1,4 @@
-<img src="https://github.com/madebyshape/craft-cms/blob/src/public/images/favicon.png" width="60">
+<img src="https://github.com/madebyshape/craft-cms/blob/master/src/public/images/favicon.png" width="60">
 
 # Craft CMS 5 Starter
 
