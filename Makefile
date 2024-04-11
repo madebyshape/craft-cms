@@ -46,7 +46,7 @@ setup:
 	ddev exec npm install
 	ddev composer install
 	ddev exec php craft up --interactive=0
-	dev
+	ddev exec npm run dev
 
 clean: 
 	rm -rf vendor/
