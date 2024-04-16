@@ -21,5 +21,16 @@
     "vite-plugin-favicon2": "^1.1.5",
     "vite-plugin-image-optimizer": "^1.1.7",
     "vite-plugin-restart": "^0.4.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madebyshape/craft-cms.git"
+  },
+  "author": "Jason Mayo (@bymayo)",
+  "authorUrl": "https://madebyshape.co.uk",
+  "license": "ISC",
+  "bugs": {
+      "url": "https://github.com/madebyshape/craft-cms/issues"
+  },
+  "homepage": "https://github.com/madebyshape/craft-cms#readme"
 }
