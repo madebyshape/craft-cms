@@ -1,5 +1,6 @@
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { ViteFaviconsPlugin } from 'vite-plugin-favicon2';
+import ViteRestart from 'vite-plugin-restart';
 import copy from 'rollup-plugin-copy';
 
 export default ({ command }) => ({
