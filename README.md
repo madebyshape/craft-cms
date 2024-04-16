@@ -89,7 +89,9 @@ Download a copy of this repo to your computer using the `Code` button above, and
 
 ### 2. Start DDEV, Install Craft CMS and dependencies
 
-There are a few CLI commands (See below) we've created that allow starting DDEV, installing Craft CMS and installing dependencies (Node particularly). The one to get you started:
+Firstly, edit `.ddev/config.yaml` and change the `name` to your project name.
+
+Then, there are a few CLI commands ([See more](#cli-commands)) we've created that allow starting DDEV, installing Craft CMS and installing dependencies (Node particularly). The one to get you started:
 
 ```shell
 make install
@@ -117,5 +119,32 @@ We've create a few commands to make development easier. All these commands are r
 | `make update` | Smaller command that runs `ddev exec php craft update all` |
 
 ## Nice to know
+
+### Database
+
+To access the database inside the DDEV environment, you can use TablePlus. You can use the following command to open TablePlus to export/import:
+
+```shell
+ddev tableplus
+```
+
+### Exiting Vite
+
+One thing that confused me in side the terminal was how to exi Vite once running a CLI command like `make dev`. You can't use `ctrl + c` like you would in a normal terminal. You need to use:
+
+```shell
+q + enter
+```
+
+### HTTPS recommended
+
+There is a few issues getting Vite, DDEV and Craft CMS running nicely together over HTTP, so always make sure you are using HTTPS. For DDEV just run:
+
+```shell
+ddev stop --all
+mkcert -install
+ddev start
+ddev launch
+```
 
 ## Roadmap
