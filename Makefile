@@ -56,3 +56,6 @@ clean:
 
 update: 
 	ddev exec php craft update all
+
+pull: 
+	ddev php craft servd-asset-storage/local/pull-database
