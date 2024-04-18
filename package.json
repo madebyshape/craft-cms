@@ -20,7 +20,11 @@
     "vite": "^5.2.0",
     "vite-plugin-favicon2": "^1.1.5",
     "vite-plugin-image-optimizer": "^1.1.7",
-    "vite-plugin-restart": "^0.4.0"
+    "vite-plugin-restart": "^0.4.0",
+    "@prettier/plugin-php": "^0.22.2",
+		"@zackad/prettier-plugin-twig-melody": "^0.6.0",
+		"prettier": "^3.2.5",
+		"prettier-plugin-tailwindcss": "^0.5.13"
   },
   "repository": {
     "type": "git",

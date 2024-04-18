@@ -1,0 +1,14 @@
+# COMPOSER
+/vendor
+
+# CRAFT STORAGE
+/storage/*
+
+# Public
+/public/*
+
+# BUILD FILES
+/bower_components/*
+/node_modules/*
+/build/*
+/yarn-error.log

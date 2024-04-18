@@ -1,0 +1,16 @@
+{
+	"plugins": [
+		"@zackad/prettier-plugin-twig-melody",
+		"prettier-plugin-tailwindcss"
+	],
+	"useTabs": true,
+	"singleQuote": true,
+	"twigPrintWidth": 360,
+	"twigMultiTags": [
+		"nav,endnav",
+		"switch,case,default,endswitch",
+		"ifchildren,endifchildren",
+		"cache,endcache",
+		"js,endjs"
+	]
+}
