@@ -41,8 +41,8 @@ install:
 	echo "Install complete 🎉"
 
 setup: 
-	ddev exec git pull
 	ddev start
+	ddev exec git pull
 	ddev exec npm install
 	ddev composer install
 	ddev exec php craft up --interactive=0
