@@ -58,4 +58,7 @@ update:
 	ddev exec php craft update all
 
 pull: 
-	ddev php craft servd-asset-storage/local/pull-database
+	ddev exec php craft servd-asset-storage/local/pull-database
+
+up: 
+	ddev exec php craft up --interactive=0
