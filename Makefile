@@ -42,7 +42,7 @@ install:
 
 setup: 
 	ddev start
-	ddev exec git pull
+	git pull
 	ddev exec npm install
 	ddev composer install
 	ddev exec php craft up --interactive=0
