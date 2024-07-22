@@ -1,4 +1,5 @@
 {
+  "name": "madebyshape/craft-cms",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
