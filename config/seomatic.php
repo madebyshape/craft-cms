@@ -3,13 +3,13 @@ return [
     '*' => [
        'pluginName' => 'SEO'
     ],
-    'local' => [
-        'environment' => 'dev',
+    'dev' => [
+        'environment' => 'local'
     ],
     'staging' => [
-        'environment' => 'staging',
+        'environment' => 'staging'
     ],
-    'live' => [
-        'environment' => 'production',
+    'production' => [
+        'environment' => 'live'
     ],
 ];
