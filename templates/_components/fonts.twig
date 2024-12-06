@@ -23,7 +23,7 @@
                     url("/dist/fonts/{{ font.file }}.woff") format("woff"),
                     url("/dist/fonts/{{ font.file }}.ttf") format("truetype"),
                     url("/dist/fonts/{{ font.file }}.svg#{{ font.file }}") format("svg");
-                font-weight: "{{ font.weight }}";
+                font-weight: {{ font.weight }};
                 font-style: "{{ font.style }}";
                 font-display: swap;
             }
