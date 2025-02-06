@@ -28,7 +28,6 @@ install:
 	fi; \
 	echo "CRAFT_TEST_EMAIL=\"$$TEST_EMAIL\"" >> .env; \
 	echo "" >> .env; \
-	ddev exec php craft plugin/install hyper
 	ddev exec php craft plugin/install seomatic
 	ddev exec php craft plugin/install vite
 	ddev exec php craft plugin/install blitz
