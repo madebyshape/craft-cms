@@ -1,0 +1,137 @@
+{#
+    @component Button
+    
+    @description A reusable button component that supports multiple styles, sizes and types
+
+    @type {string} type - The HTML element type ('a' or 'button')
+    @param {object} button - Button content and link data
+    @param {string} colour - Button color theme ('black')
+    @param {string} size - Button size ('base')
+    @param {string} class - Additional CSS classes
+    @param {boolean} submit - Whether button is a submit type
+    @param {object} attributes - Additional HTML attributes
+    @param {object} textAttributes - Additional text attributes
+
+    @example
+    {% include '_components/button' with {
+        params: {
+            button: {
+                label: 'Click Me',
+                value: '/some-url'
+            },
+            colour: 'black',
+            size: 'base',
+            type: 'a'
+        }
+    } %}
+
+    {% include '_components/button' with {
+        params: {
+            type: 'a',
+            button: {
+                label: 'Click Me',
+                value: '/some-url'
+            },
+            colour: 'black',
+            size: 'base',
+            class: '',
+            attributes: '',
+            textAttributes: ''
+        }
+    } %}
+#}
+
+{# Default Params #}
+
+{% set defaultParams = {
+    type: 'a',
+    button: null,
+    colour: 'black',
+    size: 'base',
+    class: null,
+    submit: false,
+    attributes: null,
+    textAttributes: null
+} %}
+
+{# Merge Params #}
+
+{% set params = params is defined ? defaultParams|merge(params) : defaultParams %}
+
+{# Options #}
+
+{% set options = {
+    colour: {
+        black: {
+            background: 'bg-black | hover:bg-white',
+            border: 'border-black',
+            text: 'text-white | hover:text-black',
+            ring: 'ring-black | hover:ring-white'
+        }
+    },
+    size: {
+        base: {
+            padding: 'py-3.5 px-6',
+            text: 'text-base',
+        }
+    }
+} %}
+
+{# Classes #}
+
+{% set classes = {
+    button: 
+    "
+        group
+        inline-flex
+        justify-center
+        items-center
+        justify-center
+        relative
+        rounded-xl
+        transition
+        transform
+        duration-300
+        leading-none
+        border
+        border-solid
+        focus:outline-none
+        focus:ring-3
+        focus:ring-opacity-30
+        #{attribute(options.size, params.size).padding}
+        #{attribute(options.size, params.size).text}
+        #{attribute(options.colour, params.colour).text}
+        #{attribute(options.colour, params.colour).background}
+        #{attribute(options.colour, params.colour).border}
+        #{attribute(options.colour, params.colour).ring}
+        #{params.class}
+    "    
+} %}
+
+{# Output #}
+
+{% if params.button|length %}
+
+    <{{ params.type }}
+        {% if params.type == 'a' %}
+            href="{{ params.button.value }}"
+            {% if params.target is defined %}
+                {{ params.target ? 'target="_blank"' }}
+            {% endif %}
+        {% elseif params.type == 'button' and params.submit is defined %}
+            type="submit"
+        {% endif %}
+        class="{{ classes.button }}"
+        {{ params.attributes|raw }}
+    >
+
+        <span 
+            class="relative"
+            {{ params.textAttributes|raw }}
+        >
+            {{ params.button.label }}
+        </span>
+
+    </{{ params.type }}>
+
+{% endif %}
