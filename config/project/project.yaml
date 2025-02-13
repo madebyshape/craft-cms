@@ -1,4 +1,4 @@
-dateModified: 1739442752
+dateModified: 1739444159
 email:
   fromEmail: $CRAFT_EMAIL_SYSTEM
   fromName: $CRAFT_EMAIL_SYSTEM
@@ -54,6 +54,21 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0
+    settings:
+      adjustFeedmeLogs: ''
+      assetsEnvironment: $SERVD_ASSET_ENVIRONMENT
+      assetsEnvironmentOverwrite: ''
+      cacheClearMode: full
+      clearCachesOnSave: never
+      disableDynamic: ''
+      disableTransforms: ''
+      fsMapsEnabled: ''
+      imageAutoConversion: webp
+      injectCors: '1'
+      projectSlug: $SERVD_PROJECT_SLUG
+      securityKey: $SERVD_SECURITY_KEY
+      suppressWarnings: '1'
+      useLocalVolumes: false
   sprig:
     edition: standard
     enabled: true
