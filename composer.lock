@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "681f41a2dda4983cd17ba063a0b222e6",
+    "content-hash": "22354d3b555c8451700571cc18d506b5",
     "packages": [
         {
             "name": "amphp/amp",
@@ -5277,15 +5277,31 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "2.0.0",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpdoc-parser.git",
+                "reference": "72e51f7c32c5aef7c8b462195b8c599b11199893"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/c00d78fb6b29658347f9d37ebe104bffadf36299",
-                "reference": "c00d78fb6b29658347f9d37ebe104bffadf36299",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/72e51f7c32c5aef7c8b462195b8c599b11199893",
+                "reference": "72e51f7c32c5aef7c8b462195b8c599b11199893",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "doctrine/annotations": "^2.0",
+                "nikic/php-parser": "^5.3.0",
+                "php-parallel-lint/php-parallel-lint": "^1.2",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-phpunit": "^2.0",
+                "phpstan/phpstan-strict-rules": "^2.0",
+                "phpunit/phpunit": "^9.6",
+                "symfony/process": "^5.2"
             },
             "type": "library",
             "autoload": {
@@ -5295,11 +5311,16 @@
                     ]
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
-            "time": "2024-10-13T11:29:49+00:00"
+            "support": {
+                "issues": "https://github.com/phpstan/phpdoc-parser/issues",
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.0.1"
+            },
+            "time": "2025-02-13T12:25:43+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -6386,11 +6407,11 @@
         },
         {
             "name": "servd/craft-asset-storage",
-            "version": "4.0.14",
+            "version": "4.0.15",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/servdhost/craft-asset-storage/zipball/a72a2b0ee84177716e696af9c04f12ac98b5f26d",
-                "reference": "a72a2b0ee84177716e696af9c04f12ac98b5f26d",
+                "url": "https://api.github.com/repos/servdhost/craft-asset-storage/zipball/ca0d4582cdd5bd2b4be44782c5b723eaff68aaaa",
+                "reference": "ca0d4582cdd5bd2b4be44782c5b723eaff68aaaa",
                 "shasum": ""
             },
             "require": {
@@ -6433,7 +6454,7 @@
                 "source": "https://github.com/servdhost/craft-asset-storage",
                 "docs": "https://github.com/servdhost/craft-asset-storage"
             },
-            "time": "2025-02-03T17:21:12+00:00"
+            "time": "2025-02-13T14:30:55+00:00"
         },
         {
             "name": "spacecatninja/imager-x",
