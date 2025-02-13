@@ -12,6 +12,15 @@ install:
 	ddev start
 	ddev exec npm install
 	ddev composer install
+	@if [ ! -f .env ]; then \
+		if [ -f .env.example.dev ]; then \
+			cp .env.example .env; \
+			echo ".env file created from .env.example.dev"; \
+		else \
+			echo "Error: .env.example.dev file not found"; \
+			exit 1; \
+		fi \
+	fi
 	ddev exec php craft install
 	@if [ -z "$(CRAFT_SITE_NAME)" ]; then \
 		read -p "Site Name: " site_name; \
