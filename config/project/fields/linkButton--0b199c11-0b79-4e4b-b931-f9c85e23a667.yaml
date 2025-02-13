@@ -1,0 +1,57 @@
+columnSuffix: null
+handle: linkButton
+instructions: null
+name: 'Link / Button'
+searchable: false
+settings:
+  advancedFields:
+    - target
+    - ariaLabel
+  fullGraphqlData: true
+  maxLength: 255
+  showLabelField: false
+  typeSettings:
+    __assoc__:
+      -
+        - asset
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+            -
+              - allowedKinds
+              - '*'
+            -
+              - showUnpermittedVolumes
+              - ''
+            -
+              - showUnpermittedFiles
+              - ''
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - allowRootRelativeUrls
+              - ''
+            -
+              - allowAnchors
+              - ''
+  types:
+    - entry
+    - url
+    - asset
+    - category
+    - email
+    - tel
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Link

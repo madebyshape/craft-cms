@@ -1,0 +1,55 @@
+columnSuffix: null
+handle: padding
+instructions: null
+name: Padding
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Top & Bottom'
+        -
+          - value
+          - topBottom
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Top
+        -
+          - value
+          - top
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Bottom
+        -
+          - value
+          - bottom
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - None
+        -
+          - value
+          - none
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown
