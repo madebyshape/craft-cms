@@ -105,6 +105,14 @@ Once you've followed step 2 and it's successfully ran through the steps, you'll 
 make dev
 ```
 
+## Production
+
+When you're ready to go live, make sure you have `npm` installed on the server, then you can run the production command to minify, compress and build the front end assets:
+
+```shell
+npm run build
+```
+
 ## CLI commands
 
 We've create a few commands to make development easier. All these commands are ran in terminal:
@@ -119,6 +127,8 @@ We've create a few commands to make development easier. All these commands are r
 | `make update` | Smaller command that runs `ddev exec php craft update all`. |
 | `make up` 💅 | Runs project config apply and migrations apply. |
 | `make pull` | Pulls a database dump from a remote Servd environment into the local database. |
+| `make tp` | Launches tableplus |
+| `make l` | Launches the site |
 
 ## Nice to know
 
@@ -127,15 +137,9 @@ We've create a few commands to make development easier. All these commands are r
 To access the database inside the DDEV environment, you can use TablePlus. You can use the following command to open TablePlus to export/import:
 
 ```shell
-ddev tableplus
-```
-
-### Exiting Vite
-
-One thing that confused me in side the terminal was how to exi Vite once running a CLI command like `make dev`. You can't use `ctrl + c` like you would in a normal terminal. You need to use:
-
-```shell
-q + enter
+ddev tableplus 
+or 
+make tp
 ```
 
 ### HTTPS recommended
