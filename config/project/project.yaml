@@ -1,4 +1,4 @@
-dateModified: 1739447269
+dateModified: 1739447697
 email:
   fromEmail: $CRAFT_SYSTEM_EMAIL
   fromName: $CRAFT_SITE_NAME
@@ -33,11 +33,14 @@ fs:
     url: 'https://cdn2.assets-servd.host/'
 meta:
   __names__:
+    5cbe08b7-b4bd-4a6b-be41-de9647b5eb19: Images # Images
+    6d792fe4-471d-48ed-bc45-5fe112ba7e46: Image # Image
     7b662bcd-ea91-4c91-86ce-c60348c664d1: Pages # Pages
     7bf65ac5-9169-4bf8-8825-65fadd566946: New # New
     8b610edc-f2dd-46b6-9597-96fcbb6d302a: Simple # Simple
     08c386f4-5a41-4c9f-8282-f6785af06bfc: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
     19d6d897-1cde-4d59-914a-2bf8a23e7916: 'Public Schema' # Public Schema
+    453f9294-407d-405a-b73b-d5b63aec2eaa: SEO # SEO
     b9ac68e1-d9f1-4007-843f-fde1e9f4921b: Files # Files
     bdf6317d-0df7-449f-a937-a1a274ffb106: 'Page - Blocks' # Page - Blocks
     cb6226c7-5901-41ed-ba28-a78b9504a3df: Images # Images
