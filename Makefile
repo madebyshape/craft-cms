@@ -60,6 +60,8 @@ clean:
 	rm -rf node_modules/
 	ddev composer clear-cache
 	ddev exec npm cache clean --force
+	ddev composer install
+	ddev exec npm install
 
 update: 
 	ddev exec php craft update all
