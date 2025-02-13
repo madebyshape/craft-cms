@@ -1,0 +1,67 @@
+data:
+  dataRetention: forever
+  dataRetentionValue: null
+  fileUploadsAction: retain
+  settings:
+    collectIp: false
+    collectUser: false
+    dataRetention: null
+    dataRetentionValue: null
+    defaultEmailTemplateId: null
+    defaultInstructionsPosition: verbb\formie\positions\AboveInput
+    defaultLabelPosition: verbb\formie\positions\AboveInput
+    disableCaptchas: false
+    displayCurrentPageTitle: false
+    displayFormTitle: false
+    displayPageProgress: false
+    displayPageTabs: false
+    errorMessage:
+      -
+        content:
+          -
+            text: 'Couldn’t save submission due to errors.'
+            type: text
+        type: paragraph
+    errorMessagePosition: top-form
+    fileUploadsAction: null
+    limitSubmissions: false
+    limitSubmissionsMessage: null
+    limitSubmissionsNumber: null
+    limitSubmissionsType: null
+    loadingIndicator: null
+    loadingIndicatorText: null
+    pageRedirectUrl: null
+    progressPosition: end
+    redirectUrl: null
+    requireUser: false
+    requireUserMessage: null
+    requiredIndicator: asterisk
+    scheduleForm: false
+    scheduleFormEnd: null
+    scheduleFormExpiredMessage: null
+    scheduleFormPendingMessage: null
+    scheduleFormStart: null
+    scrollToTop: true
+    submissionTitleFormat: '{timestamp}'
+    submitAction: null
+    submitActionFormHide: false
+    submitActionMessage:
+      -
+        content:
+          -
+            text: 'Submission saved.'
+            type: text
+        type: paragraph
+    submitActionMessagePosition: top-form
+    submitActionMessageTimeout: null
+    submitActionTab: null
+    submitActionUrl: null
+    submitMethod: null
+    validationOnFocus: false
+    validationOnSubmit: true
+  userDeletedAction: retain
+defaultStatus: 7bf65ac5-9169-4bf8-8825-65fadd566946 # New
+handle: contactForm
+name: 'Contact Form'
+submitActionEntry: null
+template: null

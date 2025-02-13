@@ -1,4 +1,4 @@
-dateModified: 1712760306
+dateModified: 1739442752
 email:
   fromEmail: $CRAFT_EMAIL_SYSTEM
   fromName: $CRAFT_EMAIL_SYSTEM
@@ -10,15 +10,62 @@ email:
 meta:
   __names__:
     7b662bcd-ea91-4c91-86ce-c60348c664d1: Pages # Pages
+    7bf65ac5-9169-4bf8-8825-65fadd566946: New # New
     8b610edc-f2dd-46b6-9597-96fcbb6d302a: Simple # Simple
     08c386f4-5a41-4c9f-8282-f6785af06bfc: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
     19d6d897-1cde-4d59-914a-2bf8a23e7916: 'Public Schema' # Public Schema
     bdf6317d-0df7-449f-a937-a1a274ffb106: 'Page - Blocks' # Page - Blocks
     d99bf7af-1eb1-4b77-814e-624eeec1a0e3: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
+    fb0420bb-0fbf-46d2-afd2-f7992c60c886: 'Contact Form' # Contact Form
+plugins:
+  blitz:
+    edition: standard
+    enabled: true
+    licenseKey: XO8E4093H0FPPEWU31U2S5HZ
+    schemaVersion: 5.9.0
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  formie:
+    edition: standard
+    enabled: true
+    licenseKey: OMBPJ4OA1BIW3HI7IWXHBC3R
+    schemaVersion: 3.4.8
+  imager-x:
+    edition: lite
+    enabled: true
+    licenseKey: 6MY59ANGFCG7H9OWDQTCE0PK
+    schemaVersion: 4.0.0
+  mailgun:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: 795D0IRXMO0BEU95Z64ILX03
+    schemaVersion: 3.0.12
+  servd-asset-storage:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: pro
   live: true
   name: $CRAFT_SITE_NAME
   retryDuration: null
-  schemaVersion: 5.0.0.20
+  schemaVersion: 5.6.0.2
   timeZone: America/Los_Angeles
