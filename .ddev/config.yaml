@@ -16,12 +16,14 @@ router_http_port: "8080"
 router_https_port: "8443"
 
 composer_version: "2"
-nodejs_version: "18"
+nodejs_version: "22"
 
 mutagen_enabled: true
 upload_dirs:
   - web/assets
   - storage
+
+webimage_extra_packages: [build-essential]
 
 # Key features of DDEV's config.yaml:
 
