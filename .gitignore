@@ -54,10 +54,10 @@ cache/*
 
 # Asset Source Folders
 
-web/uploads
-public/uploads
-public_html/uploads
-httpdocs/uploads
+web/assets
+public/assets
+public_html/assets
+httpdocs/assets
 
 # Log files
 

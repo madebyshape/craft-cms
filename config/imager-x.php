@@ -4,9 +4,9 @@
 
    return [
       '*' => [
-         'transformer' => 'servd',
-         'imagerUrl' => '@web/transforms',
-         'imagerSystemPath' => '@webroot/transforms',
+         'transformer' => App::env('FILESYSTEM_TYPE') == 'servd' ? 'servd' : 'craft',
+         'imagerUrl' => App::env('PRIMARY_SITE_URL') . '/' . App::env('TRANSFORMS_FOLDER'),
+         'imagerSystemPath' => App::env('CRAFT_WEB_ROOT') . '/' . App::env('TRANSFORMS_FOLDER'),
          'fallbackImage' => '@webroot/dist/images/fallback.png',
          'cacheEnabled' => true,
          'cacheDuration' => 31536000, // 1 year

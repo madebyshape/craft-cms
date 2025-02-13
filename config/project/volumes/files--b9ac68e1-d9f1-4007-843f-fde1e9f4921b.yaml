@@ -1,0 +1,50 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  6086c459-19fd-49ff-87c4-dcdd1466246d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-02-13T11:46:20+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: a8699e7a-5833-46ac-803f-a2edf8f2144d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 64eb41ce-463c-468e-bcdc-260376dcaf56
+        userCondition: null
+fs: $FILESYSTEM_TYPE
+handle: files
+name: Files
+sortOrder: 2
+subpath: files
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: files

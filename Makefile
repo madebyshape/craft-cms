@@ -26,7 +26,7 @@ install:
 	if [ -z "$(TEST_EMAIL)" ]; then \
 		read -p "Test Email: " TEST_EMAIL; \
 	fi; \
-	echo "CRAFT_TEST_EMAIL=\"$$TEST_EMAIL\"" >> .env; \
+	echo "CRAFT_TEST_TO_EMAIL_ADDRESS=\"$$TEST_EMAIL\"" >> .env; \
 	echo "" >> .env; \
 	ddev exec php craft plugin/install seomatic
 	ddev exec php craft plugin/install vite
