@@ -71,3 +71,6 @@ pull:
 
 up: 
 	ddev exec php craft up --interactive=0
+
+tp: 
+	ddev tableplus
