@@ -18,6 +18,11 @@ router_https_port: "8443"
 composer_version: "2"
 nodejs_version: "18"
 
+mutagen_enabled: true
+upload_dirs:
+  - web/assets
+  - storage
+
 # Key features of DDEV's config.yaml:
 
 # name: <projectname> # Name of the project, automatically provides
