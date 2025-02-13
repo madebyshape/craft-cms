@@ -48,16 +48,15 @@ This is a [Craft CMS 5.x](https://github.com/craftcms/cms) starter [MadeByShape]
 ### Craft CMS
 
 - Blitz
-- Hyper
-- SEOMatic
-- Vite
-- Sprig
+- CKEditor
 - Formie
 - Imager X
-- Minify
-- CKEditor
 - Mailgun
-- Servd Asset Storage
+- Minify
+- SEOMatic
+- Servd Assets and Helpers
+- Sprig
+- Vite
 
 ### Tailwind CSS
 
