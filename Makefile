@@ -74,3 +74,6 @@ up:
 
 tp: 
 	ddev tableplus
+
+l: 
+	ddev launch
