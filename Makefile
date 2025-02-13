@@ -13,21 +13,18 @@ install:
 	ddev exec npm install
 	ddev composer install
 	ddev exec php craft install
-	@if [ -z "$(SITE_NAME)" ]; then \
-		read -p "Site Name: " SITE_NAME; \
+	@if [ -z "$(CRAFT_SITE_NAME)" ]; then \
+		read -p "Site Name: " site_name; \
+		sed -i '' "s/^CRAFT_SITE_NAME=.*/CRAFT_SITE_NAME=\"$$site_name\"/" .env || echo "CRAFT_SITE_NAME=\"$$site_name\"" >> .env; \
 	fi; \
-	echo "CRAFT_SITE_NAME=\"$$SITE_NAME\"" >> .env; \
-	echo "" >> .env; \
-	if [ -z "$(SYSTEM_EMAIL)" ]; then \
-		read -p "System Email: " SYSTEM_EMAIL; \
+	if [ -z "$(CRAFT_SYSTEM_EMAIL)" ]; then \
+		read -p "System Email: " system_email; \
+		sed -i '' "s/^CRAFT_SYSTEM_EMAIL=.*/CRAFT_SYSTEM_EMAIL=\"$$system_email\"/" .env || echo "CRAFT_SYSTEM_EMAIL=\"$$system_email\"" >> .env; \
 	fi; \
-	echo "CRAFT_SYSTEM_EMAIL=\"$$SYSTEM_EMAIL\"" >> .env; \
-	echo "" >> .env; \
-	if [ -z "$(TEST_EMAIL)" ]; then \
-		read -p "Test Email: " TEST_EMAIL; \
+	if [ -z "$(CRAFT_TEST_TO_EMAIL_ADDRESS)" ]; then \
+		read -p "Test Email: " test_email; \
+		sed -i '' "s/^CRAFT_TEST_TO_EMAIL_ADDRESS=.*/CRAFT_TEST_TO_EMAIL_ADDRESS=\"$$test_email\"/" .env || echo "CRAFT_TEST_TO_EMAIL_ADDRESS=\"$$test_email\"" >> .env; \
 	fi; \
-	echo "CRAFT_TEST_TO_EMAIL_ADDRESS=\"$$TEST_EMAIL\"" >> .env; \
-	echo "" >> .env; \
 	ddev exec php craft plugin/install seomatic
 	ddev exec php craft plugin/install vite
 	ddev exec php craft plugin/install blitz
@@ -38,6 +35,8 @@ install:
 	ddev exec php craft plugin/install ckeditor
 	ddev exec php craft plugin/install mailgun
 	ddev exec php craft plugin/install servd-asset-storage
+	ddev exec php craft up --interactive=0
+	ddev exec php craft update all
 	ddev launch; \
 	echo "Install complete 🎉"
 
