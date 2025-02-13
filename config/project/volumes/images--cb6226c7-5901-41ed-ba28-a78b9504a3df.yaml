@@ -39,7 +39,7 @@ fieldLayouts:
         name: Content
         uid: 26349f51-22bc-4105-aea9-498cc6bb786e
         userCondition: null
-fs: local
+fs: $FILESYSTEM_TYPE
 handle: images
 name: Images
 sortOrder: 1
