@@ -29,10 +29,7 @@ install:
 	if [ -z "$(CRAFT_SYSTEM_EMAIL)" ]; then \
 		read -p "System Email: " system_email; \
 		sed -i '' "s/^CRAFT_SYSTEM_EMAIL=.*/CRAFT_SYSTEM_EMAIL=\"$$system_email\"/" .env || echo "CRAFT_SYSTEM_EMAIL=\"$$system_email\"" >> .env; \
-	fi; \
-	if [ -z "$(CRAFT_TEST_TO_EMAIL_ADDRESS)" ]; then \
-		read -p "Test Email: " test_email; \
-		sed -i '' "s/^CRAFT_TEST_TO_EMAIL_ADDRESS=.*/CRAFT_TEST_TO_EMAIL_ADDRESS=\"$$test_email\"/" .env || echo "CRAFT_TEST_TO_EMAIL_ADDRESS=\"$$test_email\"" >> .env; \
+		sed -i '' "s/^CRAFT_TEST_TO_EMAIL_ADDRESS=.*/CRAFT_TEST_TO_EMAIL_ADDRESS=\"$$system_email\"/" .env || echo "CRAFT_TEST_TO_EMAIL_ADDRESS=\"$$system_email\"" >> .env; \
 	fi; \
 	ddev exec php craft plugin/install seomatic
 	ddev exec php craft plugin/install vite
@@ -54,6 +51,7 @@ setup:
 	git pull
 	ddev exec npm install
 	ddev composer install
+	ddev exec php craft setup/keys
 	ddev exec php craft up --interactive=0
 	ddev exec npm run dev
 
