@@ -58,10 +58,6 @@ This is a [Craft CMS 5.x](https://github.com/craftcms/cms) starter [MadeByShape]
 - Sprig
 - Vite
 
-### Tailwind CSS
-
-- Aspect Ratio
-
 ## Install
 
 Create an empty folder and CD to it in terminal (If you plan to use Option 1 or 2).
