@@ -4,14 +4,13 @@
   "version": "5.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 3000",
+    "dev": "vite --port 3000 --force --debug",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/vite": "^4.0.6",
     "alpinejs": "^3.13.8",
-    "postcss": "^8.4.38",
     "rollup-plugin-copy": "^3.5.0",
     "sharp": "^0.33.3",
     "svgo": "^3.2.0",
@@ -31,8 +30,5 @@
   "bugs": {
     "url": "https://github.com/madebyshape/craft-cms/issues"
   },
-  "homepage": "https://github.com/madebyshape/craft-cms#readme",
-  "dependencies": {
-    "@tailwindcss/vite": "^4.0.6"
-  }
+  "homepage": "https://github.com/madebyshape/craft-cms#readme"
 }

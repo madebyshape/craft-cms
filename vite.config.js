@@ -34,15 +34,15 @@ export default ({ command }) => ({
 		headers: {
 			"Access-Control-Allow-Origin": "*",
 		},
-		allowedHosts: true,
+		allowedHosts: true
     },
     plugins: [
+        tailwindcss(),
         ViteRestart({
             reload: [
                 'templates/**/*'
             ]
         }),
-        tailwindcss(),
         ViteFaviconsPlugin({
             logo: "src/public/images/favicon.png",
             inject: false,

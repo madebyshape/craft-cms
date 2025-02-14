@@ -1,7 +1,6 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @source '../../';
-@source '../../templates/**/*.{twig}';
 
 @theme {
   --breakpoint-*: initial;
@@ -38,6 +37,7 @@
   --text-7xl: 4.5rem;
   --text-8xl: 6rem;
   --text-9xl: 8rem;
+  --text-10xl: 9rem;
 
   --font-sans-primary:
     ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
