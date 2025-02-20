@@ -1,10 +1,12 @@
 .PHONY: prod dev install setup clean
 
 prod: 
-	ddev start
 	ddev exec npm run build
 
 dev: 
+	ddev exec npm run dev
+
+start: 
 	ddev start
 	ddev exec npm run dev
 
