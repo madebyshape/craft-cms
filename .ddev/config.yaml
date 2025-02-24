@@ -23,7 +23,9 @@ upload_dirs:
   - web/assets
   - storage
 
-webimage_extra_packages: [build-essential]
+webimage_extra_packages:
+  - build-essential
+  - libvips-dev
 
 # Key features of DDEV's config.yaml:
 
