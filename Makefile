@@ -65,6 +65,9 @@ clean:
 	ddev composer install
 	ddev exec npm install
 
+clean-logs:
+	rm -rf storage/logs/*.log
+
 update: 
 	ddev exec php craft update all
 
