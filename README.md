@@ -120,6 +120,7 @@ We've create a few commands to make development easier. All these commands are r
 | `make dev` | Starts Vite development process. |
 | `make prod` | Run on production to start Vite build process - minify, compress etc. |
 | `make clean` | Removes composer and node files ready for a clean install. |
+| `make clean-logs` | Removes log files from /storage/logs for easier debugging. |
 | `make update` | Smaller command that runs `ddev exec php craft update all`. |
 | `make up` 💅 | Runs project config apply and migrations apply. |
 | `make pull` | Pulls a database dump from a remote Servd environment into the local database. |
