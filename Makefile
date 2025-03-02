@@ -16,7 +16,7 @@ install:
 	ddev composer install
 	@if [ ! -f .env ]; then \
 		if [ -f .env.example.dev ]; then \
-			cp .env.example .env; \
+			cp .env.example.dev .env; \
 			echo ".env file created from .env.example.dev"; \
 		else \
 			echo "Error: .env.example.dev file not found"; \
