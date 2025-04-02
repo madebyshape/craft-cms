@@ -71,8 +71,8 @@ clean-logs:
 update: 
 	ddev exec php craft update all
 
-pull: 
-	ddev exec php craft servd-asset-storage/local/pull-database
+pull-db: 
+	ddev exec php craft servd-asset-storage/local/pull-database --emptyDatabase
 
 up: 
 	ddev exec php craft up --interactive=0
