@@ -7,9 +7,9 @@ settings:
   advancedFields:
     - target
     - ariaLabel
-  fullGraphqlData: true
+  fullGraphqlData: false
   maxLength: 255
-  showLabelField: false
+  showLabelField: true
   typeSettings:
     __assoc__:
       -
@@ -44,7 +44,7 @@ settings:
               - ''
             -
               - allowAnchors
-              - ''
+              - '1'
   types:
     - entry
     - url
