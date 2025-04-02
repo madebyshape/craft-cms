@@ -1,4 +1,4 @@
-dateModified: 1743597071
+dateModified: 1743597224
 email:
   fromEmail: $CRAFT_SYSTEM_EMAIL
   fromName: $CRAFT_SITE_NAME
@@ -56,6 +56,7 @@ plugins:
   blitz:
     edition: standard
     enabled: true
+    licenseKey: null
     schemaVersion: 5.9.0
   ckeditor:
     edition: standard
@@ -64,10 +65,12 @@ plugins:
   formie:
     edition: standard
     enabled: true
+    licenseKey: null
     schemaVersion: 3.4.8
   imager-x:
     edition: lite
     enabled: true
+    licenseKey: null
     schemaVersion: 4.0.0
   mailgun:
     edition: standard
@@ -80,6 +83,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
+    licenseKey: null
     schemaVersion: 3.0.12
   servd-asset-storage:
     edition: standard
