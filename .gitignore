@@ -53,6 +53,7 @@ cache/*
 
 # Asset Source Folders
 
+web/transforms
 web/assets
 public/assets
 public_html/assets
