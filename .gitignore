@@ -53,11 +53,17 @@ cache/*
 
 # Asset Source Folders
 
-web/transforms
 web/assets
 public/assets
 public_html/assets
 httpdocs/assets
+
+# Transform Folders
+
+web/transforms
+public/transforms
+public_html/transforms
+httpdocs/transforms
 
 # Log files
 
