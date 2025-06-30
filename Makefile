@@ -82,3 +82,6 @@ tp:
 
 l: 
 	ddev launch
+
+keys: 
+	ddev exec php craft setup/keys
