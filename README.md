@@ -126,6 +126,7 @@ We've create a few commands to make development easier. All these commands are r
 | `make pull-db` | Pulls a database dump from a remote Servd environment into the local database. |
 | `make tp` | Launches tableplus |
 | `make l` | Launches the site |
+| `make keys` | Adds APP_ID and SECURITY_KEY keys to .env |
 
 ## Nice to know
 
