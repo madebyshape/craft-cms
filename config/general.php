@@ -11,15 +11,16 @@
 use craft\config\GeneralConfig;
 use craft\helpers\App;
 
+$devEnvironment = App::env('CRAFT_ENVIRONMENT') === 'dev' ? true : false;
 
 return GeneralConfig::create()
     ->isSystemLive(App::env('IS_SYSTEM_LIVE') ?? true)
-    ->devMode(App::env('DEV_MODE') ?? false)
-    ->allowAdminChanges(App::env('ALLOW_ADMIN_CHANGES') ?? false)
+    ->devMode($devEnvironment)
+    ->allowAdminChanges($devEnvironment)
+    ->allowUpdates($devEnvironment)
     ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
     ->testToEmailAddress(App::env('TEST_TO_EMAIL_ADDRESS') ?? false)
     ->cpTrigger(App::env('CP_TRIGGER') ?? 'admin')
-    ->allowUpdates(App::env('ALLOW_UPDATES') ?? true)
     ->timezone(App::env('TIMEZONE') ?? 'Europe/London')
     ->errorTemplatePrefix('_exceptions/')
     ->enableGql(0)
@@ -42,4 +43,5 @@ return GeneralConfig::create()
         '@web' => App::env('SITE_URL'),
         '@webroot' => App::env('WEB_ROOT'),
     ])
+    ->extraAllowedFileExtensions(['xml'])
 ;
