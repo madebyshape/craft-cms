@@ -1,4 +1,4 @@
-dateModified: 1743597224
+dateModified: 1761296889
 email:
   fromEmail: $CRAFT_SYSTEM_EMAIL
   fromName: $CRAFT_SITE_NAME
@@ -57,7 +57,9 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: null
-    schemaVersion: 5.9.0
+    schemaVersion: 5.12.0
+    settings:
+      maxUriLength: 2048
   ckeditor:
     edition: standard
     enabled: true
@@ -66,7 +68,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: null
-    schemaVersion: 3.4.8
+    schemaVersion: 3.4.10
   imager-x:
     edition: lite
     enabled: true
@@ -84,7 +86,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: null
-    schemaVersion: 3.0.12
+    schemaVersion: 3.0.13
   servd-asset-storage:
     edition: standard
     enabled: true
@@ -117,5 +119,5 @@ system:
   live: true
   name: $CRAFT_SITE_NAME
   retryDuration: null
-  schemaVersion: 5.6.0.2
+  schemaVersion: 5.8.0.3
   timeZone: America/Los_Angeles
