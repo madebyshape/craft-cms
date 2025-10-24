@@ -1,0 +1,17 @@
+columnSuffix: null
+handle: phone
+instructions: null
+name: Phone
+searchable: false
+settings:
+  advancedFields:
+    - target
+    - ariaLabel
+  fullGraphqlData: true
+  maxLength: 255
+  showLabelField: true
+  types:
+    - tel
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Link
