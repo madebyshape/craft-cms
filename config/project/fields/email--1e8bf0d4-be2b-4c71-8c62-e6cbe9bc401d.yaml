@@ -1,0 +1,17 @@
+columnSuffix: null
+handle: email
+instructions: null
+name: Email
+searchable: false
+settings:
+  advancedFields:
+    - target
+    - ariaLabel
+  fullGraphqlData: true
+  maxLength: 255
+  showLabelField: true
+  types:
+    - email
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Link

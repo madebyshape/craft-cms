@@ -11,6 +11,7 @@ settings:
     - seoPreview
     - seoTitle
     - seoDescription
+    - seoKeywords
     - seoImage
     - robots
     - canonicalUrl
