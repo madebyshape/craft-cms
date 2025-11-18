@@ -24,7 +24,10 @@ data:
         type: paragraph
     errorMessagePosition: top-form
     fileUploadsAction: null
-    limitSubmissions: false
+    limitSubmissions: ''
+    limitSubmissionsIpAddressMessage: null
+    limitSubmissionsIpAddressNumber: null
+    limitSubmissionsIpAddressType: null
     limitSubmissionsMessage: null
     limitSubmissionsNumber: null
     limitSubmissionsType: null
@@ -32,6 +35,7 @@ data:
     loadingIndicatorText: null
     pageRedirectUrl: null
     progressPosition: end
+    progressValuePosition: inside-center
     redirectUrl: null
     requireUser: false
     requireUserMessage: null

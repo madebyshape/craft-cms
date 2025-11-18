@@ -6,9 +6,13 @@ searchable: false
 settings:
   availableTransforms: ''
   availableVolumes: '*'
+  characterLimit: null
   ckeConfig: 8b610edc-f2dd-46b6-9597-96fcbb6d302a # Simple
   createButtonLabel: null
   defaultTransform: null
+  expandEntryButtons: false
+  fullGraphqlData: false
+  parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false

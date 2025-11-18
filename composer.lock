@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4d45541699f9b2979f544de547dca3d3",
+    "content-hash": "37886dd822b8113a2d7383a74d827440",
     "packages": [
         {
             "name": "99designs/http-signatures",
@@ -1338,7 +1338,7 @@
             },
             "suggest": {
                 "symfony/validator": "to validate addresses"
-          },
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1627,11 +1627,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.8.18",
+            "version": "5.8.19",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/ff394ccb9e70c83f16f47ea159ab2331b5e05084",
-                "reference": "ff394ccb9e70c83f16f47ea159ab2331b5e05084",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/2fdb2031cdf41875121c3f4b0094551ae95a2c38",
+                "reference": "2fdb2031cdf41875121c3f4b0094551ae95a2c38",
                 "shasum": ""
             },
             "require": {
@@ -1728,7 +1728,7 @@
                 "docs": "https://craftcms.com/docs/5.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2025-10-06T18:25:26+00:00"
+            "time": "2025-10-28T19:21:54+00:00"
         },
         {
             "name": "craftcms/flysystem",
@@ -3149,7 +3149,7 @@
                 "phpseclib/phpseclib": "^2.0||^3.0",
                 "phpspec/prophecy-phpunit": "^2.0",
                 "phpunit/phpunit": "^9.0",
-      "squizlabs/php_codesniffer": "2.*"
+                "squizlabs/php_codesniffer": "2.*"
             },
             "suggest": {
                 "google/cloud-pubsub": "May be used to register a topic to receive bucket notifications.",
@@ -3240,7 +3240,7 @@
         },
         {
             "name": "google/gax",
-          "version": "v1.38.1",
+            "version": "v1.38.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/gax-php.git",
@@ -8221,11 +8221,11 @@
         },
         {
             "name": "servd/craft-asset-storage",
-            "version": "4.2.0",
+            "version": "4.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/servdhost/craft-asset-storage/zipball/e9c5be176bf5f081084375880c616145f7487d35",
-                "reference": "e9c5be176bf5f081084375880c616145f7487d35",
+                "url": "https://api.github.com/repos/servdhost/craft-asset-storage/zipball/eb17c5d079472c2626341d8e9ed424b9fd3b89ce",
+                "reference": "eb17c5d079472c2626341d8e9ed424b9fd3b89ce",
                 "shasum": ""
             },
             "require": {
@@ -8268,15 +8268,15 @@
                 "source": "https://github.com/servdhost/craft-asset-storage",
                 "docs": "https://github.com/servdhost/craft-asset-storage"
             },
-            "time": "2025-09-22T15:07:09+00:00"
+            "time": "2025-11-07T11:45:47+00:00"
         },
         {
             "name": "spacecatninja/imager-x",
-            "version": "5.1.6",
+            "version": "5.1.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/4178d05208c2c32052719694af42ebf1affd00f3",
-                "reference": "4178d05208c2c32052719694af42ebf1affd00f3",
+                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/a0de6b334d3ae3dd79a21e64add844a13879f4a6",
+                "reference": "a0de6b334d3ae3dd79a21e64add844a13879f4a6",
                 "shasum": ""
             },
             "require": {
@@ -8333,7 +8333,7 @@
                 "docs": "http://imager-x.spacecat.ninja/",
                 "issues": "https://github.com/spacecatninja/craft-imager-x/issues"
             },
-            "time": "2025-07-24T20:11:18+00:00"
+            "time": "2025-11-14T12:35:28+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",
@@ -9378,16 +9378,16 @@
         },
         {
             "name": "symfony/http-client",
-            "version": "v6.4.28",
+            "version": "v7.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client.git",
-                "reference": "c9e69c185c4a845f9d46958cdb0dc7aa847f3981"
+                "reference": "3c0a55a2c8e21e30a37022801c11c7ab5a6cb2de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client/zipball/c9e69c185c4a845f9d46958cdb0dc7aa847f3981",
-                "reference": "c9e69c185c4a845f9d46958cdb0dc7aa847f3981",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/3c0a55a2c8e21e30a37022801c11c7ab5a6cb2de",
+                "reference": "3c0a55a2c8e21e30a37022801c11c7ab5a6cb2de",
                 "shasum": ""
             },
             "require": {
@@ -9454,7 +9454,7 @@
                 "http"
             ],
             "support": {
-                "source": "https://github.com/symfony/http-client/tree/v6.4.28"
+                "source": "https://github.com/symfony/http-client/tree/v7.3.6"
             },
             "funding": [
                 {
@@ -9474,7 +9474,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-11-05T17:39:22+00:00"
+            "time": "2025-11-05T17:41:46+00:00"
         },
         {
             "name": "symfony/http-client-contracts",
@@ -11535,16 +11535,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v7.3.3",
+            "version": "v7.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "d4f4a66866fe2451f61296924767280ab5732d9d"
+                "reference": "90208e2fc6f68f613eae7ca25a2458a931b1bacc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/d4f4a66866fe2451f61296924767280ab5732d9d",
-                "reference": "d4f4a66866fe2451f61296924767280ab5732d9d",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/90208e2fc6f68f613eae7ca25a2458a931b1bacc",
+                "reference": "90208e2fc6f68f613eae7ca25a2458a931b1bacc",
                 "shasum": ""
             },
             "require": {
@@ -11587,7 +11587,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v7.3.3"
+                "source": "https://github.com/symfony/yaml/tree/v7.3.5"
             },
             "funding": [
                 {
@@ -11607,7 +11607,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-27T11:34:33+00:00"
+            "time": "2025-09-27T09:00:46+00:00"
         },
         {
             "name": "theiconic/name-parser",
@@ -11911,11 +11911,11 @@
         },
         {
             "name": "verbb/formie",
-            "version": "3.1.4",
+            "version": "3.1.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/formie/zipball/94cc80163c5b4ff4639ab5abfd7b291193dd725e",
-                "reference": "94cc80163c5b4ff4639ab5abfd7b291193dd725e",
+                "url": "https://api.github.com/repos/verbb/formie/zipball/320c85cb6cb38b73b1cb33eb7319c4ac6acd50c4",
+                "reference": "320c85cb6cb38b73b1cb33eb7319c4ac6acd50c4",
                 "shasum": ""
             },
             "require": {
@@ -11932,6 +11932,7 @@
                 "php": "^8.2",
                 "stripe/stripe-php": "^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0 || ^12.0 || ^13.0",
                 "symfony/expression-language": "^5.3.0",
+                "theiconic/name-parser": "^1.0",
                 "verbb/auth": "^2.0.20",
                 "verbb/base": "^3.0.8",
                 "voku/anti-xss": "^4.1"
@@ -11972,7 +11973,7 @@
                 "docs": "https://github.com/verbb/formie",
                 "rss": "https://github.com/verbb/formie/commits/v2.atom"
             },
-            "time": "2025-09-16T03:20:40+00:00"
+            "time": "2025-11-06T04:19:39+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -13701,11 +13702,11 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
+    "platform": [],
+    "platform-dev": [],
     "platform-overrides": {
         "php": "8.2"
     },

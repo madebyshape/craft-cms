@@ -1,22 +1,16 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - bdf6317d-0df7-449f-a937-a1a274ffb106 # Page - Blocks
+  -
+    uid: bdf6317d-0df7-449f-a937-a1a274ffb106 # Page - Blocks
 handle: pages
 maxAuthors: 1
 name: Pages
 previewTargets:
   -
-    __assoc__:
-      -
-        - label
-        - Page
-      -
-        - refresh
-        - '1'
-      -
-        - urlFormat
-        - '{url}'
+    label: Page
+    refresh: '1'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   08c386f4-5a41-4c9f-8282-f6785af06bfc: # $CRAFT_SITE_NAME

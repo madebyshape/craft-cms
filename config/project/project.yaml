@@ -1,4 +1,4 @@
-dateModified: 1763483814
+dateModified: 1763485100
 email:
   fromEmail: $CRAFT_SYSTEM_EMAIL
   fromName: $CRAFT_SITE_NAME
@@ -91,7 +91,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: null
-    schemaVersion: 3.4.10
+    schemaVersion: 3.4.11
   imager-x:
     edition: lite
     enabled: true
