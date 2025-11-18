@@ -13,6 +13,7 @@ This is a [Craft CMS 5.x](https://github.com/craftcms/cms) starter [MadeByShape]
 - [Alpine.js 3.x](https://alpinejs.dev/) Minimal JS framework
 - [Mailgun](https://www.mailgun.com/) Email API
 - [Servd](https://servd.host) Craft CMS first hosting provider
+- [Craft Cloud](https://craft.cloud) Craft CMS hosting provider
 
 ## Requirements
 
@@ -40,6 +41,9 @@ This is a [Craft CMS 5.x](https://github.com/craftcms/cms) starter [MadeByShape]
 - Servd
     - Setup to be used with Servd hosting platform
     - Enabled for using static caching
+- Craft Cloud
+    - Setup to be used with Craft Cloud hosting provider
+    - Enabled for using artifacts with Vite JS and Imager X
 - Caching
     - Uses Blitz to handle server caching and warming
 
@@ -55,6 +59,8 @@ This is a [Craft CMS 5.x](https://github.com/craftcms/cms) starter [MadeByShape]
 - Minify
 - SEOMatic
 - Servd Assets and Helpers
+- Craft Cloud Extension
+- Imager X Craft Cloud Transformer
 - Sprig
 - Vite
 
@@ -127,8 +133,17 @@ We've create a few commands to make development easier. All these commands are r
 | `make tp` | Launches tableplus |
 | `make l` | Launches the site |
 | `make keys` | Adds APP_ID and SECURITY_KEY keys to .env |
+| `make update-search-index` | Updates the search index for the project. |
 
 ## Nice to know
+
+### File system type
+
+The file system type is set in the `.env` file. It can be set to either `local`, `servd` or `craftCloud` depending on where you are hosting your project. `local` is good for local and also production if the files are hosted on the same server.
+
+```shell
+FILESYSTEM_TYPE=local
+```
 
 ### Database
 
