@@ -1,0 +1,20 @@
+name: ddev-cypress
+repository: tyler36/ddev-cypress
+version: 1.6.0
+install_date: "2025-07-22T15:55:08+01:00"
+project_files:
+    - docker-compose.cypress.yaml
+    - commands/cypress/cypress-open
+    - commands/cypress/cypress-run
+global_files: []
+removal_actions:
+    - |
+      #ddev-nodisplay
+      #ddev-description:Remove docker-compose.cypress_extras.yaml file
+      if [ -f docker-compose.cypress_extras.yaml ]; then
+        if grep -q '#ddev-generated' docker-compose.cypress_extras.yaml; then
+          rm -f docker-compose.cypress_extras.yaml
+        else
+          echo "Unwilling to remove '$DDEV_APPROOT/.ddev/docker-compose.cypress_extras.yaml' because it does not have #ddev-generated in it; you can manually delete it if it is safe to delete."
+        fi
+      fi

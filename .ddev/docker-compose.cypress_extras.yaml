@@ -1,0 +1,5 @@
+#ddev-generated
+services:
+  cypress:
+    external_links:
+      - "ddev-router:${DDEV_PROJECT}.${DDEV_TLD}"
