@@ -33,16 +33,6 @@ install:
 		sed -i '' "s/^CRAFT_SYSTEM_EMAIL=.*/CRAFT_SYSTEM_EMAIL=\"$$system_email\"/" .env || echo "CRAFT_SYSTEM_EMAIL=\"$$system_email\"" >> .env; \
 		sed -i '' "s/^CRAFT_TEST_TO_EMAIL_ADDRESS=.*/CRAFT_TEST_TO_EMAIL_ADDRESS=\"$$system_email\"/" .env || echo "CRAFT_TEST_TO_EMAIL_ADDRESS=\"$$system_email\"" >> .env; \
 	fi; \
-	ddev exec php craft plugin/install seomatic
-	ddev exec php craft plugin/install vite
-	ddev exec php craft plugin/install blitz
-	ddev exec php craft plugin/install sprig
-	ddev exec php craft plugin/install formie
-	ddev exec php craft plugin/install imager-x
-	ddev exec php craft plugin/install minify
-	ddev exec php craft plugin/install ckeditor
-	ddev exec php craft plugin/install mailgun
-	ddev exec php craft plugin/install servd-asset-storage
 	ddev exec php craft up --interactive=0
 	ddev exec php craft update all
 	ddev launch; \
