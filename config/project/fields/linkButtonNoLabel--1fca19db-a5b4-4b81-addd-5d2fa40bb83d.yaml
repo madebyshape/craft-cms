@@ -1,13 +1,13 @@
 columnSuffix: null
-handle: linksToNoLabel
+handle: linkButtonNoLabel
 instructions: null
-name: 'Links To - No Label'
+name: 'Link / Button - No Label'
 searchable: false
 settings:
   advancedFields:
     - target
     - ariaLabel
-  fullGraphqlData: true
+  fullGraphqlData: false
   maxLength: 255
   showLabelField: false
   typeSettings:

@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: videoGroup
+handle: video
 instructions: null
-name: 'Video Group'
+name: Video
 searchable: false
 settings:
   fieldLayouts:
@@ -15,6 +15,9 @@ settings:
               -
                 -
                   __assoc__:
+                    0:
+                      - name
+                      - Content
                     1:
                       - uid
                       - d4f57e59-a9af-4745-827d-430501252655

@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: textCode
+instructions: null
+name: 'Text - Code'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: true
+  initialRows: 4
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

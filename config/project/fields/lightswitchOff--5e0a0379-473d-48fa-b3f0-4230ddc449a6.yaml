@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: lightswitch
+handle: lightswitchOff
 instructions: null
-name: Lightswitch
+name: 'Lightswitch - Off'
 searchable: false
 settings:
   default: false

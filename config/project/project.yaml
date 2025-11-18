@@ -1,4 +1,4 @@
-dateModified: 1763485100
+dateModified: 1763485781
 email:
   fromEmail: $CRAFT_SYSTEM_EMAIL
   fromName: $CRAFT_SITE_NAME
@@ -45,10 +45,10 @@ meta:
   __names__:
     0b199c11-0b79-4e4b-b931-f9c85e23a667: 'Link / Button' # Link / Button
     1e8bf0d4-be2b-4c71-8c62-e6cbe9bc401d: Email # Email
-    1fca19db-a5b4-4b81-addd-5d2fa40bb83d: 'Links To - No Label' # Links To - No Label
+    1fca19db-a5b4-4b81-addd-5d2fa40bb83d: 'Link / Button - No Label' # Link / Button - No Label
     2fa69ca1-0da9-4b6b-910a-16d9b40d3cad: File # File
     5cbe08b7-b4bd-4a6b-be41-de9647b5eb19: Images # Images
-    5e0a0379-473d-48fa-b3f0-4230ddc449a6: Lightswitch # Lightswitch
+    5e0a0379-473d-48fa-b3f0-4230ddc449a6: 'Lightswitch - Off' # Lightswitch - Off
     6d792fe4-471d-48ed-bc45-5fe112ba7e46: Image # Image
     7b662bcd-ea91-4c91-86ce-c60348c664d1: Pages # Pages
     7bf65ac5-9169-4bf8-8825-65fadd566946: New # New
@@ -63,11 +63,13 @@ meta:
     453f9294-407d-405a-b73b-d5b63aec2eaa: SEO # SEO
     502c0610-e74d-4359-8524-5652307ada64: Padding # Padding
     824eedc9-d6b3-4bff-9b18-08c64927c6b0: Heading # Heading
-    4580bc09-b5c8-40a2-bff5-95f715403f50: 'Video Group' # Video Group
+    4580bc09-b5c8-40a2-bff5-95f715403f50: Video # Video
+    13116ff7-bb9e-4f5b-989d-48a287e4b53c: 'Text - Code' # Text - Code
     41118d3a-a4e2-4b8e-8d11-b0a93f26deeb: 'Lightswitch - On' # Lightswitch - On
     13285537-5457-4f1f-ad8c-66fd187f8f09: 'Rich Text - Full' # Rich Text - Full
     b9ac68e1-d9f1-4007-843f-fde1e9f4921b: Files # Files
     bdf6317d-0df7-449f-a937-a1a274ffb106: 'Page - Blocks' # Page - Blocks
+    c0203d6f-4eda-4753-879f-9c36db1c1a98: Date # Date
     c3b9838a-6581-409e-9730-3fecbd013c89: Phone # Phone
     cb6226c7-5901-41ed-ba28-a78b9504a3df: Images # Images
     d99bf7af-1eb1-4b77-814e-624eeec1a0e3: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
@@ -79,7 +81,6 @@ plugins:
   blitz:
     edition: standard
     enabled: true
-    licenseKey: null
     schemaVersion: 5.12.0
     settings:
       maxUriLength: 2048
@@ -90,12 +91,10 @@ plugins:
   formie:
     edition: standard
     enabled: true
-    licenseKey: null
     schemaVersion: 3.4.11
   imager-x:
     edition: lite
     enabled: true
-    licenseKey: 2UY00I3L8AR0UMAOYN1YC03I
     schemaVersion: 4.0.0
   mailgun:
     edition: standard
@@ -108,7 +107,6 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: null
     schemaVersion: 3.0.13
   servd-asset-storage:
     edition: standard
