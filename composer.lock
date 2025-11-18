@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "37886dd822b8113a2d7383a74d827440",
+    "content-hash": "daad864635fb771be7b4a5145283aeea",
     "packages": [
         {
             "name": "99designs/http-signatures",
@@ -8334,6 +8334,64 @@
                 "issues": "https://github.com/spacecatninja/craft-imager-x/issues"
             },
             "time": "2025-11-14T12:35:28+00:00"
+        },
+        {
+            "name": "spacecatninja/imager-x-craft-cloud-transformer",
+            "version": "1.0.0-beta.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x-craft-cloud-transformer/zipball/de457925cba701af41e5ce8ddd43daa0cc4b9924",
+                "reference": "de457925cba701af41e5ce8ddd43daa0cc4b9924",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cloud": "^1.0|^2.0",
+                "craftcms/cms": "^4.6.0|^5.0.0-beta.1",
+                "php": "^8.0",
+                "spacecatninja/imager-x": "^4.0.0|^5.0.0-beta.1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Imager X Craft Cloud Transformer",
+                "handle": "imager-x-craft-cloud-transformer",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/spacecatninja/craft-imager-x-craft-cloud-transformer/master/CHANGELOG.md",
+                "components": [],
+                "class": "spacecatninja\\craftcloudtransformer\\CraftCloudTransformer"
+            },
+            "autoload": {
+                "psr-4": {
+                    "spacecatninja\\craftcloudtransformer\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "SPACECATNINJA",
+                    "homepage": "https://www.spacecat.ninja"
+                }
+            ],
+            "description": "Craft Cloud transformer for Imager X",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "image",
+                "picture",
+                "responsive",
+                "srcset",
+                "transform"
+            ],
+            "support": {
+                "docs": "https://github.com/spacecatninja/craft-imager-x-craft-cloud-transformer/blob/master/README.md",
+                "issues": "https://github.com/spacecatninja/craft-imager-x-craft-cloud-transformer/issues"
+            },
+            "time": "2024-02-14T20:48:51+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",
