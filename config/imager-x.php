@@ -1,13 +1,20 @@
 <?php
 
    use craft\helpers\App;
+   use craft\cloud\Helper as CloudHelper;
+
+   $transformers = [
+      'local' => 'craft',
+      'servd' => 'servd',
+      'craftCloud' => 'craftcloud',
+   ];
 
    return [
       '*' => [
-         'transformer' => App::env('FILESYSTEM_TYPE') == 'servd' ? 'servd' : 'craft',
+         'transformer' => $transformers[App::env('FILESYSTEM_TYPE')],
          'imagerUrl' => App::env('PRIMARY_SITE_URL') . '/' . App::env('TRANSFORMS_FOLDER'),
          'imagerSystemPath' => App::env('CRAFT_WEB_ROOT') . '/' . App::env('TRANSFORMS_FOLDER'),
-         'fallbackImage' => '@webroot/dist/images/fallback.png',
+         'fallbackImage' => CloudHelper::isCraftCloud() ? CloudHelper::artifactUrl('dist/images/fallback.png') : '@webroot/dist/images/fallback.png',
          'cacheEnabled' => true,
          'cacheDuration' => 31536000, // 1 year
          'cacheDurationRemoteFiles' => 31536000, // 1 year

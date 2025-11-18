@@ -1,4 +1,4 @@
-dateModified: 1761298084
+dateModified: 1763483814
 email:
   fromEmail: $CRAFT_SYSTEM_EMAIL
   fromName: $CRAFT_SITE_NAME
@@ -10,6 +10,16 @@ email:
     endpoint: $MAILGUN_ENDPOINT
   transportType: craft\mailgun\MailgunAdapter
 fs:
+  craftCloud:
+    hasUrls: true
+    name: 'Craft Cloud'
+    settings:
+      baseUrl: null
+      expires: '1 years'
+      localFsPath: '@webroot/uploads'
+      localFsUrl: /uploads
+      subpath: null
+    type: craft\cloud\fs\AssetsFs
   local:
     hasUrls: true
     name: Local
@@ -85,7 +95,7 @@ plugins:
   imager-x:
     edition: lite
     enabled: true
-    licenseKey: null
+    licenseKey: 2UY00I3L8AR0UMAOYN1YC03I
     schemaVersion: 4.0.0
   mailgun:
     edition: standard
