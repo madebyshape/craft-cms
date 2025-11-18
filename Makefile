@@ -86,5 +86,5 @@ l:
 keys: 
 	ddev exec php craft setup/keys
 
-update-search-index
+update-search-index:
 	ddev exec php craft resave/entries --update-search-index
