@@ -66,7 +66,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: null
-    schemaVersion: 3.4.8
+    schemaVersion: 3.4.10
   imager-x:
     edition: lite
     enabled: true
@@ -84,7 +84,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: null
-    schemaVersion: 3.0.12
+    schemaVersion: 3.0.13
   servd-asset-storage:
     edition: standard
     enabled: true

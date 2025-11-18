@@ -5,7 +5,7 @@ import copy from 'rollup-plugin-copy';
 import tailwindcss from "@tailwindcss/vite";
 
 export default ({ command }) => ({
-    base: command === 'serve' ? '' : '/dist/',
+    base: command === 'serve' ? '' : `${process.env.CRAFT_CLOUD_ARTIFACT_BASE_URL || ''}/dist/`,
     publicDir: 'src/public',
     build: {
         outDir: 'web/dist/',

@@ -1,0 +1,4 @@
+# Craft Cloud configuration file
+# https://craftcms.com/knowledge-base/cloud-config
+php-version: '8.2'
+node-version: '22.0'
