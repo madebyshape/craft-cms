@@ -1,4 +1,4 @@
-dateModified: 1743597224
+dateModified: 1763483814
 email:
   fromEmail: $CRAFT_SYSTEM_EMAIL
   fromName: $CRAFT_SITE_NAME
@@ -10,6 +10,16 @@ email:
     endpoint: $MAILGUN_ENDPOINT
   transportType: craft\mailgun\MailgunAdapter
 fs:
+  craftCloud:
+    hasUrls: true
+    name: 'Craft Cloud'
+    settings:
+      baseUrl: null
+      expires: '1 years'
+      localFsPath: '@webroot/uploads'
+      localFsUrl: /uploads
+      subpath: null
+    type: craft\cloud\fs\AssetsFs
   local:
     hasUrls: true
     name: Local
@@ -56,7 +66,7 @@ plugins:
   blitz:
     edition: standard
     enabled: true
-    licenseKey: null
+    licenseKey: IJPH6UONK3UMX1HBBPVJ0SMU
     schemaVersion: 5.9.0
   ckeditor:
     edition: standard
@@ -65,12 +75,12 @@ plugins:
   formie:
     edition: standard
     enabled: true
-    licenseKey: null
+    licenseKey: CRG1PBKSGSUFS29GAAJQO2MW
     schemaVersion: 3.4.10
   imager-x:
     edition: lite
     enabled: true
-    licenseKey: null
+    licenseKey: 2UY00I3L8AR0UMAOYN1YC03I
     schemaVersion: 4.0.0
   mailgun:
     edition: standard
@@ -83,7 +93,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: null
+    licenseKey: QE3VGHHWQWUX3Q8XUSBW9Q5G
     schemaVersion: 3.0.13
   servd-asset-storage:
     edition: standard

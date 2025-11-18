@@ -6,7 +6,7 @@
    $transformers = [
       'local' => 'craft',
       'servd' => 'servd',
-      'craftcloud' => 'craftcloud',
+      'craftCloud' => 'craftcloud',
    ];
 
    return [
