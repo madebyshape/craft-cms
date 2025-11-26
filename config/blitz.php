@@ -35,7 +35,7 @@ return [
         'warmCacheAutomatically' => true,
         'refreshCacheAutomaticallyForGlobals' => true,
         'queueJobTtr' => 600, // 10 mins
-        'queryStringCaching' => 1,
+        'queryStringCaching' => 0,
         'debug' => true
     ],
     'dev' => [
