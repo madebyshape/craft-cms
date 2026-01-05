@@ -81,7 +81,7 @@ plugins:
   blitz:
     edition: standard
     enabled: true
-    licenseKey: LZTJYBEL89QIP7ZDB3Z0NDM5
+    licenseKey: null
     schemaVersion: 5.12.0
     settings:
       maxUriLength: 2048
@@ -92,12 +92,12 @@ plugins:
   formie:
     edition: standard
     enabled: true
-    licenseKey: WWIAR2YDUIPBPOFGJJ90LVGG
+    licenseKey: null
     schemaVersion: 3.4.11
   imager-x:
     edition: lite
     enabled: true
-    licenseKey: FLRI5DCXJP2XLJQIVV5XHXOF
+    licenseKey: null
     schemaVersion: 4.0.0
   imager-x-craft-cloud-transformer:
     edition: standard
@@ -114,7 +114,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: 3HXVGSIZ0BTZKY1DQ12UF3QN
+    licenseKey: null
     schemaVersion: 3.0.13
   servd-asset-storage:
     edition: standard
