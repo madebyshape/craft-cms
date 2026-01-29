@@ -64,6 +64,12 @@ update:
 pull-db: 
 	ddev exec php craft servd-asset-storage/local/pull-database --emptyDatabase
 
+import-db:
+ifndef file
+	$(error "file" is not set. Usage: make import-db file=path/to/dump.sql.gz)
+endif
+	ddev import-db --file=$(file)
+
 up: 
 	ddev exec php craft up --interactive=0
 

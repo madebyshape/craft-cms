@@ -130,6 +130,7 @@ We've create a few commands to make development easier. All these commands are r
 | `make update` | Smaller command that runs `ddev exec php craft update all`. |
 | `make up` 💅 | Runs project config apply and migrations apply. |
 | `make pull-db` | Pulls a database dump from a remote Servd environment into the local database. |
+| `make import-db file=/path/to/file.sql.gz` | Imports a database dump from a local file into the local database. |
 | `make tp` | Launches tableplus |
 | `make l` | Launches the site |
 | `make keys` | Adds APP_ID and SECURITY_KEY keys to .env |
