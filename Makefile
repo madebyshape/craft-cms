@@ -84,3 +84,6 @@ keys:
 
 update-search-index:
 	ddev exec php craft resave/entries --update-search-index
+
+mp: 
+	ddev mailpit

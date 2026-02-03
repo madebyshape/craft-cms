@@ -23,5 +23,28 @@
 use craft\helpers\App;
 
 return [
-    'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS'
+    '*' => [
+        'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS'
+     ],
+     'dev' => [
+        'components' => [
+              'mailer' => function() {
+  
+                 $config = App::mailerConfig();
+  
+                 $adapter = craft\helpers\MailerHelper::createTransportAdapter(
+                    craft\mail\transportadapters\Smtp::class,
+                    [
+                          'host' => App::env('MAILPIT_SMTP_HOSTNAME'),
+                          'port' => App::env('MAILPIT_SMTP_PORT')
+                    ]
+                 );
+  
+                 $config['transport'] = $adapter->defineTransport();
+  
+                 return Craft::createObject($config);
+
+              }
+          ]
+     ]
 ];

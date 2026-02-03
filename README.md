@@ -135,6 +135,7 @@ We've create a few commands to make development easier. All these commands are r
 | `make l` | Launches the site |
 | `make keys` | Adds APP_ID and SECURITY_KEY keys to .env |
 | `make update-search-index` | Updates the search index for the project. |
+| `make mp` | Launches Mailpit for email testing. |
 
 ## Nice to know
 
@@ -156,6 +157,16 @@ or
 make tp
 ```
 
+### Email
+
+To access the email inside the DDEV environment, you can use Mailpit. You can use the following command to open Mailpit:
+
+```shell
+ddev mailpit
+or 
+make mp
+```
+
 ### HTTPS recommended
 
 There is a few issues getting Vite, DDEV and Craft CMS running nicely together over HTTP, so always make sure you are using HTTPS. For DDEV just run:
@@ -166,5 +177,3 @@ mkcert -install
 ddev start
 ddev launch
 ```
-
-## Roadmap
