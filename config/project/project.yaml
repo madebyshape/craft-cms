@@ -1,4 +1,4 @@
-dateModified: 1770114668
+dateModified: 1770115333
 email:
   fromEmail: $CRAFT_SYSTEM_EMAIL
   fromName: $CRAFT_SITE_NAME
@@ -33,6 +33,7 @@ fs:
     settings:
       cdnUrlPattern: ''
       customSubfolder: ''
+      disableTransforms: false
       makeUploadsPublic: true
       optimisePrefix: ''
       optimiseUrlPattern: ''
@@ -93,7 +94,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: null
-    schemaVersion: 3.4.11
+    schemaVersion: 3.4.12
   imager-x:
     edition: lite
     enabled: true
@@ -148,5 +149,5 @@ system:
   live: true
   name: $CRAFT_SITE_NAME
   retryDuration: null
-  schemaVersion: 5.8.0.3
+  schemaVersion: 5.9.0.8
   timeZone: America/Los_Angeles

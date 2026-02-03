@@ -22,7 +22,6 @@ settings:
   restrictedLocationSource: 'volume:cb6226c7-5901-41ed-ba28-a78b9504a3df' # Images
   restrictedLocationSubpath: null
   selectionLabel: null
-  showCardsInGrid: false
   showSearchInput: true
   showSiteMenu: true
   showUnpermittedFiles: false

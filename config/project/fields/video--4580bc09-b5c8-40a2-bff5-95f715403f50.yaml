@@ -39,21 +39,15 @@ settings:
                               - required
                               - false
                             7:
-                              - providesThumbs
-                              - false
-                            8:
-                              - includeInCards
-                              - false
-                            9:
                               - width
                               - 100
-                            10:
+                            8:
                               - dateAdded
                               - '2025-10-24T09:22:22+00:00'
-                            11:
+                            9:
                               - uid
                               - 0fe9b6d2-22ad-47c0-9064-2acb8c37e00a
-                            14:
+                            12:
                               - fieldUid
                               - f3e544b8-88bf-4761-8df2-d767fa1502b7 # Text
                         -
@@ -71,24 +65,18 @@ settings:
                               - required
                               - false
                             7:
-                              - providesThumbs
-                              - false
-                            8:
-                              - includeInCards
-                              - false
-                            9:
                               - width
                               - 100
-                            10:
+                            8:
                               - dateAdded
                               - '2025-10-24T09:22:22+00:00'
-                            11:
+                            9:
                               - uid
                               - 7db705a8-027f-49d5-9fa2-b32a8bc15556
-                            14:
+                            12:
                               - fieldUid
                               - 6d792fe4-471d-48ed-bc45-5fe112ba7e46 # Image
-            3:
+            4:
               - cardThumbAlignment
               - end
   viewMode: grouped
