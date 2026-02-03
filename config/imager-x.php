@@ -14,7 +14,7 @@
          'transformer' => $transformers[App::env('FILESYSTEM_TYPE')],
          'imagerUrl' => App::env('PRIMARY_SITE_URL') . '/' . App::env('TRANSFORMS_FOLDER'),
          'imagerSystemPath' => App::env('CRAFT_WEB_ROOT') . '/' . App::env('TRANSFORMS_FOLDER'),
-         'fallbackImage' => CloudHelper::isCraftCloud() ? CloudHelper::artifactUrl('dist/images/fallback.png') : '@webroot/dist/images/fallback.png',
+         'fallbackImage' => CloudHelper::isCraftCloud() ? CloudHelper::artifactUrl('dist/images/fallback.png') : '/dist/images/fallback.png',
          'cacheEnabled' => true,
          'cacheDuration' => 31536000, // 1 year
          'cacheDurationRemoteFiles' => 31536000, // 1 year
