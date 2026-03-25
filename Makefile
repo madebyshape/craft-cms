@@ -1,4 +1,8 @@
-.PHONY: prod dev install setup clean
+.PHONY: prod dev install setup clean npm-install
+
+# Vite 8 + some plugins have peerDependency ranges that still conflict on clean installs.
+# Use the same flags we verified work inside DDEV.
+NPM_INSTALL_FLAGS ?= --include=optional --legacy-peer-deps
 
 prod: 
 	ddev exec npm run build
@@ -12,7 +16,7 @@ start:
 
 install:
 	ddev start
-	ddev exec npm install
+	ddev exec -- npm install $(NPM_INSTALL_FLAGS)
 	ddev composer install
 	@if [ ! -f .env ]; then \
 		if [ -f .env.example.dev ]; then \
@@ -41,7 +45,7 @@ install:
 setup: 
 	ddev start
 	git pull
-	ddev exec npm install
+	ddev exec -- npm install $(NPM_INSTALL_FLAGS)
 	ddev composer install
 	ddev exec php craft setup/keys
 	ddev exec php craft up --interactive=0
@@ -53,7 +57,7 @@ clean:
 	ddev composer clear-cache
 	ddev exec npm cache clean --force
 	ddev composer install
-	ddev exec npm install
+	ddev exec -- npm install $(NPM_INSTALL_FLAGS)
 
 clean-logs:
 	rm -rf storage/logs/*.log
@@ -87,3 +91,11 @@ update-search-index:
 
 mp: 
 	ddev mailpit
+
+kill-vite:
+	@ddev exec bash -c "pkill -9 -f 'node.*vite'" 2>/dev/null || true
+	@echo "Vite processes killed"
+
+npm-install:
+	@ddev start
+	@ddev exec -- npm install $(NPM_INSTALL_FLAGS)

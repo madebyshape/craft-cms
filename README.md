@@ -6,63 +6,63 @@ This is a [Craft CMS 5.x](https://github.com/craftcms/cms) starter [MadeByShape]
 
 ## The Stack
 
-- [Craft CMS 5.x](https://craftcms.com) Content management system
-- [DDEV](https://ddev.com) Local development environment
-- [Vite 5.x](https://vitejs.dev) Front end build tool with HMR
-- [Tailwind CSS 4.x](https://tailwindcss.com) Utility-first CSS framework
-- [Alpine.js 3.x](https://alpinejs.dev/) Minimal JS framework
-- [Mailgun](https://www.mailgun.com/) Email API
-- [Servd](https://servd.host) Craft CMS first hosting provider
-- [Craft Cloud](https://craft.cloud) Craft CMS hosting provider
+-   [Craft CMS 5.x](https://craftcms.com) Content management system
+-   [DDEV](https://ddev.com) Local development environment
+-   [Vite 8.x](https://vitejs.dev) Front end build tool with HMR
+-   [Tailwind CSS 4.x](https://tailwindcss.com) Utility-first CSS framework
+-   [Alpine.js 3.x](https://alpinejs.dev/) Minimal JS framework
+-   [Mailgun](https://www.mailgun.com/) Email API
+-   [Servd](https://servd.host) Craft CMS first hosting provider
+-   [Craft Cloud](https://craft.cloud) Craft CMS hosting provider
 
 ## Requirements
 
-- [Docker](https://www.docker.com)
-- [DDEV](https://ddev.com)
+-   [Docker](https://www.docker.com)
+-   [DDEV](https://ddev.com)
 
 ## Features
 
-- Templates
-    - Layout templates setup ready with header and footer globals
-    - Exception templates for 404, offline/maintenece and generic errors
-    - Page templates setup for use with matrix fields
-    - Email template for sending prettier system emails (Forgot password etc)
-- Config
-    - Configs for all Craft CMS plugins
-    - Customised general config with required features that hook in to .env vars
-- Env
-    - Customised .env file with Servd and Mailgun included
-- Building
-    - HMR
-    - CSS and JS minified and purged
-    - Favicon is generated and auto inserted into the template
-    - Images compressed
-    - Sourcemaps generated
-- Servd
-    - Setup to be used with Servd hosting platform
-    - Enabled for using static caching
-- Craft Cloud
-    - Setup to be used with Craft Cloud hosting provider
-    - Enabled for using artifacts with Vite JS and Imager X
-- Caching
-    - Uses Blitz to handle server caching and warming
+-   Templates
+    -   Layout templates setup ready with header and footer globals
+    -   Exception templates for 404, offline/maintenece and generic errors
+    -   Page templates setup for use with matrix fields
+    -   Email template for sending prettier system emails (Forgot password etc)
+-   Config
+    -   Configs for all Craft CMS plugins
+    -   Customised general config with required features that hook in to .env vars
+-   Env
+    -   Customised .env file with Servd and Mailgun included
+-   Building
+    -   HMR
+    -   CSS and JS minified and purged
+    -   Favicon is generated and auto inserted into the template
+    -   Images compressed
+    -   Sourcemaps generated
+-   Servd
+    -   Setup to be used with Servd hosting platform
+    -   Enabled for using static caching
+-   Craft Cloud
+    -   Setup to be used with Craft Cloud hosting provider
+    -   Enabled for using artifacts with Vite JS and Imager X
+-   Caching
+    -   Uses Blitz to handle server caching and warming
 
 ## Plugins
 
 ### Craft CMS
 
-- Blitz
-- CKEditor
-- Formie
-- Imager X
-- Mailgun
-- Minify
-- SEOMatic
-- Servd Assets and Helpers
-- Craft Cloud Extension
-- Imager X Craft Cloud Transformer
-- Sprig
-- Vite
+-   Blitz
+-   CKEditor
+-   Formie
+-   Imager X
+-   Mailgun
+-   Minify
+-   SEOMatic
+-   Servd Assets and Helpers
+-   Craft Cloud Extension
+-   Imager X Craft Cloud Transformer
+-   Sprig
+-   Vite
 
 ## Install
 
@@ -111,31 +111,33 @@ make dev
 When you're ready to go live, make sure you have `npm` installed on the server, then you can run the production command to minify, compress and build the front end assets:
 
 ```shell
-npm run build
+make prod
 ```
 
 ## CLI commands
 
 We've create a few commands to make development easier. All these commands are ran in terminal:
 
-| Command | Description |
-| -------- | ------- |
-| `make install` | Starts DDEV, Install Craft CMS and dependencies. |
-| `make setup` | Use when starting to work on your project especially if your working in a team. |
-| `make start` | Starts DDEV and Vite development process. |
-| `make dev` | Starts Vite development process. |
-| `make prod` | Run on production to start Vite build process - minify, compress etc. |
-| `make clean` | Removes composer and node files ready for a clean install. |
-| `make clean-logs` | Removes log files from /storage/logs for easier debugging. |
-| `make update` | Smaller command that runs `ddev exec php craft update all`. |
-| `make up` 💅 | Runs project config apply and migrations apply. |
-| `make pull-db` | Pulls a database dump from a remote Servd environment into the local database. |
-| `make import-db file=/path/to/file.sql.gz` | Imports a database dump from a local file into the local database. |
-| `make tp` | Launches tableplus |
-| `make l` | Launches the site |
-| `make keys` | Adds APP_ID and SECURITY_KEY keys to .env |
-| `make update-search-index` | Updates the search index for the project. |
-| `make mp` | Launches Mailpit for email testing. |
+| Command                    | Description                                  |
+| -------------------------- | -------------------------------------------- |
+| `make install`             | Start DDEV, install Craft CMS & dependencies |
+| `make setup`               | Pull repo + install deps                     |
+| `make start`               | Start DDEV + Vite                            |
+| `make dev`                 | Start Vite (HMR)                             |
+| `make prod`                | Production build (Vite build)                |
+| `make npm-install`         | Run `npm install` inside DDEV                |
+| `make clean`               | Remove vendor & node_modules                 |
+| `make clean-logs`          | Remove storage logs                          |
+| `make update`              | Run Craft updates                            |
+| `make up`                  | Apply project config & migrations            |
+| `make pull-db`             | Pull database dump into local DB             |
+| `make import-db file=...`  | Import a SQL dump into the local DB          |
+| `make tp`                  | Launch TablePlus                             |
+| `make l`                   | Launch site                                  |
+| `make keys`                | Setup Craft project keys                     |
+| `make update-search-index` | Rebuild search index                         |
+| `make mp`                  | Launch Mailpit                               |
+| `make kill-vite`           | Kill running Vite dev processes              |
 
 ## Nice to know
 
@@ -152,8 +154,8 @@ FILESYSTEM_TYPE=local
 To access the database inside the DDEV environment, you can use TablePlus. You can use the following command to open TablePlus to export/import:
 
 ```shell
-ddev tableplus 
-or 
+ddev tableplus
+or
 make tp
 ```
 
@@ -163,7 +165,7 @@ To access the email inside the DDEV environment, you can use Mailpit. You can us
 
 ```shell
 ddev mailpit
-or 
+or
 make mp
 ```
 

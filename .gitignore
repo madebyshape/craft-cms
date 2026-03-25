@@ -2,6 +2,10 @@
 
 dist
 
+# Generated at build-time by favicon plugins
+
+src/public/favicons/
+
 # Sass
 
 *.sassc
