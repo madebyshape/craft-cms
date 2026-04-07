@@ -16,7 +16,7 @@
     "svgo": "^4.0.1",
     "esbuild": "^0.27.4",
     "tailwindcss": "^4.2.2",
-    "vite": "8.0.2",
+    "vite": "8.0.5",
     "vite-plugin-favicons": "^0.1.7",
     "vite-plugin-image-optimizer": "^2.0.3",
     "vite-plugin-restart": "^0.4.0"
