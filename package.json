@@ -9,15 +9,16 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.0.6",
+    "@tailwindcss/vite": "^4.2.2",
     "alpinejs": "^3.13.8",
     "rollup-plugin-copy": "^3.5.0",
-    "sharp": "^0.33.3",
-    "svgo": "^3.2.0",
-    "tailwindcss": "^4.1.2",
-    "vite": "^5.2.0",
-    "vite-plugin-favicon2": "^1.1.5",
-    "vite-plugin-image-optimizer": "^1.1.7",
+    "sharp": "^0.34.5",
+    "svgo": "^4.0.1",
+    "esbuild": "^0.27.4",
+    "tailwindcss": "^4.2.2",
+    "vite": "8.0.2",
+    "vite-plugin-favicons": "^0.1.7",
+    "vite-plugin-image-optimizer": "^2.0.3",
     "vite-plugin-restart": "^0.4.0"
   },
   "repository": {
