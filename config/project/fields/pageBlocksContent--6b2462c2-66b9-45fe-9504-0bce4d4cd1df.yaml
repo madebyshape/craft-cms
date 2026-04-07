@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: pageBlocksContent
+instructions: null
+name: 'Page - Blocks Content'
+searchable: false
+settings:
+  createButtonLabel: 'New Block'
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 8a84de3a-19bd-4528-a47b-1d207eda9858 # Heading
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

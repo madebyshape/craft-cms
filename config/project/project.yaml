@@ -1,4 +1,4 @@
-dateModified: 1775556570
+dateModified: 1775558487
 email:
   fromEmail: $CRAFT_SYSTEM_EMAIL
   fromName: $CRAFT_SITE_NAME
@@ -50,11 +50,13 @@ meta:
     2fa69ca1-0da9-4b6b-910a-16d9b40d3cad: File # File
     5cbe08b7-b4bd-4a6b-be41-de9647b5eb19: Images # Images
     5e0a0379-473d-48fa-b3f0-4230ddc449a6: 'Lightswitch - Off' # Lightswitch - Off
+    6b2462c2-66b9-45fe-9504-0bce4d4cd1df: 'Page - Blocks Content' # Page - Blocks Content
     6d792fe4-471d-48ed-bc45-5fe112ba7e46: Image # Image
     7b662bcd-ea91-4c91-86ce-c60348c664d1: Pages # Pages
     7bf65ac5-9169-4bf8-8825-65fadd566946: New # New
     7da91603-5ded-43ca-b8c9-692b445e049e: 'Rich Text - Longform' # Rich Text - Longform
     7f0dd947-99d8-4456-93f3-4ce4f6162a3f: 'Rich Text - Simple' # Rich Text - Simple
+    8a84de3a-19bd-4528-a47b-1d207eda9858: Heading # Heading
     08c386f4-5a41-4c9f-8282-f6785af06bfc: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
     19d6d897-1cde-4d59-914a-2bf8a23e7916: 'Public Schema' # Public Schema
     42eea3c2-2f84-43d8-a495-647d4994a8d5: 'Text - Multiline' # Text - Multiline
