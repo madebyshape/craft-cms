@@ -116,6 +116,8 @@ make dev
 When you're ready to go live, make sure you have `npm` installed on the server, then run the production command to minify, compress and build the front-end assets:
 
 ```shell
+npm run build
+# or
 make prod
 ```
 
