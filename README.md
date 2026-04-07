@@ -2,13 +2,13 @@
 
 # Craft CMS 5 Starter
 
-This is a [Craft CMS 5.x](https://github.com/craftcms/cms) starter [MadeByShape](https://madebyshape.co.uk) use internally for projects, that we open sourced so anybody can use it.
+This is a [Craft CMS 5.x](https://github.com/craftcms/cms) starter that [MadeByShape](https://madebyshape.co.uk) use internally for projects. We open sourced it so anybody can use it.
 
 ## The Stack
 
 -   [Craft CMS 5.x](https://craftcms.com) Content management system
 -   [DDEV](https://ddev.com) Local development environment
--   [Vite 8.x](https://vitejs.dev) Front end build tool with HMR
+-   [Vite 8.x](https://vitejs.dev) Front-end build tool with HMR
 -   [Tailwind CSS 4.x](https://tailwindcss.com) Utility-first CSS framework
 -   [Alpine.js 3.x](https://alpinejs.dev/) Minimal JS framework
 -   [Mailgun](https://www.mailgun.com/) Email API
@@ -26,18 +26,18 @@ This is a [Craft CMS 5.x](https://github.com/craftcms/cms) starter [MadeByShape]
 
 -   Templates
     -   Layout templates setup ready with header and footer globals
-    -   Exception templates for 404, offline/maintenece and generic errors
+    -   Exception templates for 404, offline/maintenance and generic errors
     -   Page templates setup for use with matrix fields
     -   Email template for sending prettier system emails (Forgot password etc)
 -   Config
     -   Configs for all Craft CMS plugins
-    -   Customised general config with required features that hook in to .env vars
+    -   Customised general config with required features that hook into .env vars
 -   Env
     -   Customised .env file with Servd and Mailgun included
 -   Building
     -   HMR
     -   CSS and JS minified and purged
-    -   Favicon is generated and auto inserted into the template
+    -   Favicon is generated and auto-inserted into the template
     -   Images compressed
     -   Sourcemaps generated
 -   Servd
@@ -71,11 +71,11 @@ This is a [Craft CMS 5.x](https://github.com/craftcms/cms) starter [MadeByShape]
 
 ## Install
 
-Create an empty folder and CD to it in terminal (If you plan to use Option 1 or 2).
+Create an empty folder and `cd` to it in your terminal (if you plan to use Option 1 or 2).
 
 ### 1a. Option 1: Composer
 
-If you have composer installed locally, open terminal and run:
+If you have Composer installed locally, open your terminal and run:
 
 ```shell
 composer create-project madebyshape/craft-cms
@@ -83,7 +83,7 @@ composer create-project madebyshape/craft-cms
 
 ### 1b. Option 2: Git
 
-You can clone the repo from Github using Git CLI:
+You can clone the repo from GitHub using the Git CLI:
 
 ```shell
 git clone git@github.com:madebyshape/craft-cms.git
@@ -105,7 +105,7 @@ make install
 
 ### 3. Starting Vite
 
-Once you've followed step 2 and it's successfully ran through the steps, you'll need to start Vite which allows you to start using front end tooling:
+Once step 2 has successfully completed, start Vite for front-end tooling:
 
 ```shell
 make dev
@@ -113,7 +113,7 @@ make dev
 
 ## Production
 
-When you're ready to go live, make sure you have `npm` installed on the server, then you can run the production command to minify, compress and build the front end assets:
+When you're ready to go live, make sure you have `npm` installed on the server, then run the production command to minify, compress and build the front-end assets:
 
 ```shell
 make prod
@@ -121,7 +121,7 @@ make prod
 
 ## CLI commands
 
-We've create a few commands to make development easier. All these commands are ran in terminal:
+We've created a few commands to make development easier. All commands are run in your terminal:
 
 | Command                    | Description                                  |
 | -------------------------- | -------------------------------------------- |
@@ -150,17 +150,12 @@ We've create a few commands to make development easier. All these commands are r
 
 You can test your local site on other devices (phones, tablets) using [Tailscale](https://tailscale.com). This gives you a real HTTPS URL that works on any device.
 
-### Requirements
-
 - [Tailscale](https://tailscale.com/download) installed and running on your Mac
 - For `make share`: Tailscale installed on the test device too
 - For `make funnel`: No Tailscale needed on the test device (public URL)
+- Funnel requires HTTPS certificates and the `funnel` node attribute enabled in your [Tailscale admin console](https://login.tailscale.com/admin/acls)
 
-### Setup
-
-Funnel requires HTTPS certificates and the `funnel` node attribute enabled in your [Tailscale admin console](https://login.tailscale.com/admin/acls).
-
-The share/funnel commands will automatically register the Tailscale hostname with DDEV's router and expose the Vite dev server so CSS/JS assets load correctly on remote devices. Run `make share` or `make funnel` in one terminal and `make dev` in another.
+The share/funnel commands automatically register the Tailscale hostname with DDEV's router and expose the Vite dev server so CSS/JS assets load correctly on remote devices. Run `make share` or `make funnel` in one terminal and `make dev` in another.
 
 ## Nice to know
 
@@ -194,7 +189,7 @@ make mp
 
 ### HTTPS recommended
 
-There is a few issues getting Vite, DDEV and Craft CMS running nicely together over HTTP, so always make sure you are using HTTPS. For DDEV just run:
+There are a few issues getting Vite, DDEV and Craft CMS running nicely together over HTTP, so always make sure you are using HTTPS. For DDEV just run:
 
 ```shell
 ddev stop --all
