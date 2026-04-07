@@ -1,4 +1,4 @@
-dateModified: 1770115333
+dateModified: 1775556570
 email:
   fromEmail: $CRAFT_SYSTEM_EMAIL
   fromName: $CRAFT_SITE_NAME
@@ -55,15 +55,11 @@ meta:
     7bf65ac5-9169-4bf8-8825-65fadd566946: New # New
     7da91603-5ded-43ca-b8c9-692b445e049e: 'Rich Text - Longform' # Rich Text - Longform
     7f0dd947-99d8-4456-93f3-4ce4f6162a3f: 'Rich Text - Simple' # Rich Text - Simple
-    8b610edc-f2dd-46b6-9597-96fcbb6d302a: Simple # Simple
     08c386f4-5a41-4c9f-8282-f6785af06bfc: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
     19d6d897-1cde-4d59-914a-2bf8a23e7916: 'Public Schema' # Public Schema
     42eea3c2-2f84-43d8-a495-647d4994a8d5: 'Text - Multiline' # Text - Multiline
-    60dbe852-0ff6-4c8a-8bdc-6c303ebb6720: Longform # Longform
-    69c481e3-79e8-4777-923b-472d305abcea: Full # Full
     453f9294-407d-405a-b73b-d5b63aec2eaa: SEO # SEO
     502c0610-e74d-4359-8524-5652307ada64: Padding # Padding
-    824eedc9-d6b3-4bff-9b18-08c64927c6b0: Heading # Heading
     4580bc09-b5c8-40a2-bff5-95f715403f50: Video # Video
     13116ff7-bb9e-4f5b-989d-48a287e4b53c: 'Text - Code' # Text - Code
     41118d3a-a4e2-4b8e-8d11-b0a93f26deeb: 'Lightswitch - On' # Lightswitch - On
@@ -82,23 +78,23 @@ plugins:
   blitz:
     edition: standard
     enabled: true
-    licenseKey: null
+    licenseKey: ZA9JKYZRR80VDXK7SB5UCCB5
     schemaVersion: 5.12.0
     settings:
       maxUriLength: 2048
   ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 3.0.0.0
+    schemaVersion: 5.0.0.1
   formie:
     edition: standard
     enabled: true
-    licenseKey: null
+    licenseKey: R55PADEDUBP1E3TPUD1KYP4E
     schemaVersion: 3.4.12
   imager-x:
     edition: lite
     enabled: true
-    licenseKey: null
+    licenseKey: UPG5DJSS50Z6F2I2KYZEFN8V
     schemaVersion: 4.0.0
   imager-x-craft-cloud-transformer:
     edition: standard
@@ -115,7 +111,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: null
+    licenseKey: 4RDLZC53M0NZCP3QQXIO08E1
     schemaVersion: 3.0.13
   servd-asset-storage:
     edition: standard
