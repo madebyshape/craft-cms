@@ -79,6 +79,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# DDEV (auto-generated)
+
+.ddev/config.tailscale.yaml
+
 # Editor directories and files
 
 .vscode/*

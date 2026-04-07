@@ -1,4 +1,4 @@
-.PHONY: prod dev install setup clean npm-install
+.PHONY: prod dev install setup clean npm-install share funnel
 
 # Vite 8 + some plugins have peerDependency ranges that still conflict on clean installs.
 # Use the same flags we verified work inside DDEV.
@@ -99,3 +99,9 @@ kill-vite:
 npm-install:
 	@ddev start
 	@ddev exec -- npm install $(NPM_INSTALL_FLAGS)
+
+share:
+	ddev tailscale-share
+
+funnel:
+	ddev tailscale-funnel

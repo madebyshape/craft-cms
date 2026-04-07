@@ -14,11 +14,13 @@ This is a [Craft CMS 5.x](https://github.com/craftcms/cms) starter [MadeByShape]
 -   [Mailgun](https://www.mailgun.com/) Email API
 -   [Servd](https://servd.host) Craft CMS first hosting provider
 -   [Craft Cloud](https://craft.cloud) Craft CMS hosting provider
+-   [Tailscale](https://tailscale.com) Device testing via secure tunnels
 
 ## Requirements
 
 -   [Docker](https://www.docker.com)
 -   [DDEV](https://ddev.com)
+-   [Tailscale](https://tailscale.com/download) (optional, for device testing)
 
 ## Features
 
@@ -46,6 +48,9 @@ This is a [Craft CMS 5.x](https://github.com/craftcms/cms) starter [MadeByShape]
     -   Enabled for using artifacts with Vite JS and Imager X
 -   Caching
     -   Uses Blitz to handle server caching and warming
+-   Device Testing
+    -   Test on phones and tablets via Tailscale Share or Funnel
+    -   Vite dev server assets served through the tunnel
 
 ## Plugins
 
@@ -138,6 +143,24 @@ We've create a few commands to make development easier. All these commands are r
 | `make update-search-index` | Rebuild search index                         |
 | `make mp`                  | Launch Mailpit                               |
 | `make kill-vite`           | Kill running Vite dev processes              |
+| `make share`               | Share site over Tailscale (private)          |
+| `make funnel`              | Share site via Tailscale Funnel (public)     |
+
+## Device Testing with Tailscale
+
+You can test your local site on other devices (phones, tablets) using [Tailscale](https://tailscale.com). This gives you a real HTTPS URL that works on any device.
+
+### Requirements
+
+- [Tailscale](https://tailscale.com/download) installed and running on your Mac
+- For `make share`: Tailscale installed on the test device too
+- For `make funnel`: No Tailscale needed on the test device (public URL)
+
+### Setup
+
+Funnel requires HTTPS certificates and the `funnel` node attribute enabled in your [Tailscale admin console](https://login.tailscale.com/admin/acls).
+
+The share/funnel commands will automatically register the Tailscale hostname with DDEV's router and expose the Vite dev server so CSS/JS assets load correctly on remote devices. Run `make share` or `make funnel` in one terminal and `make dev` in another.
 
 ## Nice to know
 
