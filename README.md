@@ -152,7 +152,7 @@ We've created a few commands to make development easier. All commands are run in
 
 You can test your local site on other devices (phones, tablets) using [Tailscale](https://tailscale.com). This gives you a real HTTPS URL that works on any device.
 
-- [Tailscale](https://tailscale.com/download) installed and running on your Mac
+- [Tailscale](https://tailscale.com/download) installed and running on your Mac (the standalone or Homebrew version, **not** the Mac App Store version)
 - For `make share`: Tailscale installed on the test device too
 - For `make funnel`: No Tailscale needed on the test device (public URL)
 - Funnel requires HTTPS certificates and the `funnel` node attribute enabled in your [Tailscale admin console](https://login.tailscale.com/admin/acls)

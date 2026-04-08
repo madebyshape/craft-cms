@@ -18,6 +18,17 @@ if ! tailscale status &> /dev/null; then
     exit 1
 fi
 
+# Check for Mac App Store version (doesn't support serve/funnel)
+if tailscale funnel --help 2>&1 | grep -q "doesn't support"; then
+    echo "❌ The Tailscale Mac App Store version does not support 'tailscale funnel'."
+    echo ""
+    echo "   Install the standalone version instead:"
+    echo "   brew install tailscale"
+    echo ""
+    echo "   Or download from: https://tailscale.com/download"
+    exit 1
+fi
+
 DDEV_HOSTNAME="${DDEV_SITENAME}.ddev.site"
 TAILSCALE_HOSTNAME=$(tailscale status --json | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['Self']['DNSName'].rstrip('.'))" 2>/dev/null)
 
