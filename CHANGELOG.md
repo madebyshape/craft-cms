@@ -19,7 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Updated psy/psysh to v0.12.22. (CVE-2026-25129)
 - Updated picomatch to 4.0.4, minimatch to 3.1.5, symfony/process to 6.4.33.
 
-## [5.2.1] - 2026-04-08
+## 5.2.1 - 2026-04-08
 
 ### Added
 - Tailscale for local device testing.
@@ -28,7 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - README spelling mistakes.
 - Production command in README.
 
-## [5.2.0] - 2026-04-07
+## 5.2.0 - 2026-04-07
 
 ### Added
 - Default `pageBlocksContent` field.
@@ -40,19 +40,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Security
 - Updated psy/psysh to v0.12.22. (CVE-2026-25129)
 
-## [5.1.15] - 2026-04-07
+## 5.1.15 - 2026-04-07
 
 ### Fixed
 - Docker Compose port configuration issue. ([#66](https://github.com/madebyshape/craft-cms/issues/66))
 - Removed exposed license keys.
 
-## [5.1.14] - 2026-04-07
+## 5.1.14 - 2026-04-07
 
 ### Changed
 - Upgraded to Vite 8.
 - Updated Craft CMS and plugins.
 
-## [5.1.13] - 2026-02-03
+## 5.1.13 - 2026-02-03
 
 ### Added
 - `make import-db` command.
@@ -65,7 +65,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Fallback image.
 - License keys.
 
-## [5.1.12] - 2026-01-05
+## 5.1.12 - 2026-01-05
 
 ### Changed
 - Disabled query string caching by default.
@@ -73,7 +73,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Fixed
 - Removed license keys.
 
-## [5.1.11] - 2025-11-18
+## 5.1.11 - 2025-11-18
 
 ### Added
 - Imager X Craft Cloud plugin.
@@ -81,7 +81,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Changed
 - Updated README with filesystem documentation.
 
-## [5.1.10] - 2025-11-18
+## 5.1.10 - 2025-11-18
 
 ### Added
 - Craft Cloud filesystem.
@@ -92,7 +92,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Rebuilt project config.
 - Simplified `make install` — removed plugin install commands as Composer handles it.
 
-## [5.1.9] - 2025-11-18
+## 5.1.9 - 2025-11-18
 
 ### Added
 - Craft Cloud support.
@@ -104,7 +104,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Fixed
 - Update search index command.
 
-## [5.1.8] - 2025-10-07
+## 5.1.8 - 2025-10-07
 
 ### Added
 - `make keys` command.
@@ -112,7 +112,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Removed
 - Dev-specific env var options.
 
-## [5.1.7] - 2025-05-20
+## 5.1.7 - 2025-05-20
 
 ### Added
 - Transforms directory to `.gitignore`.
@@ -120,23 +120,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Fixed
 - Fonts array issue.
 
-## [5.1.6] - 2025-04-04
+## 5.1.6 - 2025-04-04
 
 ### Changed
 - Updated Tailwind CSS to 4.1.
 
-## [5.1.5] - 2025-04-02
+## 5.1.5 - 2025-04-02
 
 ### Changed
 - Updated plugin versions.
 
-## [5.1.4] - 2025-04-02
+## 5.1.4 - 2025-04-02
 
 ### Added
 - `--emptyDatabase` flag to `make pull-db` command.
 - Label to link field.
 
-## [5.1.3] - 2025-03-03
+## 5.1.3 - 2025-03-03
 
 ### Added
 - `make clean-logs` command.
@@ -144,18 +144,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Changed
 - Added `libvips-dev` to DDEV config to fix Sharp package errors on `make prod`. ([#62](https://github.com/madebyshape/craft-cms/pull/62))
 
-## [5.1.2] - 2025-02-20
+## 5.1.2 - 2025-02-20
 
 ### Changed
 - Dev and Start make commands.
 
-## [5.1.1] - 2025-02-17
+## 5.1.1 - 2025-02-17
 
 ### Removed
 - Aspect ratio plugin from README.
 - Debug mode from Vite.
 
-## [5.1.0] - 2025-02-14
+## 5.1.0 - 2025-02-14
 
 ### Added
 - Tailwind CSS 4 support.
@@ -167,7 +167,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Fixed
 - Tailwind 4 source issues.
 
-## [5.0.9] - 2025-02-13
+## 5.0.9 - 2025-02-13
 
 ### Fixed
 - Spelling mistake on `FILESYSTEM_FOLDER`.
@@ -175,7 +175,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Removed
 - Extra email step.
 
-## [5.0.8] - 2025-02-06
+## 5.0.8 - 2025-02-06
 
 ### Added
 - Button component.
@@ -198,18 +198,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Hyper plugin.
 - `servd-asset-storage.php`.
 
-## [5.0.7] - 2025-01-28
+## 5.0.7 - 2025-01-28
 
 ### Fixed
 - License issue.
 
-## [5.0.6] - 2025-01-20
+## 5.0.6 - 2025-01-20
 
 ### Added
 - `ddev start` to make commands.
 - Name to Composer for Packagist.
 
-## [5.0.5] - 2025-01-15
+## 5.0.5 - 2025-01-15
 
 ### Added
 - `make pull-db` command.
@@ -220,7 +220,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Servd config issues.
 - Setup make command with git pull error.
 
-## [5.0.4] - 2025-01-10
+## 5.0.4 - 2025-01-10
 
 ### Fixed
 - Vite reload issue.
@@ -229,17 +229,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Changed
 - Package name.
 
-## [5.0.3] - 2024-12-20
+## 5.0.3 - 2024-12-20
 
 ### Fixed
 - Double extension on Vite DDEV YAML.
 
-## [5.0.2] - 2024-12-15
+## 5.0.2 - 2024-12-15
 
 ### Changed
 - Updated README.
 
-## [5.0.1] - 2024-12-10
+## 5.0.1 - 2024-12-10
 
 ### Added
 - Vite restart plugin to fix template issues.
@@ -251,7 +251,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Fixed
 - Setup not running dev command.
 
-## [5.0.0] - 2024-12-01
+## 5.0.0 - 2024-12-01
 
 ### Added
 - Craft CMS 5 framework.
