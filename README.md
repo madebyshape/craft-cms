@@ -132,21 +132,21 @@ We've created a few commands to make development easier. All commands are run in
 | `make start`               | Start DDEV + Vite                         |
 | `make dev`                 | Start Vite dev server                     |
 | `make prod`                | Build front-end assets for production     |
-| `make npm-install`         | Install npm packages                      |
-| `make clean`               | Reset vendor + node_modules               |
-| `make clean-logs`          | Clear log files                           |
 | `make update`              | Update Craft CMS + plugins                |
 | `make up`                  | Apply project config + migrations         |
+| `make npm-install`         | Install npm packages                      |
+| `make keys`                | Generate Craft security keys              |
 | `make pull-db`             | Pull remote database (Servd)              |
 | `make import-db file=...`  | Import a SQL dump                         |
-| `make tp`                  | Open TablePlus                            |
-| `make l`                   | Open site in browser                      |
-| `make keys`                | Generate Craft security keys              |
 | `make update-search-index` | Rebuild search index                      |
+| `make l`                   | Open site in browser                      |
+| `make tp`                  | Open TablePlus                            |
 | `make mp`                  | Open Mailpit                              |
-| `make kill-vite`           | Kill Vite processes                       |
 | `make share`               | Share site via Tailscale (private)        |
 | `make funnel`              | Share site via Tailscale Funnel (public)  |
+| `make clean`               | Reset vendor + node_modules               |
+| `make clean-logs`          | Clear log files                           |
+| `make kill-vite`           | Kill Vite processes                       |
 
 ## Nice to know
 
