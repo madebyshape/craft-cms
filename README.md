@@ -125,28 +125,28 @@ make prod
 
 We've created a few commands to make development easier. All commands are run in your terminal:
 
-| Command                    | Description                                  |
-| -------------------------- | -------------------------------------------- |
-| `make install`             | Start DDEV, install Craft CMS & dependencies |
-| `make setup`               | Pull repo + install deps                     |
-| `make start`               | Start DDEV + Vite                            |
-| `make dev`                 | Start Vite (HMR)                             |
-| `make prod`                | Production build (Vite build)                |
-| `make npm-install`         | Run `npm install` inside DDEV                |
-| `make clean`               | Remove vendor & node_modules                 |
-| `make clean-logs`          | Remove storage logs                          |
-| `make update`              | Run Craft updates                            |
-| `make up`                  | Apply project config & migrations            |
-| `make pull-db`             | Pull database dump into local DB             |
-| `make import-db file=...`  | Import a SQL dump into the local DB          |
-| `make tp`                  | Launch TablePlus                             |
-| `make l`                   | Launch site                                  |
-| `make keys`                | Setup Craft project keys                     |
-| `make update-search-index` | Rebuild search index                         |
-| `make mp`                  | Launch Mailpit                               |
-| `make kill-vite`           | Kill running Vite dev processes              |
-| `make share`               | Share site over Tailscale (private)          |
-| `make funnel`              | Share site via Tailscale Funnel (public)     |
+| Command                    | Description                               |
+| -------------------------- | ----------------------------------------- |
+| `make install`             | Full install (DDEV, Craft CMS, npm)       |
+| `make setup`               | Pull latest + install dependencies        |
+| `make start`               | Start DDEV + Vite                         |
+| `make dev`                 | Start Vite dev server                     |
+| `make prod`                | Build front-end assets for production     |
+| `make npm-install`         | Install npm packages                      |
+| `make clean`               | Reset vendor + node_modules               |
+| `make clean-logs`          | Clear log files                           |
+| `make update`              | Update Craft CMS + plugins                |
+| `make up`                  | Apply project config + migrations         |
+| `make pull-db`             | Pull remote database (Servd)              |
+| `make import-db file=...`  | Import a SQL dump                         |
+| `make tp`                  | Open TablePlus                            |
+| `make l`                   | Open site in browser                      |
+| `make keys`                | Generate Craft security keys              |
+| `make update-search-index` | Rebuild search index                      |
+| `make mp`                  | Open Mailpit                              |
+| `make kill-vite`           | Kill Vite processes                       |
+| `make share`               | Share site via Tailscale (private)        |
+| `make funnel`              | Share site via Tailscale Funnel (public)  |
 
 ## Nice to know
 
