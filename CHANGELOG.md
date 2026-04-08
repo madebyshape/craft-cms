@@ -4,13 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
-## Unreleased
+## 5.2.2 - 2026-04-08
 
 ### Added
 - Tailscale device testing with `make share` and `make funnel` commands.
 - `TAILSCALE_HOST` env var support in Craft Vite plugin for remote asset loading.
 - Mac App Store detection in Tailscale scripts with helpful error message.
 - Docker Compose port fix for DDEV router. ([#66](https://github.com/madebyshape/craft-cms/issues/66))
+- CHANGELOG.
 
 ### Changed
 - Updated README with Tailscale docs, spelling fixes, and grammar improvements.
