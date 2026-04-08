@@ -148,18 +148,16 @@ We've created a few commands to make development easier. All commands are run in
 | `make share`               | Share site over Tailscale (private)          |
 | `make funnel`              | Share site via Tailscale Funnel (public)     |
 
-## Device Testing with Tailscale
+## Nice to know
+
+### Device Testing with Tailscale
 
 You can test your local site on other devices (phones, tablets) using [Tailscale](https://tailscale.com). This gives you a real HTTPS URL that works on any device.
 
 - [Tailscale](https://tailscale.com/download) installed and running on your Mac (the standalone or Homebrew version, **not** the Mac App Store version)
-- For `make share`: Tailscale installed on the test device too
-- For `make funnel`: No Tailscale needed on the test device (public URL)
 - Funnel requires HTTPS certificates and the `funnel` node attribute enabled in your [Tailscale admin console](https://login.tailscale.com/admin/acls)
 
-The share/funnel commands automatically register the Tailscale hostname with DDEV's router and expose the Vite dev server so CSS/JS assets load correctly on remote devices. Run `make share` or `make funnel` in one terminal and `make dev` in another.
-
-## Nice to know
+The Tailscale commands (see [CLI commands](#cli-commands)) automatically register the Tailscale hostname with DDEV's router and expose the Vite dev server so CSS/JS assets load correctly on remote devices. You'll need two terminals: one for the Tailscale tunnel and one for Vite.
 
 ### File system type
 
@@ -175,7 +173,7 @@ To access the database inside the DDEV environment, you can use TablePlus. You c
 
 ```shell
 ddev tableplus
-or
+# or
 make tp
 ```
 
@@ -185,7 +183,7 @@ To access the email inside the DDEV environment, you can use Mailpit. You can us
 
 ```shell
 ddev mailpit
-or
+# or
 make mp
 ```
 
