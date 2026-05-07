@@ -40,79 +40,6 @@ const pngAssets = [
     ['yandex-browser-50x50.png', 50, 50],
 ];
 
-const startupAssets = [
-    ['apple-touch-startup-image-640x1136.png', 640, 1136],
-    ['apple-touch-startup-image-1136x640.png', 1136, 640],
-    ['apple-touch-startup-image-750x1334.png', 750, 1334],
-    ['apple-touch-startup-image-1334x750.png', 1334, 750],
-    ['apple-touch-startup-image-1125x2436.png', 1125, 2436],
-    ['apple-touch-startup-image-2436x1125.png', 2436, 1125],
-    ['apple-touch-startup-image-1170x2532.png', 1170, 2532],
-    ['apple-touch-startup-image-2532x1170.png', 2532, 1170],
-    ['apple-touch-startup-image-1179x2556.png', 1179, 2556],
-    ['apple-touch-startup-image-2556x1179.png', 2556, 1179],
-    ['apple-touch-startup-image-828x1792.png', 828, 1792],
-    ['apple-touch-startup-image-1792x828.png', 1792, 828],
-    ['apple-touch-startup-image-1242x2688.png', 1242, 2688],
-    ['apple-touch-startup-image-2688x1242.png', 2688, 1242],
-    ['apple-touch-startup-image-1242x2208.png', 1242, 2208],
-    ['apple-touch-startup-image-2208x1242.png', 2208, 1242],
-    ['apple-touch-startup-image-1284x2778.png', 1284, 2778],
-    ['apple-touch-startup-image-2778x1284.png', 2778, 1284],
-    ['apple-touch-startup-image-1290x2796.png', 1290, 2796],
-    ['apple-touch-startup-image-2796x1290.png', 2796, 1290],
-    ['apple-touch-startup-image-1488x2266.png', 1488, 2266],
-    ['apple-touch-startup-image-2266x1488.png', 2266, 1488],
-    ['apple-touch-startup-image-1536x2048.png', 1536, 2048],
-    ['apple-touch-startup-image-2048x1536.png', 2048, 1536],
-    ['apple-touch-startup-image-1620x2160.png', 1620, 2160],
-    ['apple-touch-startup-image-2160x1620.png', 2160, 1620],
-    ['apple-touch-startup-image-1640x2160.png', 1640, 2160],
-    ['apple-touch-startup-image-2160x1640.png', 2160, 1640],
-    ['apple-touch-startup-image-1668x2388.png', 1668, 2388],
-    ['apple-touch-startup-image-2388x1668.png', 2388, 1668],
-    ['apple-touch-startup-image-1668x2224.png', 1668, 2224],
-    ['apple-touch-startup-image-2224x1668.png', 2224, 1668],
-    ['apple-touch-startup-image-2048x2732.png', 2048, 2732],
-    ['apple-touch-startup-image-2732x2048.png', 2732, 2048],
-];
-
-const startupMedia = [
-    ['(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)', 'apple-touch-startup-image-640x1136.png'],
-    ['(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)', 'apple-touch-startup-image-1136x640.png'],
-    ['(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)', 'apple-touch-startup-image-750x1334.png'],
-    ['(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)', 'apple-touch-startup-image-1334x750.png'],
-    ['(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)', 'apple-touch-startup-image-1125x2436.png'],
-    ['(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)', 'apple-touch-startup-image-2436x1125.png'],
-    ['(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)', 'apple-touch-startup-image-1170x2532.png'],
-    ['(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)', 'apple-touch-startup-image-2532x1170.png'],
-    ['(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)', 'apple-touch-startup-image-1179x2556.png'],
-    ['(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)', 'apple-touch-startup-image-2556x1179.png'],
-    ['(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)', 'apple-touch-startup-image-828x1792.png'],
-    ['(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)', 'apple-touch-startup-image-1792x828.png'],
-    ['(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)', 'apple-touch-startup-image-1242x2688.png'],
-    ['(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)', 'apple-touch-startup-image-2688x1242.png'],
-    ['(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)', 'apple-touch-startup-image-1242x2208.png'],
-    ['(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)', 'apple-touch-startup-image-2208x1242.png'],
-    ['(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)', 'apple-touch-startup-image-1284x2778.png'],
-    ['(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)', 'apple-touch-startup-image-2778x1284.png'],
-    ['(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)', 'apple-touch-startup-image-1290x2796.png'],
-    ['(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)', 'apple-touch-startup-image-2796x1290.png'],
-    ['(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)', 'apple-touch-startup-image-1488x2266.png'],
-    ['(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)', 'apple-touch-startup-image-2266x1488.png'],
-    ['(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)', 'apple-touch-startup-image-1536x2048.png'],
-    ['(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)', 'apple-touch-startup-image-2048x1536.png'],
-    ['(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)', 'apple-touch-startup-image-1620x2160.png'],
-    ['(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)', 'apple-touch-startup-image-2160x1620.png'],
-    ['(device-width: 820px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)', 'apple-touch-startup-image-1640x2160.png'],
-    ['(device-width: 820px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)', 'apple-touch-startup-image-2160x1640.png'],
-    ['(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)', 'apple-touch-startup-image-1668x2388.png'],
-    ['(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)', 'apple-touch-startup-image-2388x1668.png'],
-    ['(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)', 'apple-touch-startup-image-1668x2224.png'],
-    ['(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)', 'apple-touch-startup-image-2224x1668.png'],
-    ['(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)', 'apple-touch-startup-image-2048x2732.png'],
-    ['(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)', 'apple-touch-startup-image-2732x2048.png'],
-];
 
 const resizePng = async (width, height) => {
     const iconSize = Math.min(width, height);
@@ -216,9 +143,6 @@ const html = [
     '<meta name="apple-mobile-web-app-capable" content="yes">',
     '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">',
     '<meta name="apple-mobile-web-app-title">',
-    ...startupMedia.map(([media, file]) => (
-        `<link rel="apple-touch-startup-image" media="${media}" href="${publicPath}/${file}">`
-    )),
     '<meta name="msapplication-TileColor" content="#fff">',
     `<meta name="msapplication-TileImage" content="${publicPath}/mstile-144x144.png">`,
     `<meta name="msapplication-config" content="${publicPath}/browserconfig.xml">`,
@@ -227,7 +151,7 @@ const html = [
 
 await mkdir(outputDir, { recursive: true });
 
-for (const [name, width, height] of [...pngAssets, ...startupAssets]) {
+for (const [name, width, height] of pngAssets) {
     await writeFile(path.join(outputDir, name), await resizePng(width, height));
 }
 
@@ -239,4 +163,4 @@ await Promise.all([
     writeFile(path.join(outputDir, 'favicon.html'), html),
 ]);
 
-console.log(`Generated ${pngAssets.length + startupAssets.length + 5} favicon files in ${outputDir}`);
+console.log(`Generated ${pngAssets.length + 5} favicon files in ${outputDir}`);

@@ -48,8 +48,6 @@ export default ({ command }) => ({
 		reloadTemplates(),
 		ViteImageOptimizer({
 			include: [
-				"chevron-down-dark.svg",
-				"chevron-down-light.svg",
 				"fallback.png",
 				"favicon.png",
 			],
