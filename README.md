@@ -147,6 +147,7 @@ We've created a few commands to make development easier. All commands are run in
 | `make clean`               | Reset vendor + node_modules               |
 | `make clean-logs`          | Clear log files                           |
 | `make kill-vite`           | Kill Vite processes                       |
+| `make icons`               | Build icons                                  |
 
 ## Nice to know
 

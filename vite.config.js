@@ -1,9 +1,15 @@
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
-import ViteRestart from "vite-plugin-restart";
 import tailwindcss from "@tailwindcss/vite";
-import fs from "node:fs/promises";
 import path from "node:path";
-import { faviconsPlugin } from "vite-plugin-favicons";
+
+const reloadTemplates = () => ({
+	name: "reload-craft-templates",
+	handleHotUpdate({ file, server }) {
+		if (file.includes(`${path.sep}templates${path.sep}`)) {
+			server.ws.send({ type: "full-reload" });
+		}
+	},
+});
 
 export default ({ command }) => ({
 	base: command === "serve" ? "" : `${process.env.CRAFT_CLOUD_ARTIFACT_BASE_URL || ""}/dist/`,
@@ -39,36 +45,12 @@ export default ({ command }) => ({
 	},
 	plugins: [
 		tailwindcss(),
-		ViteRestart({
-			reload: ["templates/**/*"],
+		reloadTemplates(),
+		ViteImageOptimizer({
+			include: [
+				"fallback.png",
+				"favicon.png",
+			],
 		}),
-		faviconsPlugin({
-			imgSrc: "src/public/images/favicon.png",
-			// Generates: src/public/favicons/favicon.html + icon files
-			path: "/favicons",
-		}),
-		// Keep favicon URLs consistent with the existing Craft config/routes (`/dist/favicons/...`).
-		{
-			name: "rewrite-favicons-html",
-			apply: "build",
-			enforce: "post",
-			async buildStart() {
-				const faviconHtmlPath = path.resolve("src/public/favicons/favicon.html");
-				try {
-					const html = await fs.readFile(faviconHtmlPath, "utf8");
-					const rewritten = html
-						// favicons plugin uses `/favicons/...` based on its `path` option.
-						.replaceAll("/favicons/", "/dist/favicons/")
-						.replaceAll('href="/favicons"', 'href="/dist/favicons"');
-
-					if (rewritten !== html) {
-						await fs.writeFile(faviconHtmlPath, rewritten, "utf8");
-					}
-				} catch {
-					// Ignore if file doesn't exist yet (e.g., plugin failures) so build can surface real issues elsewhere.
-				}
-			},
-		},
-		ViteImageOptimizer({}),
 	],
 });

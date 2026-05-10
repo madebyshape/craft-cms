@@ -1,11 +1,11 @@
-.PHONY: prod dev install setup clean npm-install share funnel
+.PHONY: prod dev install setup clean npm-install icons share funnel
 
-# Vite 8 + some plugins have peerDependency ranges that still conflict on clean installs.
-# Use the same flags we verified work inside DDEV.
-NPM_INSTALL_FLAGS ?= --include=optional --legacy-peer-deps
 
 prod: 
 	ddev exec npm run build
+
+icons:
+	ddev exec npm run favicons
 
 dev: 
 	ddev exec npm run dev
@@ -16,7 +16,7 @@ start:
 
 install:
 	ddev start
-	ddev exec -- npm install $(NPM_INSTALL_FLAGS)
+	ddev exec npm install
 	ddev composer install
 	@if [ ! -f .env ]; then \
 		if [ -f .env.example.dev ]; then \
@@ -45,7 +45,7 @@ install:
 setup: 
 	ddev start
 	git pull
-	ddev exec -- npm install $(NPM_INSTALL_FLAGS)
+	ddev exec npm install
 	ddev composer install
 	ddev exec php craft setup/keys
 	ddev exec php craft up --interactive=0
@@ -57,7 +57,7 @@ clean:
 	ddev composer clear-cache
 	ddev exec npm cache clean --force
 	ddev composer install
-	ddev exec -- npm install $(NPM_INSTALL_FLAGS)
+	ddev exec npm install
 
 clean-logs:
 	rm -rf storage/logs/*.log
@@ -98,7 +98,7 @@ kill-vite:
 
 npm-install:
 	@ddev start
-	@ddev exec -- npm install $(NPM_INSTALL_FLAGS)
+	@ddev exec npm install
 
 share:
 	ddev tailscale-share
