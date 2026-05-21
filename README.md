@@ -51,6 +51,10 @@ This is a [Craft CMS 5.x](https://github.com/craftcms/cms) starter that [MadeByS
 -   Device Testing
     -   Test on phones and tablets via Tailscale Share or Funnel
     -   Vite dev server assets served through the tunnel
+-   Branch Switching
+    -   Switch branches with isolated DDEV projects per branch
+    -   Automatic snapshots before switching
+    -   Auto pulls database from Servd when the new branch is empty
 
 ## Plugins
 
