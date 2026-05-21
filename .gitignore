@@ -46,6 +46,8 @@ node_modules
 # Backups
 
 backups
+*.sql
+*.sql.gz
 
 # Caching
 
