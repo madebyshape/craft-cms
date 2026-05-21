@@ -144,11 +144,22 @@ We've created a few commands to make development easier. All commands are run in
 | `make mp`                  | Open Mailpit                              |
 | `make share`               | Share site via Tailscale (private)        |
 | `make funnel`              | Share site via Tailscale Funnel (public)  |
+| `make switch-branch <name>`| Switch branch with isolated DDEV project  |
 | `make clean`               | Reset vendor + node_modules               |
 | `make clean-logs`          | Clear log files                           |
 | `make kill-vite`           | Kill Vite processes                       |
 
 ## Nice to know
+
+### Switching branches
+
+When you need to work on a different branch without disturbing your current DDEV database, use:
+
+```shell
+make switch-branch <branch>
+```
+
+This snapshots the current branch's database, stops the project, checks out the target branch, and spins up an isolated DDEV project named `<project>-<branch>` (using `.ddev/config.local.yaml`). If the new branch's database is empty, it's automatically pulled from Servd. Switching back to `master` or `main` removes the local config and returns to the default project.
 
 ### Device Testing with Tailscale
 

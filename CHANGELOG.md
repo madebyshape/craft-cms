@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## 5.2.3 - 2026-05-21
+
+### Added
+- `make switch-branch <branch>` command for working on multiple branches with isolated DDEV projects, snapshots, and auto database import from Servd when empty.
+
 ## 5.2.2 - 2026-04-08
 
 ### Added
