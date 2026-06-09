@@ -11,6 +11,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Updated Craft CMS to 5.10 and plugins: CKEditor 5.5, Blitz 5.12.9, Servd Asset Storage 4.2.6, Imager-X 6.0, Imager-X Craft Cloud Transformer 1.0.2, and Formie 3.1.28.
 - Synced project config changes resulting from the CKEditor/rich text field updates.
 
+### Fixed
+- Modernised the `_components/fonts.twig` partial: woff2-only with `preload` and `font-display: swap`, dropping the obsolete eot/woff/ttf/svg formats and fixing an invalid quoted `font-style` value.
+
 ## 5.2.4 - 2026-06-09
 
 ### Changed
