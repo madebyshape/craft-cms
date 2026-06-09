@@ -4,6 +4,23 @@
 
 This is a [Craft CMS 5.x](https://github.com/craftcms/cms) starter that [MadeByShape](https://madebyshape.co.uk) use internally for projects. We open sourced it so anybody can use it.
 
+## Contents
+
+-   [The Stack](#the-stack)
+-   [Requirements](#requirements)
+-   [Features](#features)
+-   [Plugins](#plugins)
+-   [Install](#install)
+-   [Production](#production)
+-   [CLI commands](#cli-commands)
+-   [Nice to know](#nice-to-know)
+    -   [Switching branches](#switching-branches)
+    -   [Device Testing with Tailscale](#device-testing-with-tailscale)
+    -   [File system type](#file-system-type)
+    -   [Database](#database)
+    -   [Email](#email)
+    -   [HTTPS recommended](#https-recommended)
+
 ## The Stack
 
 -   [Craft CMS 5.x](https://craftcms.com) Content management system
