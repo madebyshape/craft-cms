@@ -5,6 +5,7 @@ entryTypes:
     uid: bdf6317d-0df7-449f-a937-a1a274ffb106 # Page - Blocks
 handle: pages
 maxAuthors: 1
+minAuthors: 0
 name: Pages
 previewTargets:
   -

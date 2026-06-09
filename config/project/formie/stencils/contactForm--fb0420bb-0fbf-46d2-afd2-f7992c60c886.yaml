@@ -24,7 +24,7 @@ data:
         type: paragraph
     errorMessagePosition: top-form
     fileUploadsAction: null
-    limitSubmissions: ''
+    limitSubmissions: null
     limitSubmissionsIpAddressMessage: null
     limitSubmissionsIpAddressNumber: null
     limitSubmissionsIpAddressType: null

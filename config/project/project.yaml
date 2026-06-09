@@ -1,4 +1,4 @@
-dateModified: 1775558487
+dateModified: 1781044879
 email:
   fromEmail: $CRAFT_SYSTEM_EMAIL
   fromName: $CRAFT_SITE_NAME
@@ -80,23 +80,23 @@ plugins:
   blitz:
     edition: standard
     enabled: true
-    licenseKey: null
+    licenseKey: O2GPOLFG9AHHSLOHYYU1R006
     schemaVersion: 5.12.0
     settings:
       maxUriLength: 2048
   ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 5.0.0.1
+    schemaVersion: 5.6.0.0
   formie:
     edition: standard
     enabled: true
-    licenseKey: null
+    licenseKey: VJPCWKHVTXD6T3VNVK6EEYHL
     schemaVersion: 3.4.12
   imager-x:
     edition: lite
     enabled: true
-    licenseKey: null
+    licenseKey: NTBA9B5N7RG6LJUDJ8WQ6HH8
     schemaVersion: 4.0.0
   imager-x-craft-cloud-transformer:
     edition: standard
@@ -113,7 +113,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: null
+    licenseKey: GPOS7PIGXXUO7EBHD0RJATA3
     schemaVersion: 3.0.13
   servd-asset-storage:
     edition: standard
@@ -147,5 +147,5 @@ system:
   live: true
   name: $CRAFT_SITE_NAME
   retryDuration: null
-  schemaVersion: 5.9.0.8
+  schemaVersion: 5.10.0.0
   timeZone: America/Los_Angeles

@@ -4,7 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## 5.2.5 - 2026-06-09
+
+### Changed
+- Upgraded PHP from 8.2 to 8.3 (DDEV config and Composer platform) for improved runtime performance.
+- Updated Craft CMS to 5.10 and plugins: CKEditor 5.5, Blitz 5.12.9, Servd Asset Storage 4.2.6, Imager-X 6.0, Imager-X Craft Cloud Transformer 1.0.2, and Formie 3.1.28.
+- Synced project config changes resulting from the CKEditor/rich text field updates.
+
 ## 5.2.4 - 2026-06-09
+
+### Changed
+- Added `cpresources` to `upload_dirs` to exclude ~111MB of auto-generated control-panel assets from the Mutagen sync, reducing sync size and improving performance.
 
 ### Fixed
 - Corrected `upload_dirs` paths in DDEV config to be relative to the docroot, and excluded `node_modules` from the Mutagen sync. ([#91](https://github.com/madebyshape/craft-cms/issues/91))
