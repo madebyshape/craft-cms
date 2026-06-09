@@ -64,6 +64,7 @@ This is a [Craft CMS 5.x](https://github.com/craftcms/cms) starter that [MadeByS
 -   CKEditor
 -   Formie
 -   Imager X
+-   LLM Ready
 -   Mailgun
 -   Minify
 -   SEOMatic
@@ -194,13 +195,9 @@ make tp
 
 ### Email
 
-To access the email inside the DDEV environment, you can use Mailpit. You can use the following command to open Mailpit:
+Locally, all outgoing mail is caught by [Mailpit](https://mailpit.axllent.org) instead of being delivered, so password resets, Formie notifications and the like are safe to test. This is set in the `dev` block of `config/app.php`, which overrides Craft's `mailer` to send over SMTP to Mailpit (`MAILPIT_SMTP_HOSTNAME` / `MAILPIT_SMTP_PORT` in `.env`); edit that block to change or disable it. View caught mail with `ddev mailpit` (or `make mp`).
 
-```shell
-ddev mailpit
-# or
-make mp
-```
+> **Note:** The CP **Settings → Email → Test** button bypasses this override and uses your real (Mailgun) settings, so it errors locally. To send a test through Mailpit, run `ddev craft mailer/test` instead.
 
 ### HTTPS recommended
 
