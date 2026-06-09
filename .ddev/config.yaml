@@ -20,8 +20,9 @@ nodejs_version: "22"
 
 mutagen_enabled: true
 upload_dirs:
-  - web/assets
-  - storage
+  - assets
+  - ../storage
+  - ../node_modules
 
 webimage_extra_packages:
   - build-essential
