@@ -1,34 +1,41 @@
 {#
+   Font loading — modern pattern (woff2 only, preload + font-display: swap).
 
-{% set fonts = {
-    inter: [
-        {
-            file: 'inter',
-            weight: 400,
-            style: 'normal'
-        }
-    ]
-} %}
+   Add your fonts to the map below and drop the matching `.woff2` files in
+   `src/public/fonts/` (served from `/dist/fonts/` after the Vite build).
+   Only list fonts that are needed for the initial render here — every entry is
+   preloaded, so keep it to your critical above-the-fold weights.
 
-{% for key, family in fonts %}
-    {% for font in family %}
-        <link rel="preload" href="/dist/fonts/{{ font.file }}.woff2" as="font" crossorigin>
-        <style>
-            @font-face {
-                font-family: "{{ key }}";
-                src: url("/dist/fonts/{{ font.file }}.eot");
-                src: local("{{ key }}"),
-                    url("/dist/fonts/{{ font.file }}.eot?#iefix") format("embedded-opentype"),
-                    url("/dist/fonts/{{ font.file }}.woff2") format("woff2"),
-                    url("/dist/fonts/{{ font.file }}.woff") format("woff"),
-                    url("/dist/fonts/{{ font.file }}.ttf") format("truetype"),
-                    url("/dist/fonts/{{ font.file }}.svg#{{ font.file }}") format("svg");
-                font-weight: {{ font.weight }};
-                font-style: "{{ font.style }}";
-                font-display: swap;
-            }
-        </style>
+   Example:
+   {% set fonts = {
+       inter: [
+           { file: 'inter-regular', weight: 400, style: 'normal' },
+           { file: 'inter-bold',    weight: 700, style: 'normal' },
+       ],
+   } %}
+#}
+
+{% set fonts = {} %}
+
+{# Preload critical font files first so the browser can fetch them early. #}
+{% for family, faces in fonts %}
+    {% for font in faces %}
+        <link rel="preload" href="/dist/fonts/{{ font.file }}.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     {% endfor %}
 {% endfor %}
 
-#}
+{% if fonts is not empty %}
+    <style>
+        {% for family, faces in fonts %}
+            {% for font in faces %}
+                @font-face {
+                    font-family: "{{ family }}";
+                    src: url("/dist/fonts/{{ font.file }}.woff2") format("woff2");
+                    font-weight: {{ font.weight }};
+                    font-style: {{ font.style }};
+                    font-display: swap;
+                }
+            {% endfor %}
+        {% endfor %}
+    </style>
+{% endif %}
