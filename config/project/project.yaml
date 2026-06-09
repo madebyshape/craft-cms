@@ -1,4 +1,4 @@
-dateModified: 1781044879
+dateModified: 1781045530
 email:
   fromEmail: $CRAFT_SYSTEM_EMAIL
   fromName: $CRAFT_SITE_NAME
@@ -102,6 +102,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  llm-ready:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.2.0
   mailgun:
     edition: standard
     enabled: true

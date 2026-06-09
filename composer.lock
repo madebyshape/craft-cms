@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c91ac268c566f288c478fdbc3d6d7929",
+    "content-hash": "f1ed15087d22ae0783a3ba57d99bc6d2",
     "packages": [
         {
             "name": "99designs/http-signatures",
@@ -4094,6 +4094,52 @@
             ],
             "description": "Provides functionality for http_build_url() to environments without pecl_http.",
             "time": "2017-05-01T15:36:40+00:00"
+        },
+        {
+            "name": "johnfmorton/craft-llm-ready",
+            "version": "1.4.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnfmorton/craft-llm-ready/zipball/a0cc83ec50c8d58a3319d04995f0fd3e76d6f582",
+                "reference": "a0cc83ec50c8d58a3319d04995f0fd3e76d6f582",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.9.18",
+                "league/html-to-markdown": "^5.0",
+                "php": ">=8.2"
+            },
+            "suggest": {
+                "nystudio107/craft-seomatic": "Pull entry descriptions directly from SEOmatic by setting Description Field to `seomatic:description`. See SEO-PLUGINS.md."
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "handle": "llm-ready",
+                "name": "LLM Ready",
+                "developer": "John F Morton",
+                "documentationUrl": "https://github.com/johnfmorton/craft-llm-ready",
+                "class": "johnfmorton\\llmready\\LlmReady"
+            },
+            "autoload": {
+                "psr-4": {
+                    "johnfmorton\\llmready\\": "src/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "John F Morton",
+                    "homepage": "https://johnfmorton.com/"
+                }
+            ],
+            "description": "Serve Markdown versions of your Craft CMS pages to AI crawlers and LLMs via .md URLs, content negotiation, and user-agent detection.",
+            "support": {
+                "issues": "https://github.com/johnfmorton/craft-llm-ready/issues?state=open",
+                "source": "https://github.com/johnfmorton/craft-llm-ready"
+            },
+            "time": "2026-06-09T11:20:36+00:00"
         },
         {
             "name": "kelunik/certificate",

@@ -8,6 +8,7 @@
     "craftcms/cloud": "*",
     "craftcms/cms": "^5.10.5",
     "craftcms/mailgun": "^3.1.0",
+    "johnfmorton/craft-llm-ready": "^1.4.1",
     "nystudio107/craft-minify": "^5.0.0-beta.2",
     "nystudio107/craft-seomatic": "^5.1.21",
     "nystudio107/craft-vite": "^5.0.0-beta.3",
