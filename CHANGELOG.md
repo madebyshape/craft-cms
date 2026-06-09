@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## 5.2.7 - 2026-06-10
+
+### Changed
+- Removed license keys from project config.
+
 ## 5.2.6 - 2026-06-09
 
 ### Added
