@@ -23,9 +23,24 @@
          'pngCompressionLevel' => 0,
          'resizeFilter' => 'lanczos',
          'hashPath' => true,
-         'useCwebp' => false,
-         'cwebpPath' => '/usr/bin/cwebp',
-         'cwebpOptions' => '-q 90',
+         'customEncoders' => [
+            'webp' => [
+               'path' => '/usr/bin/cwebp',
+               'options' => [
+                  'quality' => 90,
+                  'effort' => 4,
+               ],
+               'paramsString' => '-q {quality} -m {effort} {src} -o {dest}'
+            ],
+            'avif' => [
+               'path' => '/usr/bin/cavif',
+               'options' => [
+                  'quality' => 90,
+                  'speed' => 7,
+               ],
+               'paramsString' => '--quality {quality} --speed {speed} --overwrite -o {dest} {src}'
+            ],
+         ],
          'optimizeType' => 'job',
          'optimizers' => null,
          'optimizerConfig' => [
