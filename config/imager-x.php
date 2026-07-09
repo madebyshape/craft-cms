@@ -79,6 +79,6 @@
       'dev' => [],
       'staging' => [],
       'production' => [
-        'optimizers' => ['jpegoptim', 'jpegtran', 'optipng', 'gifsicle'],
+        'optimizers' => ['jpegoptim', 'jpegtran', 'mozjpeg', 'optipng', 'pngquant', 'gifsicle'],
       ]
    ];
