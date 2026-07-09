@@ -19,9 +19,13 @@
          'cacheDuration' => 31536000, // 1 year
          'cacheDurationRemoteFiles' => 31536000, // 1 year
          'preserveColorProfiles' => true,
+         'removeMetadata' => true,
          'jpegQuality' => 90,
          'pngCompressionLevel' => 0,
          'resizeFilter' => 'lanczos',
+         'smartResizeEnabled' => true,
+         'allowUpscale' => false,
+         'interlace' => true,
          'hashPath' => true,
          'customEncoders' => [
             'webp' => [
