@@ -30,6 +30,7 @@ install:
 			exit 1; \
 		fi \
 	fi
+	ddev exec mkdir -p web/assets web/transforms
 	ddev exec php craft install
 	@if [ -z "$(CRAFT_SITE_NAME)" ]; then \
 		read -p "Site Name: " site_name; \
