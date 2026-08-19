@@ -147,9 +147,8 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
 system:
-  edition: pro
+  edition: solo
   live: true
   name: $CRAFT_SITE_NAME
-  retryDuration: null
   schemaVersion: 5.10.0.0
-  timeZone: America/Los_Angeles
+  timeZone: Europe/London
