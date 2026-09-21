@@ -30,16 +30,28 @@ install:
 			exit 1; \
 		fi \
 	fi
-	ddev exec mkdir -p web/assets web/transforms
+	ddev exec mkdir -p web/assets web/transforms web/cpresources
 	ddev exec php craft install
 	@if [ -z "$(CRAFT_SITE_NAME)" ]; then \
-		read -p "Site Name: " site_name; \
-		sed -i '' "s/^CRAFT_SITE_NAME=.*/CRAFT_SITE_NAME=\"$$site_name\"/" .env || echo "CRAFT_SITE_NAME=\"$$site_name\"" >> .env; \
+		printf 'Site Name: '; read -r site_name; \
+		if sed -i.bak "s/^CRAFT_SITE_NAME=.*/CRAFT_SITE_NAME=\"$$site_name\"/" .env; then \
+			rm -f .env.bak; \
+		else \
+			echo "CRAFT_SITE_NAME=\"$$site_name\"" >> .env; \
+		fi; \
 	fi; \
 	if [ -z "$(CRAFT_SYSTEM_EMAIL)" ]; then \
-		read -p "System Email: " system_email; \
-		sed -i '' "s/^CRAFT_SYSTEM_EMAIL=.*/CRAFT_SYSTEM_EMAIL=\"$$system_email\"/" .env || echo "CRAFT_SYSTEM_EMAIL=\"$$system_email\"" >> .env; \
-		sed -i '' "s/^CRAFT_TEST_TO_EMAIL_ADDRESS=.*/CRAFT_TEST_TO_EMAIL_ADDRESS=\"$$system_email\"/" .env || echo "CRAFT_TEST_TO_EMAIL_ADDRESS=\"$$system_email\"" >> .env; \
+		printf 'System Email: '; read -r system_email; \
+		if sed -i.bak "s/^CRAFT_SYSTEM_EMAIL=.*/CRAFT_SYSTEM_EMAIL=\"$$system_email\"/" .env; then \
+			rm -f .env.bak; \
+		else \
+			echo "CRAFT_SYSTEM_EMAIL=\"$$system_email\"" >> .env; \
+		fi; \
+		if sed -i.bak "s/^CRAFT_TEST_TO_EMAIL_ADDRESS=.*/CRAFT_TEST_TO_EMAIL_ADDRESS=\"$$system_email\"/" .env; then \
+			rm -f .env.bak; \
+		else \
+			echo "CRAFT_TEST_TO_EMAIL_ADDRESS=\"$$system_email\"" >> .env; \
+		fi; \
 	fi; \
 	ddev exec php craft up --interactive=0
 	ddev exec php craft update all
