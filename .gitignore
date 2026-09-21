@@ -84,6 +84,12 @@ lerna-debug.log*
 # DDEV (auto-generated)
 
 .ddev/config.tailscale.yaml
+.ddev/config.local.yaml
+.ddev/docker-compose.*.local.yaml
+.ddev/.env.*.local
+.ddev/.ddev-docker-compose-*.yaml
+.ddev/.dbimageBuild/
+.ddev/.webimageBuild/
 
 # Editor directories and files
 

@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## Unreleased
+
+### Added
+- `VITE_DEV_SERVER_PUBLIC` support in `config/vite.php`, so remote/VM environments (e.g. dev servers behind a reverse proxy) can point browsers at the correct public Vite URL. `make share`/`make funnel` (`TAILSCALE_HOST`) and plain local DDEV are unaffected.
+
+### Fixed
+- Ensure `web/cpresources` exists before `craft install`. Seomatic's install migration publishes assets through the asset manager, whose `resourceBasePath` (`@webroot/cpresources`) must exist; on macOS DDEV/Mutagen creates it as an upload dir, but on Linux (Mutagen disabled) `make install` never did, so the install failed.
+
+### Changed
+- Ignore DDEV-generated build artifacts (`.ddev/.ddev-docker-compose-*.yaml`, `.ddev/.dbimageBuild/`, `.ddev/.webimageBuild/`) and per-developer local overrides (`.ddev/config.local.yaml`, `.ddev/docker-compose.*.local.yaml`, `.ddev/.env.*.local`) in `.gitignore`, so a clone stays clean without a locally generated `.ddev/.gitignore`.
+- Made `make install` portable across macOS and Linux: use `sed -i.bak` (with `.bak` cleanup) instead of the macOS-only `sed -i ''`, and POSIX `printf`/`read -r` prompts so they display under `dash` as well as macOS bash.
+- Moved `PRIMARY_SITE_URL` out of the committed `.ddev/.env.web` (which hardcoded this project's URL and was inherited by every clone) into `web_environment` in `.ddev/config.yaml` as `https://${DDEV_HOSTNAME}`, so each checkout resolves its own correct local URL.
+
 ## 5.2.7 - 2026-06-10
 
 ### Changed
