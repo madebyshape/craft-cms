@@ -7,13 +7,13 @@ PROJECT_BASE := $(shell grep -h '^name:' .ddev/config.yaml | awk '{print $$2}')
 # Use the same flags we verified work inside DDEV.
 NPM_INSTALL_FLAGS ?= --include=optional --legacy-peer-deps
 
-prod: 
+prod:
 	ddev exec npm run build
 
-dev: 
+dev:
 	ddev exec npm run dev
 
-start: 
+start:
 	ddev start
 	ddev exec npm run dev
 
@@ -30,7 +30,7 @@ install:
 			exit 1; \
 		fi \
 	fi
-	ddev exec mkdir -p web/assets web/transforms
+	mkdir -p web/cpresources
 	ddev exec php craft install
 	@if [ -z "$(CRAFT_SITE_NAME)" ]; then \
 		read -p "Site Name: " site_name; \
@@ -46,7 +46,7 @@ install:
 	ddev launch; \
 	echo "Install complete 🎉"
 
-setup: 
+setup:
 	ddev start
 	git pull
 	ddev exec -- npm install $(NPM_INSTALL_FLAGS)
@@ -55,7 +55,7 @@ setup:
 	ddev exec php craft up --interactive=0
 	ddev exec npm run dev
 
-clean: 
+clean:
 	rm -rf vendor/
 	rm -rf node_modules/
 	ddev composer clear-cache
@@ -66,10 +66,10 @@ clean:
 clean-logs:
 	rm -rf storage/logs/*.log
 
-update: 
+update:
 	ddev exec php craft update all
 
-pull-db: 
+pull-db:
 	ddev exec php craft servd-asset-storage/local/pull-database --emptyDatabase
 
 import-db:
@@ -78,22 +78,22 @@ ifndef file
 endif
 	ddev import-db --file=$(file)
 
-up: 
+up:
 	ddev exec php craft up --interactive=0
 
-tp: 
+tp:
 	ddev tableplus
 
-l: 
+l:
 	ddev launch
 
-keys: 
+keys:
 	ddev exec php craft setup/keys
 
 update-search-index:
 	ddev exec php craft resave/entries --update-search-index
 
-mp: 
+mp:
 	ddev mailpit
 
 kill-vite:

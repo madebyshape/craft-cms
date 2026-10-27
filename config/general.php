@@ -39,8 +39,8 @@ return GeneralConfig::create()
         ['link', ['rel' => 'icon', 'href' => '/dist/favicons/favicon.ico']],
     ])
     ->aliases([
-        '@web' => App::env('SITE_URL'),
-        '@webroot' => App::env('WEB_ROOT'),
+        '@web' => App::env('PRIMARY_SITE_URL'),
+        '@webroot' => App::env('CRAFT_WEB_ROOT.'),
     ])
     ->extraAllowedFileExtensions(['xml'])
 ;
